@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "assets": [
+    {
+      "key": "rin",
+      "file": "quest-rin-scene-v1.png",
+      "route": "/files/quest/icon/ember_rin_scene_v1",
+      "sha256": "db043b5a560f06bd7620e60c8112759176228d4cbd3d94b1002a9b487ac22b43",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "key": "nina",
+      "file": "quest-nina-scene-v1.png",
+      "route": "/files/quest/icon/ember_nina_scene_v1",
+      "sha256": "c88bf9a76df3555b8864f2579a7bc3b104e39c1786e551f5b2c4a867b380b03f",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "key": "claire",
+      "file": "quest-claire-scene-v1.png",
+      "route": "/files/quest/icon/ember_claire_scene_v1",
+      "sha256": "207086bb0b65a7d544332bc89a464360f3fb78fa528c629833ddca8f83df6c8d",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "key": "emma",
+      "file": "quest-emma-scene-v1.png",
+      "route": "/files/quest/icon/ember_emma_scene_v1",
+      "sha256": "07e734025c0f11675b7c28eacb597a190047850842aac1796f63968b741e645b",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "key": "katya",
+      "file": "quest-katya-scene-v1.png",
+      "route": "/files/quest/icon/ember_katya_scene_v1",
+      "sha256": "8d0e4efa4efa84ea523727c540aea1e4b508e5bf35bd624037c014061375d361",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "key": "haruka",
+      "file": "quest-haruka-scene-v1.png",
+      "route": "/files/quest/icon/ember_haruka_scene_v1",
+      "sha256": "9a568b987abcd2e63759ebe1a8d3eff688ddd84fd2deee7f6bd3ac9b9780c9c3",
+      "width": 1672,
+      "height": 941
+    }
+  ]
+}

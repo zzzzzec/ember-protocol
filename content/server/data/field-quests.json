@@ -1,0 +1,1339 @@
+{
+  "version": 1,
+  "questIds": [
+    "a11f3416d3e2c0d30e74ef1e",
+    "6e3f4c22a1c4fb8f115ad878",
+    "87ee5eae8aaa4d77432f7bed",
+    "90b5d09d182834ac7fd99f64",
+    "bdf0031ac980964c48fde7e6",
+    "86b2611d7894d58a2015e257",
+    "5bd58c70c513b23aea67bba1",
+    "fa036971290467eecef9eb98",
+    "112828959d3c0357243db333",
+    "d1bf112818092c67ad4b35fa",
+    "4b73e556a053396410845282",
+    "e08d4836dca68b4c189a3022",
+    "00d7e6b5b367dd62ee7b3066",
+    "1a3c20778ede3c5d5a8186c0",
+    "618efc4f8256ab2b2bd37514",
+    "f44069469ebae74d6ca2d77c",
+    "93d8ee73d94f5e3953cf126f",
+    "04505cf21f921364ffd75196",
+    "06cbe93a5bed708779a2fd40",
+    "d86b52c67f6bee6091fe0a5e",
+    "e91165e94068b152ca05e3e8",
+    "38057c5a2231e980bf38d02c",
+    "317b38adb4ed97a374d9f72e",
+    "80f85b1ba10d97e67f5a2081",
+    "05c1844146da2c4c390f8f2f",
+    "c999c40a3160e868f6e189b8",
+    "4ad9f1971a020550798bc56e",
+    "47b2c784d47921ed96124b81",
+    "20734424bb148be95e8f46d2",
+    "d19fdc040c91263840581ed6",
+    "c3d6cb9bfb23d96d71297185",
+    "599c9693a25a3b984cb0d51e",
+    "cb3b358c8ebedb337b861547",
+    "5853ecf1df1602709f041467",
+    "bf18949fcabb25bc3a8585bc",
+    "4035037bdd0eedafc73d7ca9",
+    "82253eecdfb7414f705e0f8a",
+    "52ef24195e3d153a4c5776fd",
+    "58c8a764e763b91f68a9f5fc",
+    "7df1d9213abbe50eb40288db",
+    "89db304873230cf93e82cdec",
+    "a8f6117a5b544655ff9c8dbb",
+    "d04f4a60411d513eeb547178",
+    "50f5dbd9d9dd01be02a3e19d",
+    "11fbcebb176199c83de50dc1",
+    "0facfd4d46f3bde52e3c9a78",
+    "13143378c36614c2cc66c3b8",
+    "e84bcc17cc82414cb75c7ef9",
+    "f9171b97a746066a7fc1d7ab",
+    "8af2b2ff18040a2578f12df0",
+    "e8664b4e4d9efeb2e8d64fa5",
+    "e5f9f43130dc27c6043bc99c"
+  ],
+  "issuedOnce": {
+    "d1bf112818092c67ad4b35fa": {
+      "kind": "grenades"
+    },
+    "4b73e556a053396410845282": {
+      "kind": "rifle"
+    },
+    "e08d4836dca68b4c189a3022": {
+      "kind": "rifle"
+    },
+    "00d7e6b5b367dd62ee7b3066": {
+      "kind": "rifle"
+    },
+    "1a3c20778ede3c5d5a8186c0": {
+      "kind": "rifle"
+    },
+    "618efc4f8256ab2b2bd37514": {
+      "kind": "rifle"
+    },
+    "f44069469ebae74d6ca2d77c": {
+      "kind": "weapon"
+    },
+    "04505cf21f921364ffd75196": {
+      "kind": "weapon"
+    },
+    "d86b52c67f6bee6091fe0a5e": {
+      "kind": "weapon"
+    },
+    "38057c5a2231e980bf38d02c": {
+      "kind": "weapon"
+    },
+    "80f85b1ba10d97e67f5a2081": {
+      "kind": "weapon"
+    },
+    "c999c40a3160e868f6e189b8": {
+      "kind": "weapon"
+    },
+    "47b2c784d47921ed96124b81": {
+      "kind": "weapon"
+    },
+    "d19fdc040c91263840581ed6": {
+      "kind": "weapon"
+    },
+    "c3d6cb9bfb23d96d71297185": {
+      "kind": "weapon"
+    },
+    "cb3b358c8ebedb337b861547": {
+      "kind": "weapon"
+    },
+    "bf18949fcabb25bc3a8585bc": {
+      "kind": "weapon"
+    },
+    "82253eecdfb7414f705e0f8a": {
+      "kind": "weapon"
+    },
+    "58c8a764e763b91f68a9f5fc": {
+      "kind": "weapon"
+    },
+    "a8f6117a5b544655ff9c8dbb": {
+      "kind": "weapon"
+    },
+    "d04f4a60411d513eeb547178": {
+      "kind": "weapon"
+    },
+    "11fbcebb176199c83de50dc1": {
+      "kind": "weapon"
+    },
+    "f9171b97a746066a7fc1d7ab": {
+      "kind": "weapon"
+    },
+    "e8664b4e4d9efeb2e8d64fa5": {
+      "kind": "weapon"
+    }
+  },
+  "loans": {
+    "4b73e556a053396410845282": {
+      "weapon": "574d967124597745970e7c94",
+      "requiredParts": [
+        "574dad8024597745964bf05c",
+        "587df3a12459772c28142567"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 10,
+      "returnCondition": "b0fd375ef96a257b31e33f1b",
+      "ironSights": true
+    },
+    "e08d4836dca68b4c189a3022": {
+      "weapon": "59e6152586f77473dc057aa1",
+      "requiredParts": [],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "79bd9cc200e8b71d52446a10",
+      "ironSights": false
+    },
+    "00d7e6b5b367dd62ee7b3066": {
+      "weapon": "57dc2fa62459775949412633",
+      "requiredParts": [
+        "57dc347d245977596754e7a1"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "761f8c42d8566cf0061c8c99",
+      "ironSights": true
+    },
+    "1a3c20778ede3c5d5a8186c0": {
+      "weapon": "5644bd2b4bdc2d3b4c8b4572",
+      "requiredParts": [
+        "5947db3f86f77447880cf76f"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "1ccda99e033c6646168486cc",
+      "ironSights": false
+    },
+    "618efc4f8256ab2b2bd37514": {
+      "weapon": "59d6088586f774275f37482f",
+      "requiredParts": [
+        "5d2c76ed48f03532f2136169",
+        "570fd721d2720bc5458b4596"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "db6638503f764ab95dbfd870",
+      "ironSights": false
+    },
+    "f44069469ebae74d6ca2d77c": {
+      "weapon": "5448bd6b4bdc2dfc2f8b4569",
+      "requiredParts": [
+        "5448c12b4bdc2d02308b456f",
+        "6374a7e7417239a7bf00f042",
+        "6374a822e629013b9c0645c8",
+        "63c6adcfb4ba094317063742"
+      ],
+      "exactParts": [
+        "5448c12b4bdc2d02308b456f",
+        "6374a7e7417239a7bf00f042",
+        "6374a822e629013b9c0645c8",
+        "63c6adcfb4ba094317063742"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 8,
+      "returnCondition": "0d8672bd352576246aecd1f4",
+      "killCondition": "072c721484978cc8580ed9c9",
+      "referenceOffer": "2b77f8d07d9e712aa6f9b55a"
+    },
+    "93d8ee73d94f5e3953cf126f": {
+      "weapon": "5cadc190ae921500103bb3b6",
+      "requiredParts": [
+        "5cadc1c6ae9215000f2775a4",
+        "5cadc2e0ae9215051e1c21e7",
+        "5cadc390ae921500126a77f1",
+        "5cadc431ae921500113bb8d5",
+        "5cadc55cae921500103bb3be",
+        "5cadd919ae921500126a77f3",
+        "5cadd940ae9215051e1c2316"
+      ],
+      "exactParts": [
+        "5cadc1c6ae9215000f2775a4",
+        "5cadc2e0ae9215051e1c21e7",
+        "5cadc390ae921500126a77f1",
+        "5cadc431ae921500113bb8d5",
+        "5cadc55cae921500103bb3be",
+        "5cadd919ae921500126a77f3",
+        "5cadd940ae9215051e1c2316"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 17,
+      "returnCondition": "c50f23bd3bb85bf6cf58fc18",
+      "killCondition": "fb093a4450d7f4cedb409bca",
+      "referenceOffer": "42c1f3cb81d0e20d9445aebf"
+    },
+    "04505cf21f921364ffd75196": {
+      "weapon": "5a7ae0c351dfba0017554310",
+      "requiredParts": [
+        "5a6b5f868dc32e000a311389",
+        "5a6f5e048dc32e00094b97da",
+        "5a718da68dc32e000d46d264",
+        "5a71e0048dc32e000c52ecc8",
+        "5a71e0fb8dc32e00094b97f2",
+        "5a7b32a2e899ef00135e345a",
+        "5a7b483fe899ef0016170d15",
+        "5a7b4960e899ef197b331a2d"
+      ],
+      "exactParts": [
+        "5a6b5f868dc32e000a311389",
+        "5a6f5e048dc32e00094b97da",
+        "5a718da68dc32e000d46d264",
+        "5a71e0048dc32e000c52ecc8",
+        "5a71e0fb8dc32e00094b97f2",
+        "5a7b32a2e899ef00135e345a",
+        "5a7b483fe899ef0016170d15",
+        "5a7b4960e899ef197b331a2d"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 21,
+      "returnCondition": "fb7e2b643613b6049a38f405",
+      "killCondition": "aab833518d5dd6e56b5a4801",
+      "referenceOffer": "558b9149c31cd0937cd2a28a"
+    },
+    "06cbe93a5bed708779a2fd40": {
+      "weapon": "6193a720f8ee7e52e42109ed",
+      "requiredParts": [
+        "6193d3149fb0c665d5490e32",
+        "6193d3be7c6c7b169525f0da",
+        "6193d3cded0429009f543e6a",
+        "6193d5d4f8ee7e52e4210a1b",
+        "6194efe07c6c7b169525f11b",
+        "6194f1f918a3974e5e7421e4",
+        "6194f2df645b5d229654ad77",
+        "6194f3286db0f2477964e67d",
+        "6194f41f9fb0c665d5490e75",
+        "6196255558ef8c428c287d1c"
+      ],
+      "exactParts": [
+        "6193d3149fb0c665d5490e32",
+        "6193d3be7c6c7b169525f0da",
+        "6193d3cded0429009f543e6a",
+        "6193d5d4f8ee7e52e4210a1b",
+        "6194efe07c6c7b169525f11b",
+        "6194f1f918a3974e5e7421e4",
+        "6194f2df645b5d229654ad77",
+        "6194f3286db0f2477964e67d",
+        "6194f41f9fb0c665d5490e75",
+        "6196255558ef8c428c287d1c"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 12,
+      "returnCondition": "21572bc818fb498d1f929eff",
+      "killCondition": "5c9caba8d589738643f840fa",
+      "referenceOffer": "474ea90e65b52b1a2311fdd8"
+    },
+    "d86b52c67f6bee6091fe0a5e": {
+      "weapon": "5d67abc1a4b93614ec50137f",
+      "requiredParts": [
+        "5d3eb44aa4b93650d64e4979",
+        "5d3eb4aba4b93650d64e497d",
+        "5d3eb536a4b9363b1f22f8e2",
+        "5d3eb59ea4b9361c284bb4b2",
+        "5d3eb5eca4b9363b1f22f8e4",
+        "5d3ef698a4b9361182109872"
+      ],
+      "exactParts": [
+        "5d3eb44aa4b93650d64e4979",
+        "5d3eb4aba4b93650d64e497d",
+        "5d3eb536a4b9363b1f22f8e2",
+        "5d3eb59ea4b9361c284bb4b2",
+        "5d3eb5eca4b9363b1f22f8e4",
+        "5d3ef698a4b9361182109872"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 20,
+      "returnCondition": "825c463e21297371448d0d43",
+      "killCondition": "841014030ae0551eb01bafb2",
+      "referenceOffer": "6d4fb4d40e20fe09b366ff4e"
+    },
+    "e91165e94068b152ca05e3e8": {
+      "weapon": "57d14d2524597714373db789",
+      "requiredParts": [
+        "57d1519e24597714373db79d",
+        "57d152ec245977144076ccdf"
+      ],
+      "exactParts": [
+        "57d1519e24597714373db79d",
+        "57d152ec245977144076ccdf"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "eefdb061541fe57b08caba4e",
+      "killCondition": "d0490da7170ee083a1043193",
+      "referenceOffer": "6515c1d6d0988709b2c1314f"
+    },
+    "38057c5a2231e980bf38d02c": {
+      "weapon": "5926bb2186f7744b1c6c6e60",
+      "requiredParts": [
+        "5926c32286f774616e42de99",
+        "5926c3b286f774640d189b6b",
+        "5926d2be86f774134d668e4e",
+        "5926d33d86f77410de68ebc0",
+        "5926d40686f7740f152b6b7e",
+        "5926f2e086f7745aae644231",
+        "5926f34786f77469195bfe92"
+      ],
+      "exactParts": [
+        "5926c32286f774616e42de99",
+        "5926c3b286f774640d189b6b",
+        "5926d2be86f774134d668e4e",
+        "5926d33d86f77410de68ebc0",
+        "5926d40686f7740f152b6b7e",
+        "5926f2e086f7745aae644231",
+        "5926f34786f77469195bfe92"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "67c8dcf8b1eec69c9ef19950",
+      "killCondition": "b880e995150fa0dc449fb9ae",
+      "referenceOffer": "65b5d49e29a0ecc781a17da6"
+    },
+    "317b38adb4ed97a374d9f72e": {
+      "weapon": "5fc3e272f8b6a877a729eac5",
+      "requiredParts": [
+        "570fd721d2720bc5458b4596",
+        "5fc3e466187fea44d52eda90",
+        "5fc3e4a27283c4046c5814ab",
+        "5fc3e4ee7283c4046c5814af",
+        "5fc53954f8b6a877a729eaeb",
+        "5fc5396e900b1d5091531e72",
+        "6130c4d51cb55961fa0fd49f"
+      ],
+      "exactParts": [
+        "570fd721d2720bc5458b4596",
+        "5fc3e466187fea44d52eda90",
+        "5fc3e4a27283c4046c5814ab",
+        "5fc3e4ee7283c4046c5814af",
+        "5fc53954f8b6a877a729eaeb",
+        "5fc5396e900b1d5091531e72",
+        "5fc5396e900b1d5091531e72",
+        "6130c4d51cb55961fa0fd49f"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 25,
+      "returnCondition": "3d99c453e7d9ac4588eb42f8",
+      "killCondition": "9110e576dd89cf67293260fb",
+      "referenceOffer": "bf0277d2dbe3c1c46917e65b"
+    },
+    "80f85b1ba10d97e67f5a2081": {
+      "weapon": "59984ab886f7743e98271174",
+      "requiredParts": [
+        "560d657b4bdc2da74d8b4572",
+        "5648ac824bdc2ded0b8b457d",
+        "5648b4534bdc2d3d1c8b4580",
+        "5649ae4a4bdc2d1b2b8b4588",
+        "570fd6c2d2720bc6458b457f",
+        "591af28e86f77414a27a9e1d",
+        "59985a6c86f77414ec448d17",
+        "599860ac86f77436b225ed1a",
+        "599860e986f7743bb57573a6",
+        "59bfc5c886f7743bf6794e62",
+        "59ccd11386f77428f24a488f",
+        "59ecc3dd86f7746dc827481c",
+        "5ac78eaf5acfc4001926317a"
+      ],
+      "exactParts": [
+        "560d657b4bdc2da74d8b4572",
+        "5648ac824bdc2ded0b8b457d",
+        "5648b4534bdc2d3d1c8b4580",
+        "5649ae4a4bdc2d1b2b8b4588",
+        "570fd6c2d2720bc6458b457f",
+        "591af28e86f77414a27a9e1d",
+        "59985a6c86f77414ec448d17",
+        "599860ac86f77436b225ed1a",
+        "599860e986f7743bb57573a6",
+        "59bfc5c886f7743bf6794e62",
+        "59ccd11386f77428f24a488f",
+        "59ecc3dd86f7746dc827481c",
+        "5ac78eaf5acfc4001926317a"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "80a52b6970045231160abc37",
+      "killCondition": "6f4f37b7b83757340c8eb2f3",
+      "referenceOffer": "926fb99cd51adff59abaf79d"
+    },
+    "05c1844146da2c4c390f8f2f": {
+      "weapon": "58948c8e86f77409493f7266",
+      "requiredParts": [
+        "57adff4f24597737f373b6e6",
+        "57c55efc2459772d2c6271e7",
+        "58949edd86f77409483e16a9",
+        "5894a05586f774094708ef75",
+        "5894a42086f77426d2590762",
+        "5894a5b586f77426d2590767",
+        "58a56f8d86f774651579314c",
+        "58a5c12e86f7745d585a2b9e",
+        "58ac1bf086f77420ed183f9f",
+        "58aeaaa886f7744fc1560f81",
+        "58aeac1b86f77457c419f475",
+        "58d2664f86f7747fec5834f6",
+        "58d268fc86f774111273f8c2",
+        "591aef7986f774139d495f03",
+        "59f8a37386f7747af3328f06",
+        "5a7b483fe899ef0016170d15"
+      ],
+      "exactParts": [
+        "57adff4f24597737f373b6e6",
+        "57c55efc2459772d2c6271e7",
+        "58949edd86f77409483e16a9",
+        "5894a05586f774094708ef75",
+        "5894a42086f77426d2590762",
+        "5894a5b586f77426d2590767",
+        "58a56f8d86f774651579314c",
+        "58a5c12e86f7745d585a2b9e",
+        "58ac1bf086f77420ed183f9f",
+        "58aeaaa886f7744fc1560f81",
+        "58aeac1b86f77457c419f475",
+        "58d2664f86f7747fec5834f6",
+        "58d268fc86f774111273f8c2",
+        "591aef7986f774139d495f03",
+        "59f8a37386f7747af3328f06",
+        "5a7b483fe899ef0016170d15"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "91093e4b1f9c35287b680acd",
+      "killCondition": "5ce073a46c48e3e0da0fd401",
+      "referenceOffer": "455cc07e3bd99b6ccbf9f900"
+    },
+    "c999c40a3160e868f6e189b8": {
+      "weapon": "644674a13d52156624001fbc",
+      "requiredParts": [
+        "644675573d52156624001fc9",
+        "6450ec2e7da7133e5a09ca96",
+        "6450f21a3d52156624001fcf",
+        "6451167ad4928d46d30be3fd",
+        "645122f6d4928d46d30be3ff",
+        "64527a263d52156624001fd7"
+      ],
+      "exactParts": [
+        "644675573d52156624001fc9",
+        "6450ec2e7da7133e5a09ca96",
+        "6450f21a3d52156624001fcf",
+        "6451167ad4928d46d30be3fd",
+        "645122f6d4928d46d30be3ff",
+        "64527a263d52156624001fd7"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 20,
+      "returnCondition": "9101297bf2e24d8cebe1fafb",
+      "killCondition": "10f98dd3d377a16fdda1c001",
+      "referenceOffer": "b0733c71ad20d5336c2d169b"
+    },
+    "4ad9f1971a020550798bc56e": {
+      "weapon": "645e0c6b3b381ede770e1cc9",
+      "requiredParts": [
+        "618a5d5852ecee1505530b2a",
+        "6448f2f6d4928d46d30be3f6",
+        "6450ec2e7da7133e5a09ca96",
+        "645123013d52156624001fd1",
+        "6452519e3d52156624001fd5",
+        "64527a263d52156624001fd7"
+      ],
+      "exactParts": [
+        "618a5d5852ecee1505530b2a",
+        "6448f2f6d4928d46d30be3f6",
+        "6450ec2e7da7133e5a09ca96",
+        "645123013d52156624001fd1",
+        "6452519e3d52156624001fd5",
+        "64527a263d52156624001fd7"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 20,
+      "returnCondition": "ab8b1fecf2d0d48055912e0e",
+      "killCondition": "5fb46be69f95dba1dc169a99",
+      "referenceOffer": "0a4b95ad0ff8af812426f61b"
+    },
+    "47b2c784d47921ed96124b81": {
+      "weapon": "57838ad32459774a17445cd2",
+      "requiredParts": [
+        "57838c962459774a1651ec63",
+        "57838e1b2459774a256959b1",
+        "57838f0b2459774a256959b2",
+        "578395402459774a256959b5",
+        "578395e82459774a0e553c7b",
+        "5c82342f2e221644f31c060e",
+        "6565bb7eb4b12a56eb04b084"
+      ],
+      "exactParts": [
+        "57838c962459774a1651ec63",
+        "57838e1b2459774a256959b1",
+        "57838f0b2459774a256959b2",
+        "578395402459774a256959b5",
+        "578395e82459774a0e553c7b",
+        "5c82342f2e221644f31c060e",
+        "6565bb7eb4b12a56eb04b084"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 10,
+      "returnCondition": "f062438a702d94f35322e843",
+      "killCondition": "4620bf12d8271934de43315a",
+      "referenceOffer": "59b1ea0f126a76cf648ca6e4"
+    },
+    "20734424bb148be95e8f46d2": {
+      "weapon": "57c44b372459772d2b39b8ce",
+      "requiredParts": [
+        "57838f9f2459774a150289a0",
+        "57c44dd02459772d2e0ae249",
+        "57c44e7b2459772d28133248",
+        "57c44f4f2459772d2c627113",
+        "57c44fa82459772d2d75e415",
+        "57c450252459772d28133253",
+        "591c4efa86f7741030027726",
+        "5e569a2e56edd02abe09f280",
+        "651178336cad06c37c049eb4"
+      ],
+      "exactParts": [
+        "57838f9f2459774a150289a0",
+        "57c44dd02459772d2e0ae249",
+        "57c44e7b2459772d28133248",
+        "57c44f4f2459772d2c627113",
+        "57c44fa82459772d2d75e415",
+        "57c450252459772d28133253",
+        "591c4efa86f7741030027726",
+        "5e569a2e56edd02abe09f280",
+        "651178336cad06c37c049eb4"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 20,
+      "returnCondition": "7d3ea2411d535ecab539393d",
+      "killCondition": "f1b82d9ee47330c5a118a729",
+      "referenceOffer": "a30cb3b4540fb7b0d2f82685"
+    },
+    "d19fdc040c91263840581ed6": {
+      "weapon": "651450ce0e00edc794068371",
+      "requiredParts": [
+        "57486e672459770abd687134",
+        "57c44f4f2459772d2c627113",
+        "57c44fa82459772d2d75e415",
+        "57c450252459772d28133253",
+        "5a9e81fba2750c00164f6b11",
+        "65144ff50e00edc79406836f",
+        "6565c0c2ff7eb7070409084c",
+        "6565c3ab977bcc2dbb01c2e7"
+      ],
+      "exactParts": [
+        "57486e672459770abd687134",
+        "57c44f4f2459772d2c627113",
+        "57c44fa82459772d2d75e415",
+        "57c450252459772d28133253",
+        "5a9e81fba2750c00164f6b11",
+        "65144ff50e00edc79406836f",
+        "6565c0c2ff7eb7070409084c",
+        "6565c3ab977bcc2dbb01c2e7"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "1a7d265a207f4485839a9cee",
+      "killCondition": "72ee4974bd50e8236fb2d0f5",
+      "referenceOffer": "4461509a0cb1574d6c9ed4e5"
+    },
+    "c3d6cb9bfb23d96d71297185": {
+      "weapon": "54491c4f4bdc2db1078b4568",
+      "requiredParts": [
+        "55d4491a4bdc2d882f8b456e",
+        "55d45d3f4bdc2d972f8b456c",
+        "55d484b44bdc2d1d4e8b456d",
+        "56083cba4bdc2de22e8b456f"
+      ],
+      "exactParts": [
+        "55d4491a4bdc2d882f8b456e",
+        "55d45d3f4bdc2d972f8b456c",
+        "55d484b44bdc2d1d4e8b456d",
+        "56083cba4bdc2de22e8b456f"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 6,
+      "returnCondition": "54a124e65762e222dccde2bc",
+      "killCondition": "a80f2e8e80b9634e88d38987",
+      "referenceOffer": "68787590da426d1ee1f03f8f"
+    },
+    "599c9693a25a3b984cb0d51e": {
+      "weapon": "64748cb8de82c85eaf0a273a",
+      "requiredParts": [
+        "64748d02d1c009260702b526"
+      ],
+      "exactParts": [
+        "64748d02d1c009260702b526"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 0,
+      "returnCondition": "2d7aee7919a73b24c7cc2c9b",
+      "killCondition": "2d82ee31a6bf05f5603e773b",
+      "referenceOffer": "f1936d5bc25dcbba119654a3"
+    },
+    "cb3b358c8ebedb337b861547": {
+      "weapon": "5a7828548dc32e5a9c28b516",
+      "requiredParts": [
+        "55d4b9964bdc2d1d4e8b456e",
+        "56eabf3bd2720b75698b4569",
+        "584924ec24597768f12ae244",
+        "58d2912286f7744e27117493",
+        "59fc48e086f77463b1118392",
+        "5a787fdfc5856700142fdd9a",
+        "5a788031c585673f2b5c1c79",
+        "5a7882dcc5856700177af662",
+        "5a78948ec5856700177b1124",
+        "5ae35b315acfc4001714e8b0"
+      ],
+      "exactParts": [
+        "55d4b9964bdc2d1d4e8b456e",
+        "56eabf3bd2720b75698b4569",
+        "584924ec24597768f12ae244",
+        "58d2912286f7744e27117493",
+        "59fc48e086f77463b1118392",
+        "5a787fdfc5856700142fdd9a",
+        "5a788031c585673f2b5c1c79",
+        "5a7882dcc5856700177af662",
+        "5a78948ec5856700177b1124",
+        "5ae35b315acfc4001714e8b0"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 4,
+      "returnCondition": "f1d1443d900edd092b07aac2",
+      "killCondition": "413926866621ff1642c9e30b",
+      "referenceOffer": "47df9cd94992b77847dcb6a0"
+    },
+    "5853ecf1df1602709f041467": {
+      "weapon": "606dae0ab0e443224b421bb7",
+      "requiredParts": [
+        "606ee5c81246154cad35d65e",
+        "606eef46232e5a31c233d500",
+        "606eef756d0bd7580617baf8",
+        "606ef0812535c57a13424d20",
+        "606f2696f2cb2e02a42aceb1",
+        "6076c1b9f2cb2e02a42acedc",
+        "6076c87f232e5a31c233d50e",
+        "60785ce5132d4d12c81fd918"
+      ],
+      "exactParts": [
+        "606ee5c81246154cad35d65e",
+        "606eef46232e5a31c233d500",
+        "606eef756d0bd7580617baf8",
+        "606ef0812535c57a13424d20",
+        "606f2696f2cb2e02a42aceb1",
+        "6076c1b9f2cb2e02a42acedc",
+        "6076c87f232e5a31c233d50e",
+        "60785ce5132d4d12c81fd918"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 6,
+      "returnCondition": "1583e554e0106b9b324d117c",
+      "killCondition": "7e408faa7164d3daa78a5f66",
+      "referenceOffer": "42427fca43ff97e4f85498c7"
+    },
+    "bf18949fcabb25bc3a8585bc": {
+      "weapon": "6259b864ebedf17603599e88",
+      "requiredParts": [
+        "570fd721d2720bc5458b4596",
+        "6259bdcabd28e4721447a2aa",
+        "6259c2c1d714855d182bad85",
+        "6259c3387d6aab70bc23a18d",
+        "6259c3d8012d6678ec38eeb8",
+        "6259c4347d6aab70bc23a190",
+        "625ebcef6f53af4aa66b44dc",
+        "625ec45bb14d7326ac20f572",
+        "625ed7c64d9b6612df732146"
+      ],
+      "exactParts": [
+        "570fd721d2720bc5458b4596",
+        "6259bdcabd28e4721447a2aa",
+        "6259c2c1d714855d182bad85",
+        "6259c3387d6aab70bc23a18d",
+        "6259c3d8012d6678ec38eeb8",
+        "6259c4347d6aab70bc23a190",
+        "625ebcef6f53af4aa66b44dc",
+        "625ec45bb14d7326ac20f572",
+        "625ed7c64d9b6612df732146"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 7,
+      "returnCondition": "389a86eb6a47f0cfc2239ce7",
+      "killCondition": "889820a38c2a72cd3878c0fd",
+      "referenceOffer": "f99df7cb4f4a9d23423961aa"
+    },
+    "4035037bdd0eedafc73d7ca9": {
+      "weapon": "59e6152586f77473dc057aa1",
+      "requiredParts": [
+        "59d650cf86f7741b846413a4",
+        "59e61eb386f77440d64f5daf",
+        "59e6227d86f77440d64f5dc2",
+        "59e6284f86f77440d569536f",
+        "59e6318286f77444dd62c4cc",
+        "59e6449086f7746c9f75e822",
+        "59e649f986f77411d949b246",
+        "5b1fd4e35acfc40018633c39"
+      ],
+      "exactParts": [
+        "59d650cf86f7741b846413a4",
+        "59e61eb386f77440d64f5daf",
+        "59e6227d86f77440d64f5dc2",
+        "59e6284f86f77440d569536f",
+        "59e6318286f77444dd62c4cc",
+        "59e6449086f7746c9f75e822",
+        "59e649f986f77411d949b246",
+        "5b1fd4e35acfc40018633c39"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 10,
+      "returnCondition": "24476bed8e56ca0744dd68db",
+      "killCondition": "989831cbfd3cbf52599b48dc",
+      "referenceOffer": "bad59fbfa704ecc162f6b0a0"
+    },
+    "82253eecdfb7414f705e0f8a": {
+      "weapon": "5c07c60e0db834002330051f",
+      "requiredParts": [
+        "570fd721d2720bc5458b4596",
+        "5aaa5e60e5b5b000140293d6",
+        "5ae30e795acfc408fb139a0b",
+        "5c0e2f26d174af02a9625114",
+        "5c0e2f5cd174af02a012cfc9",
+        "5c0e2f94d174af029f650d56",
+        "5c0e2ff6d174af02a1659d4a",
+        "5c0faeddd174af02a962601f",
+        "5c0faf68d174af02a96260b8",
+        "5c0fafb6d174af02a96260ba"
+      ],
+      "exactParts": [
+        "570fd721d2720bc5458b4596",
+        "5aaa5e60e5b5b000140293d6",
+        "5ae30e795acfc408fb139a0b",
+        "5c0e2f26d174af02a9625114",
+        "5c0e2f5cd174af02a012cfc9",
+        "5c0e2f94d174af029f650d56",
+        "5c0e2ff6d174af02a1659d4a",
+        "5c0faeddd174af02a962601f",
+        "5c0faf68d174af02a96260b8",
+        "5c0fafb6d174af02a96260ba"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 10,
+      "returnCondition": "512c9b9178ba1d177f4933e5",
+      "killCondition": "7397217c94ea5e40d65883d9",
+      "referenceOffer": "3e735726e7d41e8f6ff56d17"
+    },
+    "52ef24195e3d153a4c5776fd": {
+      "weapon": "5ac66cb05acfc40198510a10",
+      "requiredParts": [
+        "5648b1504bdc2d9d488b4584",
+        "5649ade84bdc2d1b2b8b4587",
+        "5947db3f86f77447880cf76f",
+        "59c6633186f7740cf0493bb9",
+        "5a9fbb84a2750c00137fa685",
+        "5ac50c185acfc400163398d4",
+        "5ac50da15acfc4001718d287",
+        "5ac66c5d5acfc4001718d314",
+        "5ac72e475acfc400180ae6fe"
+      ],
+      "exactParts": [
+        "5648b1504bdc2d9d488b4584",
+        "5649ade84bdc2d1b2b8b4587",
+        "5947db3f86f77447880cf76f",
+        "59c6633186f7740cf0493bb9",
+        "5a9fbb84a2750c00137fa685",
+        "5ac50c185acfc400163398d4",
+        "5ac50da15acfc4001718d287",
+        "5ac66c5d5acfc4001718d314",
+        "5ac72e475acfc400180ae6fe"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "3543241033a641c103ca352d",
+      "killCondition": "b950e57ff5dcd302af49f1f0",
+      "referenceOffer": "4d2487abf13a97f816e1df6f"
+    },
+    "58c8a764e763b91f68a9f5fc": {
+      "weapon": "5ac4cd105acfc40016339859",
+      "requiredParts": [
+        "5648ac824bdc2ded0b8b457d",
+        "5648b4534bdc2d3d1c8b4580",
+        "5649ab884bdc2ded0b8b457f",
+        "5649ae4a4bdc2d1b2b8b4588",
+        "5649af884bdc2d1b2b8b4589",
+        "564ca99c4bdc2d16268b4589",
+        "59c6633186f7740cf0493bb9",
+        "59ecc3dd86f7746dc827481c",
+        "5ac72e475acfc400180ae6fe",
+        "5ac78eaf5acfc4001926317a"
+      ],
+      "exactParts": [
+        "5648ac824bdc2ded0b8b457d",
+        "5648b4534bdc2d3d1c8b4580",
+        "5649ab884bdc2ded0b8b457f",
+        "5649ae4a4bdc2d1b2b8b4588",
+        "5649af884bdc2d1b2b8b4589",
+        "564ca99c4bdc2d16268b4589",
+        "59c6633186f7740cf0493bb9",
+        "59ecc3dd86f7746dc827481c",
+        "5ac72e475acfc400180ae6fe",
+        "5ac78eaf5acfc4001926317a"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "766d05b68b6ce4f72586b106",
+      "killCondition": "50116a737f1ef9325fda4be7",
+      "referenceOffer": "a688152e0cbe208a1852f9c5"
+    },
+    "7df1d9213abbe50eb40288db": {
+      "weapon": "5447a9cd4bdc2dbd208b4567",
+      "requiredParts": [
+        "544909bb4bdc2d6f028b4577",
+        "55802d5f4bdc2dac148b458e",
+        "55d355e64bdc2d962f8b4569",
+        "55d35ee94bdc2d61338b4568",
+        "55d44fd14bdc2d962f8b456e",
+        "55f84c3c4bdc2d5f408b4576",
+        "5649a2464bdc2d91118b45a8",
+        "5649be884bdc2d79388b4577",
+        "56ea8180d2720bf2698b456a",
+        "56eabcd4d2720b66698b4574",
+        "57aca93d2459771f2c7e26db",
+        "57da93632459771cb65bf83f",
+        "58c157be86f77403c74b2bb6",
+        "58d2912286f7744e27117493",
+        "58d2946386f774496974c37e",
+        "58d399e486f77442e0016fe7",
+        "58d39d3d86f77445bb794ae7",
+        "5a339805c4a2826c6e06d73d",
+        "638f1ff84822287cad04be9d"
+      ],
+      "exactParts": [
+        "544909bb4bdc2d6f028b4577",
+        "55802d5f4bdc2dac148b458e",
+        "55d355e64bdc2d962f8b4569",
+        "55d35ee94bdc2d61338b4568",
+        "55d44fd14bdc2d962f8b456e",
+        "55f84c3c4bdc2d5f408b4576",
+        "5649a2464bdc2d91118b45a8",
+        "5649be884bdc2d79388b4577",
+        "56ea8180d2720bf2698b456a",
+        "56eabcd4d2720b66698b4574",
+        "57aca93d2459771f2c7e26db",
+        "57da93632459771cb65bf83f",
+        "58c157be86f77403c74b2bb6",
+        "58d2912286f7744e27117493",
+        "58d2946386f774496974c37e",
+        "58d399e486f77442e0016fe7",
+        "58d39d3d86f77445bb794ae7",
+        "5a339805c4a2826c6e06d73d",
+        "638f1ff84822287cad04be9d"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "617b9d1bfd1ce25fb1061a39",
+      "killCondition": "bb91980a5e128f6a9db66073",
+      "referenceOffer": "d8d43a88510ed7c764413b35"
+    },
+    "89db304873230cf93e82cdec": {
+      "weapon": "5c488a752e221602b412af63",
+      "requiredParts": [
+        "55802d5f4bdc2dac148b458e",
+        "570fd721d2720bc5458b4596",
+        "5c48a14f2e2216152006edd7",
+        "5c48a2852e221602b21d5923",
+        "5c48a2a42e221602b66d1e07",
+        "5c48a2c22e221602b313fb6c"
+      ],
+      "exactParts": [
+        "55802d5f4bdc2dac148b458e",
+        "570fd721d2720bc5458b4596",
+        "5c48a14f2e2216152006edd7",
+        "5c48a2852e221602b21d5923",
+        "5c48a2a42e221602b66d1e07",
+        "5c48a2c22e221602b313fb6c"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "bb1864f2bee744bdd2bc22fd",
+      "killCondition": "32d9d05b774e2c8d7cadfb7f",
+      "referenceOffer": "c6eb48ce489a2a9c129f713d"
+    },
+    "a8f6117a5b544655ff9c8dbb": {
+      "weapon": "5d43021ca4b9362eab4b5e25",
+      "requiredParts": [
+        "55802f5d4bdc2dac148b458f",
+        "5649be884bdc2d79388b4577",
+        "56eabcd4d2720b66698b4574",
+        "57ac965c24597706be5f975c",
+        "5aaa5dfee5b5b000140293d3",
+        "5b7be47f5acfc400170e2dd2",
+        "5b7be4895acfc400170e2dd5",
+        "5d4405aaa4b9361e6a4e6bd3",
+        "5d4405f0a4b9361e6a4e6bd9",
+        "5d440625a4b9361eec4ae6c5",
+        "5d44064fa4b9361e4f6eb8b5",
+        "5d4406a8a4b9361e4f6eb8b7",
+        "5d440b93a4b9364276578d4b",
+        "5d44334ba4b9362b346d1948"
+      ],
+      "exactParts": [
+        "55802f5d4bdc2dac148b458f",
+        "5649be884bdc2d79388b4577",
+        "56eabcd4d2720b66698b4574",
+        "57ac965c24597706be5f975c",
+        "5aaa5dfee5b5b000140293d3",
+        "5b7be47f5acfc400170e2dd2",
+        "5b7be4895acfc400170e2dd5",
+        "5d4405aaa4b9361e6a4e6bd3",
+        "5d4405f0a4b9361e6a4e6bd9",
+        "5d440625a4b9361eec4ae6c5",
+        "5d44064fa4b9361e4f6eb8b5",
+        "5d4406a8a4b9361e4f6eb8b7",
+        "5d440b93a4b9364276578d4b",
+        "5d44334ba4b9362b346d1948"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "30d9916f1075d68c875d2020",
+      "killCondition": "5a1ed5cbb965f876a46d76eb",
+      "referenceOffer": "6632fb3badc0e582b62e2350"
+    },
+    "d04f4a60411d513eeb547178": {
+      "weapon": "5fbcc1d9016cce60e8341ab3",
+      "requiredParts": [
+        "544909bb4bdc2d6f028b4577",
+        "55802d5f4bdc2dac148b458e",
+        "55802f5d4bdc2dac148b458f",
+        "57d17c5e2459775a5c57d17d",
+        "57d17e212459775a1179a0f5",
+        "58d399e486f77442e0016fe7",
+        "58d39b0386f77443380bf13c",
+        "58d39d3d86f77445bb794ae7",
+        "59e0bdb186f774156f04ce82",
+        "5c1780312e221602b66cc189",
+        "5c17804b2e2216152006c02f",
+        "5fbbfabed5cb881a7363194e",
+        "5fbc210bf24b94483f726481",
+        "5fbc227aa56d053a3543f79e",
+        "5fbc22ccf24b94483f726483",
+        "5fbcbcf593164a5b6278efb2",
+        "5fbcc3e4d6fa9c00c571bb58",
+        "5fbcc429900b1d5091531dd7",
+        "5fbcc640016cce60e8341acc",
+        "5fbe760793164a5b6278efc8",
+        "5fc0f9cbd6fa9c00c571bb90"
+      ],
+      "exactParts": [
+        "544909bb4bdc2d6f028b4577",
+        "55802d5f4bdc2dac148b458e",
+        "55802f5d4bdc2dac148b458f",
+        "57d17c5e2459775a5c57d17d",
+        "57d17e212459775a1179a0f5",
+        "58d399e486f77442e0016fe7",
+        "58d39b0386f77443380bf13c",
+        "58d39d3d86f77445bb794ae7",
+        "59e0bdb186f774156f04ce82",
+        "5c1780312e221602b66cc189",
+        "5c17804b2e2216152006c02f",
+        "5fbbfabed5cb881a7363194e",
+        "5fbc210bf24b94483f726481",
+        "5fbc227aa56d053a3543f79e",
+        "5fbc22ccf24b94483f726483",
+        "5fbcbcf593164a5b6278efb2",
+        "5fbcc3e4d6fa9c00c571bb58",
+        "5fbcc429900b1d5091531dd7",
+        "5fbcc640016cce60e8341acc",
+        "5fbe760793164a5b6278efc8",
+        "5fc0f9cbd6fa9c00c571bb90"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "99fd99d2ccd9a4362b3ac27a",
+      "killCondition": "0e2a30259ac63aec244fa9c5",
+      "referenceOffer": "cfb2802c24db17231fe31177"
+    },
+    "50f5dbd9d9dd01be02a3e19d": {
+      "weapon": "606587252535c57a13424cfd",
+      "requiredParts": [
+        "55802f5d4bdc2dac148b458f",
+        "58491f3324597764bc48fa02",
+        "59d6272486f77466146386ff",
+        "5bc09a18d4351e003562b68e",
+        "5bc09a30d4351e00367fb7c8",
+        "60658776f2cb2e02a42ace2b",
+        "606587a88900dc2d9a55b659",
+        "606587bd6d0bd7580617bacc",
+        "606587d11246154cad35d635",
+        "606587e18900dc2d9a55b65f",
+        "6065880c132d4d12c81fd8da",
+        "6065c6e7132d4d12c81fd8e1",
+        "6065dc8a132d4d12c81fd8e3"
+      ],
+      "exactParts": [
+        "55802f5d4bdc2dac148b458f",
+        "58491f3324597764bc48fa02",
+        "59d6272486f77466146386ff",
+        "5bc09a18d4351e003562b68e",
+        "5bc09a30d4351e00367fb7c8",
+        "60658776f2cb2e02a42ace2b",
+        "606587a88900dc2d9a55b659",
+        "606587bd6d0bd7580617bacc",
+        "606587d11246154cad35d635",
+        "606587e18900dc2d9a55b65f",
+        "6065880c132d4d12c81fd8da",
+        "6065c6e7132d4d12c81fd8e1",
+        "6065dc8a132d4d12c81fd8e3"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 30,
+      "returnCondition": "e909c76b0cfde12ca2a19af0",
+      "killCondition": "25e006e27f48cf5a4506d8a1",
+      "referenceOffer": "312e596d66a3c1bfcb1cce6f"
+    },
+    "11fbcebb176199c83de50dc1": {
+      "weapon": "5aafa857e5b5b00018480968",
+      "requiredParts": [
+        "5aaf8a0be5b5b00015693243",
+        "5aaf9d53e5b5b00015042a52",
+        "5aafa1c2e5b5b00015042a56",
+        "5aafa49ae5b5b00015042a58",
+        "5abcbb20d8ce87001773e258",
+        "5addc7005acfc4001669f275",
+        "5addc7ac5acfc400194dbd90",
+        "5addc7db5acfc4001669f279"
+      ],
+      "exactParts": [
+        "5aaf8a0be5b5b00015693243",
+        "5aaf9d53e5b5b00015042a52",
+        "5aafa1c2e5b5b00015042a56",
+        "5aafa49ae5b5b00015042a58",
+        "5abcbb20d8ce87001773e258",
+        "5addc7005acfc4001669f275",
+        "5addc7ac5acfc400194dbd90",
+        "5addc7db5acfc4001669f279"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 20,
+      "returnCondition": "e9ea5994080f2ce9679b81e5",
+      "killCondition": "f8c3cdf544cf8bb695746416",
+      "referenceOffer": "400efa18e4ae1d79d497537c"
+    },
+    "0facfd4d46f3bde52e3c9a78": {
+      "weapon": "5dcbd56fdbd3d91b3e5468d5",
+      "requiredParts": [
+        "58c157be86f77403c74b2bb6",
+        "59db7eed86f77461f8380365",
+        "5a32aa8bc4a2826c6e06d737",
+        "5a33bab6c4a28200741e22f8",
+        "5a34fd2bc4a282329a73b4c5",
+        "5a3501acc4a282000d72293a",
+        "5b7be4895acfc400170e2dd5",
+        "5c052a900db834001a66acbd",
+        "5c06595c0db834001a66af6c",
+        "5c48a2c22e221602b313fb6c",
+        "5dcbd6b46ec07c0c4347a564",
+        "5dcbe9431e1f4616d354987e",
+        "5dfa3d7ac41b2312ea33362a"
+      ],
+      "exactParts": [
+        "58c157be86f77403c74b2bb6",
+        "59db7eed86f77461f8380365",
+        "5a32aa8bc4a2826c6e06d737",
+        "5a33bab6c4a28200741e22f8",
+        "5a34fd2bc4a282329a73b4c5",
+        "5a3501acc4a282000d72293a",
+        "5b7be4895acfc400170e2dd5",
+        "5c052a900db834001a66acbd",
+        "5c06595c0db834001a66af6c",
+        "5c48a2c22e221602b313fb6c",
+        "5dcbd6b46ec07c0c4347a564",
+        "5dcbe9431e1f4616d354987e",
+        "5dfa3d7ac41b2312ea33362a"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 20,
+      "returnCondition": "89de43200e0f9a72e759c0b0",
+      "killCondition": "a9c0bb99a81d3b2ad9e056ca",
+      "referenceOffer": "40c83c420bdf1ebe646a0c6c"
+    },
+    "13143378c36614c2cc66c3b8": {
+      "weapon": "65290f395ae2ae97b80fdf2d",
+      "requiredParts": [
+        "652910565ae2ae97b80fdf35",
+        "6529109524cbe3c74a05e5b7",
+        "652910bc24cbe3c74a05e5b9",
+        "652910ef50dc782999054b97",
+        "6529113b5ae2ae97b80fdf39",
+        "652911675ae2ae97b80fdf3c",
+        "6529119424cbe3c74a05e5bb",
+        "652911e650dc782999054b9d",
+        "6529348224cbe3c74a05e5c4",
+        "6529366450dc782999054ba0",
+        "6529370c405a5f51dd023db8",
+        "65293c38fc460e50a509cb25",
+        "6567e751a715f85433025998",
+        "6567e7681265c8a131069b0f"
+      ],
+      "exactParts": [
+        "652910565ae2ae97b80fdf35",
+        "6529109524cbe3c74a05e5b7",
+        "652910bc24cbe3c74a05e5b9",
+        "652910ef50dc782999054b97",
+        "6529113b5ae2ae97b80fdf39",
+        "652911675ae2ae97b80fdf3c",
+        "6529119424cbe3c74a05e5bb",
+        "652911e650dc782999054b9d",
+        "6529348224cbe3c74a05e5c4",
+        "6529366450dc782999054ba0",
+        "6529370c405a5f51dd023db8",
+        "65293c38fc460e50a509cb25",
+        "6567e751a715f85433025998",
+        "6567e7681265c8a131069b0f"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 20,
+      "returnCondition": "b52d08f4a5cd4e4cdee6b5e7",
+      "killCondition": "c44a6e5c6f8a8ceb03d4bb13",
+      "referenceOffer": "15c24ec89a77c0a3da6305d9"
+    },
+    "e84bcc17cc82414cb75c7ef9": {
+      "weapon": "5de652c31b7e3716273428be",
+      "requiredParts": [
+        "5d2dc3e548f035404a1a4798",
+        "5de653abf76fdc1ce94a5a2a",
+        "5de65547883dde217541644b",
+        "5de6556a205ddc616a6bc4f7",
+        "5de6558e9f98ac2bc65950fc",
+        "5de655be4a9f347bc92edb88"
+      ],
+      "exactParts": [
+        "5d2dc3e548f035404a1a4798",
+        "5de653abf76fdc1ce94a5a2a",
+        "5de65547883dde217541644b",
+        "5de6556a205ddc616a6bc4f7",
+        "5de6558e9f98ac2bc65950fc",
+        "5de655be4a9f347bc92edb88"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 4,
+      "returnCondition": "388ae0b71c63787c0f4e0081",
+      "killCondition": "69e576b666bc87082aef21e3",
+      "referenceOffer": "adceddcd60fe2404749ab799"
+    },
+    "f9171b97a746066a7fc1d7ab": {
+      "weapon": "55801eed4bdc2d89578b4588",
+      "requiredParts": [
+        "559ba5b34bdc2d1f1a8b4582",
+        "56083e1b4bdc2dc8488b4572",
+        "560e620e4bdc2d724b8b456b",
+        "57ac965c24597706be5f975c",
+        "623b2e9d11c3296b440d1638",
+        "623c2f4242aee3103f1c44b7",
+        "623c2f652febb22c2777d8d7",
+        "623c3be0484b5003161840dc",
+        "623c3c1f37b4b31470357737",
+        "624c29ce09cd027dff2f8cd7"
+      ],
+      "exactParts": [
+        "559ba5b34bdc2d1f1a8b4582",
+        "56083e1b4bdc2dc8488b4572",
+        "560e620e4bdc2d724b8b456b",
+        "57ac965c24597706be5f975c",
+        "623b2e9d11c3296b440d1638",
+        "623c2f4242aee3103f1c44b7",
+        "623c2f652febb22c2777d8d7",
+        "623c2f652febb22c2777d8d7",
+        "623c3be0484b5003161840dc",
+        "623c3c1f37b4b31470357737",
+        "624c29ce09cd027dff2f8cd7"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 10,
+      "returnCondition": "2e15f68873466bfbc4ea606a",
+      "killCondition": "8b4df42f55dc2572bf2425cf",
+      "referenceOffer": "dc11d40d67d0bd7d0f4afccc"
+    },
+    "8af2b2ff18040a2578f12df0": {
+      "weapon": "5bfea6e90db834001b7347f3",
+      "requiredParts": [
+        "5b7be47f5acfc400170e2dd2",
+        "5bfebc320db8340019668d79",
+        "5c0517910db83400232ffee5",
+        "5cdeac22d7f00c000f26168f",
+        "5cdeac42d7f00c000d36ba73",
+        "5cdeac5cd7f00c000f261694",
+        "5cdeaca5d7f00c00b61c4b70",
+        "5ce69cbad7f00c00b61c5098",
+        "5d270b3c8abbc3105335cfb8",
+        "65f064eec4da400cbb0dc1fe"
+      ],
+      "exactParts": [
+        "5b7be47f5acfc400170e2dd2",
+        "5b7be47f5acfc400170e2dd2",
+        "5b7be47f5acfc400170e2dd2",
+        "5bfebc320db8340019668d79",
+        "5c0517910db83400232ffee5",
+        "5cdeac22d7f00c000f26168f",
+        "5cdeac42d7f00c000d36ba73",
+        "5cdeac5cd7f00c000f261694",
+        "5cdeaca5d7f00c00b61c4b70",
+        "5ce69cbad7f00c00b61c5098",
+        "5d270b3c8abbc3105335cfb8",
+        "65f064eec4da400cbb0dc1fe"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 5,
+      "returnCondition": "e92b0efdc376faf3e6499c0e",
+      "killCondition": "733a1eb017e880b024ab9d69",
+      "referenceOffer": "0b561ec081dea0f1424a2528"
+    },
+    "e8664b4e4d9efeb2e8d64fa5": {
+      "weapon": "5c46fbd72e2216398b5a8c9c",
+      "requiredParts": [
+        "5c471b5d2e221602b21d4e14",
+        "5c471b7e2e2216152006e46c",
+        "5c471ba12e221602b3137d76",
+        "5c471bd12e221602b4129c3a",
+        "5c471be12e221602b66cd9ac",
+        "5c471bfc2e221602b21d4e17",
+        "5c471c2d2e22164bef5d077f",
+        "5c471c442e221602b542a6f8",
+        "5c471c6c2e221602b66cd9ae",
+        "5c471c842e221615214259b5",
+        "5c471cb32e221602b177afaa",
+        "5c82342f2e221644f31c060e",
+        "5e01e9e273d8eb11426f5bc3",
+        "5e01ea19e9dc277128008c0b"
+      ],
+      "exactParts": [
+        "5c471b5d2e221602b21d4e14",
+        "5c471b7e2e2216152006e46c",
+        "5c471ba12e221602b3137d76",
+        "5c471bd12e221602b4129c3a",
+        "5c471be12e221602b66cd9ac",
+        "5c471bfc2e221602b21d4e17",
+        "5c471c2d2e22164bef5d077f",
+        "5c471c442e221602b542a6f8",
+        "5c471c6c2e221602b66cd9ae",
+        "5c471c842e221615214259b5",
+        "5c471cb32e221602b177afaa",
+        "5c82342f2e221644f31c060e",
+        "5e01e9e273d8eb11426f5bc3",
+        "5e01ea19e9dc277128008c0b"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 10,
+      "returnCondition": "bbedcd762c9ca548b4156ed2",
+      "killCondition": "a8ba8a9191b4572fdac85001",
+      "referenceOffer": "52aa7ce3a3adf1128809dbdb"
+    },
+    "e5f9f43130dc27c6043bc99c": {
+      "weapon": "5df8ce05b11454561e39243b",
+      "requiredParts": [
+        "544909bb4bdc2d6f028b4577",
+        "5649be884bdc2d79388b4577",
+        "57af48872459771f0b2ebf11",
+        "57cffcd624597763133760c5",
+        "5888961624597754281f93f3",
+        "5a32aa8bc4a2826c6e06d737",
+        "5df8e085bb49d91fb446d6a8",
+        "5df8e4080b92095fd441e594",
+        "5df8f541c41b2312ea3335e3",
+        "5df916dfbb49d91fb446d6b9",
+        "5df917564a9f347bc92edca3",
+        "5dfa3d2b0dee1b22f862eade",
+        "5dfa3d45dfc58d14537c20b0",
+        "5dfa3d7ac41b2312ea33362a",
+        "5dfa3d950dee1b22f862eae0",
+        "5fc2369685fd526b824a5713",
+        "6130c43c67085e45ef1405a1",
+        "618ba27d9008e4636a67f61d",
+        "618ba92152ecee1505530bd3",
+        "618bab21526131765025ab3f",
+        "671126b049e181972e0681fa"
+      ],
+      "exactParts": [
+        "544909bb4bdc2d6f028b4577",
+        "5649be884bdc2d79388b4577",
+        "57af48872459771f0b2ebf11",
+        "57cffcd624597763133760c5",
+        "5888961624597754281f93f3",
+        "5a32aa8bc4a2826c6e06d737",
+        "5df8e085bb49d91fb446d6a8",
+        "5df8e4080b92095fd441e594",
+        "5df8f541c41b2312ea3335e3",
+        "5df916dfbb49d91fb446d6b9",
+        "5df917564a9f347bc92edca3",
+        "5dfa3d2b0dee1b22f862eade",
+        "5dfa3d45dfc58d14537c20b0",
+        "5dfa3d7ac41b2312ea33362a",
+        "5dfa3d950dee1b22f862eae0",
+        "5fc2369685fd526b824a5713",
+        "6130c43c67085e45ef1405a1",
+        "618ba27d9008e4636a67f61d",
+        "618ba92152ecee1505530bd3",
+        "618bab21526131765025ab3f",
+        "671126b049e181972e0681fa"
+      ],
+      "minimumDurability": 50,
+      "minimumMagazineCapacity": 20,
+      "returnCondition": "d77bc8bf36408d0b0baadb41",
+      "killCondition": "7819238adc76e6c2a4380bb3",
+      "referenceOffer": "99158e91ca159a776385e27a"
+    }
+  }
+}

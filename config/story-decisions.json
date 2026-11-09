@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "version": "2.7.0",
+  "choices": [
+    {
+      "id": "family_reply",
+      "commitStage": "complete",
+      "prerequisite": "9f2cb72dd8b17bfb23372a8a",
+      "rejectionMessage": "另一份回信已经寄出，这份草稿不再发送。",
+      "routes": [
+        {
+          "id": "signed",
+          "key": "familySigned",
+          "followupKey": "familySignedReply",
+          "title": "回信：署名草稿",
+          "followupTitle": "她认得这个名字",
+          "recipient": "询问玛丽娜下落的来信人，经克莱尔中继转交",
+          "scope": "指定来信人的回复频道；中继经手人能够阅读和转发，不作保密保证",
+          "authorization": "妮娜已同意发送自己的姓名、录音身份和过去的同事关系；不含现住址、患者资料及旧录音",
+          "payloadKey": "family_reply.signed.v1",
+          "payload": "我是妮娜·索科洛娃。录音里说话的是我，不是玛丽娜。我和她一起在原诊室工作过。原地址已经撤离，请不要再去。你来信中提到的事，我愿意继续答复。请说一件你和她之间的往事，不必写住址，也不要寄其他人的名单。"
+        },
+        {
+          "id": "relay",
+          "key": "familyRelay",
+          "followupKey": "familyRelayReply",
+          "title": "回信：呼号草稿",
+          "followupTitle": "请她自己回答",
+          "recipient": "询问玛丽娜下落的来信人，经克莱尔中继转交",
+          "scope": "指定来信人的回复频道；中继经手人能够阅读和转发，不作保密保证",
+          "authorization": "妮娜已同意确认录音不是玛丽娜的声音，并通过呼号继续联系；不含姓名、现住址、患者资料及旧录音",
+          "payloadKey": "family_reply.relay.v1",
+          "payload": "录音里说话的人不是玛丽娜。原诊室已经撤离，请不要再去。她以前的同事在这里，愿意经本频道继续答复。请说一件你和她之间的往事，不必写住址，也不要寄其他人的名单。此封由中继转交。"
+        }
+      ]
+    }
+  ]
+}

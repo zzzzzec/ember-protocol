@@ -1,0 +1,2895 @@
+[
+  {
+    "_id": "2a0bc8980d1bc784befd4e7b",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af47786f7746d404f3aaa",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d40419286f774318526545f"
+      }
+    ],
+    "productionTime": 1800,
+    "endProduct": "544fb25a4bdc2dfb738b4567",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 3,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "c44b627280a865ad61a01eb5",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d40419286f774318526545f"
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af47786f7746d404f3aaa",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2400,
+    "endProduct": "5e831507ea0a7c419c2f9bd9",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 3,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "1637021f8fa16290214e5095",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1500,
+    "endProduct": "544fb3364bdc2d34748b456a",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "c763132605e5f6d251bc1a44",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "544fb25a4bdc2dfb738b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2700,
+    "endProduct": "5755356824597772cb798962",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "95d6843de3e5df6ffc1d04c2",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af47786f7746d404f3aaa",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "4eb04c535d1ca06bb2de1e3f"
+      }
+    ],
+    "productionTime": 4500,
+    "endProduct": "590c661e86f7741e566b646a",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "969094a1adbdc232064d6b78",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 3,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5b4335ba86f7744d2837a264",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "544fb25a4bdc2dfb738b4567",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "74166e73283e0b0ff4cd1edf"
+      }
+    ],
+    "productionTime": 7200,
+    "endProduct": "544fb45d4bdc2dee738b4568",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "3d98351b5e38d5ed0fec0523",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af4a786f7746d3f3c3400",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e8488fa988a8701445df1e4",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "74166e73283e0b0ff4cd1edf"
+      }
+    ],
+    "productionTime": 9000,
+    "endProduct": "590c678286f77426c9660122",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "13cba5103dd6d13790a58303",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af4a786f7746d3f3c3400",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf83814088ec1a363d7097",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "619cc01e0a7c3a1a2731940c"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "298e69ad02bef5351d381a91"
+      }
+    ],
+    "productionTime": 10800,
+    "endProduct": "5d02778e86f774203e7dedbe",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "1efe2ad3b690f38a5bd95368",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 3
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 4,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5751a25924597722c463c472",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af4a786f7746d3f3c3400",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3f2d86f774253763b735",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "619cc01e0a7c3a1a2731940c"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "4e29526338a244110e8a9bfd"
+      }
+    ],
+    "productionTime": 18000,
+    "endProduct": "5d02797c86f774203f38e30a",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "599b3629ad17bc7641a17d51",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 3
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 6,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5b4335ba86f7744d2837a264",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e8488fa988a8701445df1e4",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "619cc01e0a7c3a1a2731940c"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "8e2961ebe1965773fe1af960"
+      }
+    ],
+    "productionTime": 18000,
+    "endProduct": "590c657e86f77412b013051d",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "c455a3b7822f15fbca826242",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 3
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3f2d86f774253763b735",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "62a0a043cf4a99369e2624a5",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "619cc01e0a7c3a1a2731940c"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "8e2961ebe1965773fe1af960"
+      }
+    ],
+    "productionTime": 14400,
+    "endProduct": "5c0e530286f7747fa1419862",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "8b1c517e2483f362c8fe627d",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Area",
+        "areaType": 6,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b385e86f774252167b98a",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b39a386f774252339976f"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "226d9ae8639ad413a494cf16"
+      }
+    ],
+    "productionTime": 7200,
+    "endProduct": "5448fee04bdc2dbc018b4567",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 4,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "bf361b65e77297d0055e3b68",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d90245977448f7b7f65",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5673de654bdc2d180f8b456d",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2700,
+    "endProduct": "57347d7224597744596b4e72",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "0cf704df0545a5b69c65220d",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "59e3577886f774176a362503",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "6c62302c4570171fe98264fc"
+      }
+    ],
+    "productionTime": 5400,
+    "endProduct": "57513f07245977207e26a311",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "a32bca034fe22a235373346b",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "57347da92459774491567cf5",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d90245977448f7b7f65",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d3d245977448f7b7f61",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af4a786f7746d3f3c3400",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "1ecc3fee40f96f3626fbf440"
+      }
+    ],
+    "productionTime": 7200,
+    "endProduct": "590c5d4b86f774784e1b9c45",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "06448a2db07b039bdabf86b1",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "590c5a7286f7747884343aea",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      }
+    ],
+    "productionTime": 3600,
+    "endProduct": "57372140245977611f70ee91",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 48,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "f3fc163e069d3fc3b735c798",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "590c5a7286f7747884343aea",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "d655e12b4f04d1e852711caf"
+      }
+    ],
+    "productionTime": 5400,
+    "endProduct": "5d6e6806a4b936088465b17e",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 32,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "9eac447bd5ae6a5bde79958b",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5d6fc78386f77449d825f9dc",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "12750a6e8c871c144895e105"
+      }
+    ],
+    "productionTime": 9000,
+    "endProduct": "56dff2ced2720bb4668b4567",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 64,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "20268bb835a194819fafa82b",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5d6fc78386f77449d825f9dc",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "12750a6e8c871c144895e105"
+      }
+    ],
+    "productionTime": 10800,
+    "endProduct": "5656d7c34bdc2d9d198b4587",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 48,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "c8d9da9d402e5cf71531882a",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 3
+      },
+      {
+        "type": "Tool",
+        "templateId": "544fb5454bdc2df8738b456a"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "d3df45ddf83ae7f36ba7b62f"
+      },
+      {
+        "type": "Item",
+        "templateId": "5d6fc78386f77449d825f9dc",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 10800,
+    "endProduct": "5e023e88277cce2b522ff2b1",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 32,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "75c091e5caea344bd4caaaa8",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1c819a86f774771b0acd6c",
+        "count": 3,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 3,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b39a386f774252339976f",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "544fb5454bdc2df8738b456a"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "12750a6e8c871c144895e105"
+      }
+    ],
+    "productionTime": 21600,
+    "endProduct": "5a0d63621526d8dba31fe3bf",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "160b6477b96c0caaa43ba2cf",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "590c5a7286f7747884343aea",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "252d36149bc8dfdca4633dff"
+      }
+    ],
+    "productionTime": 3600,
+    "endProduct": "57372140245977611f70ee91",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 72,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "96fc9c1d6bd0336493b45dc3",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d6fc78386f77449d825f9dc",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1c819a86f774771b0acd6c",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "bba7cc44f73619e08ba27148"
+      }
+    ],
+    "productionTime": 7200,
+    "endProduct": "56dff2ced2720bb4668b4567",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 96,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "24ad5b434474203faf29ff7d",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d6fc78386f77449d825f9dc",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1c819a86f774771b0acd6c",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "9fd70423403a7d984db0588d"
+      }
+    ],
+    "productionTime": 7200,
+    "endProduct": "5656d7c34bdc2d9d198b4587",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 72,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "6c65c87cc926e64c86dcd7aa",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "590c5a7286f7747884343aea",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "0cacd861878ddb32647bc5e7"
+      }
+    ],
+    "productionTime": 3600,
+    "endProduct": "5d6e6806a4b936088465b17e",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 48,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "aedd4611c8bcab60d741a39a",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 3
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b31ce86f7742523398394"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "94fd74058e00cec0d0f32c8e"
+      },
+      {
+        "type": "Item",
+        "templateId": "5d6fc78386f77449d825f9dc",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 7200,
+    "endProduct": "5e023e88277cce2b522ff2b1",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 40,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "808d3cd75138f734a617bdd5",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d7224597744596b4e72",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af4a786f7746d3f3c3400",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "bba7cc44f73619e08ba27148"
+      }
+    ],
+    "productionTime": 5400,
+    "endProduct": "590c5d4b86f774784e1b9c45",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "acbceb4524d4e8aa767c606b",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af47786f7746d404f3aaa",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d40419286f774318526545f"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "f5276177b69fca460a60c4c7"
+      }
+    ],
+    "productionTime": 1800,
+    "endProduct": "544fb25a4bdc2dfb738b4567",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 8,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "9becefd6d81f18d88b4bc171",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af47786f7746d404f3aaa",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d40419286f774318526545f"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "f5276177b69fca460a60c4c7"
+      }
+    ],
+    "productionTime": 2400,
+    "endProduct": "5e831507ea0a7c419c2f9bd9",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 4,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "0f642acc8376066d0135e5e9",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b385e86f774252167b98a",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d1b39a386f774252339976f"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "21e6b150e7ffd5d5af946e42"
+      }
+    ],
+    "productionTime": 3600,
+    "endProduct": "5448fee04bdc2dbc018b4567",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 4,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "fde46dd9497295ebd10fdff7",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d7224597744596b4e72",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d3d245977448f7b7f61",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "5d40419286f774318526545f"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "9b545ba79f33befde753defb"
+      }
+    ],
+    "productionTime": 5400,
+    "endProduct": "590c5d4b86f774784e1b9c45",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 3,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "da29d9e662f504593521031b",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "590c2b4386f77425357b6123"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "4546e2aaab3c0f791a8fd9ce"
+      }
+    ],
+    "productionTime": 2100,
+    "endProduct": "544fb3364bdc2d34748b456a",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 3,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "ca83986134616c931a876226",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5751a25924597722c463c472",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "619cc01e0a7c3a1a2731940c"
+      },
+      {
+        "type": "QuestComplete",
+        "questId": "21e6b150e7ffd5d5af946e42"
+      }
+    ],
+    "productionTime": 3600,
+    "endProduct": "5755356824597772cb798962",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 4,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "833f3abb9736fdcc5547a1cf",
+    "areaType": 10,
+    "requirements": [
+      {
+        "areaType": 10,
+        "requiredLevel": 3,
+        "type": "Area"
+      },
+      {
+        "templateId": "62a0a0bb621468534a797ad5",
+        "type": "Tool"
+      },
+      {
+        "templateId": "590c2e1186f77425357b6124",
+        "type": "Tool"
+      },
+      {
+        "templateId": "59d6088586f774275f37482f",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false,
+        "type": "Item"
+      },
+      {
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 4,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false,
+        "type": "Item"
+      },
+      {
+        "templateId": "5d1c819a86f774771b0acd6c",
+        "count": 4,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false,
+        "type": "Item"
+      },
+      {
+        "templateId": "5e2af22086f7746d3f3c33fa",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false,
+        "type": "Item"
+      },
+      {
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false,
+        "type": "Item"
+      },
+      {
+        "questId": "cd8f5b77ae4ef8d47ece31df",
+        "type": "QuestComplete"
+      }
+    ],
+    "productionTime": 10800,
+    "endProduct": "67d0576f29f580ebc10efd08",
+    "isEncoded": false,
+    "locked": true,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "060dfe6a65f7c39edc0bebe2",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af4a786f7746d3f3c3400",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1440,
+    "endProduct": "5e2af47786f7746d404f3aaa",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "66b92efeed5b10c0d2511d97",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af4a786f7746d3f3c3400",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1680,
+    "endProduct": "57347c1124597737fb1379e3",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "20b88be4c3605fa4caf6622f",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5751a25924597722c463c472",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1320,
+    "endProduct": "544fb25a4bdc2dfb738b4567",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "90ca9c17d6bb8a3f4a592720",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5b4335ba86f7744d2837a264",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "544fb25a4bdc2dfb738b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1620,
+    "endProduct": "5d1b3f2d86f774253763b735",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "7834d16356d4c83d1c5de7be",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "59e35ef086f7741777737012",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1920,
+    "endProduct": "57347c5b245977448d35f6e1",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "a31f6b58396babd5f96ad351",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "590c31c586f774245e3141b2",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "59e35ef086f7741777737012",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1560,
+    "endProduct": "57347c77245977448d35f6e2",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "5d1e6c3e76f003e83a66a85b",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5c06779c86f77426e00dd782",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347c1124597737fb1379e3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1980,
+    "endProduct": "59e35cbb86f7741778269d83",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "843fc339b07864e6c52abf23",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "590c5f0d86f77413997acfab",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1380,
+    "endProduct": "62a09ee4cf4a99369e262453",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "85038023f8d40ee94a33e71b",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af47786f7746d404f3aaa",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1260,
+    "endProduct": "577e1c9d2459773cd707c525",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "975a4de4e1746df77d9ce190",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "544fb37f4bdc2dee738b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "544fb25a4bdc2dfb738b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2280,
+    "endProduct": "5d1b3a5d86f774252167ba22",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "e56939424f6eec40c5f98efe",
+    "areaType": 2,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 2,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "59e35cbb86f7741778269d83",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347c1124597737fb1379e3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2160,
+    "endProduct": "5d1b39a386f774252339976f",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "0eac9607af29d78eeaa319ea",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "590a386e86f77429692b27ab",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1140,
+    "endProduct": "61bf7b6302b3924be92fa8c3",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "d48307ed873db23fed58c517",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "57347c1124597737fb1379e3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1080,
+    "endProduct": "5734795124597738002c6176",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "8d6bbf8b0820926537888c48",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "57347cd0245977445a2d6ff1",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5c06782b86f77426df5407d2",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5672cb124bdc2d1a0f8b4568",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1740,
+    "endProduct": "5d1b313086f77425227d1678",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "c79b1a3a1dacaa6d838772dc",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5c06779c86f77426e00dd782",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347cd0245977445a2d6ff1",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1920,
+    "endProduct": "59e36c6f86f774176c10a2a7",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "3d3a5c601446e845852632ab",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "590c31c586f774245e3141b2",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "544fb5454bdc2df8738b456a"
+      }
+    ],
+    "productionTime": 1860,
+    "endProduct": "573474f924597738002c6174",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "d110837ce65467ce5f272724",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "57347c2e24597744902c94a1",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1500,
+    "endProduct": "5c06779c86f77426e00dd782",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "cef9b5f8f587a00846d4a9f8",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "57347cd0245977445a2d6ff1",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 960,
+    "endProduct": "5909e99886f7740c983b9984",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "e6c4fd617cf21e745c486d21",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5672cb304bdc2dc2088b456a",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1080,
+    "endProduct": "5672cb124bdc2d1a0f8b4568",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "82a1e1b748fa9436a2f2763a",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "590c2d8786f774245b1f03f3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "590c31c586f774245e3141b2",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Tool",
+        "templateId": "544fb5454bdc2df8738b456a"
+      }
+    ],
+    "productionTime": 2160,
+    "endProduct": "62a0a098de7ac8199358053b",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "083ab94e543a1b8681683ade",
+    "areaType": 10,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 10,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5af0561e86f7745f5f3ad6ac",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5734795124597738002c6176",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2040,
+    "endProduct": "590a358486f77429692b2790",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "54c31130dfd1f8427c9e7f14",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "62a09ee4cf4a99369e262453",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2040,
+    "endProduct": "59e3606886f77417674759a5",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "236aba034159efac52dcfb5d",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5b4335ba86f7744d2837a264",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "59e361e886f774176c10a2a5",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1860,
+    "endProduct": "5d1b3a5d86f774252167ba22",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "7317b2156d5dfdddf9c0bc22",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "61bf7b6302b3924be92fa8c3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "590c31c586f774245e3141b2",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "544fb25a4bdc2dfb738b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1860,
+    "endProduct": "619cc01e0a7c3a1a2731940c",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "4f9d7d5a9e80d8a4bd7c0905",
+    "areaType": 7,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 7,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3f2d86f774253763b735",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347c1124597737fb1379e3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "544fb25a4bdc2dfb738b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2460,
+    "endProduct": "5b4335ba86f7744d2837a264",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "12d65c739a2bba67fcf4248a",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5bc9c29cd4351e003562b8a3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1620,
+    "endProduct": "5673de654bdc2d180f8b456d",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "a54e382fc979f6e6fa4897e7",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d5f245977448b40fa81",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1740,
+    "endProduct": "5673de654bdc2d180f8b456d",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "f7b12b188e729134489fe6af",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5448ff904bdc2d6f028b456e",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1380,
+    "endProduct": "57347d3d245977448f7b7f61",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "b6ebbcf5a8f1eea649bc776d",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5734773724597737fd047c14",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1920,
+    "endProduct": "575146b724597720a27126d5",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "cd91bfed39e9e8cad325fb86",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d90245977448f7b7f65",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1980,
+    "endProduct": "575146b724597720a27126d5",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "c92b226ef284af27056092b7",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "575062b524597720a31c09a1",
+        "count": 3,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "59e3577886f774176a362503",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "577e1c9d2459773cd707c525",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2040,
+    "endProduct": "5bc9be8fd4351e00334cae6e",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "405ac2b99e1e8e376b1f7343",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "590c5d4b86f774784e1b9c45",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1800,
+    "endProduct": "57347d692459774491567cf1",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "06ef6603cf4b5f2e8c34552f",
+    "areaType": 8,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 8,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b3a5d86f774252167ba22",
+        "count": 3,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347d692459774491567cf1",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2580,
+    "endProduct": "62a0a043cf4a99369e2624a5",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "1d17933272d933c9837418f6",
+    "areaType": 6,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 6,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "57514643245977207f2c2d09",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 1620,
+    "endProduct": "5448fee04bdc2dbc018b4567",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 2,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "e67026f8d87a50dfc97907dd",
+    "areaType": 6,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 6,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "5448fee04bdc2dbc018b4567",
+        "count": 5,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5e2af4a786f7746d3f3c3400",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "57347c1124597737fb1379e3",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 2220,
+    "endProduct": "60098b1705871270cd5352a1",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "bc039c676fb834ace4d956fd",
+    "areaType": 6,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 6,
+        "requiredLevel": 2
+      },
+      {
+        "type": "Item",
+        "templateId": "590c595c86f7747884343ad7",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5d1b39a386f774252339976f",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 3360,
+    "endProduct": "5d1b385e86f774252167b98a",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  },
+  {
+    "_id": "caba7eaebc39e2587139296c",
+    "areaType": 11,
+    "requirements": [
+      {
+        "type": "Area",
+        "areaType": 11,
+        "requiredLevel": 1
+      },
+      {
+        "type": "Item",
+        "templateId": "573477e124597737dd42e191",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "590a386e86f77429692b27ab",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "590a3b0486f7743954552bdb",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "56742c324bdc2d150f8b456d",
+        "count": 1,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      },
+      {
+        "type": "Item",
+        "templateId": "5c06782b86f77426df5407d2",
+        "count": 2,
+        "isEncoded": false,
+        "isFunctional": false,
+        "isSpawnedInSession": false
+      }
+    ],
+    "productionTime": 4320,
+    "endProduct": "590c392f86f77444754deb29",
+    "isEncoded": false,
+    "locked": false,
+    "needFuelForAllProductionTime": false,
+    "continuous": false,
+    "count": 1,
+    "productionLimitCount": 0,
+    "isCodeProduction": false
+  }
+]

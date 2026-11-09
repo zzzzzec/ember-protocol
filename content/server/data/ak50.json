@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "quests": {
+    "workbench": "cd8f5b77ae4ef8d47ece31df",
+    "deposit": "fecbaeb93c624b6f6c134c4d",
+    "handoff": "765b2135febbf35719bbe690"
+  },
+  "nativeRecipe": "6839a4b18b47de9b76007028",
+  "recipe": "833f3abb9736fdcc5547a1cf",
+  "weapon": "67d0576f29f580ebc10efd08",
+  "handguard": "683ed6ccd9a096739b0c9228",
+  "sourceMap": "interchange",
+  "sourceSpot": "loot_shop_oli_vedodmost [32f2ae26-2b72-48d9-9e88-78fec69ad370]",
+  "relocatedSpot": "ember_ak50_handguard [fab4a25e-e5ea-4fc7-b6e4-bd8816699f57]",
+  "relocatedItemId": "5213292afab9e56eeb864fff",
+  "ammo": [
+    "67d41936f378a36c4706eeb9",
+    "67dc255ee3028a8b120efc48"
+  ]
+}

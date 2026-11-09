@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework><LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Codex.StashQuickSell</AssemblyName><Version>1.1.1</Version>
+    <UseSharedCompilation>false</UseSharedCompilation>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../client/Client.csproj" Private="false" />
+    <EmbeddedResource Include="i18n\*.json" />
+    <Reference Include="BepInEx" HintPath="$(GameRoot)\BepInEx\core\BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(GameRoot)\BepInEx\core\0Harmony.dll" Private="false" />
+    <Reference Include="spt-reflection" HintPath="$(GameRoot)\BepInEx\plugins\spt\spt-reflection.dll" Private="false" />
+    <Reference Include="Assembly-CSharp" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="Comfort" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\Comfort.dll" Private="false" />
+    <Reference Include="Comfort.Unity" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\Comfort.Unity.dll" Private="false" />
+    <Reference Include="CommonExtensions" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\CommonExtensions.dll" Private="false" />
+    <Reference Include="Sirenix.Serialization" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\Sirenix.Serialization.dll" Private="false" />
+    <Reference Include="Newtonsoft.Json" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\Newtonsoft.Json.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UI" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\UnityEngine.UI.dll" Private="false" />
+    <Reference Include="Unity.TextMeshPro" HintPath="$(GameRoot)\EscapeFromTarkov_Data\Managed\Unity.TextMeshPro.dll" Private="false" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "trigger": "540537731bd6ddf7293984ae",
+  "parts": "e9cb3aed4b612c0c39e7668d",
+  "repair": "0a3aed2d4c6621b7954529f3",
+  "repairCondition": "627e0eb9c08cf39a8989ddb8",
+  "scout": "85705beb2665cb4fbd6efc4b",
+  "scoutCondition": "cd228aa226ed4b46009dfdd4",
+  "plantCondition": "9b328fe88d08d61498f371ce",
+  "plantZone": "ember_lab_power_placement"
+}

@@ -1,0 +1,14 @@
+* text=auto
+/.gitattributes text eol=lf
+/.gitignore text eol=lf
+*.cs text eol=lf
+*.csproj text eol=lf
+*.props text eol=lf
+*.json text eol=lf
+mods.lock.json text eol=crlf
+*.cfg text eol=lf -whitespace
+*.py text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.md text eol=lf
+*.png binary

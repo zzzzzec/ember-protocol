@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><TargetFramework>netstandard2.1</TargetFramework><LangVersion>latest</LangVersion><Nullable>enable</Nullable><EnableDefaultCompileItems>false</EnableDefaultCompileItems><AssemblyName>Codex.ZombieSurvival.Client</AssemblyName><Version>2.19.0</Version><UseSharedCompilation>false</UseSharedCompilation></PropertyGroup>
+ <ItemGroup><Compile Include="Client.cs" /><Compile Include="WeaponTrials.cs" /><Compile Include="ThreatActors.cs" /><Compile Include="ThreatArmor.cs" /><Compile Include="../shared/ThreatPolicy.cs" Link="ThreatPolicy.cs" /><Compile Include="ClientDiagnostics.cs" /><Compile Include="BoundedHearing.cs" /><Compile Include="InfectedAwareness.cs" /><Compile Include="InfectedIdleBudget.cs" /><Compile Include="InfectedPatrol.cs" /><Compile Include="InfectedWeaponActivation.cs" /><Compile Include="FiniteWaves.cs" /><Compile Include="RaidLoading.cs" /><Compile Include="LabBlackout.cs" /><Compile Include="SkillProgression.cs" /><Compile Include="InfectedAudio.cs" /><Compile Include="PauseCompatibility.cs" /><Compile Include="../shared/LoadingPolicy.cs" Link="LoadingPolicy.cs" /><Compile Include="../shared/WavePolicy.cs" Link="WavePolicy.cs" /><Compile Include="../shared/PatrolPolicy.cs" Link="PatrolPolicy.cs" /><Compile Include="../shared/AwarenessPolicy.cs" Link="AwarenessPolicy.cs" /><Compile Include="../shared/HearingPolicy.cs" Link="HearingPolicy.cs" />
+ <Compile Include="MapAbundance.cs" />
+ <Reference Include="Unity.TextMeshPro" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/Unity.TextMeshPro.dll" Private="false" />
+ <Reference Include="UnityEngine.UI" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.UI.dll" Private="false" />
+ <Reference Include="Newtonsoft.Json" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/Newtonsoft.Json.dll" Private="false" />
+ <Reference Include="spt-common" HintPath="$(GameRoot)/BepInEx/plugins/spt/spt-common.dll" Private="false" />
+ <Reference Include="BepInEx" HintPath="$(GameRoot)/BepInEx/core/BepInEx.dll" Private="false" />
+ <Reference Include="0Harmony" HintPath="$(GameRoot)/BepInEx/core/0Harmony.dll" Private="false" />
+ <Reference Include="Assembly-CSharp" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/Assembly-CSharp.dll" Private="false" />
+ <Reference Include="Comfort" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/Comfort.dll" Private="false" />
+ <Reference Include="DissonanceVoip" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/DissonanceVoip.dll" Private="false" />
+ <Reference Include="UnityEngine" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.dll" Private="false" />
+ <Reference Include="UnityEngine.CoreModule" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.CoreModule.dll" Private="false" />
+ <Reference Include="UnityEngine.PhysicsModule" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.PhysicsModule.dll" Private="false" />
+ <Reference Include="Sirenix.Serialization" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/Sirenix.Serialization.dll" Private="false" />
+  <Reference Include="ItemComponent.Types" HintPath="$(GameRoot)/EscapeFromTarkov_Data/Managed/ItemComponent.Types.dll" Private="false" />
+ </ItemGroup>
+</Project>

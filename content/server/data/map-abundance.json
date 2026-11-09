@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "maps": {
+    "sandbox": {
+      "main": [
+        "bfcd67383f01173ee8820e48",
+        "f93a45179ff24a145c595c74",
+        "226d9ae8639ad413a494cf16",
+        "a8b645968b8ce43d0d5811f0",
+        "86f2cef2dda9cbebe5aae0a5",
+        "b9ab764d65b132d70944b570",
+        "f18545b64019bb84bbc1fcfa"
+      ],
+      "side": [
+        "14b6e9c7d838651c1c92214b",
+        "fe5c80449bfbe129b741049b",
+        "93d8ee73d94f5e3953cf126f",
+        "10869cd34cdcb2c7898805cf"
+      ]
+    },
+    "bigmap": {
+      "main": [
+        "252d36149bc8dfdca4633dff",
+        "a13e0034770157cdc5a98cbc",
+        "8f317947fb0090656fd08f2f",
+        "9f2cb72dd8b17bfb23372a8a",
+        "0cacd861878ddb32647bc5e7",
+        "ec539c673ba2012e2104e0c4"
+      ],
+      "side": [
+        "dc78ea0e1c44d4160a222b97",
+        "4dbbd899342ce6dfb2b9b43f",
+        "345298adc4ea0d6ed70462d4",
+        "f1b276a888d9f080a2af1c55",
+        "e778ba981aa4cf8b704a9c7e",
+        "38057c5a2231e980bf38d02c"
+      ]
+    },
+    "interchange": {
+      "main": [
+        "4ae41ef71256078a50843d28",
+        "4fcafab0509d2256ba7d06bb",
+        "69223725a1d615825140e25c",
+        "bba7cc44f73619e08ba27148",
+        "83fd27ec838aae58b1c86a35"
+      ],
+      "side": [
+        "7fe67dbb4f787aae62d3a32f",
+        "55b6249e2da11677091a0ab7",
+        "9b545ba79f33befde753defb",
+        "f84f577510f9ef678691cf5e",
+        "3e270f4b6d8d1568ba84e6b0",
+        "1a2ea60af0cb01341b99a9bb",
+        "cacfde782f6ea33700c730b7"
+      ]
+    },
+    "factory": {
+      "main": [
+        "6ce394a754d03d20f5847310",
+        "9fd70423403a7d984db0588d",
+        "e02c238a2f39d6e2362112de",
+        "a99fc9f77e1b312cb02ae0b1",
+        "c07c3c291ac2c0d3135492ad"
+      ],
+      "side": [
+        "c8d4fb36c485794c647bd0c4",
+        "c8590c3ff897fec0afd1c845",
+        "c999c40a3160e868f6e189b8",
+        "5853ecf1df1602709f041467",
+        "122662c5c8021ce11887c5f1",
+        "c1a7930972a68751ff8990b8"
+      ]
+    },
+    "rezervbase": {
+      "main": [
+        "fe0fa858b6c969579920b60f",
+        "bc4f4444065379e4c0df6467",
+        "a1411d69e3fa8e3157336460",
+        "598dd21659089848ba384ab8",
+        "94fd74058e00cec0d0f32c8e",
+        "4b33280fcadd5086d86c2b8c"
+      ],
+      "side": [
+        "28ce6e603f0271344b3bd91e",
+        "c4b37cd727f1a0d5ea42bb38",
+        "a6b093b16e0287d0abb93802",
+        "dde51ec2e3fcc1ef6aa13bf3",
+        "402341ba13191fea2b6e260f",
+        "972bc733f72a884be0449fe9"
+      ]
+    },
+    "laboratory": {
+      "main": [
+        "540537731bd6ddf7293984ae",
+        "b362969324ed284eda3ea2d1",
+        "5d379630c76894ee9cce80e9",
+        "0f2b6a64d95afbe50227bd1e",
+        "7cc011a4bbef8822a8ecb9a4"
+      ],
+      "side": [
+        "ec4ae41063a524baae81dd2b",
+        "85705beb2665cb4fbd6efc4b",
+        "e9cb3aed4b612c0c39e7668d",
+        "0a3aed2d4c6621b7954529f3",
+        "1a371711f405d1490eada5c9",
+        "77e1e820bda4a8c557d54266"
+      ]
+    }
+  },
+  "shared": {
+    "7df1d9213abbe50eb40288db": [
+      "rezervbase",
+      "laboratory"
+    ],
+    "e5f9f43130dc27c6043bc99c": [
+      "rezervbase",
+      "laboratory"
+    ],
+    "765b2135febbf35719bbe690": [
+      "bigmap",
+      "rezervbase"
+    ]
+  }
+}

@@ -1,0 +1,1138 @@
+{
+  "title": "余烬协议",
+  "version": "2.12.4",
+  "main": [
+    {
+      "id": "bfcd67383f01173ee8820e48",
+      "index": 1,
+      "title": "借住一晚",
+      "chapter": 1
+    },
+    {
+      "id": "f93a45179ff24a145c595c74",
+      "index": 2,
+      "title": "有去有回",
+      "chapter": 1
+    },
+    {
+      "id": "226d9ae8639ad413a494cf16",
+      "index": 3,
+      "title": "多出的一份",
+      "chapter": 1
+    },
+    {
+      "id": "a8b645968b8ce43d0d5811f0",
+      "index": 4,
+      "title": "凳子矮了一截",
+      "chapter": 1
+    },
+    {
+      "id": "86f2cef2dda9cbebe5aae0a5",
+      "index": 5,
+      "title": "灯还亮着",
+      "chapter": 1
+    },
+    {
+      "id": "252d36149bc8dfdca4633dff",
+      "index": 6,
+      "title": "再往前一段",
+      "chapter": 2
+    },
+    {
+      "id": "a13e0034770157cdc5a98cbc",
+      "index": 7,
+      "title": "同样的停顿",
+      "chapter": 2
+    },
+    {
+      "id": "8f317947fb0090656fd08f2f",
+      "index": 8,
+      "title": "先让我进去",
+      "chapter": 2
+    },
+    {
+      "id": "9f2cb72dd8b17bfb23372a8a",
+      "index": 9,
+      "title": "更正",
+      "chapter": 2
+    },
+    {
+      "id": "0cacd861878ddb32647bc5e7",
+      "index": 10,
+      "title": "走一趟看看",
+      "chapter": 2
+    },
+    {
+      "id": "4ae41ef71256078a50843d28",
+      "index": 11,
+      "title": "没亮灯的商店",
+      "chapter": 3
+    },
+    {
+      "id": "4fcafab0509d2256ba7d06bb",
+      "index": 12,
+      "title": "药箱上的日期",
+      "chapter": 3
+    },
+    {
+      "id": "69223725a1d615825140e25c",
+      "index": 13,
+      "title": "风机旁边",
+      "chapter": 3
+    },
+    {
+      "id": "bba7cc44f73619e08ba27148",
+      "index": 14,
+      "title": "晚饭先不谈这个",
+      "chapter": 3
+    },
+    {
+      "id": "83fd27ec838aae58b1c86a35",
+      "index": 15,
+      "title": "问过再写",
+      "chapter": 3
+    },
+    {
+      "id": "6ce394a754d03d20f5847310",
+      "index": 16,
+      "title": "老车间",
+      "chapter": 4
+    },
+    {
+      "id": "9fd70423403a7d984db0588d",
+      "index": 17,
+      "title": "手工生产线",
+      "chapter": 4
+    },
+    {
+      "id": "e02c238a2f39d6e2362112de",
+      "index": 18,
+      "title": "两趟路",
+      "chapter": 4
+    },
+    {
+      "id": "a99fc9f77e1b312cb02ae0b1",
+      "index": 19,
+      "title": "挨枪子的事",
+      "chapter": 4
+    },
+    {
+      "id": "fe0fa858b6c969579920b60f",
+      "index": 20,
+      "title": "电网的另一边",
+      "chapter": 4
+    },
+    {
+      "id": "bc4f4444065379e4c0df6467",
+      "index": 21,
+      "title": "门那边的人",
+      "chapter": 5
+    },
+    {
+      "id": "a1411d69e3fa8e3157336460",
+      "index": 22,
+      "title": "读得懂的那一页",
+      "chapter": 5
+    },
+    {
+      "id": "598dd21659089848ba384ab8",
+      "index": 23,
+      "title": "车厢里空着",
+      "chapter": 5
+    },
+    {
+      "id": "94fd74058e00cec0d0f32c8e",
+      "index": 24,
+      "title": "留在这里的副本",
+      "chapter": 5
+    },
+    {
+      "id": "540537731bd6ddf7293984ae",
+      "index": 25,
+      "title": "没说出口的话",
+      "chapter": 6
+    },
+    {
+      "id": "b362969324ed284eda3ea2d1",
+      "index": 26,
+      "title": "有人在那边",
+      "chapter": 6
+    },
+    {
+      "id": "5d379630c76894ee9cce80e9",
+      "index": 27,
+      "title": "她自己的回答",
+      "chapter": 6
+    },
+    {
+      "id": "0f2b6a64d95afbe50227bd1e",
+      "index": 28,
+      "title": "只写了我的名字",
+      "chapter": 6
+    },
+    {
+      "id": "7cc011a4bbef8822a8ecb9a4",
+      "index": 29,
+      "title": "留给下个人",
+      "chapter": 6
+    },
+    {
+      "id": "b9ab764d65b132d70944b570",
+      "index": 30,
+      "title": "晚一点再收",
+      "chapter": 6
+    },
+    {
+      "id": "9de80704f47677d6e875e60a",
+      "index": 31,
+      "title": "这次有问句",
+      "chapter": 7
+    },
+    {
+      "id": "421b3112ae53be7462a82ba1",
+      "index": 32,
+      "title": "她要两份",
+      "chapter": 7
+    },
+    {
+      "id": "ec539c673ba2012e2104e0c4",
+      "index": 33,
+      "title": "两条路分开写",
+      "chapter": 7
+    },
+    {
+      "id": "c07c3c291ac2c0d3135492ad",
+      "index": 34,
+      "title": "把门留到最后",
+      "chapter": 7
+    },
+    {
+      "id": "330622e11bf9f00cd9bea779",
+      "index": 35,
+      "title": "只给收件的人",
+      "chapter": 7
+    },
+    {
+      "id": "302c697c45e1a9d7b14b4cd7",
+      "index": 36,
+      "title": "给各人留一格",
+      "chapter": 7
+    },
+    {
+      "id": "4b33280fcadd5086d86c2b8c",
+      "index": 37,
+      "title": "约好的那一声",
+      "chapter": 7
+    },
+    {
+      "id": "f18545b64019bb84bbc1fcfa",
+      "index": 38,
+      "title": "有人想先坐一会儿",
+      "chapter": 7
+    }
+  ],
+  "skillTraining": [
+    { "id": "field", "eliteQuest": 33, "skills": ["Endurance", "Strength", "Perception", "Attention", "Search", "CovertMovement"] },
+    { "id": "care", "eliteQuest": 34, "skills": ["Health", "Vitality", "Metabolism", "StressResistance", "Immunity", "Surgery"] },
+    { "id": "workshop", "eliteQuest": 35, "skills": ["Crafting", "HideoutManagement", "WeaponTreatment", "Intellect", "Charisma"] },
+    { "id": "firearms", "eliteQuest": 32, "skills": ["Pistol", "SMG", "Assault", "Shotgun", "DMR", "MagDrills"] },
+    { "id": "protection", "eliteQuest": 35, "skills": ["LightVests", "HeavyVests", "AimDrills", "Throwing"] }
+  ],
+  "chapters": [
+    "焦土上的灯",
+    "错误的回声",
+    "商场夜班",
+    "工业心脏",
+    "灰潮",
+    "黎明信号",
+    "各自的一份"
+  ],
+  "events": [
+    {
+      "id": "echo",
+      "name": "回声危机",
+      "map": "bigmap",
+      "starts": "a13e0034770157cdc5a98cbc",
+      "ends": "9f2cb72dd8b17bfb23372a8a",
+      "total": 140,
+      "shooters": 10,
+      "chestMultiplier": 1.1
+    },
+    {
+      "id": "nightshift",
+      "name": "商场夜班",
+      "map": "interchange",
+      "starts": "4fcafab0509d2256ba7d06bb",
+      "ends": "83fd27ec838aae58b1c86a35",
+      "total": 140,
+      "shooters": 12,
+      "chestMultiplier": 1.1
+    },
+    {
+      "id": "greytide",
+      "name": "灰潮",
+      "map": "rezervbase",
+      "starts": "fe0fa858b6c969579920b60f",
+      "ends": "598dd21659089848ba384ab8",
+      "total": 190,
+      "shooters": 24,
+      "chestMultiplier": 1.1
+    },
+    {
+      "id": "fuse",
+      "name": "熔断",
+      "map": "laboratory",
+      "starts": "b362969324ed284eda3ea2d1",
+      "ends": "0f2b6a64d95afbe50227bd1e",
+      "total": 230,
+      "shooters": 32,
+      "chestMultiplier": 1.1
+    }
+  ],
+  "ending": "b9ab764d65b132d70944b570",
+  "containers": [
+    {
+      "key": "beta",
+      "quest": "6e4c7d9d6d499560b1535974",
+      "item": "5857a8b324597729ab0a0e7d",
+      "cells": 6
+    },
+    {
+      "key": "epsilon",
+      "quest": "44d675653639200720066173",
+      "item": "59db794186f77448bc595262",
+      "cells": 8
+    },
+    {
+      "key": "gamma",
+      "quest": "b5b4f22cef0ccbdf9b44f344",
+      "item": "5857a8bc2459772bad15db29",
+      "cells": 9
+    },
+    {
+      "key": "kappa",
+      "quest": "7de28c15f386f8ebb9f2411e",
+      "item": "5c093ca986f7740a1867ab12",
+      "cells": 12
+    }
+  ],
+  "collector": "7de28c15f386f8ebb9f2411e",
+  "collectorItems": [
+    "5bc9c377d4351e3bac12251b",
+    "5bc9c049d4351e44f824d360",
+    "5bc9b355d4351e6d1509862a",
+    "5bc9bc53d4351e00367fbcee",
+    "5bc9bdb8d4351e003562b8a1",
+    "5bc9b9ecd4351e3bac122519",
+    "5bc9b720d4351e450201234b",
+    "5bc9b156d4351e00367fbce9",
+    "5bc9c29cd4351e003562b8a3",
+    "5e54f62086f774219b0f1937",
+    "5e54f6af86f7742199090bf3",
+    "5bc9be8fd4351e00334cae6e",
+    "5f745ee30acaeb0d490d8c5b",
+    "60b0f93284c20f0feb453da7",
+    "60b0f7057897d47c5b04ab94",
+    "60b0f6c058e0b0481a09ad11",
+    "60b0f561c4449e4cb624c1d7",
+    "62a09e974f842e1bd12da3f0",
+    "62a09e73af34e73a266d932a",
+    "62a09d3bcf4a99369e262447",
+    "62a09cfe4f842e1bd12da3e4",
+    "62a09cb7a04c0c5c6e0a84f8",
+    "62a091170b9d3c46de5b6cf2",
+    "62a08f4c4f842e1bd12d9d62"
+  ],
+  "acquisition": {
+    "5673de654bdc2d180f8b456d": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5448fee04bdc2dbc018b4567": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5e2af47786f7746d404f3aaa": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5d1b3a5d86f774252167ba22": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "544fb25a4bdc2dfb738b4567": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5c06779c86f77426e00dd782": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "590a358486f77429692b2790": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "590a3c0a86f774385a33c450": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5d1b304286f774253763a528": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "590a3b0486f7743954552bdb": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5d1b313086f77425227d1678": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5af0561e86f7745f5f3ad6ac": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5b4335ba86f7744d2837a264": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "59e3606886f77417674759a5": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5d1b3f2d86f774253763b735": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "590c5d4b86f774784e1b9c45": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "57347d7224597744596b4e72": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "59e3577886f774176a362503": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5d1c819a86f774771b0acd6c": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "61bf7b6302b3924be92fa8c3": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5d1b31ce86f7742523398394": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5e2af4a786f7746d3f3c3400": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5e2af4d286f7746d4159f07a": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "57347c2e24597744902c94a1": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5d1b2fa286f77425227d1674": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5c06782b86f77426df5407d2": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5d1c774f86f7746d6620f8db": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "590a3efd86f77437d351a25b": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "590c392f86f77444754deb29": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "590c621186f774138d11ea29": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "590c645c86f77412b01304d9": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "57347c5b245977448d35f6e1": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "57347c77245977448d35f6e2": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5e2af41e86f774755a234b67": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5734795124597738002c6176": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "61bf83814088ec1a363d7097": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9c377d4351e3bac12251b": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9c049d4351e44f824d360": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9b355d4351e6d1509862a": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9bc53d4351e00367fbcee": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9bdb8d4351e003562b8a1": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9b9ecd4351e3bac122519": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9b720d4351e450201234b": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9b156d4351e00367fbce9": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9c29cd4351e003562b8a3": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5e54f62086f774219b0f1937": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5e54f6af86f7742199090bf3": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9be8fd4351e00334cae6e": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5f745ee30acaeb0d490d8c5b": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "60b0f93284c20f0feb453da7": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "60b0f7057897d47c5b04ab94": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "60b0f6c058e0b0481a09ad11": [
+      "bigmap",
+      "rezervbase"
+    ],
+    "60b0f561c4449e4cb624c1d7": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "62a09e974f842e1bd12da3f0": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "62a09e73af34e73a266d932a": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "62a09d3bcf4a99369e262447": [
+      "bigmap",
+      "rezervbase"
+    ],
+    "62a09cfe4f842e1bd12da3e4": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "62a09cb7a04c0c5c6e0a84f8": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "62a091170b9d3c46de5b6cf2": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "62a08f4c4f842e1bd12d9d62": [
+      "bigmap",
+      "factory4_day",
+      "interchange",
+      "laboratory",
+      "rezervbase",
+      "sandbox"
+    ],
+    "5bc9c1e2d4351e00367fbcf0": [
+      "factory4_day",
+      "factory4_night",
+      "rezervbase",
+      "laboratory"
+    ],
+    "5fc64ea372b0dd78d51159dc": [
+      "rezervbase",
+      "laboratory"
+    ]
+  },
+  "sideStories": [
+    {
+      "title": "修理台",
+      "quests": [
+        "2efbbfee5258b36a687fa86f",
+        "1cc8108baea3aaacea3cab24",
+        "d28fb5681ad176f2d2e30f00",
+        "74584f05f68e7901aa6f1574"
+      ]
+    },
+    {
+      "title": "黑商的账",
+      "quests": [
+        "a64fabf92c367700176b3f0f",
+        "57c40a8831b4259c2bf93809",
+        "7373093b4c095816b10e0ddd"
+      ]
+    },
+    {
+      "title": "夜车",
+      "quests": [
+        "5e3e87fd3dd8498f4f653e40",
+        "4dbbd899342ce6dfb2b9b43f",
+        "704a12ee5ccad045b744bcd9",
+        "a616150e2e92b1a310c348c8",
+        "cacfde782f6ea33700c730b7",
+        "893edd8b4599d6958e0dc547",
+        "98db2241a47a1c3033213b9c",
+        "c1a7930972a68751ff8990b8",
+        "833a93f5c21b5052efd40612"
+      ]
+    },
+    {
+      "title": "妮娜的医疗站",
+      "quests": [
+        "83dd221f3e807298b51f6b6c",
+        "f5276177b69fca460a60c4c7",
+        "55b6249e2da11677091a0ab7",
+        "21e6b150e7ffd5d5af946e42",
+        "9de5cce732c21ebe9805fc62",
+        "77e1e820bda4a8c557d54266"
+      ]
+    },
+    {
+      "title": "有人回话",
+      "quests": [
+        "a556ad0f206552173012ab28",
+        "dc78ea0e1c44d4160a222b97",
+        "5b8916036980df63e5faf953",
+        "a5a3c84fe314fdf22c40e014",
+        "4f1b7112351f801c59c9be5e",
+        "1a371711f405d1490eada5c9"
+      ]
+    },
+    {
+      "title": "营地里的架子",
+      "quests": [
+        "c108f38a767d90f488c0b299",
+        "4546e2aaab3c0f791a8fd9ce",
+        "c15c832a91a3f62760ebe9da",
+        "9b545ba79f33befde753defb",
+        "849ca0023a95695fea7268ec",
+        "0cc6b16af3580f218dcc02f5"
+      ]
+    },
+    {
+      "title": "最后一笔账",
+      "quests": [
+        "27a2b1b55087606f6d30565c",
+        "9847c9447eb42c56d545e145",
+        "029594ba98962f03f514d87c",
+        "c8590c3ff897fec0afd1c845",
+        "e40ef9824630ab4068f6db9f",
+        "efaa3740859e21c81e8d64b2"
+      ]
+    },
+    {
+      "title": "门边的出勤簿",
+      "quests": [
+        "f4950b88027d14bf9ba4183f",
+        "34dda18796b68738a09a5723",
+        "d5dc91d87f19dca66f864af3"
+      ]
+    },
+    {
+      "title": "艾玛的行李",
+      "quests": [
+        "c394ec3eac3ff16e343459e7",
+        "a00dabb1e0cfb69941951cc5",
+        "1c5cf004621d33b97cb84ff4"
+      ]
+    },
+    {
+      "title": "卡佳的器材间",
+      "quests": [
+        "329059c5bd7f751fdb39d91b",
+        "6157df273ae6968951e9f2af",
+        "7ef464b7898cfeaa0d182444"
+      ]
+    },
+    {
+      "title": "纸背面的街",
+      "quests": [
+        "d59ca94b0e1c99294ed9f708",
+        "1dbc8d8cbd40b1ec7ba41cc4",
+        "bb8dc90f84669829486f7926"
+      ]
+    },
+    {
+      "title": "诊室的第二班",
+      "quests": [
+        "8988e4beb6e13eeb56a2fae4",
+        "8e8825890347e4cc1fd5d443",
+        "b6c16aedc41fb11779987a9f",
+        "659d8aabf71f2d8d06730807",
+        "10869cd34cdcb2c7898805cf",
+        "f8e5a14cd486d5d0a7f87b07"
+      ]
+    },
+    {
+      "title": "归还那把钥匙",
+      "quests": [
+        "88d6c97c01c4bf1f28150cb4",
+        "22661fe7458185a9f2a11685",
+        "8d2878c31af93fdf66383d8e",
+        "c4b37cd727f1a0d5ea42bb38",
+        "53edaa3534e864c6af8fdc76",
+        "18644905c1c853f707c6007d"
+      ]
+    },
+    {
+      "title": "借一个频道",
+      "quests": [
+        "ac4ef9ca8aac31a703612ea9",
+        "fe5c80449bfbe129b741049b",
+        "f29a1fa2f0ecb2b876b32ea1",
+        "3684347e0e7b86ac647ca70c",
+        "bb4a51970f0b65fc65bfa96a",
+        "cdb297f659b2c2628886709d"
+      ]
+    },
+    {
+      "title": "回话的窗口",
+      "quests": [
+        "e80b5ffd4caeda8bd8a8bb3c",
+        "012f297e80c301a9b2651e3a",
+        "a6b093b16e0287d0abb93802",
+        "0ba1cbb83a84e84fca12c5f5",
+        "165cf1e7e26f37656ccb0e4e",
+        "f1e4d2cf8ac0e06362ad9801"
+      ]
+    },
+    {
+      "title": "一趟短途的账",
+      "quests": [
+        "be492281f248f8b62822ae6c",
+        "77c5ac22eea6cc8cf6f98245",
+        "d33d7e759d8e19d58732af61",
+        "8e454271290c7bf90cf68f96",
+        "0929f6b0cfca58c5f5cbd6d2",
+        "b35bf35f05cd25d81a873192"
+      ]
+    },
+    {
+      "title": "空返也算一程",
+      "quests": [
+        "eb1847e40dc79b3f9892d208",
+        "46e617aec452bd759b6e61e6",
+        "98afbe5d3e65ffa4adf55e4e",
+        "5d44ee9b5bb9c0a089b1cc75",
+        "f84f577510f9ef678691cf5e",
+        "402341ba13191fea2b6e260f"
+      ]
+    },
+    {
+      "title": "器材间的公用架",
+      "quests": [
+        "a6bd8b1b05dc13e1941f0de8",
+        "316cdbc991b8cb456b8940ec",
+        "9c34ee2c5ea900604eca38f3",
+        "f9dfb5252e225509a56cd0e1",
+        "37cc3a49764d9b8b1ad5fba1",
+        "122662c5c8021ce11887c5f1"
+      ]
+    },
+    {
+      "title": "谁负责关门",
+      "quests": [
+        "4e35beefd6013c3e891de254",
+        "e9270cf16c5b7513fcef4df5",
+        "963c4c57e19784985a453779",
+        "972bc733f72a884be0449fe9",
+        "3fd2813adc2d22e828492e0c",
+        "3a35e105ce618e9d11bb097d"
+      ]
+    },
+    {
+      "title": "店门开着的时候",
+      "quests": [
+        "0a4248837afa56cf089ecb5a",
+        "3e270f4b6d8d1568ba84e6b0",
+        "5fefb36d57e0b825c6011e3b",
+        "1a2ea60af0cb01341b99a9bb",
+        "9e39dfb836b533858d37535d",
+        "d60b73a8aaf3ddb3f22c5949"
+      ]
+    },
+    {
+      "title": "到货才签字",
+      "quests": [
+        "1decff43b902355e92dd48be",
+        "0e2c4a40454cde511cd91ce6",
+        "e3e31152e5f1617d5b2668ca",
+        "bf8d6e780a572f70074048c5",
+        "5dbf1b5b233955db2f88fb3c",
+        "aac7218cec6b546d92b481f6"
+      ]
+    },
+    {
+      "title": "收件台的旧账",
+      "quests": [
+        "7f54a3ad18da01723a71a82d",
+        "e778ba981aa4cf8b704a9c7e",
+        "5df06c5c14d2108cc0e434a2"
+      ]
+    },
+    {
+      "title": "晚到的收货人",
+      "quests": [
+        "f1b276a888d9f080a2af1c55",
+        "8f28edfd1b92e8ba0aab0baa",
+        "f4e13946726c258a5c43edff"
+      ]
+    },
+    {
+      "title": "留下来的东西",
+      "quests": [
+        "14b6e9c7d838651c1c92214b",
+        "345298adc4ea0d6ed70462d4",
+        "7fe67dbb4f787aae62d3a32f",
+        "348fd44d02a3933109e47982",
+        "dde51ec2e3fcc1ef6aa13bf3",
+        "ec4ae41063a524baae81dd2b"
+      ]
+    },
+    {
+      "title": "诊室借用簿",
+      "quests": [
+        "f44069469ebae74d6ca2d77c",
+        "93d8ee73d94f5e3953cf126f",
+        "04505cf21f921364ffd75196",
+        "06cbe93a5bed708779a2fd40",
+        "d86b52c67f6bee6091fe0a5e"
+      ]
+    },
+    {
+      "title": "工作台试用单",
+      "quests": [
+        "e91165e94068b152ca05e3e8",
+        "38057c5a2231e980bf38d02c",
+        "317b38adb4ed97a374d9f72e",
+        "80f85b1ba10d97e67f5a2081",
+        "05c1844146da2c4c390f8f2f",
+        "c999c40a3160e868f6e189b8",
+        "4ad9f1971a020550798bc56e",
+        "47b2c784d47921ed96124b81",
+        "20734424bb148be95e8f46d2",
+        "d19fdc040c91263840581ed6"
+      ]
+    },
+    {
+      "title": "随车试用单",
+      "quests": [
+        "c3d6cb9bfb23d96d71297185",
+        "599c9693a25a3b984cb0d51e",
+        "cb3b358c8ebedb337b861547",
+        "5853ecf1df1602709f041467",
+        "bf18949fcabb25bc3a8585bc"
+      ]
+    },
+    {
+      "title": "器材间借用簿",
+      "quests": [
+        "4035037bdd0eedafc73d7ca9",
+        "82253eecdfb7414f705e0f8a",
+        "52ef24195e3d153a4c5776fd",
+        "58c8a764e763b91f68a9f5fc",
+        "7df1d9213abbe50eb40288db",
+        "89db304873230cf93e82cdec",
+        "a8f6117a5b544655ff9c8dbb",
+        "d04f4a60411d513eeb547178",
+        "50f5dbd9d9dd01be02a3e19d",
+        "11fbcebb176199c83de50dc1",
+        "0facfd4d46f3bde52e3c9a78",
+        "13143378c36614c2cc66c3b8"
+      ]
+    },
+    {
+      "title": "待验货清单",
+      "quests": [
+        "e84bcc17cc82414cb75c7ef9",
+        "f9171b97a746066a7fc1d7ab",
+        "8af2b2ff18040a2578f12df0",
+        "e8664b4e4d9efeb2e8d64fa5",
+        "e5f9f43130dc27c6043bc99c"
+      ]
+    }
+  ]
+}

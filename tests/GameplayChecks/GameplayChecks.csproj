@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><UseSharedCompilation>false</UseSharedCompilation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/shared/ThreatPolicy.cs" Link="ThreatPolicy.cs" />
+    <Compile Include="../../src/shared/LoadingPolicy.cs" Link="LoadingPolicy.cs" />
+    <Compile Include="../../src/shared/WavePolicy.cs" Link="WavePolicy.cs" />
+    <Compile Include="../../src/shared/PatrolPolicy.cs" Link="PatrolPolicy.cs" />
+    <Compile Include="../../src/server/StoryQuestPolicy.cs" Link="StoryQuestPolicy.cs" />
+    <Compile Include="../../src/server/QuestLootPolicy.cs" Link="QuestLootPolicy.cs" />
+    <Compile Include="../../src/server/TraderSalePolicy.cs" Link="TraderSalePolicy.cs" />
+    <Compile Include="../../src/server/EconomyPolicy.cs" Link="EconomyPolicy.cs" /><Compile Include="../../src/server/AmmoPackPolicy.cs" Link="AmmoPackPolicy.cs" />
+    <Compile Include="../../src/server/RestockPolicy.cs" Link="RestockPolicy.cs" />
+    <Compile Include="../../src/server/LegacyHealthPolicy.cs" Link="LegacyHealthPolicy.cs" />
+    <Compile Include="../../src/shared/HearingPolicy.cs" Link="HearingPolicy.cs" /><Compile Include="../../src/shared/AwarenessPolicy.cs" Link="AwarenessPolicy.cs" /><Compile Include="../../src/server/FieldQuestPolicy.cs" Link="FieldQuestPolicy.cs" />
+    <Reference Include="SPTarkov.Server.Core" HintPath="$(GameRoot)/SPT/SPTarkov.Server.Core.dll" />
+    <Reference Include="SPTarkov.Common" HintPath="$(GameRoot)/SPT/SPTarkov.Common.dll" />
+  </ItemGroup>
+</Project>

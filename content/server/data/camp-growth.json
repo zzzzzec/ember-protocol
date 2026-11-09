@@ -1,0 +1,69 @@
+{
+  "version": "1.5.0",
+  "quests": {
+    "clinic1": "83dd221f3e807298b51f6b6c",
+    "clinic2": "f5276177b69fca460a60c4c7",
+    "clinic3": "55b6249e2da11677091a0ab7",
+    "clinic4": "21e6b150e7ffd5d5af946e42",
+    "clinic5": "9de5cce732c21ebe9805fc62",
+    "clinic6": "77e1e820bda4a8c557d54266",
+    "signal1": "a556ad0f206552173012ab28",
+    "signal2": "dc78ea0e1c44d4160a222b97",
+    "signal3": "5b8916036980df63e5faf953",
+    "signal4": "a5a3c84fe314fdf22c40e014",
+    "signal5": "4f1b7112351f801c59c9be5e",
+    "signal6": "1a371711f405d1490eada5c9",
+    "stores1": "c108f38a767d90f488c0b299",
+    "stores2": "4546e2aaab3c0f791a8fd9ce",
+    "stores3": "c15c832a91a3f62760ebe9da",
+    "stores4": "9b545ba79f33befde753defb",
+    "stores5": "849ca0023a95695fea7268ec",
+    "stores6": "0cc6b16af3580f218dcc02f5",
+    "ledger1": "27a2b1b55087606f6d30565c",
+    "ledger2": "9847c9447eb42c56d545e145",
+    "ledger3": "029594ba98962f03f514d87c",
+    "ledger4": "c8590c3ff897fec0afd1c845",
+    "ledger5": "e40ef9824630ab4068f6db9f",
+    "ledger6": "efaa3740859e21c81e8d64b2",
+    "returns1": "f4950b88027d14bf9ba4183f",
+    "returns2": "34dda18796b68738a09a5723",
+    "returns3": "d5dc91d87f19dca66f864af3"
+  },
+  "offers": {
+    "marker": "5f7de0279a10611aa9f40722",
+    "water": "1cfcaa4a18d9c87c2c69931e",
+    "ai2": "02915f9eaa11c9ffbd20c6db",
+    "hemostatic": "1c2ebd88287ea4359c93bb23",
+    "ration": "2c2b4dff6c7d44f8816ce905",
+    "saline": "faf6bdb246af08213c2a8b9c",
+    "fuel": "d1a411239a30a24045e8a846"
+  },
+  "recipes": {
+    "dressings": "acbceb4524d4e8aa767c606b",
+    "tourniquets": "9becefd6d81f18d88b4bc171",
+    "water": "0f642acc8376066d0135e5e9",
+    "rations": "fde46dd9497295ebd10fdff7",
+    "splints": "da29d9e662f504593521031b",
+    "field-ai2": "ca83986134616c931a876226"
+  },
+  "stashRows": 6,
+  "trainingPoints": {
+    "Vitality": 380,
+    "Health": 250,
+    "StressResistance": 270,
+    "Metabolism": 260,
+    "Intellect": 390,
+    "Attention": 1250,
+    "CovertMovement": 320,
+    "Search": 670,
+    "Strength": 430,
+    "Endurance": 470
+  },
+  "suppressedWeaponTemplates": 87,
+  "nativeRecipeBatchCaps": {
+    "5d93b91286f77467310ca15d": 1,
+    "5dd1126571e3fd3f634b1c8b": 3,
+    "5d5c1f5ed582a543983ee82e": 1,
+    "5dd3c5487058311d4b267186": 1
+  }
+}

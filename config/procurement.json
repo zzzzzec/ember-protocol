@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "traderId": "d20d87e0da4822e5261cd161",
+  "cashMarkup": 1.8,
+  "roundToRoubles": 50,
+  "policy": "Limited late-campaign procurement. Native handbook/resale values stay unchanged. Stock and personal limits reset after completed deployment. Purchased goods are not found in raid.",
+  "cash": [
+    {"id": "c85fa42e02cb70252b39fc69", "tpl": "577e1c9d2459773cd707c525", "name": "Printer paper", "nativeReference": 2337, "level": 1, "stock": 1, "limit": 1},
+    {"id": "683613b4eba33f199df11f43", "tpl": "57347c1124597737fb1379e3", "name": "Duct tape", "nativeReference": 2499, "level": 1, "stock": 1, "limit": 1},
+    {"id": "335de23e48fe94c65f1ee74d", "tpl": "57347c5b245977448d35f6e1", "name": "Bolts", "nativeReference": 11000, "level": 2, "stock": 1, "limit": 1},
+    {"id": "532acc8aa2941f008bac9d76", "tpl": "57347c77245977448d35f6e2", "name": "Screw nuts", "nativeReference": 8700, "level": 2, "stock": 1, "limit": 1},
+    {"id": "e9a5d3ec807a1f10dc67ca98", "tpl": "61bf83814088ec1a363d7097", "name": "Sewing kit", "nativeReference": 38000, "level": 3, "stock": 1, "limit": 1},
+    {"id": "6ed909b83e792457f892de16", "tpl": "59e35cbb86f7741778269d83", "name": "Corrugated hose", "nativeReference": 9523, "level": 3, "stock": 1, "limit": 1},
+    {"id": "5566ea2df0b111383ce6b5b3", "tpl": "5d1b39a386f774252339976f", "name": "Silicone tube", "nativeReference": 18900, "level": 4, "stock": 1, "limit": 1},
+    {"id": "8313c61500fa07ed02a94c96", "tpl": "5af0484c86f7740f02001f7f", "name": "Pack of coffee Majaica", "nativeReference": 14977, "level": 1, "stock": 1, "limit": 1},
+    {"id": "39a315d4644b7665323aa4e9", "tpl": "57505f6224597709a92585a9", "name": "Alyonka chocolate bar", "nativeReference": 10483, "level": 1, "stock": 1, "limit": 1, "foodResource": 1}
+  ],
+  "barters": [
+    {"id": "57402bf3f109f048d2968a50", "tpl": "577e1c9d2459773cd707c525", "name": "Printer paper", "level": 1, "stock": 1, "limit": 1, "unlock": "d59ca94b0e1c99294ed9f708", "inputs": [{"_tpl": "57347c1124597737fb1379e3", "count": 1}]},
+    {"id": "0daba5010431dd55d4f38a1c", "tpl": "57347c5b245977448d35f6e1", "name": "Bolts", "level": 2, "stock": 1, "limit": 1, "unlock": "bb8dc90f84669829486f7926", "inputs": [{"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}]}
+  ]
+}

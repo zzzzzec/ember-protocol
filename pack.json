@@ -1,0 +1,62 @@
+{
+  "name": "Ember Protocol",
+  "displayName": "余烬协议",
+  "version": "2.19.0",
+  "contentVersion": "2.19.0-campaign-skills",
+  "sptVersion": "4.0.13",
+  "gameVersion": "0.16.9.40087",
+  "defaultPort": 6969,
+  "projects": [
+    {
+      "project": "src/server/Survival.csproj",
+      "dll": "Codex.ZombieSurvival.dll",
+      "target": "SPT/user/mods/Codex-ZombieSurvival/Codex.ZombieSurvival.dll"
+    },
+    {
+      "project": "src/client/Client.csproj",
+      "dll": "Codex.ZombieSurvival.Client.dll",
+      "target": "BepInEx/plugins/Codex-ZombieSurvival/Codex.ZombieSurvival.Client.dll"
+    },
+    {
+      "project": "src/skip-healing/SkipPostRaidHealing.csproj",
+      "dll": "Codex.SkipPostRaidHealing.dll",
+      "target": "BepInEx/plugins/Codex-SkipPostRaidHealing/Codex.SkipPostRaidHealing.dll"
+    },
+    {
+      "project": "src/skip-preset/SkipPresetExitConfirmation.csproj",
+      "dll": "Codex.SkipPresetExitConfirmation.dll",
+      "target": "BepInEx/plugins/Codex-SkipPresetExitConfirmation/Codex.SkipPresetExitConfirmation.dll"
+    },
+    {
+      "project": "src/stash-quick-sell/StashQuickSell.csproj",
+      "dll": "Codex.StashQuickSell.dll",
+      "target": "BepInEx/plugins/Codex-StashQuickSell/Codex.StashQuickSell.dll"
+    }
+  ],
+  "knownConflicts": [
+    "SPT/user/mods/acidphantasm-botplacementsystem",
+    "SPT/user/mods/acidphantasm-progressivebotsystem",
+    "SPT/user/mods/acidphantasm-enablelabyrinth",
+    "SPT/user/mods/QuestingBots",
+    "SPT/user/mods/Solarint-SAIN-ServerMod",
+    "SPT/user/mods/Codex-WeaponInstructor",
+    "SPT/user/mods/Codex-HideoutRequirementMultiplier",
+    "BepInEx/plugins/SAIN",
+    "BepInEx/plugins/QuestingBots",
+    "BepInEx/plugins/acidphantasm-botplacementsystem",
+    "BepInEx/plugins/acidphantasm-enablelabyrinth",
+    "BepInEx/plugins/SPTExfilNow",
+    "BepInEx/plugins/SuperSprintJump.dll"
+  ],
+  "runtimeFiles": [
+    "SPT/user/mods/Codex-ZombieSurvival/runtime.json",
+    "SPT/SPT_Data/configs/http.json",
+    "SPT/user/launcher/config.json"
+  ],
+  "counts": {
+    "quests": 285,
+    "offers": 617,
+    "barters": 190,
+    "crafts": 71
+  }
+}

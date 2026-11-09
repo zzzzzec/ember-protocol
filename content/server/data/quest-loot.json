@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "containers": [
+    "578f87ad245977356274f2cc",
+    "5909d5ef86f77467974efbd8",
+    "5909d76c86f77471e53d2adf",
+    "5909d7cf86f77470ee57d75a",
+    "5909d89086f77472591234a0"
+  ],
+  "items": [
+    {
+      "tpl": "5bc9c1e2d4351e00367fbcf0",
+      "minimumRank": 4,
+      "weightFraction": 0.0015
+    },
+    {
+      "tpl": "5fc64ea372b0dd78d51159dc",
+      "minimumRank": 5,
+      "weightFraction": 0.0012
+    }
+  ]
+}

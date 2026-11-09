@@ -1,0 +1,17 @@
+{
+  "sell": "Sell",
+  "loading": "Loading trader offers…",
+  "no_buyers": "No trader buys this item",
+  "no_batch_buyers": "No trader buys all selected items",
+  "load_failed": "Could not load prices; click to retry",
+  "offer": "{0} — {1}",
+  "stack": " (whole stack ×{0})",
+  "selection": " ({0} items, total)",
+  "contents": " (includes contents)",
+  "busy": "Sale in progress; please wait",
+  "changed": "The item or price changed. Reopen the Sell menu",
+  "unavailable": "This item cannot be sold right now",
+  "sold": "Sold to {0} for {1}",
+  "failed": "Sale failed. Reopen the menu to check the item",
+  "error": "Quick sell encountered an error; details are in the log"
+}

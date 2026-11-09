@@ -1,0 +1,592 @@
+{
+  "debug": false,
+  "customIncreasePercent": 25,
+  "backpacks": {
+    "5ab8f04f86f774585f4237d8": {
+      "grids": [
+        {
+          "cellsH": 3,
+          "cellsV": 3,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5ab8ee7786f7742d8f33f0b9": {
+      "grids": [
+        {
+          "cellsH": 5,
+          "cellsV": 2,
+          "removeFilters": false
+        }
+      ]
+    },
+    "56e33680d2720be2748b4576": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 3,
+          "removeFilters": false
+        }
+      ]
+    },
+    "544a5cde4bdc2d39388b456b": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5ca20d5986f774331e7c9602": {
+      "grids": [
+        {
+          "cellsH": 5,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5e9dcf5986f7746c417435b3": {
+      "grids": [
+        {
+          "cellsH": 5,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "6038d614d10cbf667352dd44": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 8,
+          "removeFilters": false
+        }
+      ]
+    },
+    "656ddcf0f02d7bcea90bf395": {
+      "grids": [
+        {
+          "cellsH": 1,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 3,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 3,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 4,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 4,
+          "cellsV": 3,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5d5d940f86f7742797262046": {
+      "grids": [
+        {
+          "cellsH": 5,
+          "cellsV": 5,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        }
+      ]
+    },
+    "56e33634d2720bd8058b456b": {
+      "grids": [
+        {
+          "cellsH": 5,
+          "cellsV": 3,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5f5e45cc5021ce62144be7aa": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 4,
+          "removeFilters": false
+        }
+      ]
+    },
+    "66b5f247af44ca0014063c02": {
+      "grids": [
+        {
+          "cellsH": 5,
+          "cellsV": 4,
+          "removeFilters": false
+        }
+      ]
+    },
+    "60a2828e8689911a226117f9": {
+      "grids": [
+        {
+          "cellsH": 5,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "56e335e4d2720b6c058b456d": {
+      "grids": [
+        {
+          "cellsH": 5,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "6034d103ca006d2dca39b3f0": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 8,
+          "removeFilters": false
+        }
+      ]
+    },
+    "618bb76513f5097c8d5aa2d5": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 5,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "619cf0335771dd3c390269ae": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 5,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "60a272cc93ef783291411d8e": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "618cfae774bb2d036a049e7c": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "67458794e21e5d724e066976": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 5,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5f5e467b0bc58666c37e7821": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 6,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 6,
+          "removeFilters": false
+        }
+      ]
+    },
+    "628e1ffc83ec92260c0f437f": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 6,
+          "removeFilters": false
+        }
+      ]
+    },
+    "62a1b7fbc30cfa1d366af586": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 6,
+          "removeFilters": false
+        }
+      ]
+    },
+    "545cdae64bdc2d39198b4568": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 6,
+          "removeFilters": false
+        }
+      ]
+    },
+    "66b5f22b78bbc0200425f904": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 6,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5b44c6ae86f7742d1627baea": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 7,
+          "removeFilters": false
+        }
+      ]
+    },
+    "656f198fb27298d6fd005466": {
+      "grids": [
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 3,
+          "cellsV": 3,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 5,
+          "cellsV": 4,
+          "removeFilters": false
+        }
+      ]
+    },
+    "674da107c512807d1a0e7436": {
+      "grids": [
+        {
+          "cellsH": 3,
+          "cellsV": 5,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 4,
+          "cellsV": 6,
+          "removeFilters": false
+        }
+      ]
+    },
+    "674da9cf0cb4bcde7103c07b": {
+      "grids": [
+        {
+          "cellsH": 3,
+          "cellsV": 5,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 4,
+          "cellsV": 6,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5e997f0b86f7741ac73993e2": {
+      "grids": [
+        {
+          "cellsH": 3,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 3,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        }
+      ]
+    },
+    "66a9f98f3bd5a41b162030f4": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 2,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5c0e805e86f774683f3dd637": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 5,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 1,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 3,
+          "cellsV": 3,
+          "removeFilters": false
+        }
+      ]
+    },
+    "6034d2d697633951dc245ea6": {
+      "grids": [
+        {
+          "cellsH": 4,
+          "cellsV": 5,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 8,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 3,
+          "cellsV": 3,
+          "removeFilters": false
+        }
+      ]
+    },
+    "656e0436d44a1bb4220303a0": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 3,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 4,
+          "cellsV": 4,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 4,
+          "cellsV": 4,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5f5e46b96bdad616ad46d613": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 4,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 5,
+          "cellsV": 3,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 5,
+          "cellsV": 3,
+          "removeFilters": false
+        }
+      ]
+    },
+    "628bc7fb408e2b2e9c0801b1": {
+      "grids": [
+        {
+          "cellsH": 2,
+          "cellsV": 7,
+          "removeFilters": true
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 7,
+          "removeFilters": true
+        }
+      ]
+    },
+    "639346cc1c8f182ad90c8972": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 7,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5ab8ebf186f7742d8b372e80": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 9,
+          "removeFilters": false
+        }
+      ]
+    },
+    "61b9e1aaef9a1b5d6a79899a": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 9,
+          "removeFilters": false
+        }
+      ]
+    },
+    "59e763f286f7742ee57895da": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 9,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5c0e774286f77468413cc5b2": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 10,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5df8a4d786f77412672a1e3b": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 12,
+          "removeFilters": false
+        }
+      ]
+    },
+    "67458730df3c1da90b0b052b": {
+      "grids": [
+        {
+          "cellsH": 2,
+          "cellsV": 2,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 3,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 2,
+          "cellsV": 3,
+          "removeFilters": false
+        },
+        {
+          "cellsH": 6,
+          "cellsV": 9,
+          "removeFilters": false
+        }
+      ]
+    },
+    "5e4abc6786f77406812bd572": {
+      "grids": [
+        {
+          "cellsH": 6,
+          "cellsV": 8,
+          "removeFilters": true
+        }
+      ]
+    }
+  }
+}

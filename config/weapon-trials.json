@@ -1,0 +1,3627 @@
+{
+  "schemaVersion": 1,
+  "groups": {
+    "nina": {
+      "trader": "09ce24e1c055c45828a1922f",
+      "prerequisite": "a8b645968b8ce43d0d5811f0",
+      "title": "诊室借用簿",
+      "stages": [
+        {
+          "key": "nina-1",
+          "title": "门先别关",
+          "weapon": "5448bd6b4bdc2dfc2f8b4569",
+          "weaponName": "Makarov PM 9x18PM pistol",
+          "setup": "原厂 PM",
+          "maps": [
+            "Sandbox",
+            "Sandbox_high"
+          ],
+          "mapNames": [
+            "中心区",
+            "Ground Zero"
+          ],
+          "kills": 6,
+          "challenge": "survive",
+          "level": 1,
+          "loyalty": 1,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5448c12b4bdc2d02308b456f"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "6374a822e629013b9c0645c8"
+            ],
+            [
+              2,
+              "mod_sight_rear",
+              "63c6adcfb4ba094317063742"
+            ],
+            [
+              0,
+              "mod_pistolgrip",
+              "6374a7e7417239a7bf00f042"
+            ]
+          ],
+          "magazineCapacity": 8,
+          "price": 8200,
+          "xp": 1300,
+          "cashReward": 13500,
+          "starterBox": [
+            "573724b42459776125652ac2",
+            "573719762459775a626ccbc1",
+            16
+          ],
+          "spares": [
+            [
+              "5448c12b4bdc2d02308b456f",
+              "PM 9x18PM 90-93 8-round magazine",
+              1450,
+              2
+            ]
+          ]
+        },
+        {
+          "key": "nina-2",
+          "title": "短抽屉",
+          "weapon": "5cadc190ae921500103bb3b6",
+          "weaponName": "Beretta M9A3 9x19 pistol",
+          "setup": "原厂 M9A3",
+          "maps": [
+            "Sandbox",
+            "Sandbox_high"
+          ],
+          "mapNames": [
+            "中心区",
+            "Ground Zero"
+          ],
+          "kills": 8,
+          "challenge": "close:15",
+          "level": 8,
+          "loyalty": 1,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "5cadc1c6ae9215000f2775a4"
+            ],
+            [
+              1,
+              "mod_muzzle",
+              "5cadc390ae921500126a77f1"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "5cadc431ae921500113bb8d5"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5cadc55cae921500103bb3be"
+            ],
+            [
+              4,
+              "mod_sight_rear",
+              "5cadd940ae9215051e1c2316"
+            ],
+            [
+              4,
+              "mod_sight_front",
+              "5cadd919ae921500126a77f3"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5cadc2e0ae9215051e1c21e7"
+            ]
+          ],
+          "magazineCapacity": 17,
+          "price": 16000,
+          "xp": 1800,
+          "cashReward": 18000,
+          "spares": [
+            [
+              "5cadc2e0ae9215051e1c21e7",
+              "M9A3 9x19 17-round magazine",
+              2500,
+              2
+            ],
+            [
+              "5cadc390ae921500126a77f1",
+              "M9A3 thread protector",
+              450,
+              1
+            ],
+            [
+              "5cadc1c6ae9215000f2775a4",
+              "M9A3 9x19 127mm threaded barrel",
+              2300,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "nina-3",
+          "title": "少打两发",
+          "weapon": "5a7ae0c351dfba0017554310",
+          "weaponName": "Glock 17 9x19 pistol",
+          "setup": "Glock 17 加长弹匣与补偿器",
+          "maps": [
+            "BigMap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 8,
+          "challenge": "head",
+          "level": 10,
+          "loyalty": 2,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "5a6b5f868dc32e000a311389"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "5a7b4960e899ef197b331a2d"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5a6f5e048dc32e00094b97da"
+            ],
+            [
+              3,
+              "mod_sight_rear",
+              "5a71e0fb8dc32e00094b97f2"
+            ],
+            [
+              3,
+              "mod_sight_front",
+              "5a71e0048dc32e000c52ecc8"
+            ],
+            [
+              3,
+              "mod_muzzle",
+              "5a7b32a2e899ef00135e345a"
+            ],
+            [
+              0,
+              "mod_tactical",
+              "5a7b483fe899ef0016170d15"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5a718da68dc32e000d46d264"
+            ]
+          ],
+          "magazineCapacity": 21,
+          "price": 51250,
+          "xp": 2350,
+          "cashReward": 20500,
+          "starterBox": [
+            "5739d41224597779c3645501",
+            "56d59d3ad2720bdb418b4577",
+            16
+          ],
+          "spares": [
+            [
+              "5a718da68dc32e000d46d264",
+              "Glock 9x19 Magpul PMAG GL9 21-round magazine",
+              2400,
+              2
+            ],
+            [
+              "5a7b32a2e899ef00135e345a",
+              "Glock 9x19 Strike Industries G4 SlideComp compensator",
+              8900,
+              1
+            ],
+            [
+              "5a6b5f868dc32e000a311389",
+              "Glock 17 9x19 114mm barrel",
+              2150,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "nina-4",
+          "title": "别搁在药盘上",
+          "weapon": "6193a720f8ee7e52e42109ed",
+          "weaponName": "HK USP .45 ACP pistol",
+          "setup": "USP Tactical 原配战术套件",
+          "maps": [
+            "Interchange"
+          ],
+          "mapNames": [
+            "立交桥",
+            "Interchange"
+          ],
+          "kills": 10,
+          "challenge": "survive",
+          "level": 15,
+          "loyalty": 2,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "6194efe07c6c7b169525f11b"
+            ],
+            [
+              1,
+              "mod_muzzle",
+              "6194f1f918a3974e5e7421e4"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "6194f41f9fb0c665d5490e75"
+            ],
+            [
+              3,
+              "mod_sight_rear",
+              "6194f2df645b5d229654ad77"
+            ],
+            [
+              3,
+              "mod_sight_front",
+              "6194f3286db0f2477964e67d"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "6193d3149fb0c665d5490e32"
+            ],
+            [
+              0,
+              "mod_trigger",
+              "6193d3cded0429009f543e6a"
+            ],
+            [
+              0,
+              "mod_hammer",
+              "6193d3be7c6c7b169525f0da"
+            ],
+            [
+              0,
+              "mod_catch",
+              "6193d5d4f8ee7e52e4210a1b"
+            ],
+            [
+              0,
+              "mod_mount_000",
+              "6196255558ef8c428c287d1c"
+            ]
+          ],
+          "magazineCapacity": 12,
+          "price": 31200,
+          "xp": 3000,
+          "cashReward": 30500,
+          "spares": [
+            [
+              "6193d3149fb0c665d5490e32",
+              "HK USP Tactical .45 ACP 12-round magazine",
+              4150,
+              2
+            ],
+            [
+              "6194f1f918a3974e5e7421e4",
+              "HK USP Tactical thread protector",
+              1550,
+              1
+            ],
+            [
+              "6196255558ef8c428c287d1c",
+              "HK USP rail adapter",
+              2100,
+              1
+            ],
+            [
+              "5efb0d4f4bc50b58e81710f3",
+              ".45 ACP Lasermatch FMJ",
+              290,
+              16
+            ]
+          ]
+        },
+        {
+          "key": "nina-5",
+          "title": "半夜不用敲",
+          "weapon": "5d67abc1a4b93614ec50137f",
+          "weaponName": "FN Five-seveN MK2 5.7x28 pistol (FDE)",
+          "setup": "FN Five-seveN FDE 消音套件",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 12,
+          "challenge": "head",
+          "level": 21,
+          "loyalty": 3,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "5d3eb59ea4b9361c284bb4b2"
+            ],
+            [
+              1,
+              "mod_muzzle",
+              "5d3ef698a4b9361182109872"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5d3eb44aa4b93650d64e4979"
+            ],
+            [
+              3,
+              "mod_sight_rear",
+              "5d3eb4aba4b93650d64e497d"
+            ],
+            [
+              3,
+              "mod_sight_front",
+              "5d3eb536a4b9363b1f22f8e2"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5d3eb5eca4b9363b1f22f8e4"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 83100,
+          "xp": 3900,
+          "cashReward": 27500,
+          "starterBox": [
+            "6570251ccfc010a0f5006a13",
+            "5cc86832d7f00c000d3a6e6c",
+            50
+          ],
+          "spares": [
+            [
+              "5d3eb5eca4b9363b1f22f8e4",
+              "FN Five-seveN 5.7x28 20-round magazine",
+              5050,
+              2
+            ],
+            [
+              "5d3ef698a4b9361182109872",
+              "Gemtech SFN-57 5.7x28 sound suppressor",
+              52000,
+              1
+            ],
+            [
+              "5d3eb59ea4b9361c284bb4b2",
+              "FN Five-seveN 5.7x28 120mm threaded barrel",
+              5800,
+              1
+            ],
+            [
+              "5cc86832d7f00c000d3a6e6c",
+              "5.7x28mm R37.F",
+              530,
+              16
+            ]
+          ]
+        }
+      ]
+    },
+    "claire": {
+      "trader": "39a130d714ed6d61f6b1c2aa",
+      "prerequisite": "8f317947fb0090656fd08f2f",
+      "title": "工作台试用单",
+      "stages": [
+        {
+          "key": "claire-1",
+          "title": "灯往下照",
+          "weapon": "57d14d2524597714373db789",
+          "weaponName": "PP-91 Kedr 9x18PM submachine gun",
+          "setup": "原厂 PP-91 Kedr",
+          "maps": [
+            "BigMap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 8,
+          "challenge": "none",
+          "level": 5,
+          "loyalty": 1,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "57d152ec245977144076ccdf"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "57d1519e24597714373db79d"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 27750,
+          "xp": 1300,
+          "cashReward": 27500,
+          "spares": [
+            [
+              "57d1519e24597714373db79d",
+              "PP-91 Kedr 9x18PM 30-round magazine",
+              4300,
+              2
+            ]
+          ]
+        },
+        {
+          "key": "claire-2",
+          "title": "窗户留条缝",
+          "weapon": "5926bb2186f7744b1c6c6e60",
+          "weaponName": "HK MP5 9x19 submachine gun (Navy 3 Round Burst)",
+          "setup": "MP5SD 一体消音配置",
+          "maps": [
+            "BigMap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 10,
+          "challenge": "none",
+          "level": 8,
+          "loyalty": 1,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5926c3b286f774640d189b6b"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5926f2e086f7745aae644231"
+            ],
+            [
+              2,
+              "mod_handguard",
+              "5926f34786f77469195bfe92"
+            ],
+            [
+              2,
+              "mod_sight_rear",
+              "5926d2be86f774134d668e4e"
+            ],
+            [
+              2,
+              "mod_stock",
+              "5926d40686f7740f152b6b7e"
+            ],
+            [
+              2,
+              "mod_muzzle",
+              "5926d33d86f77410de68ebc0"
+            ],
+            [
+              0,
+              "mod_charge",
+              "5926c32286f774616e42de99"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 92800,
+          "xp": 1800,
+          "cashReward": 17000,
+          "starterBox": [
+            "5739d41224597779c3645501",
+            "56d59d3ad2720bdb418b4577",
+            16
+          ],
+          "spares": [
+            [
+              "5926c3b286f774640d189b6b",
+              "HK MP5 9x19 30-round magazine",
+              5500,
+              2
+            ],
+            [
+              "5926d33d86f77410de68ebc0",
+              "HK MP5SD 9x19 sound suppressor",
+              36600,
+              1
+            ],
+            [
+              "5926f34786f77469195bfe92",
+              "HK MP5SD polymer handguard",
+              7500,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "claire-3",
+          "title": "拨到另一个频道",
+          "weapon": "5fc3e272f8b6a877a729eac5",
+          "weaponName": "HK UMP .45 ACP submachine gun",
+          "setup": "UMP45 原配短枪身、原装消音器和 MRS",
+          "maps": [
+            "Interchange"
+          ],
+          "mapNames": [
+            "立交桥",
+            "Interchange"
+          ],
+          "kills": 12,
+          "challenge": "close:20",
+          "level": 11,
+          "loyalty": 2,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5fc3e466187fea44d52eda90"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5fc3e4ee7283c4046c5814af"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5fc3e4a27283c4046c5814ab"
+            ],
+            [
+              0,
+              "mod_mount_000",
+              "5fc53954f8b6a877a729eaeb"
+            ],
+            [
+              0,
+              "mod_mount_001",
+              "5fc5396e900b1d5091531e72"
+            ],
+            [
+              0,
+              "mod_mount_002",
+              "5fc5396e900b1d5091531e72"
+            ],
+            [
+              3,
+              "mod_muzzle",
+              "6130c4d51cb55961fa0fd49f"
+            ],
+            [
+              0,
+              "mod_scope",
+              "570fd721d2720bc5458b4596"
+            ]
+          ],
+          "magazineCapacity": 25,
+          "price": 127750,
+          "xp": 2350,
+          "cashReward": 109500,
+          "spares": [
+            [
+              "5fc3e466187fea44d52eda90",
+              "HK UMP .45 ACP 25-round magazine",
+              3200,
+              2
+            ],
+            [
+              "6130c4d51cb55961fa0fd49f",
+              "HK UMP B&T OEM .45 ACP sound suppressor",
+              57200,
+              1
+            ],
+            [
+              "5fc53954f8b6a877a729eaeb",
+              "HK UMP bottom handguard rail",
+              2200,
+              1
+            ],
+            [
+              "5efb0d4f4bc50b58e81710f3",
+              ".45 ACP Lasermatch FMJ",
+              290,
+              12
+            ]
+          ]
+        },
+        {
+          "key": "claire-4",
+          "title": "桌上剩一颗",
+          "weapon": "59984ab886f7743e98271174",
+          "weaponName": "PP-19-01 Vityaz 9x19 submachine gun",
+          "setup": "PP-19 Zenit 护木和消音配置",
+          "maps": [
+            "factory4_day",
+            "factory4_night"
+          ],
+          "mapNames": [
+            "工厂",
+            "Factory"
+          ],
+          "kills": 14,
+          "challenge": "survive",
+          "level": 16,
+          "loyalty": 2,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "5649ae4a4bdc2d1b2b8b4588"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5ac78eaf5acfc4001926317a"
+            ],
+            [
+              2,
+              "mod_stock",
+              "59ecc3dd86f7746dc827481c"
+            ],
+            [
+              0,
+              "mod_charge",
+              "5648ac824bdc2ded0b8b457d"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "599860ac86f77436b225ed1a"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "59bfc5c886f7743bf6794e62"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "59985a6c86f77414ec448d17"
+            ],
+            [
+              7,
+              "mod_scope",
+              "570fd6c2d2720bc6458b457f"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "599860e986f7743bb57573a6"
+            ],
+            [
+              0,
+              "mod_gas_block",
+              "59ccd11386f77428f24a488f"
+            ],
+            [
+              10,
+              "mod_handguard",
+              "5648b4534bdc2d3d1c8b4580"
+            ],
+            [
+              11,
+              "mod_foregrip",
+              "591af28e86f77414a27a9e1d"
+            ],
+            [
+              11,
+              "mod_tactical_002",
+              "560d657b4bdc2da74d8b4572"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 173300,
+          "xp": 3000,
+          "cashReward": 24000,
+          "starterBox": [
+            "5739d41224597779c3645501",
+            "56d59d3ad2720bdb418b4577",
+            16
+          ],
+          "spares": [
+            [
+              "599860ac86f77436b225ed1a",
+              "PP-19-01 Vityaz 9x19 30-round magazine",
+              3650,
+              2
+            ],
+            [
+              "570fd6c2d2720bc6458b457f",
+              "EOTech 553 holographic sight",
+              26550,
+              1
+            ],
+            [
+              "59bfc5c886f7743bf6794e62",
+              "PP-19-01 Vityaz 9x19 sound suppressor",
+              27900,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "claire-5",
+          "title": "落下的那一格",
+          "weapon": "58948c8e86f77409493f7266",
+          "weaponName": "SIG MPX 9x19 submachine gun",
+          "setup": "MPX SD 中距离全套",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 16,
+          "challenge": "far:25",
+          "level": 22,
+          "loyalty": 3,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "57c55efc2459772d2c6271e7"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5894a05586f774094708ef75"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5894a5b586f77426d2590767"
+            ],
+            [
+              3,
+              "mod_scope",
+              "57adff4f24597737f373b6e6"
+            ],
+            [
+              4,
+              "mod_scope",
+              "58d2664f86f7747fec5834f6"
+            ],
+            [
+              5,
+              "mod_scope",
+              "58d268fc86f774111273f8c2"
+            ],
+            [
+              3,
+              "mod_barrel",
+              "58aeaaa886f7744fc1560f81"
+            ],
+            [
+              7,
+              "mod_muzzle",
+              "58aeac1b86f77457c419f475"
+            ],
+            [
+              3,
+              "mod_handguard",
+              "5894a42086f77426d2590762"
+            ],
+            [
+              9,
+              "mod_mount_000",
+              "58a56f8d86f774651579314c"
+            ],
+            [
+              10,
+              "mod_tactical",
+              "5a7b483fe899ef0016170d15"
+            ],
+            [
+              9,
+              "mod_mount_001",
+              "58a5c12e86f7745d585a2b9e"
+            ],
+            [
+              12,
+              "mod_foregrip",
+              "59f8a37386f7747af3328f06"
+            ],
+            [
+              0,
+              "mod_stock",
+              "58ac1bf086f77420ed183f9f"
+            ],
+            [
+              14,
+              "mod_stock",
+              "591aef7986f774139d495f03"
+            ],
+            [
+              0,
+              "mod_charge",
+              "58949edd86f77409483e16a9"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 212450,
+          "xp": 3900,
+          "cashReward": 179000,
+          "spares": [
+            [
+              "5894a05586f774094708ef75",
+              "MPX 9x19 30-round magazine",
+              2850,
+              2
+            ],
+            [
+              "57adff4f24597737f373b6e6",
+              "SIG Sauer BRAVO4 4x30 scope",
+              58550,
+              1
+            ],
+            [
+              "58d2664f86f7747fec5834f6",
+              "DeltaPoint Cross Slot Mount base",
+              2250,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "claire-6",
+          "title": "线从下面过",
+          "weapon": "644674a13d52156624001fbc",
+          "weaponName": "KBP 9A-91 9x39 compact assault rifle",
+          "setup": "原厂 9A-91",
+          "maps": [
+            "factory4_day",
+            "factory4_night"
+          ],
+          "mapNames": [
+            "工厂",
+            "Factory"
+          ],
+          "kills": 9,
+          "challenge": "close:18",
+          "level": 22,
+          "loyalty": 3,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "6450ec2e7da7133e5a09ca96"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "6450f21a3d52156624001fcf"
+            ],
+            [
+              0,
+              "mod_stock_000",
+              "6451167ad4928d46d30be3fd"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "645122f6d4928d46d30be3ff"
+            ],
+            [
+              4,
+              "mod_muzzle",
+              "64527a263d52156624001fd7"
+            ],
+            [
+              4,
+              "mod_handguard",
+              "644675573d52156624001fc9"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 47750,
+          "xp": 3500,
+          "cashReward": 24500,
+          "starterBox": [
+            "657984a50fbff513dd435765",
+            "6576f96220d53a5b8f3e395e",
+            20
+          ],
+          "spares": [
+            [
+              "6450ec2e7da7133e5a09ca96",
+              "9A-91 9x39 20-round magazine",
+              6200,
+              2
+            ],
+            [
+              "64527a263d52156624001fd7",
+              "9A-91 handguard retainer",
+              700,
+              1
+            ],
+            [
+              "644675573d52156624001fc9",
+              "9A-91 handguard",
+              2300,
+              1
+            ],
+            [
+              "6576f96220d53a5b8f3e395e",
+              "9x39mm FMJ",
+              695,
+              12
+            ]
+          ]
+        },
+        {
+          "key": "claire-7",
+          "title": "别替我拔掉",
+          "weapon": "645e0c6b3b381ede770e1cc9",
+          "weaponName": "KBP VSK-94 9x39 rifle",
+          "setup": "VSK-94 战术套件",
+          "maps": [
+            "BigMap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 11,
+          "challenge": "survive",
+          "level": 23,
+          "loyalty": 3,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "6450ec2e7da7133e5a09ca96"
+            ],
+            [
+              0,
+              "mod_stock",
+              "6452519e3d52156624001fd5"
+            ],
+            [
+              0,
+              "mod_scope",
+              "618a5d5852ecee1505530b2a"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "645123013d52156624001fd1"
+            ],
+            [
+              4,
+              "mod_muzzle",
+              "64527a263d52156624001fd7"
+            ],
+            [
+              4,
+              "mod_handguard",
+              "6448f2f6d4928d46d30be3f6"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 53800,
+          "xp": 3850,
+          "cashReward": 50000,
+          "spares": [
+            [
+              "618a5d5852ecee1505530b2a",
+              "NPZ PK1 Obzor dovetail reflex sight",
+              9600,
+              1
+            ],
+            [
+              "6448f2f6d4928d46d30be3f6",
+              "VSK-94 handguard",
+              2400,
+              1
+            ],
+            [
+              "645123013d52156624001fd1",
+              "VSK-94 9x39 barrel",
+              10850,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "claire-8",
+          "title": "隔一扇玻璃",
+          "weapon": "57838ad32459774a17445cd2",
+          "weaponName": "VSS Vintorez 9x39 special sniper rifle",
+          "setup": "VSS 木托、原配消音筒和 PSO 四倍镜",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 10,
+          "challenge": "far:35",
+          "level": 24,
+          "loyalty": 3,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "57838f0b2459774a256959b2"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "57838c962459774a1651ec63"
+            ],
+            [
+              2,
+              "mod_sight_rear",
+              "57838e1b2459774a256959b1"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "578395402459774a256959b5"
+            ],
+            [
+              0,
+              "mod_stock",
+              "578395e82459774a0e553c7b"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "6565bb7eb4b12a56eb04b084"
+            ],
+            [
+              0,
+              "mod_mount_000",
+              "5c82342f2e221644f31c060e"
+            ]
+          ],
+          "magazineCapacity": 10,
+          "price": 145750,
+          "xp": 4200,
+          "cashReward": 30100,
+          "starterBox": [
+            "657984a50fbff513dd435765",
+            "6576f96220d53a5b8f3e395e",
+            20
+          ],
+          "spares": [
+            [
+              "57838f0b2459774a256959b2",
+              "VSS/VAL 9x39 6L24 10-round magazine",
+              6400,
+              2
+            ],
+            [
+              "57838c962459774a1651ec63",
+              "VSS 9x39 integral barrel-suppressor",
+              30850,
+              1
+            ],
+            [
+              "5c82342f2e221644f31c060e",
+              "BelOMO PSO-1 4x24 scope",
+              24400,
+              1
+            ],
+            [
+              "57a0dfb82459774d3078b56c",
+              "9x39mm SP-5 gs",
+              620,
+              8
+            ]
+          ]
+        },
+        {
+          "key": "claire-9",
+          "title": "同一个声音",
+          "weapon": "57c44b372459772d2b39b8ce",
+          "weaponName": "AS VAL 9x39 special assault rifle",
+          "setup": "AS VAL Kobra 消音配置",
+          "maps": [
+            "Interchange"
+          ],
+          "mapNames": [
+            "立交桥",
+            "Interchange"
+          ],
+          "kills": 14,
+          "challenge": "head",
+          "level": 26,
+          "loyalty": 3,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_muzzle",
+              "57c44dd02459772d2e0ae249"
+            ],
+            [
+              1,
+              "mod_sight_rear",
+              "57c44e7b2459772d28133248"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "57c44f4f2459772d2c627113"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "57838f9f2459774a150289a0"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "57c44fa82459772d2d75e415"
+            ],
+            [
+              0,
+              "mod_stock",
+              "57c450252459772d28133253"
+            ],
+            [
+              0,
+              "mod_mount_004",
+              "5e569a2e56edd02abe09f280"
+            ],
+            [
+              7,
+              "mod_scope",
+              "591c4efa86f7741030027726"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "651178336cad06c37c049eb4"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 157450,
+          "xp": 4550,
+          "cashReward": 135000,
+          "spares": [
+            [
+              "57838f9f2459774a150289a0",
+              "VSS/VAL 9x39 6L25 20-round magazine (Plum)",
+              8250,
+              2
+            ],
+            [
+              "57c44dd02459772d2e0ae249",
+              "AS VAL 9x39 integral barrel-suppressor",
+              32000,
+              1
+            ],
+            [
+              "591c4efa86f7741030027726",
+              "Axion Kobra EKP-8-18 reflex sight",
+              19200,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "claire-10",
+          "title": "别盖太早",
+          "weapon": "651450ce0e00edc794068371",
+          "weaponName": "SR-3M 9x39 compact assault rifle",
+          "setup": "SR-3M、指定侧挂红点和消音器",
+          "maps": [
+            "RezervBase",
+            "Laboratory"
+          ],
+          "mapNames": [
+            "储备站或实验室",
+            "Reserve or the Laboratory"
+          ],
+          "kills": 16,
+          "challenge": "survive",
+          "level": 30,
+          "loyalty": 4,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_reciever",
+              "57c44f4f2459772d2c627113"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5a9e81fba2750c00164f6b11"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "57c44fa82459772d2d75e415"
+            ],
+            [
+              0,
+              "mod_stock",
+              "57c450252459772d28133253"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "6565c3ab977bcc2dbb01c2e7"
+            ],
+            [
+              0,
+              "mod_foregrip",
+              "6565c0c2ff7eb7070409084c"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "65144ff50e00edc79406836f"
+            ],
+            [
+              0,
+              "mod_mount_004",
+              "57486e672459770abd687134"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 185850,
+          "xp": 4900,
+          "cashReward": 35700,
+          "starterBox": [
+            "657984a50fbff513dd435765",
+            "6576f96220d53a5b8f3e395e",
+            20
+          ],
+          "spares": [
+            [
+              "5a9e81fba2750c00164f6b11",
+              "VSS/VAL 9x39 SR3M.130 30-round magazine",
+              27450,
+              2
+            ],
+            [
+              "65144ff50e00edc79406836f",
+              "SR-3M 9x39 sound suppressor",
+              37750,
+              1
+            ],
+            [
+              "6565c3ab977bcc2dbb01c2e7",
+              "SR-3M polymer handguard (Plum)",
+              2250,
+              1
+            ],
+            [
+              "57a0e5022459774d1673f889",
+              "9x39mm SP-6 gs",
+              1495,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    "emma": {
+      "trader": "428880b53be6cbb14b9e2f11",
+      "prerequisite": "c394ec3eac3ff16e343459e7",
+      "title": "随车试用单",
+      "stages": [
+        {
+          "key": "emma-1",
+          "title": "包别横着背",
+          "weapon": "54491c4f4bdc2db1078b4568",
+          "weaponName": "MP-133 12ga pump-action shotgun",
+          "setup": "原厂 MP-133",
+          "maps": [
+            "BigMap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 8,
+          "challenge": "survive",
+          "level": 13,
+          "loyalty": 1,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "55d4491a4bdc2d882f8b456e"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "55d45d3f4bdc2d972f8b456c"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "55d484b44bdc2d1d4e8b456d"
+            ],
+            [
+              0,
+              "mod_stock",
+              "56083cba4bdc2de22e8b456f"
+            ]
+          ],
+          "magazineCapacity": 6,
+          "price": 27750,
+          "xp": 1300,
+          "cashReward": 13500,
+          "starterBox": [
+            "657024361419851aef03e6fa",
+            "560d5e524bdc2d25448b4571",
+            25
+          ],
+          "spares": [
+            [
+              "55d484b44bdc2d1d4e8b456d",
+              "MP-133 12ga 6-shell magazine",
+              1850,
+              2
+            ],
+            [
+              "55d45d3f4bdc2d972f8b456c",
+              "MP-133 beechwood forestock",
+              2100,
+              1
+            ],
+            [
+              "55d4491a4bdc2d882f8b456e",
+              "MP-133 12ga 510mm barrel",
+              5500,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "emma-2",
+          "title": "膝盖上那只",
+          "weapon": "64748cb8de82c85eaf0a273a",
+          "weaponName": "MP-43 12ga sawed-off double-barrel shotgun",
+          "setup": "原厂锯短 MP-43",
+          "maps": [
+            "BigMap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 8,
+          "challenge": "close:12",
+          "level": 14,
+          "loyalty": 1,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "64748d02d1c009260702b526"
+            ]
+          ],
+          "magazineCapacity": 0,
+          "price": 12200,
+          "xp": 1800,
+          "cashReward": 15000,
+          "spares": [
+            [
+              "64748d02d1c009260702b526",
+              "MP-43 12ga sawed-off 310mm barrel",
+              2550,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "emma-3",
+          "title": "进门先让一让",
+          "weapon": "5a7828548dc32e5a9c28b516",
+          "weaponName": "Remington Model 870 12ga pump-action shotgun",
+          "setup": "M870 MESA 突入套件",
+          "maps": [
+            "Interchange"
+          ],
+          "mapNames": [
+            "立交桥",
+            "Interchange"
+          ],
+          "kills": 11,
+          "challenge": "close:18",
+          "level": 16,
+          "loyalty": 2,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "5a787fdfc5856700142fdd9a"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "5a788031c585673f2b5c1c79"
+            ],
+            [
+              2,
+              "mod_foregrip",
+              "59fc48e086f77463b1118392"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5a7882dcc5856700177af662"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5ae35b315acfc4001714e8b0"
+            ],
+            [
+              5,
+              "mod_stock",
+              "56eabf3bd2720b75698b4569"
+            ],
+            [
+              6,
+              "mod_stock",
+              "58d2912286f7744e27117493"
+            ],
+            [
+              5,
+              "mod_pistol_grip",
+              "55d4b9964bdc2d1d4e8b456e"
+            ],
+            [
+              0,
+              "mod_mount",
+              "5a78948ec5856700177b1124"
+            ],
+            [
+              9,
+              "mod_scope",
+              "584924ec24597768f12ae244"
+            ]
+          ],
+          "magazineCapacity": 4,
+          "price": 103550,
+          "xp": 2350,
+          "cashReward": 20500,
+          "starterBox": [
+            "657024361419851aef03e6fa",
+            "560d5e524bdc2d25448b4571",
+            25
+          ],
+          "spares": [
+            [
+              "5a7882dcc5856700177af662",
+              "M870 12ga 4-shell magazine cap",
+              1450,
+              2
+            ],
+            [
+              "584924ec24597768f12ae244",
+              "EOTech XPS3-2 holographic sight",
+              31550,
+              1
+            ],
+            [
+              "5a788031c585673f2b5c1c79",
+              "M870 FAB Defense PR-870 forestock",
+              2850,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "emma-4",
+          "title": "把车往前挪",
+          "weapon": "606dae0ab0e443224b421bb7",
+          "weaponName": "MP-155 12ga semi-automatic shotgun",
+          "setup": "MP-155 Ultima 套件",
+          "maps": [
+            "factory4_day",
+            "factory4_night"
+          ],
+          "mapNames": [
+            "工厂",
+            "Factory"
+          ],
+          "kills": 13,
+          "challenge": "survive",
+          "level": 19,
+          "loyalty": 2,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "6076c1b9f2cb2e02a42acedc"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "606ee5c81246154cad35d65e"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "6076c87f232e5a31c233d50e"
+            ],
+            [
+              0,
+              "mod_stock",
+              "606eef46232e5a31c233d500"
+            ],
+            [
+              4,
+              "mod_stock",
+              "606eef756d0bd7580617baf8"
+            ],
+            [
+              5,
+              "mod_stock",
+              "606ef0812535c57a13424d20"
+            ],
+            [
+              5,
+              "mod_tactical",
+              "606f2696f2cb2e02a42aceb1"
+            ],
+            [
+              0,
+              "mod_mount",
+              "60785ce5132d4d12c81fd918"
+            ]
+          ],
+          "magazineCapacity": 6,
+          "price": 119300,
+          "xp": 3000,
+          "cashReward": 102500,
+          "spares": [
+            [
+              "6076c87f232e5a31c233d50e",
+              "MP-155 12ga 6-shell magazine",
+              1700,
+              2
+            ],
+            [
+              "606ee5c81246154cad35d65e",
+              "MP-155 Ultima polymer forestock",
+              6050,
+              1
+            ],
+            [
+              "6076c1b9f2cb2e02a42acedc",
+              "MP-155 12ga 510mm barrel",
+              9600,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "emma-5",
+          "title": "空架上还有一层",
+          "weapon": "6259b864ebedf17603599e88",
+          "weaponName": "Benelli M3 Super 90 12ga dual-mode shotgun",
+          "setup": "Benelli M3 七发弹管、顶轨和红点",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 16,
+          "challenge": "survive",
+          "level": 23,
+          "loyalty": 3,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_barrel",
+              "6259c2c1d714855d182bad85"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "6259c4347d6aab70bc23a190"
+            ],
+            [
+              0,
+              "mod_stock",
+              "6259c3387d6aab70bc23a18d"
+            ],
+            [
+              3,
+              "mod_pistol_grip",
+              "6259c3d8012d6678ec38eeb8"
+            ],
+            [
+              0,
+              "mod_mount",
+              "625ed7c64d9b6612df732146"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "625ebcef6f53af4aa66b44dc"
+            ],
+            [
+              0,
+              "mod_charge",
+              "625ec45bb14d7326ac20f572"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "6259bdcabd28e4721447a2aa"
+            ],
+            [
+              5,
+              "mod_scope",
+              "570fd721d2720bc5458b4596"
+            ]
+          ],
+          "magazineCapacity": 7,
+          "price": 68500,
+          "xp": 3900,
+          "cashReward": 27500,
+          "starterBox": [
+            "657024361419851aef03e6fa",
+            "560d5e524bdc2d25448b4571",
+            25
+          ],
+          "spares": [
+            [
+              "6259bdcabd28e4721447a2aa",
+              "Benelli M3 Super 90 12ga 7-shell magazine",
+              3200,
+              2
+            ],
+            [
+              "570fd721d2720bc5458b4596",
+              "Walther MRS reflex sight",
+              18950,
+              1
+            ],
+            [
+              "6259c4347d6aab70bc23a190",
+              "Benelli M3 forend",
+              2750,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "katya": {
+      "trader": "afee5b874a94cd243d05ff44",
+      "prerequisite": "6157df273ae6968951e9f2af",
+      "title": "器材间借用簿",
+      "stages": [
+        {
+          "key": "katya-1",
+          "title": "标线外面",
+          "weapon": "59e6152586f77473dc057aa1",
+          "weaponName": "Molot Arms VPO-136 Vepr-KM 7.62x39 carbine",
+          "setup": "原厂 VPO-136",
+          "maps": [
+            "BigMap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 10,
+          "challenge": "far:25",
+          "level": 16,
+          "loyalty": 1,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_gas_block",
+              "59e649f986f77411d949b246"
+            ],
+            [
+              1,
+              "mod_handguard",
+              "59e6284f86f77440d569536f"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "59e61eb386f77440d64f5daf"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "59e6318286f77444dd62c4cc"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "59e6449086f7746c9f75e822"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "59d650cf86f7741b846413a4"
+            ],
+            [
+              0,
+              "mod_stock",
+              "59e6227d86f77440d64f5dc2"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5b1fd4e35acfc40018633c39"
+            ]
+          ],
+          "magazineCapacity": 10,
+          "price": 44100,
+          "xp": 1300,
+          "cashReward": 41000,
+          "spares": [
+            [
+              "5b1fd4e35acfc40018633c39",
+              "AK 7.62x39 aluminium 10-round magazine",
+              1150,
+              2
+            ],
+            [
+              "59e61eb386f77440d64f5daf",
+              "VPO-136 Vepr-KM 7.62x39 muzzle brake-compensator",
+              850,
+              1
+            ],
+            [
+              "59e6284f86f77440d569536f",
+              "VPO-136 Vepr-KM wooden handguard",
+              1100,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-2",
+          "title": "离木头一指",
+          "weapon": "5c07c60e0db834002330051f",
+          "weaponName": "ADAR 2-15 5.56x45 carbine",
+          "setup": "ADAR 木托和低位红点",
+          "maps": [
+            "Interchange"
+          ],
+          "mapNames": [
+            "立交桥",
+            "Interchange"
+          ],
+          "kills": 12,
+          "challenge": "far:30",
+          "level": 18,
+          "loyalty": 1,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "5c0e2ff6d174af02a1659d4a"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5aaa5e60e5b5b000140293d6"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5c0e2f26d174af02a9625114"
+            ],
+            [
+              3,
+              "mod_barrel",
+              "5c0e2f94d174af029f650d56"
+            ],
+            [
+              4,
+              "mod_muzzle",
+              "5c0fafb6d174af02a96260ba"
+            ],
+            [
+              4,
+              "mod_gas_block",
+              "5ae30e795acfc408fb139a0b"
+            ],
+            [
+              3,
+              "mod_handguard",
+              "5c0e2f5cd174af02a012cfc9"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5c0faeddd174af02a962601f"
+            ],
+            [
+              0,
+              "mod_charge",
+              "5c0faf68d174af02a96260b8"
+            ],
+            [
+              3,
+              "mod_scope",
+              "570fd721d2720bc5458b4596"
+            ]
+          ],
+          "magazineCapacity": 10,
+          "price": 67100,
+          "xp": 1800,
+          "cashReward": 17000,
+          "starterBox": [
+            "657024d8c5d7d4cb4d078567",
+            "59e6920f86f77411d82aa167",
+            50
+          ],
+          "spares": [
+            [
+              "5aaa5e60e5b5b000140293d6",
+              "AR-15 5.56x45 Magpul PMAG 10 GEN M3 STANAG 10-round magazine",
+              2750,
+              2
+            ],
+            [
+              "570fd721d2720bc5458b4596",
+              "Walther MRS reflex sight",
+              18950,
+              1
+            ],
+            [
+              "5c0fafb6d174af02a96260ba",
+              "AR-15 ADAR 2-15 5.56x45 flash hider",
+              1250,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-3",
+          "title": "把线往外挪",
+          "weapon": "5ac66cb05acfc40198510a10",
+          "weaponName": "Kalashnikov AK-101 5.56x45 assault rifle",
+          "setup": "AK-101、Kobra 侧挂红点与 Rotor 43 消音器",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 14,
+          "challenge": "far:35",
+          "level": 20,
+          "loyalty": 2,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_gas_block",
+              "59c6633186f7740cf0493bb9"
+            ],
+            [
+              1,
+              "mod_handguard",
+              "5648b1504bdc2d9d488b4584"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "5649ade84bdc2d1b2b8b4587"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5ac50da15acfc4001718d287"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "5ac72e475acfc400180ae6fe"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5ac50c185acfc400163398d4"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5ac66c5d5acfc4001718d314"
+            ],
+            [
+              0,
+              "mod_mount_000",
+              "5947db3f86f77447880cf76f"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "5a9fbb84a2750c00137fa685"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 123100,
+          "xp": 2350,
+          "cashReward": 105500,
+          "spares": [
+            [
+              "5ac66c5d5acfc4001718d314",
+              "AK-101 5.56x45 6L29 30-round magazine",
+              2500,
+              2
+            ],
+            [
+              "5a9fbb84a2750c00137fa685",
+              "Rotor 43 5.56x45 sound suppressor",
+              58900,
+              1
+            ],
+            [
+              "5947db3f86f77447880cf76f",
+              "Axion Kobra EKP-8-02 reflex sight (Dovetail)",
+              14000,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-4",
+          "title": "手放松点",
+          "weapon": "5ac4cd105acfc40016339859",
+          "weaponName": "Kalashnikov AK-74M 5.45x39 assault rifle",
+          "setup": "AK-74M Zenitco 套件",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 18,
+          "challenge": "head",
+          "level": 23,
+          "loyalty": 2,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_gas_block",
+              "59c6633186f7740cf0493bb9"
+            ],
+            [
+              1,
+              "mod_handguard",
+              "5648b4534bdc2d3d1c8b4580"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "5649ab884bdc2ded0b8b457f"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "5649ae4a4bdc2d1b2b8b4588"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5649af884bdc2d1b2b8b4589"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "5ac72e475acfc400180ae6fe"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5ac78eaf5acfc4001926317a"
+            ],
+            [
+              7,
+              "mod_stock",
+              "59ecc3dd86f7746dc827481c"
+            ],
+            [
+              0,
+              "mod_charge",
+              "5648ac824bdc2ded0b8b457d"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "564ca99c4bdc2d16268b4589"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 116200,
+          "xp": 3000,
+          "cashReward": 24000,
+          "starterBox": [
+            "5737339e2459776af261abeb",
+            "56dff216d2720bbd668b4568",
+            30
+          ],
+          "spares": [
+            [
+              "564ca99c4bdc2d16268b4589",
+              "AK-74 5.45x39 6L20 30-round magazine",
+              3050,
+              2
+            ],
+            [
+              "5649ab884bdc2ded0b8b457f",
+              "AK Zenit DTK-1 7.62x39/5.45x39 muzzle brake-compensator",
+              5800,
+              1
+            ],
+            [
+              "5648b4534bdc2d3d1c8b4580",
+              "AK Zenit B-10M handguard with B-19 upper mount",
+              18300,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-5",
+          "title": "最后拧这一颗",
+          "weapon": "5447a9cd4bdc2dbd208b4567",
+          "weaponName": "Colt M4A1 5.56x45 assault rifle",
+          "setup": "M4A1 Block II 全套",
+          "maps": [
+            "RezervBase",
+            "Laboratory"
+          ],
+          "mapNames": [
+            "储备站或实验室",
+            "Reserve or the Laboratory"
+          ],
+          "kills": 20,
+          "challenge": "survive",
+          "level": 28,
+          "loyalty": 3,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "5a339805c4a2826c6e06d73d"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "55802d5f4bdc2dac148b458e"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "55d355e64bdc2d962f8b4569"
+            ],
+            [
+              3,
+              "mod_scope",
+              "57aca93d2459771f2c7e26db"
+            ],
+            [
+              3,
+              "mod_barrel",
+              "55d35ee94bdc2d61338b4568"
+            ],
+            [
+              5,
+              "mod_muzzle",
+              "56ea8180d2720bf2698b456a"
+            ],
+            [
+              6,
+              "mod_muzzle",
+              "57da93632459771cb65bf83f"
+            ],
+            [
+              5,
+              "mod_gas_block",
+              "56eabcd4d2720b66698b4574"
+            ],
+            [
+              3,
+              "mod_handguard",
+              "55f84c3c4bdc2d5f408b4576"
+            ],
+            [
+              9,
+              "mod_scope",
+              "5649a2464bdc2d91118b45a8"
+            ],
+            [
+              10,
+              "mod_scope",
+              "58d39d3d86f77445bb794ae7"
+            ],
+            [
+              11,
+              "mod_scope",
+              "58d399e486f77442e0016fe7"
+            ],
+            [
+              9,
+              "mod_tactical",
+              "544909bb4bdc2d6f028b4577"
+            ],
+            [
+              9,
+              "mod_handguard",
+              "638f1ff84822287cad04be9d"
+            ],
+            [
+              14,
+              "mod_foregrip",
+              "58c157be86f77403c74b2bb6"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5649be884bdc2d79388b4577"
+            ],
+            [
+              16,
+              "mod_stock_000",
+              "58d2946386f774496974c37e"
+            ],
+            [
+              17,
+              "mod_stock",
+              "58d2912286f7744e27117493"
+            ],
+            [
+              0,
+              "mod_charge",
+              "55d44fd14bdc2d962f8b456e"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 297700,
+          "xp": 3900,
+          "cashReward": 249000,
+          "spares": [
+            [
+              "55802d5f4bdc2dac148b458e",
+              "AR-15 5.56x45 Magpul PMAG 30 GEN M3 W STANAG 30-round magazine",
+              5250,
+              2
+            ],
+            [
+              "57aca93d2459771f2c7e26db",
+              "ELCAN SpecterDR 1x/4x scope (FDE)",
+              52100,
+              1
+            ],
+            [
+              "5649a2464bdc2d91118b45a8",
+              "NcSTAR MPR45 Backup mount",
+              4250,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-6",
+          "title": "换一头拿",
+          "weapon": "5c488a752e221602b412af63",
+          "weaponName": "Desert Tech MDR 5.56x45 assault rifle",
+          "setup": "MDR 5.56、原护木和 MRS 红点",
+          "maps": [
+            "BigMap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 12,
+          "challenge": "far:25",
+          "level": 28,
+          "loyalty": 3,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "5c48a2c22e221602b313fb6c"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "55802d5f4bdc2dac148b458e"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "5c48a14f2e2216152006edd7"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5c48a2852e221602b21d5923"
+            ],
+            [
+              4,
+              "mod_muzzle",
+              "5c48a2a42e221602b66d1e07"
+            ],
+            [
+              0,
+              "mod_scope",
+              "570fd721d2720bc5458b4596"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 145300,
+          "xp": 3500,
+          "cashReward": 125000,
+          "spares": [
+            [
+              "5c48a2a42e221602b66d1e07",
+              "AR-15 Desert Tech 5.56x45 flash hider",
+              5800,
+              1
+            ],
+            [
+              "5c48a14f2e2216152006edd7",
+              "MDR handguard (FDE)",
+              11900,
+              1
+            ],
+            [
+              "5c48a2852e221602b21d5923",
+              "MDR 5.56x45 16 inch barrel",
+              51100,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-7",
+          "title": "看准再搬",
+          "weapon": "5d43021ca4b9362eab4b5e25",
+          "weaponName": "Lone Star TX-15 DML 5.56x45 carbine",
+          "setup": "TX-15 DML、原配消音器与 ELCAN",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 11,
+          "challenge": "far:45",
+          "level": 29,
+          "loyalty": 3,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "55802f5d4bdc2dac148b458f"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5aaa5dfee5b5b000140293d3"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5d4405aaa4b9361e6a4e6bd3"
+            ],
+            [
+              3,
+              "mod_barrel",
+              "5d440b93a4b9364276578d4b"
+            ],
+            [
+              4,
+              "mod_muzzle",
+              "5d440625a4b9361eec4ae6c5"
+            ],
+            [
+              5,
+              "mod_muzzle",
+              "5d44064fa4b9361e4f6eb8b5"
+            ],
+            [
+              4,
+              "mod_gas_block",
+              "56eabcd4d2720b66698b4574"
+            ],
+            [
+              3,
+              "mod_handguard",
+              "5d4405f0a4b9361e6a4e6bd9"
+            ],
+            [
+              8,
+              "mod_mount_004",
+              "5b7be47f5acfc400170e2dd2"
+            ],
+            [
+              8,
+              "mod_foregrip",
+              "5b7be4895acfc400170e2dd5"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5649be884bdc2d79388b4577"
+            ],
+            [
+              11,
+              "mod_stock_000",
+              "5d4406a8a4b9361e4f6eb8b7"
+            ],
+            [
+              0,
+              "mod_charge",
+              "5d44334ba4b9362b346d1948"
+            ],
+            [
+              3,
+              "mod_scope",
+              "57ac965c24597706be5f975c"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 288800,
+          "xp": 3850,
+          "cashReward": 27300,
+          "starterBox": [
+            "657024d8c5d7d4cb4d078567",
+            "59e6920f86f77411d82aa167",
+            50
+          ],
+          "spares": [
+            [
+              "5aaa5dfee5b5b000140293d3",
+              "AR-15 5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine",
+              4300,
+              2
+            ],
+            [
+              "5d440625a4b9361eec4ae6c5",
+              "AR-15 Thunder Beast Arms 223CB 5.56x45 muzzle brake",
+              9850,
+              1
+            ],
+            [
+              "5d44064fa4b9361e4f6eb8b5",
+              "Thunder Beast Arms Ultra 5 sound suppressor",
+              84950,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-8",
+          "title": "把那格分开",
+          "weapon": "5fbcc1d9016cce60e8341ab3",
+          "weaponName": "SIG MCX .300 Blackout assault rifle",
+          "setup": "MCX .300 短管战术全套",
+          "maps": [
+            "Interchange"
+          ],
+          "mapNames": [
+            "立交桥",
+            "Interchange"
+          ],
+          "kills": 14,
+          "challenge": "close:25",
+          "level": 30,
+          "loyalty": 4,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "55802f5d4bdc2dac148b458f"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "55802d5f4bdc2dac148b458e"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5fbcc3e4d6fa9c00c571bb58"
+            ],
+            [
+              3,
+              "mod_scope",
+              "58d39d3d86f77445bb794ae7"
+            ],
+            [
+              4,
+              "mod_scope",
+              "58d39b0386f77443380bf13c"
+            ],
+            [
+              5,
+              "mod_scope",
+              "58d399e486f77442e0016fe7"
+            ],
+            [
+              3,
+              "mod_barrel",
+              "5fbbfabed5cb881a7363194e"
+            ],
+            [
+              7,
+              "mod_muzzle",
+              "5fbc22ccf24b94483f726483"
+            ],
+            [
+              8,
+              "mod_muzzle_000",
+              "5fbcbcf593164a5b6278efb2"
+            ],
+            [
+              8,
+              "mod_muzzle_001",
+              "5fbe760793164a5b6278efc8"
+            ],
+            [
+              7,
+              "mod_gas_block",
+              "5fbc210bf24b94483f726481"
+            ],
+            [
+              3,
+              "mod_handguard",
+              "5fbc227aa56d053a3543f79e"
+            ],
+            [
+              12,
+              "mod_mount_001",
+              "59e0bdb186f774156f04ce82"
+            ],
+            [
+              13,
+              "mod_tactical",
+              "57d17e212459775a1179a0f5"
+            ],
+            [
+              14,
+              "mod_flashlight",
+              "57d17c5e2459775a5c57d17d"
+            ],
+            [
+              12,
+              "mod_sight_front",
+              "5c17804b2e2216152006c02f"
+            ],
+            [
+              12,
+              "mod_foregrip",
+              "5fc0f9cbd6fa9c00c571bb90"
+            ],
+            [
+              3,
+              "mod_sight_rear",
+              "5c1780312e221602b66cc189"
+            ],
+            [
+              3,
+              "mod_tactical",
+              "544909bb4bdc2d6f028b4577"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5fbcc429900b1d5091531dd7"
+            ],
+            [
+              0,
+              "mod_charge",
+              "5fbcc640016cce60e8341acc"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 254200,
+          "xp": 4200,
+          "cashReward": 30100,
+          "starterBox": [
+            "657023bebfc87b3a34093207",
+            "5fbe3ffdf8b6a877a729ea82",
+            50
+          ],
+          "spares": [
+            [
+              "5fbc22ccf24b94483f726483",
+              "SIG Sauer Taper-LOK 7.62x51/.300 BLK muzzle adapter",
+              5800,
+              1
+            ],
+            [
+              "58d39d3d86f77445bb794ae7",
+              "Aimpoint Micro Standard Mount",
+              3400,
+              1
+            ],
+            [
+              "58d39b0386f77443380bf13c",
+              "Aimpoint Micro Spacer High",
+              3050,
+              1
+            ],
+            [
+              "5fbe3ffdf8b6a877a729ea82",
+              ".300 Blackout BCP FMJ",
+              490,
+              8
+            ]
+          ]
+        },
+        {
+          "key": "katya-9",
+          "title": "匣子照旧放",
+          "weapon": "606587252535c57a13424cfd",
+          "weaponName": "CMMG Mk47 Mutant 7.62x39 assault rifle",
+          "setup": "Mk47 Mutant 短管和 XPS3 红点",
+          "maps": [
+            "factory4_day",
+            "factory4_night"
+          ],
+          "mapNames": [
+            "工厂",
+            "Factory"
+          ],
+          "kills": 14,
+          "challenge": "survive",
+          "level": 30,
+          "loyalty": 4,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "55802f5d4bdc2dac148b458f"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "59d6272486f77466146386ff"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "606587a88900dc2d9a55b659"
+            ],
+            [
+              3,
+              "mod_barrel",
+              "60658776f2cb2e02a42ace2b"
+            ],
+            [
+              4,
+              "mod_muzzle",
+              "6065c6e7132d4d12c81fd8e1"
+            ],
+            [
+              4,
+              "mod_gas_block",
+              "6065dc8a132d4d12c81fd8e3"
+            ],
+            [
+              3,
+              "mod_handguard",
+              "6065880c132d4d12c81fd8da"
+            ],
+            [
+              7,
+              "mod_sight_front",
+              "5bc09a30d4351e00367fb7c8"
+            ],
+            [
+              3,
+              "mod_sight_rear",
+              "5bc09a18d4351e003562b68e"
+            ],
+            [
+              0,
+              "mod_stock_001",
+              "606587e18900dc2d9a55b65f"
+            ],
+            [
+              10,
+              "mod_stock_000",
+              "606587d11246154cad35d635"
+            ],
+            [
+              0,
+              "mod_charge",
+              "606587bd6d0bd7580617bacc"
+            ],
+            [
+              3,
+              "mod_scope",
+              "58491f3324597764bc48fa02"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 158850,
+          "xp": 4550,
+          "cashReward": 136000,
+          "spares": [
+            [
+              "59d6272486f77466146386ff",
+              "AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine",
+              4400,
+              2
+            ],
+            [
+              "6065c6e7132d4d12c81fd8e1",
+              "AR-10 CMMG SV Brake 7.62x51 muzzle brake",
+              9900,
+              1
+            ],
+            [
+              "58491f3324597764bc48fa02",
+              "EOTech XPS3-0 holographic sight",
+              31600,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-10",
+          "title": "空一把椅子",
+          "weapon": "5aafa857e5b5b00018480968",
+          "weaponName": "Springfield Armory M1A 7.62x51 rifle",
+          "setup": "M1A EBR 枪托和原配机械瞄具",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 12,
+          "challenge": "far:40",
+          "level": 31,
+          "loyalty": 4,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5aaf8a0be5b5b00015693243"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5addc7005acfc4001669f275"
+            ],
+            [
+              2,
+              "mod_stock",
+              "5addc7ac5acfc400194dbd90"
+            ],
+            [
+              3,
+              "mod_pistol_grip",
+              "5addc7db5acfc4001669f279"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5aaf9d53e5b5b00015042a52"
+            ],
+            [
+              5,
+              "mod_muzzle",
+              "5aafa1c2e5b5b00015042a56"
+            ],
+            [
+              6,
+              "mod_sight_front",
+              "5aafa49ae5b5b00015042a58"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "5abcbb20d8ce87001773e258"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 112300,
+          "xp": 4900,
+          "cashReward": 35700,
+          "starterBox": [
+            "65702561cfc010a0f5006a28",
+            "5e023e53d4353e3302577c4c",
+            20
+          ],
+          "spares": [
+            [
+              "5aaf8a0be5b5b00015693243",
+              "M1A 7.62x51 20-round magazine",
+              3400,
+              2
+            ],
+            [
+              "5aafa1c2e5b5b00015042a56",
+              "M1A SOCOM 16 7.62x51 muzzle brake-compensator",
+              2950,
+              1
+            ],
+            [
+              "5aaf9d53e5b5b00015042a52",
+              "M1A 7.62x51 16 inch barrel",
+              21400,
+              1
+            ],
+            [
+              "5e023e53d4353e3302577c4c",
+              "7.62x51mm BCP FMJ",
+              1145,
+              6
+            ]
+          ]
+        },
+        {
+          "key": "katya-11",
+          "title": "多留一格",
+          "weapon": "5dcbd56fdbd3d91b3e5468d5",
+          "weaponName": "Desert Tech MDR 7.62x51 assault rifle",
+          "setup": "MDR 7.62×51 指定全配",
+          "maps": [
+            "RezervBase",
+            "Laboratory"
+          ],
+          "mapNames": [
+            "储备站或实验室",
+            "Reserve or the Laboratory"
+          ],
+          "kills": 16,
+          "challenge": "far:35",
+          "level": 32,
+          "loyalty": 4,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "5c48a2c22e221602b313fb6c"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5a3501acc4a282000d72293a"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "5dcbd6b46ec07c0c4347a564"
+            ],
+            [
+              3,
+              "mod_mount_000",
+              "5b7be4895acfc400170e2dd5"
+            ],
+            [
+              4,
+              "mod_foregrip",
+              "58c157be86f77403c74b2bb6"
+            ],
+            [
+              3,
+              "mod_tactical",
+              "5c06595c0db834001a66af6c"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5dcbe9431e1f4616d354987e"
+            ],
+            [
+              7,
+              "mod_muzzle",
+              "5a34fd2bc4a282329a73b4c5"
+            ],
+            [
+              0,
+              "mod_scope",
+              "59db7eed86f77461f8380365"
+            ],
+            [
+              9,
+              "mod_scope",
+              "5c052a900db834001a66acbd"
+            ],
+            [
+              10,
+              "mod_mount",
+              "5a33bab6c4a28200741e22f8"
+            ],
+            [
+              11,
+              "mod_scope",
+              "5a32aa8bc4a2826c6e06d737"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "5dfa3d7ac41b2312ea33362a"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 272100,
+          "xp": 5250,
+          "cashReward": 229000,
+          "spares": [
+            [
+              "5a3501acc4a282000d72293a",
+              "AR-10 7.62x51 Magpul PMAG 20 SR-LR GEN M3 20-round magazine",
+              4450,
+              2
+            ],
+            [
+              "5a34fd2bc4a282329a73b4c5",
+              "AR-10 AAC Blackout 51T 7.62x51 flash hider",
+              6350,
+              1
+            ],
+            [
+              "59db7eed86f77461f8380365",
+              "Trijicon TA51 sight mount",
+              5850,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-12",
+          "title": "写完再折",
+          "weapon": "65290f395ae2ae97b80fdf2d",
+          "weaponName": "SIG MCX-SPEAR 6.8x51 assault rifle",
+          "setup": "MCX-SPEAR、TANGO6T 和原配消音组件",
+          "maps": [
+            "RezervBase",
+            "Laboratory"
+          ],
+          "mapNames": [
+            "储备站或实验室",
+            "Reserve or the Laboratory"
+          ],
+          "kills": 18,
+          "challenge": "survive",
+          "level": 34,
+          "loyalty": 4,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "652911675ae2ae97b80fdf3c"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "65293c38fc460e50a509cb25"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "6529119424cbe3c74a05e5bb"
+            ],
+            [
+              3,
+              "mod_scope",
+              "6567e751a715f85433025998"
+            ],
+            [
+              4,
+              "mod_scope",
+              "6567e7681265c8a131069b0f"
+            ],
+            [
+              3,
+              "mod_barrel",
+              "652910565ae2ae97b80fdf35"
+            ],
+            [
+              6,
+              "mod_muzzle",
+              "6529113b5ae2ae97b80fdf39"
+            ],
+            [
+              7,
+              "mod_muzzle",
+              "652911e650dc782999054b9d"
+            ],
+            [
+              6,
+              "mod_gas_block",
+              "652910bc24cbe3c74a05e5b9"
+            ],
+            [
+              3,
+              "mod_handguard",
+              "652910ef50dc782999054b97"
+            ],
+            [
+              0,
+              "mod_stock_000",
+              "6529348224cbe3c74a05e5c4"
+            ],
+            [
+              11,
+              "mod_stock",
+              "6529366450dc782999054ba0"
+            ],
+            [
+              12,
+              "mod_stock_000",
+              "6529370c405a5f51dd023db8"
+            ],
+            [
+              0,
+              "mod_charge",
+              "6529109524cbe3c74a05e5b7"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 276900,
+          "xp": 5600,
+          "cashReward": 233000,
+          "spares": [
+            [
+              "65293c38fc460e50a509cb25",
+              "AR-10 7.62x51 Lancer L7AWM 20-round magazine",
+              5100,
+              2
+            ],
+            [
+              "6529113b5ae2ae97b80fdf39",
+              "MCX-SPEAR Clutch-Lok QD 6.8x51 Shouldered Flash Hider",
+              6650,
+              1
+            ],
+            [
+              "652911e650dc782999054b9d",
+              "MCX-SPEAR SLX68-MG-QD 6.8x51 sound suppressor",
+              68550,
+              1
+            ],
+            [
+              "6529302b8c26af6326029fb7",
+              "6.8x51mm SIG FMJ",
+              1035,
+              6
+            ]
+          ]
+        }
+      ]
+    },
+    "haruka": {
+      "trader": "d20d87e0da4822e5261cd161",
+      "prerequisite": "0a4248837afa56cf089ecb5a",
+      "title": "待验货清单",
+      "stages": [
+        {
+          "key": "haruka-1",
+          "title": "签收前数一遍",
+          "weapon": "5de652c31b7e3716273428be",
+          "weaponName": "Molot Arms VPO-215 Gornostay .366 TKM bolt-action rifle",
+          "setup": "VPO-215 原配木托和短倍率镜",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 8,
+          "challenge": "far:30",
+          "level": 19,
+          "loyalty": 1,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5de653abf76fdc1ce94a5a2a"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5de655be4a9f347bc92edb88"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5de65547883dde217541644b"
+            ],
+            [
+              3,
+              "mod_muzzle",
+              "5de6556a205ddc616a6bc4f7"
+            ],
+            [
+              0,
+              "mod_mount",
+              "5de6558e9f98ac2bc65950fc"
+            ],
+            [
+              5,
+              "mod_scope",
+              "5d2dc3e548f035404a1a4798"
+            ]
+          ],
+          "magazineCapacity": 4,
+          "price": 68950,
+          "xp": 1300,
+          "cashReward": 61500,
+          "spares": [
+            [
+              "5de653abf76fdc1ce94a5a2a",
+              "VPO-215 .366 TKM 4-round magazine",
+              1650,
+              2
+            ],
+            [
+              "5d2dc3e548f035404a1a4798",
+              "Monstrum Tactical Compact Prism Scope 2x32",
+              50700,
+              1
+            ],
+            [
+              "5de6556a205ddc616a6bc4f7",
+              "VPO-215 thread protector",
+              300,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "haruka-2",
+          "title": "隔着站台",
+          "weapon": "55801eed4bdc2d89578b4588",
+          "weaponName": "SV-98 7.62x54R bolt-action sniper rifle",
+          "setup": "SV-98 OV 枪托和指定镜组",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 10,
+          "challenge": "far:40",
+          "level": 21,
+          "loyalty": 1,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "559ba5b34bdc2d1f1a8b4582"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "56083e1b4bdc2dc8488b4572"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "560e620e4bdc2d724b8b456b"
+            ],
+            [
+              0,
+              "mod_stock",
+              "623b2e9d11c3296b440d1638"
+            ],
+            [
+              4,
+              "mod_handguard",
+              "623c3c1f37b4b31470357737"
+            ],
+            [
+              5,
+              "mod_mount_000",
+              "623c2f4242aee3103f1c44b7"
+            ],
+            [
+              5,
+              "mod_mount_001",
+              "623c2f652febb22c2777d8d7"
+            ],
+            [
+              5,
+              "mod_mount_002",
+              "623c2f652febb22c2777d8d7"
+            ],
+            [
+              4,
+              "mod_pistol_grip",
+              "623c3be0484b5003161840dc"
+            ],
+            [
+              4,
+              "mod_stock_000",
+              "624c29ce09cd027dff2f8cd7"
+            ],
+            [
+              0,
+              "mod_scope",
+              "57ac965c24597706be5f975c"
+            ]
+          ],
+          "magazineCapacity": 10,
+          "price": 136350,
+          "xp": 1800,
+          "cashReward": 17000,
+          "starterBox": [
+            "64aceab0426a303417060654",
+            "64b8f7b5389d7ffd620ccba2",
+            20
+          ],
+          "spares": [
+            [
+              "559ba5b34bdc2d1f1a8b4582",
+              "SV-98 7.62x54R 10-round magazine",
+              5350,
+              2
+            ],
+            [
+              "57ac965c24597706be5f975c",
+              "ELCAN SpecterDR 1x/4x scope",
+              52100,
+              1
+            ],
+            [
+              "560e620e4bdc2d724b8b456b",
+              "SV-98 7.62x54R muzzle device",
+              2100,
+              1
+            ],
+            [
+              "64b8f7b5389d7ffd620ccba2",
+              "7.62x54mm R SP BT",
+              1395,
+              4
+            ]
+          ]
+        },
+        {
+          "key": "haruka-3",
+          "title": "看得见门牌",
+          "weapon": "5bfea6e90db834001b7347f3",
+          "weaponName": "Remington Model 700 7.62x51 bolt-action sniper rifle",
+          "setup": "M700 PRO 全套",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 12,
+          "challenge": "far:45",
+          "level": 23,
+          "loyalty": 2,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5ce69cbad7f00c00b61c5098"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5cdeac22d7f00c000f26168f"
+            ],
+            [
+              2,
+              "mod_stock",
+              "5cdeac42d7f00c000d36ba73"
+            ],
+            [
+              2,
+              "mod_pistol_grip",
+              "5cdeac5cd7f00c000f261694"
+            ],
+            [
+              2,
+              "mod_mount_000",
+              "5cdeaca5d7f00c00b61c4b70"
+            ],
+            [
+              2,
+              "mod_mount_001",
+              "5b7be47f5acfc400170e2dd2"
+            ],
+            [
+              2,
+              "mod_mount_002",
+              "5b7be47f5acfc400170e2dd2"
+            ],
+            [
+              2,
+              "mod_mount_003",
+              "5b7be47f5acfc400170e2dd2"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5bfebc320db8340019668d79"
+            ],
+            [
+              9,
+              "mod_muzzle",
+              "5d270b3c8abbc3105335cfb8"
+            ],
+            [
+              0,
+              "mod_mount",
+              "65f064eec4da400cbb0dc1fe"
+            ],
+            [
+              11,
+              "mod_scope",
+              "5c0517910db83400232ffee5"
+            ]
+          ],
+          "magazineCapacity": 5,
+          "price": 142750,
+          "xp": 2350,
+          "cashReward": 122000,
+          "spares": [
+            [
+              "5ce69cbad7f00c00b61c5098",
+              "M700 7.62x51 Magpul PMAG AC 5-round magazine",
+              3850,
+              2
+            ],
+            [
+              "5c0517910db83400232ffee5",
+              "Valday PS-320 1/6x scope",
+              60250,
+              1
+            ],
+            [
+              "5d270b3c8abbc3105335cfb8",
+              "M700 thread protector",
+              700,
+              1
+            ],
+            [
+              "5e023e6e34d52a55c3304f71",
+              "7.62x51mm TCW SP",
+              900,
+              4
+            ]
+          ]
+        },
+        {
+          "key": "haruka-4",
+          "title": "签字那一行",
+          "weapon": "5c46fbd72e2216398b5a8c9c",
+          "weaponName": "SVDS 7.62x54R sniper rifle",
+          "setup": "SVDS、PSO 四倍镜与 Rotor 43 消音组合",
+          "maps": [
+            "RezervBase",
+            "Laboratory"
+          ],
+          "mapNames": [
+            "储备站或实验室",
+            "Reserve or the Laboratory"
+          ],
+          "kills": 14,
+          "challenge": "far:35",
+          "level": 26,
+          "loyalty": 2,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "5c471be12e221602b66cd9ac"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5c471c442e221602b542a6f8"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5c471b5d2e221602b21d4e14"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5c471cb32e221602b177afaa"
+            ],
+            [
+              4,
+              "mod_muzzle",
+              "5c471bfc2e221602b21d4e17"
+            ],
+            [
+              5,
+              "mod_sight_front",
+              "5c471ba12e221602b3137d76"
+            ],
+            [
+              4,
+              "mod_gas_block",
+              "5c471c842e221615214259b5"
+            ],
+            [
+              0,
+              "mod_mount_001",
+              "5c471c2d2e22164bef5d077f"
+            ],
+            [
+              8,
+              "mod_handguard",
+              "5c471c6c2e221602b66cd9ae"
+            ],
+            [
+              8,
+              "mod_sight_rear",
+              "5c471b7e2e2216152006e46c"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5c471bd12e221602b4129c3a"
+            ],
+            [
+              0,
+              "mod_mount_002",
+              "5c82342f2e221644f31c060e"
+            ],
+            [
+              5,
+              "mod_muzzle",
+              "5e01e9e273d8eb11426f5bc3"
+            ],
+            [
+              13,
+              "mod_muzzle",
+              "5e01ea19e9dc277128008c0b"
+            ]
+          ],
+          "magazineCapacity": 10,
+          "price": 191450,
+          "xp": 3000,
+          "cashReward": 24000,
+          "starterBox": [
+            "64aceab0426a303417060654",
+            "64b8f7b5389d7ffd620ccba2",
+            20
+          ],
+          "spares": [
+            [
+              "5c471c442e221602b542a6f8",
+              "SVD 7.62x54R 10-round magazine",
+              5150,
+              2
+            ],
+            [
+              "5c471bfc2e221602b21d4e17",
+              "SVDS 7.62x54R muzzle brake-compensator",
+              850,
+              1
+            ],
+            [
+              "5e01e9e273d8eb11426f5bc3",
+              "SVDS Rotor 43 thread adapter",
+              2500,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "haruka-5",
+          "title": "正本留在这里",
+          "weapon": "5df8ce05b11454561e39243b",
+          "weaponName": "Knight's Armament Company SR-25 7.62x51 marksman rifle",
+          "setup": "SR-25 精确射手全配",
+          "maps": [
+            "RezervBase",
+            "Laboratory"
+          ],
+          "mapNames": [
+            "储备站或实验室",
+            "Reserve or the Laboratory"
+          ],
+          "kills": 16,
+          "challenge": "far:45",
+          "level": 30,
+          "loyalty": 3,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "57af48872459771f0b2ebf11"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5df8f541c41b2312ea3335e3"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5649be884bdc2d79388b4577"
+            ],
+            [
+              3,
+              "mod_stock_000",
+              "5fc2369685fd526b824a5713"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5df8e4080b92095fd441e594"
+            ],
+            [
+              5,
+              "mod_scope",
+              "618bab21526131765025ab3f"
+            ],
+            [
+              6,
+              "mod_scope",
+              "618ba27d9008e4636a67f61d"
+            ],
+            [
+              6,
+              "mod_mount",
+              "618ba92152ecee1505530bd3"
+            ],
+            [
+              8,
+              "mod_scope",
+              "5a32aa8bc4a2826c6e06d737"
+            ],
+            [
+              5,
+              "mod_barrel",
+              "5df917564a9f347bc92edca3"
+            ],
+            [
+              10,
+              "mod_muzzle",
+              "6130c43c67085e45ef1405a1"
+            ],
+            [
+              11,
+              "mod_muzzle",
+              "5dfa3d2b0dee1b22f862eade"
+            ],
+            [
+              10,
+              "mod_gas_block",
+              "5dfa3d45dfc58d14537c20b0"
+            ],
+            [
+              5,
+              "mod_handguard",
+              "5df916dfbb49d91fb446d6b9"
+            ],
+            [
+              14,
+              "mod_tactical",
+              "544909bb4bdc2d6f028b4577"
+            ],
+            [
+              14,
+              "mod_sight_front",
+              "5dfa3d950dee1b22f862eae0"
+            ],
+            [
+              14,
+              "mod_foregrip",
+              "57cffcd624597763133760c5"
+            ],
+            [
+              14,
+              "mod_mount_002",
+              "671126b049e181972e0681fa"
+            ],
+            [
+              18,
+              "mod_bipod",
+              "5888961624597754281f93f3"
+            ],
+            [
+              5,
+              "mod_sight_rear",
+              "5dfa3d7ac41b2312ea33362a"
+            ],
+            [
+              0,
+              "mod_charge",
+              "5df8e085bb49d91fb446d6a8"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 392200,
+          "xp": 3900,
+          "cashReward": 326500,
+          "spares": [
+            [
+              "5df8f541c41b2312ea3335e3",
+              "AR-10 7.62x51 KAC 20-round steel magazine",
+              3400,
+              2
+            ],
+            [
+              "618bab21526131765025ab3f",
+              "Geissele Super Precision 30mm ring scope mount (DDC)",
+              18100,
+              1
+            ],
+            [
+              "618ba27d9008e4636a67f61d",
+              "Vortex Razor HD Gen.2 1-6x24 30mm riflescope",
+              98650,
+              1
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

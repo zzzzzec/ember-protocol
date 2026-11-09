@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <PathMap>$(MSBuildThisFileDirectory)=/src/</PathMap>
+    <GameRoot Condition="'$(GameRoot)' == ''">$(SPTZ_GAME_ROOT)</GameRoot>
+    <ServerDir Condition="'$(ServerDir)' == ''">$(GameRoot)/SPT</ServerDir>
+  </PropertyGroup>
+  <Target Name="ValidateGameReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(GameRoot)/EscapeFromTarkov_Data/Managed/Assembly-CSharp.dll')" Text="Provide a compatible game installation with -p:GameRoot=...; game assemblies are not stored in this repository." />
+  </Target>
+</Project>

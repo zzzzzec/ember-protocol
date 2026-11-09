@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 1,
+  "traders": {
+    "nina": [
+      {
+        "quest": null,
+        "level": 1,
+        "offers": [
+          {"key": "nina_pineapple", "tpl": "544fb62a4bdc2dfb738b4568", "name": "Pack of Russian Army pineapple juice", "price": 3350},
+          {"key": "nina_kvass", "tpl": "5e8f3423fd7471236e6e3b64", "name": "Bottle of Norvinsky Yadreniy premium kvass (0.6L)", "price": 24100},
+          {"key": "nina_tourniquet_cat", "tpl": "60098af40accd37ef2175f27", "name": "CAT hemostatic tourniquet", "price": 5000},
+          {"key": "nina_splint_basic", "tpl": "544fb3364bdc2d34748b456a", "name": "Immobilizing splint", "price": 4650},
+          {"key": "nina_bandage_basic", "tpl": "544fb25a4bdc2dfb738b4567", "name": "Aseptic bandage", "price": 2300},
+          {"key": "nina_vitajuice", "tpl": "57513fcc24597720a31c09a6", "name": "Pack of Vita juice", "inputs": [{"_tpl": "5448ff904bdc2d6f028b456e", "count": 2}]},
+          {"key": "nina_vaseline", "tpl": "5755383e24597772cb798966", "name": "Vaseline balm", "inputs": [{"_tpl": "57347c93245977448d35f6e3", "count": 1}, {"_tpl": "5c13cd2486f774072c757944", "count": 3}]}
+        ]
+      },
+      {
+        "quest": "d3c77d193a69771659365ba2",
+        "level": 1,
+        "offers": [
+          {"key": "nina_saline", "tpl": "59e3606886f77417674759a5", "name": "Bottle of saline solution", "price": 13200},
+          {"key": "nina_aluminum_splint", "tpl": "5af0454c86f7746bf20992e8", "name": "Aluminum splint", "inputs": [{"_tpl": "59e361e886f774176c10a2a5", "count": 1}]},
+          {"key": "nina_car_aid", "tpl": "590c661e86f7741e566b646a", "name": "Car first aid kit", "inputs": [{"_tpl": "59e3606886f77417674759a5", "count": 1}, {"_tpl": "544fb25a4bdc2dfb738b4567", "count": 1}]},
+          {"key": "nina_bleach", "tpl": "59e3556c86f7741776641ac2", "name": "Ox bleach", "price": 9300}
+        ]
+      },
+      {
+        "quest": "21e6b150e7ffd5d5af946e42",
+        "level": 1,
+        "offers": [
+          {"key": "nina_emergency_ration", "tpl": "60098b1705871270cd5352a1", "name": "Emergency Water Ration", "inputs": [{"_tpl": "575146b724597720a27126d5", "count": 1}]},
+          {"key": "nina_hot_rod", "tpl": "5751496424597720a27126da", "name": "Can of Hot Rod energy drink", "price": 14350},
+          {"key": "nina_tarcola", "tpl": "57514643245977207f2c2d09", "name": "Can of TarCola soda", "inputs": [{"_tpl": "57347d90245977448f7b7f65", "count": 1}]},
+          {"key": "nina_milk", "tpl": "575146b724597720a27126d5", "name": "Pack of milk", "price": 22900}
+        ]
+      },
+      {
+        "quest": "0d20d83376a18b382046abfe",
+        "level": 2,
+        "offers": [
+          {"key": "nina_augmentin", "tpl": "590c695186f7741e566b64a2", "name": "Augmentin antibiotic pills", "price": 21350},
+          {"key": "nina_ibuprofen", "tpl": "5af0548586f7743a532b7e99", "name": "Ibuprofen painkillers", "inputs": [{"_tpl": "62a0a043cf4a99369e2624a5", "count": 1}, {"_tpl": "544fb25a4bdc2dfb738b4567", "count": 1}]},
+          {"key": "nina_ifak", "tpl": "590c678286f77426c9660122", "name": "IFAK individual first aid kit", "inputs": [{"_tpl": "5b4335ba86f7744d2837a264", "count": 1}, {"_tpl": "5d1b3a5d86f774252167ba22", "count": 1}, {"_tpl": "5d1b3f2d86f774253763b735", "count": 1}]},
+          {"key": "nina_ahf", "tpl": "5ed515f6915ec335206e4152", "name": "AHF1-M stimulant injector", "inputs": [{"_tpl": "62a0a043cf4a99369e2624a5", "count": 1}, {"_tpl": "59e3606886f77417674759a5", "count": 1}, {"_tpl": "5d1b3a5d86f774252167ba22", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "83dd221f3e807298b51f6b6c",
+        "level": 2,
+        "offers": [
+          {"key": "nina_med_tools", "tpl": "619cc01e0a7c3a1a2731940c", "name": "Medical tools", "price": 11650},
+          {"key": "nina_chlorine", "tpl": "5e2af02c86f7746d420957d4", "name": "Pack of chlorine", "inputs": [{"_tpl": "59e361e886f774176c10a2a5", "count": 1}]},
+          {"key": "nina_water_tablets", "tpl": "6389c6c7dbfd5e4b95197e68", "name": "Aquapeps water purification tablets", "price": 46650},
+          {"key": "nina_field_med_pack", "tpl": "5e4abc6786f77406812bd572", "name": "LBT-2670 Slim Field Med Pack (Black)", "inputs": [{"_tpl": "5e2af41e86f774755a234b67", "count": 1}, {"_tpl": "5d1b3a5d86f774252167ba22", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "a8b645968b8ce43d0d5811f0",
+        "level": 2,
+        "offers": [
+          {"key": "nina_afak", "tpl": "60098ad7c2240c0fe85c570a", "name": "AFAK tactical individual first aid kit", "inputs": [{"_tpl": "590c661e86f7741e566b646a", "count": 1}, {"_tpl": "5d1b3a5d86f774252167ba22", "count": 3}, {"_tpl": "5b4335ba86f7744d2837a264", "count": 1}]},
+          {"key": "nina_cms", "tpl": "5d02778e86f774203e7dedbe", "name": "CMS surgical kit", "price": 55800},
+          {"key": "nina_morphine", "tpl": "544fb3f34bdc2d03748b456a", "name": "Morphine injector", "price": 39250},
+          {"key": "nina_adrenaline", "tpl": "5c10c8fd86f7743d7d706df3", "name": "Adrenaline injector", "inputs": [{"_tpl": "62a0a043cf4a99369e2624a5", "count": 1}, {"_tpl": "5d1b3f2d86f774253763b735", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "659d8aabf71f2d8d06730807",
+        "level": 2,
+        "offers": [
+          {"key": "nina_max_energy", "tpl": "5751435d24597720a27126d1", "name": "Can of Max Energy energy drink", "price": 13850},
+          {"key": "nina_golden_star", "tpl": "5751a89d24597722aa0e8db0", "name": "Golden Star balm", "inputs": [{"_tpl": "62a0a043cf4a99369e2624a5", "count": 1}]},
+          {"key": "nina_salewa_exchange", "tpl": "544fb45d4bdc2dee738b4568", "name": "Salewa first aid kit", "inputs": [{"_tpl": "590c661e86f7741e566b646a", "count": 1}, {"_tpl": "59e3606886f77417674759a5", "count": 1}, {"_tpl": "544fb25a4bdc2dfb738b4567", "count": 1}]},
+          {"key": "nina_stimulant_l1", "tpl": "5ed515e03a40a50460332579", "name": "L1 (Norepinephrine) injector", "inputs": [{"_tpl": "590c695186f7741e566b64a2", "count": 1}, {"_tpl": "62a0a043cf4a99369e2624a5", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "8d2878c31af93fdf66383d8e",
+        "level": 3,
+        "offers": [
+          {"key": "nina_surv12", "tpl": "5d02797c86f774203f38e30a", "name": "Surv12 field surgical kit", "inputs": [{"_tpl": "5af0534a86f7743b6f354284", "count": 1}, {"_tpl": "59e3606886f77417674759a5", "count": 1}]},
+          {"key": "nina_grizzly", "tpl": "590c657e86f77412b013051d", "name": "Grizzly medical kit", "price": 54350},
+          {"key": "nina_propital", "tpl": "5c0e530286f7747fa1419862", "name": "Propital regenerative stimulant injector", "inputs": [{"_tpl": "544fb3f34bdc2d03748b456a", "count": 1}, {"_tpl": "5d1b3a5d86f774252167ba22", "count": 1}]},
+          {"key": "nina_ophthalmoscope", "tpl": "5af0534a86f7743b6f354284", "name": "Ophthalmoscope", "price": 131650}
+        ]
+      },
+      {
+        "quest": "348fd44d02a3933109e47982",
+        "level": 3,
+        "offers": [
+          {"key": "nina_zagustin", "tpl": "5c0e533786f7747fa23f4d47", "name": "Zagustin hemostatic drug injector", "price": 52000},
+          {"key": "nina_etg", "tpl": "5c0e534186f7747fa1419867", "name": "eTG-change regenerative stimulant injector", "inputs": [{"_tpl": "62a0a043cf4a99369e2624a5", "count": 2}, {"_tpl": "5b4335ba86f7744d2837a264", "count": 1}]},
+          {"key": "nina_sj1", "tpl": "5c0e531286f7747fa54205c2", "name": "SJ1 TGLabs combat stimulant injector", "inputs": [{"_tpl": "5c0e530286f7747fa1419862", "count": 1}, {"_tpl": "5d1b3a5d86f774252167ba22", "count": 1}, {"_tpl": "5b4335ba86f7744d2837a264", "count": 1}]},
+          {"key": "nina_defibrillator", "tpl": "5c052e6986f7746b207bc3c9", "name": "Portable defibrillator", "inputs": [{"_tpl": "5af0534a86f7743b6f354284", "count": 1}, {"_tpl": "5e2aee0a86f774755a234b62", "count": 1}, {"_tpl": "619cc01e0a7c3a1a2731940c", "count": 2}]}
+        ]
+      },
+      {
+        "quest": "18644905c1c853f707c6007d",
+        "level": 4,
+        "offers": [
+          {"key": "nina_p22", "tpl": "5ed515ece452db0eb56fc028", "name": "P22 (Product 22) stimulant injector", "price": 62500},
+          {"key": "nina_perfotoran", "tpl": "637b6251104668754b72f8f9", "name": "Perfotoran (Blue Blood) stimulant injector", "inputs": [{"_tpl": "5ed515f6915ec335206e4152", "count": 1}, {"_tpl": "5d1b3a5d86f774252167ba22", "count": 2}, {"_tpl": "5b4335ba86f7744d2837a264", "count": 1}]},
+          {"key": "nina_sj6", "tpl": "5c0e531d86f7747fa23f4d42", "name": "SJ6 TGLabs combat stimulant injector", "price": 43350},
+          {"key": "nina_sj12", "tpl": "637b612fb7afa97bfc3d7005", "name": "SJ12 TGLabs combat stimulant injector", "inputs": [{"_tpl": "5ed515e03a40a50460332579", "count": 1}, {"_tpl": "59e3606886f77417674759a5", "count": 1}]},
+          {"key": "nina_pn16", "tpl": "637b6179104668754b72f8f5", "name": "PNB (Product 16) stimulant injector", "inputs": [{"_tpl": "5c0e533786f7747fa23f4d47", "count": 1}, {"_tpl": "62a0a043cf4a99369e2624a5", "count": 1}, {"_tpl": "59e3606886f77417674759a5", "count": 1}]}
+        ]
+      }
+    ],
+    "claire": [
+      {
+        "quest": null,
+        "level": 1,
+        "offers": [
+          {"key": "claire_aa_battery", "tpl": "5672cb124bdc2d1a0f8b4568", "name": "AA Battery", "limit": 2, "price": 1050},
+          {"key": "claire_d_battery", "tpl": "5672cb304bdc2dc2088b456a", "name": "D Size battery", "price": 3500},
+          {"key": "claire_screwdriver", "tpl": "590c2d8786f774245b1f03f3", "name": "Screwdriver", "price": 5550},
+          {"key": "claire_voltage_plug", "tpl": "57347cd0245977445a2d6ff1", "name": "T-Shaped plug", "price": 3950},
+          {"key": "claire_pk06", "tpl": "57ae0171245977343c27bfcf", "name": "BelOMO PK-06 reflex sight", "price": 12650},
+          {"key": "claire_ultrafire", "tpl": "57d17c5e2459775a5c57d17d", "name": "Ultrafire WF-501B flashlight", "price": 5950},
+          {"key": "claire_hard_drive", "tpl": "590a386e86f77429692b27ab", "name": "Damaged hard drive", "inputs": [{"_tpl": "590a391c86f774385a33c404", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "b94857eaafa2fe9660702151",
+        "level": 1,
+        "offers": [
+          {"key": "claire_powerbank", "tpl": "5af0561e86f7745f5f3ad6ac", "name": "Portable Powerbank", "inputs": [{"_tpl": "56742c324bdc2d150f8b456d", "count": 1}, {"_tpl": "5c06782b86f77426df5407d2", "count": 1}]},
+          {"key": "claire_rechargeable", "tpl": "590a358486f77429692b2790", "name": "Rechargeable battery", "price": 26950},
+          {"key": "claire_electronics", "tpl": "6389c70ca33d8c4cdf4932c6", "name": "Electronic components", "price": 28450},
+          {"key": "claire_power_supply", "tpl": "57347c2e24597744902c94a1", "name": "Power supply unit", "price": 12550}
+        ]
+      },
+      {
+        "quest": "18bb13838ed134a02ad27877",
+        "level": 1,
+        "offers": [
+          {"key": "claire_broken_phone", "tpl": "56742c324bdc2d150f8b456d", "name": "Broken GPhone smartphone", "price": 29550},
+          {"key": "claire_dvd_drive", "tpl": "5734781f24597737e04bf32a", "name": "DVD drive", "price": 13150},
+          {"key": "claire_ram", "tpl": "57347baf24597738002c6178", "name": "RAM stick", "inputs": [{"_tpl": "5734779624597737e04bf329", "count": 1}, {"_tpl": "5909e99886f7740c983b9984", "count": 1}, {"_tpl": "5672cb304bdc2dc2088b456a", "count": 1}]},
+          {"key": "claire_energy_lamp", "tpl": "590a3cd386f77436f20848cb", "name": "Energy-saving lamp", "inputs": [{"_tpl": "5d1b392c86f77425243e98fe", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "8f317947fb0090656fd08f2f",
+        "level": 1,
+        "offers": [
+          {"key": "claire_flashlight_armytek", "tpl": "59d790f486f77403cb06aec6", "name": "Armytek Predator Pro v3 XHP35 HI flashlight", "price": 9600},
+          {"key": "claire_laser_ncstar", "tpl": "5cc9c20cd7f00c001336c65d", "name": "NcSTAR Tactical Blue Laser", "inputs": [{"_tpl": "5c06782b86f77426df5407d2", "count": 1}, {"_tpl": "5909e99886f7740c983b9984", "count": 1}]},
+          {"key": "claire_pk_aa", "tpl": "6113d6c3290d254f5e6b27db", "name": "BelOMO PK-AA dovetail reflex sight", "price": 8100},
+          {"key": "claire_construction_tape", "tpl": "590c2c9c86f774245b1f03f2", "name": "Construction measuring tape", "price": 6000}
+        ]
+      },
+      {
+        "quest": "ac4ef9ca8aac31a703612ea9",
+        "level": 2,
+        "offers": [
+          {"key": "claire_nippers", "tpl": "5d40425986f7743185265461", "name": "Nippers", "inputs": [{"_tpl": "590c2b4386f77425357b6123", "count": 1}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}]},
+          {"key": "claire_pliers_elite", "tpl": "5af04b6486f774195a3ebb49", "name": "Pliers Elite", "price": 45850},
+          {"key": "claire_spark_plug", "tpl": "590a3c0a86f774385a33c450", "name": "Spark plug", "price": 17400},
+          {"key": "claire_greenbat", "tpl": "5e2aedd986f7746d404f3aa4", "name": "GreenBat lithium battery", "inputs": [{"_tpl": "5af0561e86f7745f5f3ad6ac", "count": 1}, {"_tpl": "5c06779c86f77426e00dd782", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "f29a1fa2f0ecb2b876b32ea1",
+        "level": 2,
+        "offers": [
+          {"key": "claire_cpu", "tpl": "573477e124597737dd42e191", "name": "PC CPU", "price": 22000},
+          {"key": "claire_monitor_broken", "tpl": "5d1b309586f77425227d1676", "name": "Broken LCD", "inputs": [{"_tpl": "57347baf24597738002c6178", "count": 1}, {"_tpl": "5c06779c86f77426e00dd782", "count": 1}]},
+          {"key": "claire_drill", "tpl": "59e35de086f7741778269d84", "name": "Electric drill", "inputs": [{"_tpl": "5d1b2fa286f77425227d1674", "count": 1}]},
+          {"key": "claire_gas_analyzer", "tpl": "590a3efd86f77437d351a25b", "name": "Gas analyzer", "price": 34300}
+        ]
+      },
+      {
+        "quest": "9f2cb72dd8b17bfb23372a8a",
+        "level": 2,
+        "offers": [
+          {"key": "claire_eotech_xps3", "tpl": "58491f3324597764bc48fa02", "name": "EOTech XPS3-0 holographic sight", "price": 31600},
+          {"key": "claire_holosun_401", "tpl": "5b30b0dc5acfc400153b7124", "name": "Holosun HS401G5 reflex sight", "inputs": [{"_tpl": "590a3b0486f7743954552bdb", "count": 1}, {"_tpl": "5c06779c86f77426e00dd782", "count": 1}]},
+          {"key": "claire_olight_baldr", "tpl": "6272370ee4013c5d7e31f418", "name": "Olight Baldr Pro tactical flashlight with laser", "price": 13050},
+          {"key": "claire_geiger_counter", "tpl": "5672cb724bdc2dc2088b456b", "name": "Geiger-Muller counter", "inputs": [{"_tpl": "5d1b313086f77425227d1678", "count": 1}, {"_tpl": "590a3b0486f7743954552bdb", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "fe0fa858b6c969579920b60f",
+        "level": 3,
+        "offers": [
+          {"key": "claire_working_lcd", "tpl": "5d1b304286f774253763a528", "name": "Working LCD", "inputs": [{"_tpl": "5d1b309586f77425227d1676", "count": 1}, {"_tpl": "5d1b2ffd86f77425243e8d17", "count": 1}]},
+          {"key": "claire_uv_lamp", "tpl": "590a3d9c86f774385926e510", "name": "Ultraviolet lamp", "price": 24600},
+          {"key": "claire_signal_jammer", "tpl": "5ac78a9b86f7741cca0bbd8d", "name": "Signal Jammer", "inputs": [{"_tpl": "6389c70ca33d8c4cdf4932c6", "count": 1}, {"_tpl": "5909e99886f7740c983b9984", "count": 1}]},
+          {"key": "claire_valday_1p87", "tpl": "5c0505e00db834001b735073", "name": "Valday PK-120 (1P87) reflex sight", "price": 30400}
+        ]
+      },
+      {
+        "quest": "94fd74058e00cec0d0f32c8e",
+        "level": 3,
+        "offers": [
+          {"key": "claire_specter_dr", "tpl": "57ac965c24597706be5f975c", "name": "ELCAN SpecterDR 1x/4x scope", "price": 52100},
+          {"key": "claire_vortex_ranger", "tpl": "61605e13ffa6e502ac5e7eef", "name": "Vortex Ranger 1500 rangefinder", "inputs": [{"_tpl": "5734779624597737e04bf329", "count": 1}, {"_tpl": "5c06782b86f77426df5407d2", "count": 2}]},
+          {"key": "claire_monstrum", "tpl": "5d2dc3e548f035404a1a4798", "name": "Monstrum Tactical Compact Prism Scope 2x32", "inputs": [{"_tpl": "5d1b2ffd86f77425243e8d17", "count": 1}, {"_tpl": "590a3b0486f7743954552bdb", "count": 1}]},
+          {"key": "claire_rfid", "tpl": "5c052fb986f7746b2101e909", "name": "UHF RFID Reader", "inputs": [{"_tpl": "6389c70ca33d8c4cdf4932c6", "count": 1}, {"_tpl": "590a3b0486f7743954552bdb", "count": 1}, {"_tpl": "590c621186f774138d11ea29", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "b362969324ed284eda3ea2d1",
+        "level": 4,
+        "offers": [
+          {"key": "claire_valday_ps320", "tpl": "5c0517910db83400232ffee5", "name": "Valday PS-320 1/6x scope", "price": 60250},
+          {"key": "claire_wilcox_raptar", "tpl": "61605d88ffa6e502ac5e7eeb", "name": "Wilcox RAPTAR ES Tactical Rangefinder", "inputs": [{"_tpl": "6389c70ca33d8c4cdf4932c6", "count": 1}, {"_tpl": "5c06779c86f77426e00dd782", "count": 1}]},
+          {"key": "claire_microcontroller", "tpl": "6389c7750ef44505c87f5996", "name": "Microcontroller board", "inputs": [{"_tpl": "5d0376a486f7747d8050965c", "count": 1}, {"_tpl": "5d1b304286f774253763a528", "count": 1}, {"_tpl": "6389c70ca33d8c4cdf4932c6", "count": 1}]},
+          {"key": "claire_bulbex", "tpl": "619cbfeb6b8a1b37a54eebfa", "name": "Bulbex cable cutter", "inputs": [{"_tpl": "5af04b6486f774195a3ebb49", "count": 2}, {"_tpl": "590c2e1186f77425357b6124", "count": 2}]},
+          {"key": "claire_cyclon", "tpl": "5e2aee0a86f774755a234b62", "name": "Cyclon rechargeable battery", "inputs": [{"_tpl": "5e2aedd986f7746d404f3aa4", "count": 2}, {"_tpl": "5af0561e86f7745f5f3ad6ac", "count": 2}]}
+        ]
+      }
+    ],
+    "emma": [
+      {
+        "quest": null,
+        "level": 1,
+        "offers": [
+          {"key": "emma_vkbo_bag", "tpl": "5ab8ee7786f7742d8f33f0b9", "name": "VKBO army bag", "price": 12400},
+          {"key": "emma_duffle", "tpl": "56e33634d2720bd8058b456b", "name": "Duffle bag", "price": 17550},
+          {"key": "emma_security_rig", "tpl": "5fd4c5477a8d854fa0105061", "name": "Security vest", "price": 6050},
+          {"key": "emma_chicom", "tpl": "64be7110bf597ba84a0a41ea", "name": "Type 56 Chicom chest harness", "price": 14500},
+          {"key": "emma_soap", "tpl": "5c13cd2486f774072c757944", "name": "Soap", "price": 6050},
+          {"key": "emma_toilet_paper", "tpl": "5c13cef886f774072e618e82", "name": "Toilet paper", "inputs": [{"_tpl": "5c13cd2486f774072c757944", "count": 2}]},
+          {"key": "emma_peas", "tpl": "57347d692459774491567cf1", "name": "Can of green peas", "price": 10150}
+        ]
+      },
+      {
+        "quest": "5bd58c70c513b23aea67bba1",
+        "level": 1,
+        "offers": [
+          {"key": "emma_pillbox", "tpl": "60a2828e8689911a226117f9", "name": "Hazard 4 Pillbox backpack (Black)", "price": 33200},
+          {"key": "emma_lol_kek", "tpl": "5f5e45cc5021ce62144be7aa", "name": "LolKek 3F Transfer tourist backpack", "inputs": [{"_tpl": "5e2af47786f7746d404f3aaa", "count": 1}, {"_tpl": "5e2af4a786f7746d3f3c3400", "count": 1}, {"_tpl": "59e36c6f86f774176c10a2a7", "count": 1}]},
+          {"key": "emma_soe_micro", "tpl": "5d5d8ca986f7742798716522", "name": "SOE Micro Rig (MultiCam)", "price": 14900},
+          {"key": "emma_croutons", "tpl": "5751487e245977207e26a315", "name": "Emelya rye croutons", "inputs": [{"_tpl": "5448ff904bdc2d6f028b456e", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "1c5cf004621d33b97cb84ff4",
+        "level": 1,
+        "offers": [
+          {"key": "emma_instant_noodles", "tpl": "656df4fec921ad01000481a2", "name": "Pack of instant noodles", "price": 19550},
+          {"key": "emma_large_beef_stew", "tpl": "57347da92459774491567cf5", "name": "Can of beef stew (Large)", "price": 25450},
+          {"key": "emma_oat_flakes", "tpl": "57347d90245977448f7b7f65", "name": "Pack of oat flakes", "inputs": [{"_tpl": "5448ff904bdc2d6f028b456e", "count": 2}, {"_tpl": "62a09ee4cf4a99369e262453", "count": 1}]},
+          {"key": "emma_pevkobeer", "tpl": "62a09f32621468534a797acb", "name": "Bottle of Pevko Light beer", "inputs": [{"_tpl": "59e3577886f774176a362503", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "c394ec3eac3ff16e343459e7",
+        "level": 2,
+        "offers": [
+          {"key": "emma_dragon_egg", "tpl": "656f198fb27298d6fd005466", "name": "Direct Action Dragon Egg Mark II backpack (Black)", "price": 47200},
+          {"key": "emma_t20", "tpl": "618bb76513f5097c8d5aa2d5", "name": "Gruppa 99 T20 backpack (Umber Brown)", "inputs": [{"_tpl": "5e2af41e86f774755a234b67", "count": 1}, {"_tpl": "5e2af4a786f7746d3f3c3400", "count": 1}, {"_tpl": "59e36c6f86f774176c10a2a7", "count": 1}]},
+          {"key": "emma_drawbridge", "tpl": "60a272cc93ef783291411d8e", "name": "Hazard 4 Drawbridge backpack (Coyote Tan)", "price": 46500},
+          {"key": "emma_commando", "tpl": "5c0e9f2c86f77432297fe0a3", "name": "BlackHawk! Commando chest harness (Black)", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 1}, {"_tpl": "5e2af41e86f774755a234b67", "count": 1}, {"_tpl": "5e2af47786f7746d404f3aaa", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "be492281f248f8b62822ae6c",
+        "level": 2,
+        "offers": [
+          {"key": "emma_sewing_kit", "tpl": "61bf83814088ec1a363d7097", "name": "Sewing kit", "price": 58900},
+          {"key": "emma_awl", "tpl": "62a0a098de7ac8199358053b", "name": "Awl", "price": 23700},
+          {"key": "emma_plexiglass", "tpl": "59e366c186f7741778269d85", "name": "Piece of plexiglass", "inputs": [{"_tpl": "57347c1124597737fb1379e3", "count": 2}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 1}]},
+          {"key": "emma_shampoo", "tpl": "5d40412b86f7743cb332ac3a", "name": "Schaman shampoo", "inputs": [{"_tpl": "5c13cd2486f774072c757944", "count": 2}]}
+        ]
+      },
+      {
+        "quest": "77c5ac22eea6cc8cf6f98245",
+        "level": 2,
+        "offers": [
+          {"key": "emma_cordura", "tpl": "5e2af41e86f774755a234b67", "name": "Cordura polyamide fabric", "price": 20500},
+          {"key": "emma_paracord", "tpl": "5c12688486f77426843c7d32", "name": "Paracord", "price": 34900},
+          {"key": "emma_stich_assault", "tpl": "60a621c49c197e4e8c4455e6", "name": "Stich Profi Chest Rig MK2 (Assault, A-TACS FG)", "inputs": [{"_tpl": "5e2af41e86f774755a234b67", "count": 2}, {"_tpl": "5e2af29386f7746d4159f077", "count": 1}]},
+          {"key": "emma_waterproof_t30", "tpl": "628e1ffc83ec92260c0f437f", "name": "Gruppa 99 T30 backpack (Black)", "inputs": [{"_tpl": "5e2af41e86f774755a234b67", "count": 3}, {"_tpl": "5c12688486f77426843c7d32", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "e02c238a2f39d6e2362112de",
+        "level": 3,
+        "offers": [
+          {"key": "emma_beta2", "tpl": "5b44c6ae86f7742d1627baea", "name": "ANA Tactical Beta 2 Battle backpack (Olive Drab)", "price": 106150},
+          {"key": "emma_alpha_rig", "tpl": "592c2d1a86f7746dbe2af32a", "name": "ANA Tactical Alpha chest rig (Olive Drab)", "price": 66500},
+          {"key": "emma_lbt_rig", "tpl": "5e9db13186f7742f845ee9d3", "name": "LBT-1961A Load Bearing Chest Rig (MAS Grey)", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 2}, {"_tpl": "5e2af41e86f774755a234b67", "count": 1}]},
+          {"key": "emma_mechanism", "tpl": "5d5d940f86f7742797262046", "name": "Oakley Mechanism heavy duty backpack (Black)", "inputs": [{"_tpl": "61bf83814088ec1a363d7097", "count": 1}, {"_tpl": "5c12688486f77426843c7d32", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "98afbe5d3e65ffa4adf55e4e",
+        "level": 3,
+        "offers": [
+          {"key": "emma_switchblade", "tpl": "5f5e467b0bc58666c37e7821", "name": "Eberlestock F5 Switchblade backpack (Dry Earth)", "price": 91400},
+          {"key": "emma_trooper35", "tpl": "639346cc1c8f182ad90c8972", "name": "Tasmanian Tiger Trooper 35 backpack (Khaki)", "inputs": [{"_tpl": "5e2af41e86f774755a234b67", "count": 3}, {"_tpl": "61bf83814088ec1a363d7097", "count": 1}, {"_tpl": "5c12688486f77426843c7d32", "count": 1}]},
+          {"key": "emma_mppv", "tpl": "5df8a42886f77412640e2e75", "name": "Velocity Systems MPPV Multi-Purpose Patrol Vest (Wolf Grey)", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 2}, {"_tpl": "5e2af4a786f7746d3f3c3400", "count": 2}, {"_tpl": "5e2af41e86f774755a234b67", "count": 1}]},
+          {"key": "emma_pistol_case", "tpl": "567143bf4bdc2d1a0f8b4567", "name": "Pistol case", "inputs": [{"_tpl": "59e366c186f7741778269d85", "count": 1}, {"_tpl": "57347c5b245977448d35f6e1", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "402341ba13191fea2b6e260f",
+        "level": 4,
+        "offers": [
+          {"key": "emma_attack2", "tpl": "5ab8ebf186f7742d8b372e80", "name": "SSO Attack 2 raid backpack (Khaki)", "price": 135550},
+          {"key": "emma_raid_pack", "tpl": "5df8a4d786f77412672a1e3b", "name": "6Sh118 raid backpack (EMR)", "inputs": [{"_tpl": "5e2af41e86f774755a234b67", "count": 4}, {"_tpl": "61bf83814088ec1a363d7097", "count": 1}, {"_tpl": "5e2af4d286f7746d4159f07a", "count": 3}]},
+          {"key": "emma_blackjack", "tpl": "5c0e774286f77468413cc5b2", "name": "Mystery Ranch Blackjack 50 backpack (MultiCam)", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 3}, {"_tpl": "61bf83814088ec1a363d7097", "count": 1}, {"_tpl": "5c12688486f77426843c7d32", "count": 2}]},
+          {"key": "emma_plateframe_backpack", "tpl": "628bc7fb408e2b2e9c0801b1", "name": "Mystery Ranch NICE COMM 3 BVS frame system (Coyote)", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 4}, {"_tpl": "61bf83814088ec1a363d7097", "count": 2}, {"_tpl": "5c12688486f77426843c7d32", "count": 2}]},
+          {"key": "emma_troop_terminator", "tpl": "5f5e46b96bdad616ad46d613", "name": "Eberlestock F4 Terminator load bearing backpack (Tiger Stripe)", "price": 140250}
+        ]
+      }
+    ],
+    "katya": [
+      {
+        "quest": null,
+        "level": 1,
+        "offers": [
+          {"key": "katya_anti_frag_glasses", "tpl": "5b432be65acfc433000ed01f", "name": "6B34 anti-fragmentation glasses", "price": 4000},
+          {"key": "katya_headset_liberator", "tpl": "66b5f68de98be930d701c00e", "name": "Safariland Liberator HP 2.0 Hearing Protection Headset (FDE)", "price": 61450},
+          {"key": "katya_sfera", "tpl": "5aa7d193e5b5b000171d063f", "name": "SSSh-94 SFERA-S helmet", "parts": [{"_tpl": "657bb70486c7f9ef7a009936", "slotId": "Helmet_top"}, {"_tpl": "657bb79ba1c61ee0c303631a", "slotId": "Helmet_back"}, {"_tpl": "657bb7d7b30eca9763051176", "slotId": "Helmet_ears"}], "price": 46400},
+          {"key": "katya_module_3m", "tpl": "59e7635f86f7742cbf2c1095", "name": "BNTI Module-3M body armor", "parts": [{"_tpl": "65702f87722744627e05cdb8", "slotId": "Soft_armor_front"}, {"_tpl": "65702fe593b7ea9c330f4ce8", "slotId": "Soft_armor_back"}, {"_tpl": "6570305d93b7ea9c330f4ced", "slotId": "Soft_armor_left"}, {"_tpl": "65703472c9030b928a0a8a78", "slotId": "soft_armor_right"}], "price": 31150},
+          {"key": "katya_tkm_fmj", "tpl": "59e6542b86f77411dc52a77a", "name": ".366 TKM FMJ", "limit": 10, "price": 430},
+          {"key": "katya_shotgun_express", "tpl": "5d6e67fba4b9361bc73bc779", "name": "12/70 6.5mm Express buckshot", "limit": 12, "price": 220},
+          {"key": "katya_lightweight_plate", "tpl": "656fac30c6baea13cd07e10c", "name": "PRTCTR Lightweight ballistic plate", "inputs": [{"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}, {"_tpl": "57347c5b245977448d35f6e1", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "329059c5bd7f751fdb39d91b",
+        "level": 1,
+        "offers": [
+          {"key": "katya_kirasa", "tpl": "5b44d22286f774172b0c9de8", "name": "BNTI Kirasa-N body armor", "parts": [{"_tpl": "65704de13e7bba58ea0285c8", "slotId": "Soft_armor_front"}, {"_tpl": "65705c3c14f2ed6d7d0b7738", "slotId": "Soft_armor_back"}, {"_tpl": "65705c777260e1139e091408", "slotId": "Soft_armor_left"}, {"_tpl": "65705cb314f2ed6d7d0b773c", "slotId": "soft_armor_right"}, {"_tpl": "65705cea4916448ae1050897", "slotId": "Collar"}, {"_tpl": "656f9d5900d62bcd2e02407c", "slotId": "Front_plate"}, {"_tpl": "656f9d5900d62bcd2e02407c", "slotId": "Back_plate"}], "price": 66600},
+          {"key": "katya_ratnik", "tpl": "5a7c4850e899ef00150be885", "name": "6B47 Ratnik-BSh helmet (Olive Drab)", "parts": [{"_tpl": "657baaf0b7e9ca9a02045c02", "slotId": "Helmet_top"}, {"_tpl": "657bab6ec6f689d3a205b85f", "slotId": "Helmet_back"}, {"_tpl": "657babc6f58ba5a6250107a2", "slotId": "Helmet_ears"}], "price": 52000},
+          {"key": "katya_plate_6b12", "tpl": "654a4dea7c17dec2f50cc86a", "name": "6B12 ballistic plates (Front)", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 1}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 1}]},
+          {"key": "katya_face_kiver", "tpl": "5b46238386f7741a693bcf9c", "name": "Kiver-M face shield", "inputs": [{"_tpl": "59e366c186f7741778269d85", "count": 1}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}, {"_tpl": "5e2af4d286f7746d4159f07a", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "6157df273ae6968951e9f2af",
+        "level": 2,
+        "offers": [
+          {"key": "katya_round_545_ps", "tpl": "56dff3afd2720bba668b4567", "name": "5.45x39mm PS gs", "limit": 12, "price": 340},
+          {"key": "katya_round_556_fmj", "tpl": "59e6920f86f77411d82aa167", "name": "5.56x45mm FMJ", "limit": 12, "price": 370},
+          {"key": "katya_round_762_fmj", "tpl": "64b7af5a8532cf95ee0a0dbd", "name": "7.62x39mm FMJ", "limit": 10, "price": 410},
+          {"key": "katya_round_9_39_fmj", "tpl": "6576f96220d53a5b8f3e395e", "name": "9x39mm FMJ", "limit": 5, "price": 615}
+        ]
+      },
+      {
+        "quest": "a6bd8b1b05dc13e1941f0de8",
+        "level": 2,
+        "offers": [
+          {"key": "katya_plate_mmac", "tpl": "61bc85697113f767765c7fe7", "name": "Eagle Industries MMAC plate carrier (Ranger Green)", "parts": [{"_tpl": "6572fc809a866b80ab07eb59", "slotId": "Soft_armor_front"}, {"_tpl": "6572fc8c9a866b80ab07eb5d", "slotId": "Soft_armor_back"}, {"_tpl": "6572fc989a866b80ab07eb61", "slotId": "Soft_armor_left"}, {"_tpl": "6572fca39a866b80ab07eb65", "slotId": "soft_armor_right"}, {"_tpl": "656fad8c498d1b7e3e071da0", "slotId": "Front_plate"}, {"_tpl": "656fad8c498d1b7e3e071da0", "slotId": "Back_plate"}], "price": 99050},
+          {"key": "katya_zhuk_press", "tpl": "5c0e5edb86f77461f55ed1f7", "name": "BNTI Zhuk body armor (Press)", "parts": [{"_tpl": "6571dbd388ead79fcf091d71", "slotId": "Soft_armor_front"}, {"_tpl": "6571dbda88ead79fcf091d75", "slotId": "Soft_armor_back"}, {"_tpl": "6571dbe07c02ae206002502e", "slotId": "Soft_armor_left"}, {"_tpl": "6571dbeaee8ec43d520cf89e", "slotId": "soft_armor_right"}, {"_tpl": "6571dbef88ead79fcf091d79", "slotId": "Collar"}, {"_tpl": "656f57dc27aed95beb08f628", "slotId": "Front_plate"}, {"_tpl": "656fac30c6baea13cd07e10c", "slotId": "Back_plate"}], "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 2}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}, {"_tpl": "57347c5b245977448d35f6e1", "count": 1}]},
+          {"key": "katya_kiver", "tpl": "5645bc214bdc2d363b8b4571", "name": "FORT Kiver-M bulletproof helmet", "parts": [{"_tpl": "657bae18b7e9ca9a02045c0a", "slotId": "Helmet_top"}, {"_tpl": "657baeaacfcf63c951052db3", "slotId": "Helmet_back"}, {"_tpl": "657baecbc6f689d3a205b863", "slotId": "Helmet_ears"}], "price": 45150},
+          {"key": "katya_plate_6b33", "tpl": "656f603f94b480b8a500c0d6", "name": "6B33 ballistic plate (Front)", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 1}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "f9dfb5252e225509a56cd0e1",
+        "level": 2,
+        "offers": [
+          {"key": "katya_sordin", "tpl": "5aa2ba71e5b5b000137b758f", "name": "MSA Sordin Supreme PRO-X/L headset", "price": 65300},
+          {"key": "katya_razor_headset", "tpl": "5e4d34ca86f774264f758330", "name": "Walker's Razor Digital headset", "inputs": [{"_tpl": "5c06779c86f77426e00dd782", "count": 1}, {"_tpl": "590a3b0486f7743954552bdb", "count": 2}]},
+          {"key": "katya_condor_glasses", "tpl": "603409c80ca681766b6a0fb2", "name": "NPP KlASS Condor glasses", "price": 22650},
+          {"key": "katya_lshz", "tpl": "5b432d215acfc4771e1c6624", "name": "LShZ lightweight helmet (Olive Drab)", "parts": [{"_tpl": "657bb92fa1c61ee0c303631f", "slotId": "Helmet_top"}, {"_tpl": "657bb99db30eca976305117f", "slotId": "Helmet_back"}], "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 2}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}]}
+        ]
+      },
+      {
+        "quest": "a99fc9f77e1b312cb02ae0b1",
+        "level": 3,
+        "offers": [
+          {"key": "katya_platecarrier_tv110", "tpl": "5c0e746986f7741453628fe5", "name": "WARTECH TV-110 plate carrier (Coyote)", "parts": [{"_tpl": "6570df294cc0d2ab1e05ed74", "slotId": "Soft_armor_front"}, {"_tpl": "6570df9c615f54368b04fca9", "slotId": "Soft_armor_back"}, {"_tpl": "656fa0fb498d1b7e3e071d9c", "slotId": "Front_plate"}, {"_tpl": "656fa0fb498d1b7e3e071d9c", "slotId": "Back_plate"}], "price": 117750},
+          {"key": "katya_armor_trooper", "tpl": "5c0e655586f774045612eeb2", "name": "HighCom Trooper TFO body armor (MultiCam)", "parts": [{"_tpl": "6570e025615f54368b04fcb0", "slotId": "Soft_armor_front"}, {"_tpl": "6570e0610b57c03ec90b96ef", "slotId": "Soft_armor_back"}, {"_tpl": "656fad8c498d1b7e3e071da0", "slotId": "Front_plate"}, {"_tpl": "656fad8c498d1b7e3e071da0", "slotId": "Back_plate"}], "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 4}, {"_tpl": "61bf83814088ec1a363d7097", "count": 1}, {"_tpl": "5c12688486f77426843c7d32", "count": 1}]},
+          {"key": "katya_ulach", "tpl": "5b40e1525acfc4771e1c6611", "name": "HighCom Striker ULACH IIIA helmet (Black)", "parts": [{"_tpl": "657112234269e9a568089eac", "slotId": "Helmet_top"}, {"_tpl": "657112a4818110db4600aa66", "slotId": "Helmet_back"}, {"_tpl": "657112ce22996eaf110881fb", "slotId": "Helmet_ears"}], "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 3}, {"_tpl": "5e2af29386f7746d4159f077", "count": 1}, {"_tpl": "5c12688486f77426843c7d32", "count": 1}]},
+          {"key": "katya_comtacv", "tpl": "66b5f693acff495a294927e3", "name": "Peltor ComTac V headset (OD Green)", "price": 93600}
+        ]
+      },
+      {
+        "quest": "963c4c57e19784985a453779",
+        "level": 3,
+        "offers": [
+          {"key": "katya_round_300_fmj", "tpl": "5fbe3ffdf8b6a877a729ea82", "name": ".300 Blackout BCP FMJ", "limit": 8, "price": 430},
+          {"key": "katya_round_762_39_t45m", "tpl": "59e4cf5286f7741778269d8a", "name": "7.62x39mm T-45M1 gzh", "limit": 10, "price": 410},
+          {"key": "katya_round_762_51_tcw", "tpl": "5e023e6e34d52a55c3304f71", "name": "7.62x51mm TCW SP", "limit": 5, "price": 780},
+          {"key": "katya_round_762_54_sp", "tpl": "64b8f7b5389d7ffd620ccba2", "name": "7.62x54mm R SP BT", "limit": 5, "price": 1210}
+        ]
+      },
+      {
+        "quest": "972bc733f72a884be0449fe9",
+        "level": 3,
+        "offers": [
+          {"key": "katya_bastion", "tpl": "66b5f65ca7f72d197e70bcd6", "name": "Ballistic Armor Co. Bastion helmet (Armor Black)", "parts": [{"_tpl": "66b61cfae98be930d701c029", "slotId": "Helmet_top"}, {"_tpl": "66b61ce0c5d72b027748867e", "slotId": "Helmet_back"}], "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 4}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 3}, {"_tpl": "59e366c186f7741778269d85", "count": 1}]},
+          {"key": "katya_zsh", "tpl": "5aa7e4a4e5b5b000137b76f2", "name": "ZSh-1-2M helmet (Black cover)", "parts": [{"_tpl": "657f925dada5fadd1f07a57a", "slotId": "Helmet_top"}, {"_tpl": "657f92acada5fadd1f07a57e", "slotId": "Helmet_back"}, {"_tpl": "657f92e7f4c82973640b2354", "slotId": "Helmet_ears"}], "price": 64700},
+          {"key": "katya_back_6b13", "tpl": "656efd66034e8e01c407f35c", "name": "6B13 custom ballistic plates (Back)", "price": 17500},
+          {"key": "katya_face_zsh", "tpl": "5aa7e3abe5b5b000171d064d", "name": "ZSh-1-2M face shield", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 1}, {"_tpl": "59e366c186f7741778269d85", "count": 2}]}
+        ]
+      },
+      {
+        "quest": "5d379630c76894ee9cce80e9",
+        "level": 4,
+        "offers": [
+          {"key": "katya_korund", "tpl": "5f5f41476bdad616ad46d631", "name": "NPP KlASS Korund-VM body armor (Black)", "parts": [{"_tpl": "65731b46cea9255e2102360a", "slotId": "Soft_armor_front"}, {"_tpl": "65731b4fcea9255e2102360e", "slotId": "Soft_armor_back"}, {"_tpl": "65731b576e709cddd001ec3f", "slotId": "Soft_armor_left"}, {"_tpl": "65731b60ff6dc44a7d068c4a", "slotId": "soft_armor_right"}, {"_tpl": "65731b666e709cddd001ec43", "slotId": "Collar"}, {"_tpl": "65731b716e709cddd001ec47", "slotId": "Groin"}, {"_tpl": "65731b6b6042b0f210020ef6", "slotId": "Groin_back"}, {"_tpl": "656f664200d62bcd2e024077", "slotId": "Front_plate"}, {"_tpl": "654a4f8bc721968a4404ef18", "slotId": "Left_side_plate"}, {"_tpl": "654a4f8bc721968a4404ef18", "slotId": "Right_side_plate"}, {"_tpl": "657b2797c3dbcb01d60c35ea", "slotId": "Back_plate"}], "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 4}, {"_tpl": "60391afc25aff57af81f7085", "count": 1}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 3}]},
+          {"key": "katya_gzhel", "tpl": "5ab8e79e86f7742d8b372e78", "name": "BNTI Gzhel-K body armor", "parts": [{"_tpl": "65732688d9d89ff7ac0d9c4c", "slotId": "Soft_armor_front"}, {"_tpl": "657326978c1cc6dcd9098b56", "slotId": "Soft_armor_back"}, {"_tpl": "657326a28c1cc6dcd9098b5a", "slotId": "Soft_armor_left"}, {"_tpl": "657326b08c1cc6dcd9098b5e", "slotId": "soft_armor_right"}, {"_tpl": "657326bc5d3a3129fb05f36b", "slotId": "Collar"}, {"_tpl": "656f611f94b480b8a500c0db", "slotId": "Front_plate"}, {"_tpl": "65573fa5655447403702a816", "slotId": "Back_plate"}], "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 4}, {"_tpl": "590c2e1186f77425357b6124", "count": 3}, {"_tpl": "619cbf476b8a1b37a54eebf8", "count": 1}]},
+          {"key": "katya_korund_front", "tpl": "656f664200d62bcd2e024077", "name": "Korund-VM ballistic plates (Front)", "price": 47550},
+          {"key": "katya_korund_back", "tpl": "657b2797c3dbcb01d60c35ea", "name": "Korund-VM ballistic plate (Back)", "inputs": [{"_tpl": "5e2af4d286f7746d4159f07a", "count": 2}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}]},
+          {"key": "katya_round_762_51_m62", "tpl": "5a608bf24f39f98ffc77720e", "name": "7.62x51mm M62 Tracer", "limit": 4, "price": 1885},
+          {"key": "katya_round_762_54_ps", "tpl": "59e77a2386f7742ee578960a", "name": "7.62x54mm R PS gzh", "limit": 4, "price": 2020}
+        ]
+      },
+      {
+        "quest": "765b2135febbf35719bbe690",
+        "level": 3,
+        "offers": [
+          {"key": "ak50_magazine", "tpl": "67d418d0ffb910d21f04720e", "name": "M82A1 .50 BMG 10-round magazine", "price": 21500},
+          {"key": "ak50_brake", "tpl": "67d41883f378a36c4706eeb7", "name": "AK-50 .50 BMG muzzle brake", "price": 29000},
+          {"key": "ak50_cover", "tpl": "67d416e19bd76ef20f0e743b", "name": "AK-50 dust cover", "price": 17000},
+          {"key": "ak50_handguard", "tpl": "67d417c023ec241bb70d4896", "name": "AK-50 handguard with gas tube", "price": 24000},
+          {"key": "ak50_barrel", "tpl": "67d4178bffb910d21f04720a", "name": "AK-50 .50 BMG 24 inch barrel", "inputs": [{"_tpl": "5d1c819a86f774771b0acd6c", "count": 3}, {"_tpl": "5e2af22086f7746d3f3c33fa", "count": 2}]},
+          {"key": "ak50_hp", "tpl": "67d41936f378a36c4706eeb9", "name": ".50 BMG HP", "price": 4300, "limit": 4},
+          {"key": "ak50_m33", "tpl": "67dc255ee3028a8b120efc48", "name": ".50 BMG M33", "price": 9800, "limit": 3}
+        ]
+      }
+    ],
+    "haruka": [
+      {
+        "quest": null,
+        "level": 1,
+        "offers": [
+          {"key": "haruka_customs_dorm_103", "tpl": "5938994586f774523a425196", "name": "Dorm room 103 key", "price": 6700},
+          {"key": "haruka_customs_gas_office", "tpl": "5780d0652459777df90dcb74", "name": "Gas station office key", "price": 14000},
+          {"key": "haruka_customs_cabin", "tpl": "5913611c86f77479e0084092", "name": "Trailer park portable cabin key", "price": 11900},
+          {"key": "haruka_oli_utility", "tpl": "5ad5d20586f77449be26d877", "name": "OLI outlet utility room key", "price": 5900},
+          {"key": "haruka_groundzero_parking", "tpl": "658199972dc4e60f6d556a2f", "name": "Underground parking utility room key", "price": 15850},
+          {"key": "haruka_english_tea", "tpl": "5bc9be8fd4351e00334cae6e", "name": "42 Signature Blend English Tea", "price": 50000},
+          {"key": "haruka_tech_manual", "tpl": "590c639286f774151567fa95", "name": "Tech manual", "inputs": [{"_tpl": "577e1c9d2459773cd707c525", "count": 3}, {"_tpl": "5af0561e86f7745f5f3ad6ac", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "d59ca94b0e1c99294ed9f708",
+        "level": 1,
+        "offers": [
+          {"key": "haruka_customs_guard", "tpl": "59136a4486f774447a1ed172", "name": "Dorm guard desk key", "price": 25600},
+          {"key": "haruka_customs_dorm_110", "tpl": "59136e1e86f774432f15d133", "name": "Dorm room 110 key", "price": 29350},
+          {"key": "haruka_customs_dorm_114", "tpl": "59387a4986f77401cc236e62", "name": "Dorm room 114 key", "inputs": [{"_tpl": "5e2af29386f7746d4159f077", "count": 1}]},
+          {"key": "haruka_customs_director", "tpl": "5780d0532459777a5108b9a2", "name": "Tarcone Director's office key", "price": 38000}
+        ]
+      },
+      {
+        "quest": "1dbc8d8cbd40b1ec7ba41cc4",
+        "level": 1,
+        "offers": [
+          {"key": "haruka_groundzero_pharmacy", "tpl": "5ad5d64486f774079b080af8", "name": "NecrusPharm pharmacy key", "inputs": [{"_tpl": "5af0534a86f7743b6f354284", "count": 1}, {"_tpl": "5d1b3a5d86f774252167ba22", "count": 2}]},
+          {"key": "haruka_interchange_idea_register", "tpl": "5ad7242b86f7740a6a3abd43", "name": "IDEA cash register key", "price": 25950},
+          {"key": "haruka_interchange_oli_register", "tpl": "5ad7217186f7746744498875", "name": "OLI cash register key", "price": 21700},
+          {"key": "haruka_interchange_goshan_register", "tpl": "5ad7247386f7747487619dc3", "name": "Goshan cash register key", "price": 27800}
+        ]
+      },
+      {
+        "quest": "1a2ea60af0cb01341b99a9bb",
+        "level": 2,
+        "offers": [
+          {"key": "haruka_interchange_oli_admin", "tpl": "5ad5ccd186f774446d5706e9", "name": "OLI administration office key", "price": 27050},
+          {"key": "haruka_interchange_oli_logistics", "tpl": "5ad5cfbd86f7742c825d6104", "name": "OLI logistics department office key", "inputs": [{"_tpl": "590c645c86f77412b01304d9", "count": 1}, {"_tpl": "590c639286f774151567fa95", "count": 1}]},
+          {"key": "haruka_interchange_emercom", "tpl": "5ad5db3786f7743568421cce", "name": "EMERCOM medical unit key", "inputs": [{"_tpl": "5af0534a86f7743b6f354284", "count": 1}, {"_tpl": "59e3606886f77417674759a5", "count": 1}]},
+          {"key": "haruka_customs_checkpoint", "tpl": "5913915886f774123603c392", "name": "Military checkpoint key", "inputs": [{"_tpl": "5e2af29386f7746d4159f077", "count": 1}, {"_tpl": "577e1c9d2459773cd707c525", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "0a4248837afa56cf089ecb5a",
+        "level": 2,
+        "offers": [
+          {"key": "haruka_customs_gas_storage", "tpl": "5913877a86f774432f15d444", "name": "Gas station storage room key", "price": 23250},
+          {"key": "haruka_reserve_rb_ao", "tpl": "5d80c66d86f774405611c7d6", "name": "RB-AO key", "inputs": [{"_tpl": "590c2e1186f77425357b6124", "count": 1}]},
+          {"key": "haruka_reserve_rb_am", "tpl": "5d80c88d86f77440556dbf07", "name": "RB-AM key", "price": 47200},
+          {"key": "haruka_reserve_rb_mps", "tpl": "5d80cbd886f77470855c26c2", "name": "RB-MP13 key", "inputs": [{"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}, {"_tpl": "59e35ef086f7741777737012", "count": 3}]}
+        ]
+      },
+      {
+        "quest": "598dd21659089848ba384ab8",
+        "level": 2,
+        "offers": [
+          {"key": "haruka_factory_exit", "tpl": "5448ba0b4bdc2d02308b456c", "name": "Factory emergency exit key", "inputs": [{"_tpl": "590c645c86f77412b01304d9", "count": 1}, {"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}]},
+          {"key": "haruka_reserve_rb_ob", "tpl": "5d80c6c586f77440351beef1", "name": "RB-OB key", "price": 34350},
+          {"key": "haruka_reserve_rb_ak", "tpl": "5d80c78786f774403a401e3e", "name": "RB-AK key", "price": 5900},
+          {"key": "haruka_reserve_rb_korl", "tpl": "5d8e0db586f7744450412a42", "name": "RB-KORL key", "inputs": [{"_tpl": "5c06779c86f77426e00dd782", "count": 1}, {"_tpl": "5909e99886f7740c983b9984", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "0e2c4a40454cde511cd91ce6",
+        "level": 3,
+        "offers": [
+          {"key": "haruka_reserve_rb_smp", "tpl": "5d947d3886f774447b415893", "name": "RB-SMP key", "inputs": [{"_tpl": "5af0534a86f7743b6f354284", "count": 1}, {"_tpl": "59e3606886f77417674759a5", "count": 1}]},
+          {"key": "haruka_reserve_rb_ksm", "tpl": "5d947d4e86f774447b415895", "name": "RB-KSM key", "price": 45400},
+          {"key": "haruka_reserve_rb_st", "tpl": "5d9f1fa686f774726974a992", "name": "RB-ST key", "inputs": [{"_tpl": "619cbf476b8a1b37a54eebf8", "count": 2}, {"_tpl": "5d1b2fa286f77425227d1674", "count": 1}]},
+          {"key": "haruka_interchange_ultra", "tpl": "5e42c71586f7747f245e1343", "name": "ULTRA medical storage key", "inputs": [{"_tpl": "5c052e6986f7746b207bc3c9", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "e3e31152e5f1617d5b2668ca",
+        "level": 3,
+        "offers": [
+          {"key": "haruka_intel_folder", "tpl": "5c12613b86f7743bbe2c3f76", "name": "Intelligence folder", "price": 124200},
+          {"key": "haruka_military_flash", "tpl": "62a0a16d0b9d3c46de5b6e97", "name": "Military flash drive", "inputs": [{"_tpl": "5c052fb986f7746b2101e909", "count": 1}, {"_tpl": "590c621186f774138d11ea29", "count": 1}]},
+          {"key": "haruka_interchange_kiba_inner", "tpl": "5addaffe86f77470b455f900", "name": "Kiba Arms inner grate door key", "inputs": [{"_tpl": "590c645c86f77412b01304d9", "count": 2}, {"_tpl": "5d0375ff86f774186372f685", "count": 2}]},
+          {"key": "haruka_interchange_kiba_outer", "tpl": "5ad5d7d286f77450166e0a89", "name": "Kiba Arms outer door key", "inputs": [{"_tpl": "590c651286f7741e566b6461", "count": 2}, {"_tpl": "5d0375ff86f774186372f685", "count": 1}]}
+        ]
+      },
+      {
+        "quest": "0f2b6a64d95afbe50227bd1e",
+        "level": 4,
+        "offers": [
+          {"key": "haruka_labs_manager", "tpl": "5c1e2a1e86f77431ea0ea84c", "name": "TerraGroup Labs manager's office room key", "price": 90000},
+          {"key": "haruka_labs_arsenal", "tpl": "5c1f79a086f7746ed066fb8f", "name": "TerraGroup Labs arsenal storage room key", "inputs": [{"_tpl": "5c12613b86f7743bbe2c3f76", "count": 1}, {"_tpl": "5d0375ff86f774186372f685", "count": 1}]},
+          {"key": "haruka_labs_weapon_testing", "tpl": "5c1e2d1f86f77431e9280bee", "name": "TerraGroup Labs weapon testing area key", "inputs": [{"_tpl": "5d0376a486f7747d8050965c", "count": 1}, {"_tpl": "5d0375ff86f774186372f685", "count": 1}]},
+          {"key": "haruka_labs_yellow", "tpl": "5c1d0d6d86f7744bb2683e1f", "name": "TerraGroup Labs keycard (Yellow)", "inputs": [{"_tpl": "5c052f6886f7746b1e3db148", "count": 2}, {"_tpl": "590c645c86f77412b01304d9", "count": 2}]},
+          {"key": "haruka_labs_violet", "tpl": "5c1e495a86f7743109743dfb", "name": "TerraGroup Labs keycard (Violet)", "inputs": [{"_tpl": "5d03775b86f774203e7e0c4b", "count": 2}, {"_tpl": "5c05300686f7746dce784e5d", "count": 2}]}
+        ]
+      }
+    ]
+  }
+}

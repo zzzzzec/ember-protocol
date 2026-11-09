@@ -211,7 +211,9 @@ public sealed partial class SurvivalService
         foreach (var (id, contact) in _contacts)
         {
             profile.TraderPurchases?.Remove((MongoId)id);
-            db.GetTrader((MongoId)id)!.Assort = Parse<TraderAssort>(contact.Assort);
+            var assort = Parse<TraderAssort>(contact.Assort);
+            RemoveClosedMapKeyOffers(assort);
+            db.GetTrader((MongoId)id)!.Assort = assort;
             db.GetTrader((MongoId)id)!.Base.NextResupply = RestockPolicy.RaidClock;
             if (profile.CharacterData?.PmcData?.TradersInfo?.TryGetValue((MongoId)id, out var info) == true) info.NextResupply = RestockPolicy.RaidClock;
         }

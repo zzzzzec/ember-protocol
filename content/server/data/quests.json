@@ -61656,7 +61656,7 @@
                 "conditionType": "Location",
                 "id": "171ddb30defeb9817eb12488",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -63089,7 +63089,7 @@
                 "conditionType": "Location",
                 "id": "8f6894fc1caa110d982ab085",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -63497,7 +63497,7 @@
                 "conditionType": "Location",
                 "id": "93bbe23499cf801da9f08413",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -66174,7 +66174,7 @@
                 "conditionType": "Location",
                 "id": "9c41d369a30d8790d3177ac7",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -66211,7 +66211,7 @@
                 "conditionType": "Location",
                 "id": "bee1e0bc11c483e69bf64abd",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -67670,7 +67670,7 @@
                 "id": "031e3981593f3bacdc72b001",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }
@@ -67708,7 +67708,7 @@
                 "id": "bb0386f13c146b208b66f94b",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }
@@ -68088,7 +68088,7 @@
                 "conditionType": "Location",
                 "id": "3f0804485e1eb4f7ed2a4cac",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -68125,7 +68125,7 @@
                 "conditionType": "Location",
                 "id": "2b8c24509226dd33f18fd997",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -68536,7 +68536,7 @@
                 "conditionType": "Location",
                 "id": "a69956dffe9343b80f4d00da",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -70443,7 +70443,7 @@
                 "conditionType": "Location",
                 "id": "ab7a70cad73811eb072b974e",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -72529,7 +72529,7 @@
                 "id": "6aab6e6795cc2f3998e53f0d",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }
@@ -72567,7 +72567,7 @@
                 "id": "688a2f0e468ee1b9cd9ffec3",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }
@@ -73000,7 +73000,7 @@
                 "conditionType": "Location",
                 "id": "f867f6cbb343dee00cfa088f",
                 "target": [
-                  "BigMap"
+                  "bigmap"
                 ],
                 "dynamicLocale": false
               }
@@ -75933,7 +75933,7 @@
                 "id": "63d8bfaa02ca536c7e6b12a7",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }
@@ -76438,7 +76438,7 @@
                 "id": "88e2048eeef9bd587e60fd04",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }
@@ -76476,7 +76476,7 @@
                 "id": "16ba923a600454338da1ebf7",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }
@@ -78308,7 +78308,7 @@
                 "id": "7fe964c9721786c767ff8ed8",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }
@@ -78987,7 +78987,7 @@
                 "id": "c52a8b26511c55fcd62d6df4",
                 "target": [
                   "RezervBase",
-                  "Laboratory"
+                  "laboratory"
                 ],
                 "dynamicLocale": false
               }

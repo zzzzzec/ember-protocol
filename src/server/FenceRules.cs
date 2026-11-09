@@ -65,7 +65,7 @@ public sealed partial class SurvivalService
             var blacklist = n["blacklist"]!.AsArray();
             var listed = blacklist.Select(item => item!.ToString()).ToHashSet();
             if (listed.Add(questRifle)) blacklist.Add(questRifle);
-            foreach (var tpl in _items.Keys.Where(IsPortableStorage).Order(StringComparer.Ordinal))
+            foreach (var tpl in _items.Keys.Where(tpl => IsPortableStorage(tpl) || IsClosedMapKey(tpl)).Order(StringComparer.Ordinal))
                 if (listed.Add(tpl)) blacklist.Add(tpl);
             var discount = n["discountOptions"]!;
             discount["assortSize"] = (int)balance["discountLooseOffers"]!;
@@ -129,9 +129,9 @@ public sealed partial class SurvivalService
 
     private bool IsPortableStorage(string tpl) => FenceHasParent(tpl, StorageContainerClass);
 
-    // Fence still buys containers from the player, but cannot put them back on sale.
+    // Fence can buy excluded items without putting them back on sale.
     public bool AllowFenceResaleStock(IEnumerable<Item> items, Item root) =>
-        !FenceEnabled || !items.GetItemWithChildren(root.Id).Any(item => IsPortableStorage(item.Template.ToString()));
+        !FenceEnabled || !items.GetItemWithChildren(root.Id).Any(item => IsPortableStorage(item.Template.ToString()) || IsClosedMapKey(item.Template.ToString()));
 
     private bool IsFenceExcludedContainer(string tpl) =>
         IsPortableStorage(tpl) ||
@@ -170,6 +170,11 @@ public sealed partial class SurvivalService
                 var price = n["barter_scheme"]?[root["_id"]!.ToString()];
                 var cashSale = price is JsonArray { Count: 1 } && price[0] is JsonArray { Count: 1 } payment &&
                     payment[0]?["_tpl"]?.ToString() == TraderSalePolicy.Roubles && (double?)payment[0]?["count"] > 0;
+                if (tree.Any(item => IsClosedMapKey(item["_tpl"]!.ToString())))
+                {
+                    foreach (var item in tree) removed.Add(item["_id"]!.ToString());
+                    continue;
+                }
                 var reject = !cashSale || forbidden.Contains(tpl) || FenceHasParent(tpl, "543be5dd4bdc2deb348b4569") || IsFenceExcludedContainer(tpl);
                 if (category is "pistol" or "longGun") { if (weaponBudget == 0) reject = true; else weaponBudget--; }
                 var armorTree=category is "armor" or "plate" || tree.Any(i=>Number(_items[i["_tpl"]!.ToString()]["_props"]?["armorClass"])>0);

@@ -207,6 +207,7 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
             else if(node is JsonArray array)foreach(var value in array)ReplaceRequirements(value);
         }
         EditInPlace(db.GetHideout(),ReplaceRequirements);
+        InitializeClosedMapKeys();
         InitializeRaidRestock();
         foreach(var (id,profile) in saves.GetProfiles()) EnsureProfile(id);
         _items=db.GetItems().ToDictionary(x=>x.Key.ToString(),x=>Node(x.Value).AsObject());
@@ -421,14 +422,21 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         if(p?["StackSlots"] is JsonArray slots && slots.ToJsonString().Contains("5485a8684bdc2da71d8b4567"))return "ammo";
         return "other";
     }
-    public JsonArray FilterItems(JsonArray list,double factor=1,Random? random=null)
+    private const string MiraFlareCorpse = "container_Sandbox_Design_Stuff_00008";
+    private const string GreenHandheldFlare = "6217726288ed9f0845317459";
+
+    public JsonArray FilterItems(JsonArray list,double factor=1,Random? random=null,bool preserveMiraFlare=false)
     {
         random??=Random.Shared;var rules=Config["scarcity"]!;
         var ids=list.OfType<JsonObject>().ToDictionary(x=>x["_id"]!.ToString());var removed=new HashSet<string>();
         bool AncestorRemoved(JsonObject item){var seen=new HashSet<string>();var parent=item["parentId"]?.ToString();while(parent is not null&&seen.Add(parent)&&ids.TryGetValue(parent,out var p)){if(removed.Contains(parent))return true;parent=p["parentId"]?.ToString();}return false;}
         foreach(var item in list.OfType<JsonObject>())
         {
-            var id=item["_id"]!.ToString();var tpl=item["_tpl"]!.ToString();var category=Category(tpl);
+            var id=item["_id"]!.ToString();var tpl=item["_tpl"]!.ToString();
+            if (IsClosedMapKey(tpl)) { removed.Add(id); continue; }
+            // EFT classifies this single-use signal cartridge as a weapon.
+            if (preserveMiraFlare && tpl == GreenHandheldFlare) continue;
+            var category=Category(tpl);
             if(category=="other")continue;
             var parent=item["parentId"]?.ToString();
             // Keep loaded weapons and fitted armor intact when filtering loose supplies.
@@ -470,13 +478,15 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
     }
     public List<SpawnpointTemplate> FilterLoot(List<SpawnpointTemplate> loot,string location)
     {
-        var data=Node(loot).AsArray();var factor=(int?)Maps[location.ToLowerInvariant()]?["rank"]??1;
+        var map = location.ToLowerInvariant();
+        var data=Node(loot).AsArray();var factor=(int?)Maps[map]?["rank"]??1;
         var result=new JsonArray();
         foreach(var spawn in data)
         {
             if(spawn?["Items"] is JsonArray list)
             {
-                spawn["Items"]=FilterItems(list,.80+factor*.08);
+                var preserveMiraFlare = (map is "sandbox" or "sandbox_high") && spawn["Id"]?.ToString() == MiraFlareCorpse;
+                spawn["Items"]=FilterItems(list,.80+factor*.08,preserveMiraFlare:preserveMiraFlare);
                 var root=spawn["Root"]?.ToString();
                 if(root is not null&&!spawn["Items"]!.AsArray().Any(x=>x?["_id"]?.ToString()==root))continue;
             }

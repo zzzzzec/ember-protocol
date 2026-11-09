@@ -8,5 +8,5 @@
   <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions" HintPath="$(ServerDir)/Microsoft.Extensions.DependencyInjection.Abstractions.dll" Private="false" />
   <Reference Include="0Harmony" HintPath="$(ServerDir)/0Harmony.dll" Private="false" />
  </ItemGroup>
- <ItemGroup><Compile Include="VanillaGiftRules.cs" /><Compile Include="AmmoPackPolicy.cs" /><Compile Include="HelmetLoot.cs" /><Compile Include="HideoutRewards.cs" /><Compile Include="LabBlackout.cs" /><Compile Include="QuestLootPolicy.cs" /><Compile Include="QuestLootSources.cs" /><Compile Include="MapAbundance.cs" /><Compile Include="AbundanceLoot.cs" /></ItemGroup>
+ <ItemGroup><Compile Include="VanillaGiftRules.cs" /><Compile Include="AmmoPackPolicy.cs" /><Compile Include="HelmetLoot.cs" /><Compile Include="HideoutRewards.cs" /><Compile Include="LabBlackout.cs" /><Compile Include="QuestLootPolicy.cs" /><Compile Include="QuestLootSources.cs" /><Compile Include="ClosedMapKeys.cs" /><Compile Include="MapAbundance.cs" /><Compile Include="AbundanceLoot.cs" /></ItemGroup>
 </Project>

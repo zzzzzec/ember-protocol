@@ -11,7 +11,7 @@
     {
       "id": "f93a45179ff24a145c595c74",
       "index": 2,
-      "title": "有去有回",
+      "title": "街角那家店",
       "chapter": 1
     },
     {
@@ -23,7 +23,7 @@
     {
       "id": "a8b645968b8ce43d0d5811f0",
       "index": 4,
-      "title": "凳子矮了一截",
+      "title": "候诊",
       "chapter": 1
     },
     {
@@ -35,7 +35,7 @@
     {
       "id": "252d36149bc8dfdca4633dff",
       "index": 6,
-      "title": "再往前一段",
+      "title": "旧箱新路",
       "chapter": 2
     },
     {
@@ -47,7 +47,7 @@
     {
       "id": "8f317947fb0090656fd08f2f",
       "index": 8,
-      "title": "先让我进去",
+      "title": "重播",
       "chapter": 2
     },
     {
@@ -59,19 +59,19 @@
     {
       "id": "0cacd861878ddb32647bc5e7",
       "index": 10,
-      "title": "走一趟看看",
+      "title": "笔盒里那支",
       "chapter": 2
     },
     {
       "id": "4ae41ef71256078a50843d28",
       "index": 11,
-      "title": "没亮灯的商店",
+      "title": "打烊之后",
       "chapter": 3
     },
     {
       "id": "4fcafab0509d2256ba7d06bb",
       "index": 12,
-      "title": "药箱上的日期",
+      "title": "三个日期",
       "chapter": 3
     },
     {
@@ -83,13 +83,13 @@
     {
       "id": "bba7cc44f73619e08ba27148",
       "index": 14,
-      "title": "晚饭先不谈这个",
+      "title": "难得同桌",
       "chapter": 3
     },
     {
       "id": "83fd27ec838aae58b1c86a35",
       "index": 15,
-      "title": "问过再写",
+      "title": "熟归熟",
       "chapter": 3
     },
     {
@@ -101,19 +101,19 @@
     {
       "id": "9fd70423403a7d984db0588d",
       "index": 17,
-      "title": "手工生产线",
+      "title": "工作台",
       "chapter": 4
     },
     {
       "id": "e02c238a2f39d6e2362112de",
       "index": 18,
-      "title": "两趟路",
+      "title": "转角余地",
       "chapter": 4
     },
     {
       "id": "a99fc9f77e1b312cb02ae0b1",
       "index": 19,
-      "title": "挨枪子的事",
+      "title": "裂痕",
       "chapter": 4
     },
     {
@@ -131,91 +131,91 @@
     {
       "id": "a1411d69e3fa8e3157336460",
       "index": 22,
-      "title": "读得懂的那一页",
+      "title": "字里行间",
       "chapter": 5
     },
     {
       "id": "598dd21659089848ba384ab8",
       "index": 23,
-      "title": "车厢里空着",
+      "title": "第三辆车",
       "chapter": 5
     },
     {
       "id": "94fd74058e00cec0d0f32c8e",
       "index": 24,
-      "title": "留在这里的副本",
+      "title": "副本",
       "chapter": 5
     },
     {
       "id": "540537731bd6ddf7293984ae",
       "index": 25,
-      "title": "没说出口的话",
+      "title": "我听见了",
       "chapter": 6
     },
     {
       "id": "b362969324ed284eda3ea2d1",
       "index": 26,
-      "title": "有人在那边",
+      "title": "北岸回音",
       "chapter": 6
     },
     {
       "id": "5d379630c76894ee9cce80e9",
       "index": 27,
-      "title": "她自己的回答",
+      "title": "归处",
       "chapter": 6
     },
     {
       "id": "0f2b6a64d95afbe50227bd1e",
       "index": 28,
-      "title": "只写了我的名字",
+      "title": "一人份的归途",
       "chapter": 6
     },
     {
       "id": "7cc011a4bbef8822a8ecb9a4",
       "index": 29,
-      "title": "留给下个人",
+      "title": "交接簿",
       "chapter": 6
     },
     {
       "id": "b9ab764d65b132d70944b570",
       "index": 30,
-      "title": "晚一点再收",
+      "title": "家门口",
       "chapter": 6
     },
     {
       "id": "9de80704f47677d6e875e60a",
       "index": 31,
-      "title": "这次有问句",
+      "title": "来自北岸的问句",
       "chapter": 7
     },
     {
       "id": "421b3112ae53be7462a82ba1",
       "index": 32,
-      "title": "她要两份",
+      "title": "两份空白",
       "chapter": 7
     },
     {
       "id": "ec539c673ba2012e2104e0c4",
       "index": 33,
-      "title": "两条路分开写",
+      "title": "各自的方向",
       "chapter": 7
     },
     {
       "id": "c07c3c291ac2c0d3135492ad",
       "index": 34,
-      "title": "把门留到最后",
+      "title": "闭门之前",
       "chapter": 7
     },
     {
       "id": "330622e11bf9f00cd9bea779",
       "index": 35,
-      "title": "只给收件的人",
+      "title": "回执的主人",
       "chapter": 7
     },
     {
       "id": "302c697c45e1a9d7b14b4cd7",
       "index": 36,
-      "title": "给各人留一格",
+      "title": "请勿整理",
       "chapter": 7
     },
     {
@@ -227,16 +227,68 @@
     {
       "id": "f18545b64019bb84bbc1fcfa",
       "index": 38,
-      "title": "有人想先坐一会儿",
+      "title": "诊室的晚灯",
       "chapter": 7
     }
   ],
   "skillTraining": [
-    { "id": "field", "eliteQuest": 33, "skills": ["Endurance", "Strength", "Perception", "Attention", "Search", "CovertMovement"] },
-    { "id": "care", "eliteQuest": 34, "skills": ["Health", "Vitality", "Metabolism", "StressResistance", "Immunity", "Surgery"] },
-    { "id": "workshop", "eliteQuest": 35, "skills": ["Crafting", "HideoutManagement", "WeaponTreatment", "Intellect", "Charisma"] },
-    { "id": "firearms", "eliteQuest": 32, "skills": ["Pistol", "SMG", "Assault", "Shotgun", "DMR", "MagDrills"] },
-    { "id": "protection", "eliteQuest": 35, "skills": ["LightVests", "HeavyVests", "AimDrills", "Throwing"] }
+    {
+      "id": "field",
+      "eliteQuest": 33,
+      "skills": [
+        "Endurance",
+        "Strength",
+        "Perception",
+        "Attention",
+        "Search",
+        "CovertMovement"
+      ]
+    },
+    {
+      "id": "care",
+      "eliteQuest": 34,
+      "skills": [
+        "Health",
+        "Vitality",
+        "Metabolism",
+        "StressResistance",
+        "Immunity",
+        "Surgery"
+      ]
+    },
+    {
+      "id": "workshop",
+      "eliteQuest": 35,
+      "skills": [
+        "Crafting",
+        "HideoutManagement",
+        "WeaponTreatment",
+        "Intellect",
+        "Charisma"
+      ]
+    },
+    {
+      "id": "firearms",
+      "eliteQuest": 32,
+      "skills": [
+        "Pistol",
+        "SMG",
+        "Assault",
+        "Shotgun",
+        "DMR",
+        "MagDrills"
+      ]
+    },
+    {
+      "id": "protection",
+      "eliteQuest": 35,
+      "skills": [
+        "LightVests",
+        "HeavyVests",
+        "AimDrills",
+        "Throwing"
+      ]
+    }
   ],
   "chapters": [
     "焦土上的灯",

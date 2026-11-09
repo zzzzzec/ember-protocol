@@ -8,7 +8,7 @@
       "stages": [
         {
           "key": "nina-1",
-          "title": "门先别关",
+          "title": "门边的铃",
           "weapon": "5448bd6b4bdc2dfc2f8b4569",
           "weaponName": "Makarov PM 9x18PM pistol",
           "setup": "原厂 PM",
@@ -148,7 +148,7 @@
         },
         {
           "key": "nina-3",
-          "title": "少打两发",
+          "title": "缝线与弹匣",
           "weapon": "5a7ae0c351dfba0017554310",
           "weaponName": "Glock 17 9x19 pistol",
           "setup": "Glock 17 加长弹匣与补偿器",
@@ -432,7 +432,7 @@
       "stages": [
         {
           "key": "claire-1",
-          "title": "灯往下照",
+          "title": "窗下的手电",
           "weapon": "57d14d2524597714373db789",
           "weaponName": "PP-91 Kedr 9x18PM submachine gun",
           "setup": "原厂 PP-91 Kedr",
@@ -475,7 +475,7 @@
         },
         {
           "key": "claire-2",
-          "title": "窗户留条缝",
+          "title": "窗缝里的动静",
           "weapon": "5926bb2186f7744b1c6c6e60",
           "weaponName": "HK MP5 9x19 submachine gun (Navy 3 Round Burst)",
           "setup": "MP5SD 一体消音配置",
@@ -560,7 +560,7 @@
         },
         {
           "key": "claire-3",
-          "title": "拨到另一个频道",
+          "title": "串台",
           "weapon": "5fc3e272f8b6a877a729eac5",
           "weaponName": "HK UMP .45 ACP submachine gun",
           "setup": "UMP45 原配短枪身、原装消音器和 MRS",
@@ -651,7 +651,7 @@
         },
         {
           "key": "claire-4",
-          "title": "桌上剩一颗",
+          "title": "多出来的螺丝",
           "weapon": "59984ab886f7743e98271174",
           "weaponName": "PP-19-01 Vityaz 9x19 submachine gun",
           "setup": "PP-19 Zenit 护木和消音配置",
@@ -767,7 +767,7 @@
         },
         {
           "key": "claire-5",
-          "title": "落下的那一格",
+          "title": "留给楼下的一格",
           "weapon": "58948c8e86f77409493f7266",
           "weaponName": "SIG MPX 9x19 submachine gun",
           "setup": "MPX SD 中距离全套",
@@ -892,7 +892,7 @@
         },
         {
           "key": "claire-6",
-          "title": "线从下面过",
+          "title": "旧电线的去处",
           "weapon": "644674a13d52156624001fbc",
           "weaponName": "KBP 9A-91 9x39 compact assault rifle",
           "setup": "原厂 9A-91",
@@ -979,7 +979,7 @@
         },
         {
           "key": "claire-7",
-          "title": "别替我拔掉",
+          "title": "单边耳机",
           "weapon": "645e0c6b3b381ede770e1cc9",
           "weaponName": "KBP VSK-94 9x39 rifle",
           "setup": "VSK-94 战术套件",
@@ -1145,7 +1145,7 @@
         },
         {
           "key": "claire-9",
-          "title": "同一个声音",
+          "title": "相似的脚步声",
           "weapon": "57c44b372459772d2b39b8ce",
           "weaponName": "AS VAL 9x39 special assault rifle",
           "setup": "AS VAL Kobra 消音配置",
@@ -1235,7 +1235,7 @@
         },
         {
           "key": "claire-10",
-          "title": "别盖太早",
+          "title": "敞着的盒子",
           "weapon": "651450ce0e00edc794068371",
           "weaponName": "SR-3M 9x39 compact assault rifle",
           "setup": "SR-3M、指定侧挂红点和消音器",
@@ -1339,7 +1339,7 @@
       "stages": [
         {
           "key": "emma-1",
-          "title": "包别横着背",
+          "title": "横着的长包",
           "weapon": "54491c4f4bdc2db1078b4568",
           "weaponName": "MP-133 12ga pump-action shotgun",
           "setup": "原厂 MP-133",
@@ -1409,7 +1409,7 @@
         },
         {
           "key": "emma-2",
-          "title": "膝盖上那只",
+          "title": "膝盖上的空包",
           "weapon": "64748cb8de82c85eaf0a273a",
           "weaponName": "MP-43 12ga sawed-off double-barrel shotgun",
           "setup": "原厂锯短 MP-43",
@@ -1447,7 +1447,7 @@
         },
         {
           "key": "emma-3",
-          "title": "进门先让一让",
+          "title": "门底的拖板",
           "weapon": "5a7828548dc32e5a9c28b516",
           "weaponName": "Remington Model 870 12ga pump-action shotgun",
           "setup": "M870 MESA 突入套件",
@@ -1547,7 +1547,7 @@
         },
         {
           "key": "emma-4",
-          "title": "把车往前挪",
+          "title": "车再往前一点",
           "weapon": "606dae0ab0e443224b421bb7",
           "weaponName": "MP-155 12ga semi-automatic shotgun",
           "setup": "MP-155 Ultima 套件",
@@ -1633,7 +1633,7 @@
         },
         {
           "key": "emma-5",
-          "title": "空架上还有一层",
+          "title": "最后一只纸箱",
           "weapon": "6259b864ebedf17603599e88",
           "weaponName": "Benelli M3 Super 90 12ga dual-mode shotgun",
           "setup": "Benelli M3 七发弹管、顶轨和红点",
@@ -1820,7 +1820,7 @@
         },
         {
           "key": "katya-2",
-          "title": "离木头一指",
+          "title": "木托上的豁口",
           "weapon": "5c07c60e0db834002330051f",
           "weaponName": "ADAR 2-15 5.56x45 carbine",
           "setup": "ADAR 木托和低位红点",
@@ -1920,7 +1920,7 @@
         },
         {
           "key": "katya-3",
-          "title": "把线往外挪",
+          "title": "扶门的人",
           "weapon": "5ac66cb05acfc40198510a10",
           "weaponName": "Kalashnikov AK-101 5.56x45 assault rifle",
           "setup": "AK-101、Kobra 侧挂红点与 Rotor 43 消音器",
@@ -2110,7 +2110,7 @@
         },
         {
           "key": "katya-5",
-          "title": "最后拧这一颗",
+          "title": "最后一颗螺丝",
           "weapon": "5447a9cd4bdc2dbd208b4567",
           "weaponName": "Colt M4A1 5.56x45 assault rifle",
           "setup": "M4A1 Block II 全套",
@@ -2251,7 +2251,7 @@
         },
         {
           "key": "katya-6",
-          "title": "换一头拿",
+          "title": "惯用手",
           "weapon": "5c488a752e221602b412af63",
           "weaponName": "Desert Tech MDR 5.56x45 assault rifle",
           "setup": "MDR 5.56、原护木和 MRS 红点",
@@ -2326,7 +2326,7 @@
         },
         {
           "key": "katya-7",
-          "title": "看准再搬",
+          "title": "长箱的另一头",
           "weapon": "5d43021ca4b9362eab4b5e25",
           "weaponName": "Lone Star TX-15 DML 5.56x45 carbine",
           "setup": "TX-15 DML、原配消音器与 ELCAN",
@@ -2446,7 +2446,7 @@
         },
         {
           "key": "katya-8",
-          "title": "把那格分开",
+          "title": "弹盒之间",
           "weapon": "5fbcc1d9016cce60e8341ab3",
           "weaponName": "SIG MCX .300 Blackout assault rifle",
           "setup": "MCX .300 短管战术全套",
@@ -2607,7 +2607,7 @@
         },
         {
           "key": "katya-9",
-          "title": "匣子照旧放",
+          "title": "箱底的弹匣",
           "weapon": "606587252535c57a13424cfd",
           "weaponName": "CMMG Mk47 Mutant 7.62x39 assault rifle",
           "setup": "Mk47 Mutant 短管和 XPS3 红点",
@@ -2718,7 +2718,7 @@
         },
         {
           "key": "katya-10",
-          "title": "空一把椅子",
+          "title": "靠墙的椅子",
           "weapon": "5aafa857e5b5b00018480968",
           "weaponName": "Springfield Armory M1A 7.62x51 rifle",
           "setup": "M1A EBR 枪托和原配机械瞄具",
@@ -2814,7 +2814,7 @@
         },
         {
           "key": "katya-11",
-          "title": "多留一格",
+          "title": "口袋里那一件",
           "weapon": "5dcbd56fdbd3d91b3e5468d5",
           "weaponName": "Desert Tech MDR 7.62x51 assault rifle",
           "setup": "MDR 7.62×51 指定全配",
@@ -2925,7 +2925,7 @@
         },
         {
           "key": "katya-12",
-          "title": "写完再折",
+          "title": "未干的墨",
           "weapon": "65290f395ae2ae97b80fdf2d",
           "weaponName": "SIG MCX-SPEAR 6.8x51 assault rifle",
           "setup": "MCX-SPEAR、TANGO6T 和原配消音组件",
@@ -3240,7 +3240,7 @@
         },
         {
           "key": "haruka-3",
-          "title": "看得见门牌",
+          "title": "斜门牌",
           "weapon": "5bfea6e90db834001b7347f3",
           "weaponName": "Remington Model 700 7.62x51 bolt-action sniper rifle",
           "setup": "M700 PRO 全套",
@@ -3351,7 +3351,7 @@
         },
         {
           "key": "haruka-4",
-          "title": "签字那一行",
+          "title": "空着的签字栏",
           "weapon": "5c46fbd72e2216398b5a8c9c",
           "weaponName": "SVDS 7.62x54R sniper rifle",
           "setup": "SVDS、PSO 四倍镜与 Rotor 43 消音组合",

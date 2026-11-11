@@ -52,6 +52,7 @@ public sealed partial class SurvivalRaid
 {
     private readonly Dictionary<Player,PatrolPlan> _patrols=new();
     private readonly Dictionary<Player,int> _patrolCoverRevisions=new();
+    private readonly Dictionary<Player,int> _investigationRevisions=new();
     private int _idlePatrolPlans,_patrolInformationChanges;
     private float _nextPatrolSample;
     private static RoamPoint PatrolPosition(Vector3 p)=>new(p.x,p.y,p.z);
@@ -83,7 +84,8 @@ public sealed partial class SurvivalRaid
             neighbours=close;
         }
         var previousMode=plan.FollowingInformation;
-        if(plan.Update(Plugin.Patrol,now,current,informed?PatrolPosition(attention!.Point):(RoamPoint?)null,informed?attention!.Until:0,neighbours))
+        if(plan.Update(Plugin.Patrol,now,current,informed?PatrolPosition(attention!.Point):(RoamPoint?)null,informed?attention!.Until:0,
+            neighbours,informed?AwarenessPolicy.CuePriority(attention!.Reason):0))
         {
             if(plan.FollowingInformation)_patrolInformationChanges++;else _idlePatrolPlans++;
             if(!plan.FollowingInformation||previousMode!=plan.FollowingInformation)
@@ -96,7 +98,32 @@ public sealed partial class SurvivalRaid
         if(_patrolCoverRevisions.TryGetValue(player,out var old)&&old==revision)return false;
         _patrolCoverRevisions[player]=revision;return true;
     }
-    private void ForgetPatrol(Player player){_patrols.Remove(player);_patrolCoverRevisions.Remove(player);}
+    private void RefreshInvestigationRoute(Player player,BotOwner owner,bool fighting)
+    {
+        if(fighting){_investigationRevisions.Remove(player);return;}
+        var hadRoute=_investigationRevisions.TryGetValue(player,out var previousRevision);
+        var informed=_attention.TryGetValue(player,out var cue)&&AwarenessPolicy.InformationAlive(Time.time,cue.Until);
+        if(!informed&&!hadRoute)return;
+        if(!TryPatrol(player,out var plan))return;
+        if(plan.FollowingInformation)
+        {
+            if(hadRoute&&previousRevision==plan.Revision)return;
+            _investigationRevisions[player]=plan.Revision;
+        }
+        else
+        {
+            if(!_investigationRevisions.Remove(player))return;
+        }
+        // Restart the native patrol decision once per change of destination.
+        // Its cover action owns both the route and the movement.
+        owner.Memory.SetCoverPoints(null,"Ember investigate");
+        owner.Memory.CheckIsInCover2();
+        owner.Brain?.BaseBrain?.CalcActionNextFrame();
+        ClientDiagnostics.Record("patrol.route",new{id=ClientDiagnostics.Key(player.Profile.Id),
+            mode=plan.FollowingInformation?"investigate":"wander",reason=informed?cue!.Reason:"expired",
+            revision=plan.Revision,centre=new{x=plan.Centre.X,y=plan.Centre.Y,z=plan.Centre.Z}});
+    }
+    private void ForgetPatrol(Player player){_patrols.Remove(player);_patrolCoverRevisions.Remove(player);_investigationRevisions.Remove(player);}
     private void SamplePatrol()
     {
         if(Time.time<_nextPatrolSample)return;_nextPatrolSample=Time.time+15;
@@ -106,7 +133,10 @@ public sealed partial class SurvivalRaid
             if(player==null||player.HealthController?.IsAlive!=true)continue;
             _patrols.TryGetValue(player,out var plan);var pos=player.Transform.position;
             var informed=_attention.TryGetValue(player,out var cue)&&cue.Until>Time.time;
-            actors.Add(new{id=ClientDiagnostics.Key(player.Profile.Id),position=new{pos.x,pos.y,pos.z},mode=informed?"investigate":"wander",reason=informed?cue!.Reason:"none",centre=plan==null?null:new{x=plan.Centre.X,y=plan.Centre.Y,z=plan.Centre.Z},remaining=informed?cue!.Until-Time.time:Math.Max(0,(plan?.NextIdlePlan??0)-Time.time)});
+            var owner=player.AIData?.BotOwner;
+            var destination=owner?.Memory?.CurCustomCoverPoint?.Position;
+            actors.Add(new{id=ClientDiagnostics.Key(player.Profile.Id),position=new{pos.x,pos.y,pos.z},mode=informed?"investigate":"wander",reason=informed?cue!.Reason:"none",centre=plan==null?null:new{x=plan.Centre.X,y=plan.Centre.Y,z=plan.Centre.Z},remaining=informed?cue!.Until-Time.time:Math.Max(0,(plan?.NextIdlePlan??0)-Time.time),
+                nativeDestination=destination is { } point?new{point.x,point.y,point.z}:null,nativePath=owner?.Mover?.HasPathAndNoComplete==true});
         }
         ClientDiagnostics.Record("patrol.sample",new{idlePlans=_idlePatrolPlans,informationChanges=_patrolInformationChanges,actors});
     }

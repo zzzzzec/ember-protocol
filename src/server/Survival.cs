@@ -41,7 +41,7 @@ public sealed record Metadata : AbstractModMetadata
     public override string Name { get; init; } = "SPT-Z Survival";
     public override string Author { get; init; } = "Ember Protocol contributors";
     public override List<string> Contributors { get; init; } = [];
-    public override SemanticVersioning.Version Version { get; init; } = new("2.19.0");
+    public override SemanticVersioning.Version Version { get; init; } = new("2.21.6");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.13");
     public override List<string> Incompatibilities { get; init; } = ["com.vonbraunz.roamingzombies"];
     public override Dictionary<string, SemanticVersioning.Range> ModDependencies { get; init; } = [];
@@ -89,7 +89,6 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         var runtimePath=Path.Combine(Folder,"runtime.json");
         Config["instanceKind"]=File.Exists(runtimePath)?JsonNode.Parse(File.ReadAllText(runtimePath))?["instanceKind"]?.DeepClone():JsonValue.Create("Player");
         LoadCampaign();
-        LoadCampaignTraining();
         try{InitializeDiagnostics();}catch(Exception e){log.Warning("[SPT-Z] Diagnostics unavailable: "+e.Message,null);}
         foreach(var r in Read("data/recipes.json").AsArray())
             foreach(var req in r!["requirements"]!.AsArray())
@@ -105,7 +104,6 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         InitializeVanillaGiftPolicy();
         var loc=Read("data/locales.json").AsObject();_authoredLocales=loc;
         InitializeAbundanceAwards(loc);
-        AddCampaignTrainingNotes(loc);
         foreach(var (lang,lazy) in db.GetLocales().Global)
         {
             var entries=(loc[lang]??loc["en"])!.AsObject().ToDictionary(x=>x.Key,x=>x.Value!.GetValue<string>());
@@ -156,6 +154,10 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
             skills["Metabolism"]!["HydrationRecoveryRate"]=progression["metabolismRecoveryRate"]!.DeepClone();
             skills["Health"]!["SkillProgress"]=progression["healthSkillProgress"]!.DeepClone();
             skills["MagDrills"]!["RaidLoadedAmmoAction"]=progression["magDrillsLoadAction"]!.DeepClone();
+            var search = skills["Search"]!;
+            var searchGain = progression["searchGainMultiplier"]!.GetValue<double>();
+            foreach (var action in new[] { "SearchAction", "FindAction" })
+                search[action] = search[action]!.GetValue<double>() * searchGain;
             // This mode supplies infected spawns independently of the legacy summoning event.
             if((bool?)Config["disableLegacyRitual"]==true)n["EventSettings"]!["EventActive"]=false;
             // Native melee bleeding applies this named buff afterward. Removing
@@ -211,6 +213,7 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         InitializeRaidRestock();
         foreach(var (id,profile) in saves.GetProfiles()) EnsureProfile(id);
         _items=db.GetItems().ToDictionary(x=>x.Key.ToString(),x=>Node(x.Value).AsObject());
+        ConfigureRareKeyLoot();
         InitializeAbundanceLoot();
         InitializeHelmetLoot();
         InitializeThreatGenerator();
@@ -422,7 +425,8 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         if(p?["StackSlots"] is JsonArray slots && slots.ToJsonString().Contains("5485a8684bdc2da71d8b4567"))return "ammo";
         return "other";
     }
-    private const string MiraFlareCorpse = "container_Sandbox_Design_Stuff_00008";
+    // The bus-side Scav body (6582e6bb0c3b9823fe6d1840) has its own loot table.
+    private const string MiraFlareCorpse = "container_Sandbox_Design_Stuff_00011";
     private const string GreenHandheldFlare = "6217726288ed9f0845317459";
 
     public JsonArray FilterItems(JsonArray list,double factor=1,Random? random=null,bool preserveMiraFlare=false)
@@ -486,7 +490,9 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
             if(spawn?["Items"] is JsonArray list)
             {
                 var preserveMiraFlare = (map is "sandbox" or "sandbox_high") && spawn["Id"]?.ToString() == MiraFlareCorpse;
-                spawn["Items"]=FilterItems(list,.80+factor*.08,preserveMiraFlare:preserveMiraFlare);
+                var items = FilterItems(list,.80+factor*.08,preserveMiraFlare:preserveMiraFlare);
+                WearRareWorldKeys(items, map, spawn["Id"]?.ToString() ?? "");
+                spawn["Items"] = items;
                 var root=spawn["Root"]?.ToString();
                 if(root is not null&&!spawn["Items"]!.AsArray().Any(x=>x?["_id"]?.ToString()==root))continue;
             }
@@ -526,7 +532,6 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         Patch(h,typeof(TraderController),"GetAssort",prefix:nameof(Patches.AssortAccess));
         Patch(h,typeof(QuestController),"CompleteQuest",postfix:nameof(Patches.RefreshProgression));
         Patch(h,typeof(RewardHelper),nameof(RewardHelper.GetRewardProductionMatch),prefix:nameof(Patches.AuthoredCraftReward));
-        Patch(h,typeof(QuestRewardHelper),"GetQuestFromDb",postfix:nameof(Patches.TrainingQuest));
         InstallSupplyPatches(h);
         Patch(h,typeof(TradeController),"ConfirmRagfairTrading",prefix:nameof(Patches.Flea));
         Patch(h,typeof(RagfairController),"AddPlayerOffer",prefix:nameof(Patches.Flea));
@@ -544,7 +549,7 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
     }
 }
 
-public static partial class Patches
+public static class Patches
 {
     public static void BareReceiverReward(HideoutProduction __0, List<List<Item>> __result) => S.StripReceiverPreset(__0, __result);
     private static SurvivalService S=>SurvivalService.Current;

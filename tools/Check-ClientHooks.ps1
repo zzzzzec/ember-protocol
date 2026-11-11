@@ -8,13 +8,14 @@ $methods+=,@('BotCreatorClass','.ctor',3)
 $methods+=,@('BotWeaponManager','PreActivate',0)
 $methods+=,@('PoolManagerClass','CreateItem',4)
 $methods+=,@('Player','method_137',1)
+$methods+=@(@('Player','Rotate',2),@('MovementContext','ApplyRotation',1),@('BotMemoryClass','SetCoverPoints',2),@('BotMemoryClass','CheckIsInCover2',0),@('BaseBrain','CalcActionNextFrame',0))
+$methods+=@(@('BotSteering','SetXAngle',1),@('GClass498','SetXAngle',1))
+$fields+=,@('MovementContext','_player')
 $methods+=,@('LocationInfoPanel','Set',9)
 $fields+=@(@('LocationInfoPanel','location_0'),@('LocationInfoPanel','_description'))
 $fields+=,@('GClass429','BotOwner_0')
 $methods+=@(@('BotOwner','UpdateManual',0),@('BotOwner','FixedUpdate',0),@('BotOwner','method_9',3),@('AICoreAgentClass','Update',0))
 $fields+=,@('BotCreatorClass','Func_0')
-$methods+=,@('GClass4042','Test',1)
-$fields+=@(@('GClass4042','Condition'),@('GClass4015','WeaponMods'))
 try {
  foreach($check in $methods){
   $type=$module.Types|Where-Object Name -eq $check[0]
@@ -35,6 +36,19 @@ try {
  if(@($movement.Fields|Where-Object {$_.Name -eq '_player' -and $_.FieldType.FullName -eq 'EFT.Player'}).Count -ne 1){throw 'Player sprint context field binding mismatch.'}
  $sprintAcceleration=$movement.Methods|Where-Object Name -eq 'SprintAcceleration'
  if(-not ($sprintAcceleration.Body.Instructions|Where-Object { $_.Operand -is [Mono.Cecil.MethodReference] -and $_.Operand.Name -eq 'get_SprintingSpeed' })){throw 'Native sprint movement no longer consumes the speed curve.'}
+ $playerType=$module.GetType('EFT.Player')
+ $firearm=$playerType.NestedTypes|Where-Object Name -eq 'FirearmController'
+ $clientFirearm=$module.GetType('EFT.ClientFirearmController')
+ $initiateShot=$firearm.Methods|Where-Object Name -eq 'InitiateShot'
+ if(@($initiateShot.Body.Instructions|Where-Object { $_.Operand -is [Mono.Cecil.MethodReference] -and $_.Operand.Name -eq 'OnMakingShot' }).Count -ne 1){throw 'Live round practice binding mismatch.'}
+ foreach($name in @('ReloadMag','QuickReloadMag','ReloadWithAmmo','ReloadCylinderMagazine','ReloadBarrels')){
+  foreach($controller in @($firearm,$clientFirearm)){
+   if(@($controller.Methods|Where-Object { $_.Name -eq $name -and @($_.Parameters|Where-Object { $_.Name -eq 'callback' -and $_.ParameterType.FullName -eq 'Comfort.Common.Callback' }).Count -eq 1 }).Count -ne 1){throw ('Reload completion callback binding mismatch: '+$name)}
+  }
+ }
+ $quick=$clientFirearm.Methods|Where-Object Name -eq 'QuickReloadMag'
+ if(-not ($quick.Body.Instructions|Where-Object { $_.Operand -is [Mono.Cecil.MethodReference] -and $_.Operand.Name -eq 'QuickReloadMag' -and $_.Operand.DeclaringType.FullName -eq $firearm.FullName })){throw 'Native client quick reload no longer calls the patched base method.'}
+ if(@($playerType.Events|Where-Object Name -eq 'OnPlayerDeadStatic').Count -ne 1){throw 'Native armor practice death event mismatch.'}
  $speech=$module.GetType('EFT.Player').Methods|Where-Object Name -eq 'PlaySpeechFromTime'
  $speechGain=@($speech.Body.Instructions|Where-Object {$_.OpCode.Name -eq 'ldfld' -and $_.Operand -is [Mono.Cecil.FieldReference] -and $_.Operand.DeclaringType.Name -eq 'TaggedClip' -and $_.Operand.Name -eq 'Volume'})
  if($speechGain.Count -ne 1 -or -not ($speech.Body.Instructions|Where-Object {$_.Operand -is [Mono.Cecil.MethodReference] -and $_.Operand.DeclaringType.Name -eq 'BetterSource' -and $_.Operand.Name -eq 'Play'})){throw 'Infected speech gain binding mismatch.'}

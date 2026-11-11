@@ -18,6 +18,7 @@ public sealed class WaveBudget
     public double Spacing { get; }
     public bool Steady { get; }
     public int PendingLimit { get; }
+    public int GroupSize { get; }
     public double Jitter { get; }
     public uint Seed { get; }
     public int Activating=>_activating.Count;
@@ -32,11 +33,12 @@ public sealed class WaveBudget
     public int Pending=>Issued-Spawned;
     public int Waiting=>Total-Issued;
     public bool Cleared=>Sealed&&Spawned==Total&&Pending==0&&Alive==0;
-    public WaveBudget(int cap,int threshold,double pause,double spacing,bool steady=false,int pendingLimit=2,double jitter=.25,uint seed=0)
+    public WaveBudget(int cap,int threshold,double pause,double spacing,bool steady=false,int pendingLimit=2,double jitter=.25,uint seed=0,int groupSize=0)
     {
         Cap=Math.Max(1,Math.Min(64,cap));Threshold=Math.Max(0,Math.Min(Cap-1,threshold));
         Pause=Finite(pause)?Math.Max(0,pause):8;Spacing=Finite(spacing)?Math.Max(.1,spacing):.35;
         Steady=steady;PendingLimit=Math.Max(1,Math.Min(Cap,pendingLimit));Jitter=Finite(jitter)?Math.Max(0,Math.Min(.5,jitter)):.25;Seed=seed;
+        GroupSize=Math.Max(0,Math.Min(Cap,groupSize));
     }
     private static bool Finite(double n)=>!double.IsNaN(n)&&!double.IsInfinity(n);
     public bool Register(int ticket)
@@ -71,9 +73,15 @@ public sealed class WaveBudget
     {
         // Reserve only a small number of native requests. Unsafe positions can wait
         // without filling every free slot with profiles that later activate together.
-        if(Alive+Pending>=Cap||Pending>=PendingLimit){_readyAt=double.NaN;return null;}
-        if(double.IsNaN(_readyAt)){_readyAt=now+Pause;return null;}
-        if(now<_readyAt||now<_nextIssue)return null;
+        var waitingForGroup=GroupSize>0&&_batchRemaining==0;
+        if(Alive+Pending>=Cap||Pending>=PendingLimit||waitingForGroup&&(Alive>Threshold||Pending>0))
+        {_readyAt=double.NaN;return null;}
+        if(GroupSize==0||waitingForGroup)
+        {
+            if(double.IsNaN(_readyAt)){_readyAt=now+Pause;return null;}
+            if(now<_readyAt)return null;
+        }
+        if(now<_nextIssue)return null;
         while(_cursor<_order.Count&&_issued.Contains(_order[_cursor]))_cursor++;
         var firstIndex = _cursor;
         while (firstIndex < _order.Count && (_issued.Contains(_order[firstIndex]) || eligible?.Invoke(_order[firstIndex]) == false))
@@ -95,14 +103,20 @@ public sealed class WaveBudget
                 best = score;
             }
         }
+        if(waitingForGroup)
+        {
+            Batch++;
+            _batchRemaining=Math.Min(GroupSize,Math.Min(Cap-Alive,Waiting));
+        }
         _issued.Add(ticket);
-        Batch=2;
+        if(GroupSize>0)_batchRemaining--;else Batch=2;
         _readyAt=double.NaN;_nextIssue=now+Interval(ticket);return ticket;
     }
     public bool ReturnUnbound(int ticket)
     {
         if (!Steady || Ended || _opening.Contains(ticket) || _ticketProfiles.ContainsKey(ticket)
             || _activating.Contains(ticket) || !_issued.Remove(ticket)) return false;
+        if(GroupSize>0)_batchRemaining++;
         _cursor = 0;
         return true;
     }

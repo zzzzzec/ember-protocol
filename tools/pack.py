@@ -211,15 +211,7 @@ def validate():
     campaign=read(data/'campaign.json')
     campaign_main={row['id'] for row in campaign['main']}
     assert [row['index'] for row in campaign['main']]==list(range(1,len(campaign_main)+1))
-    training=campaign['skillTraining']
-    assert len({track['id'] for track in training})==len(training)
-    trained=[skill for track in training for skill in track['skills']]
-    assert len(set(trained))==len(trained)==27
-    for edition in read(data/'profiles.json').values():
-        for side in ('usec','bear'):
-            assert set(trained)<={row['Id'] for row in edition[side]['character']['Skills']['Common']}
-    assert {track['eliteQuest'] for track in training}=={32,33,34,35}
-    assert max(track['eliteQuest'] for track in training)<len(campaign_main)
+    assert 'skillTraining' not in campaign
     awards=[]
     for rows in abundance['maps'].values():
         assert set(rows['main'])<=campaign_main and not set(rows['side'])&campaign_main
@@ -252,6 +244,9 @@ def validate():
     waves=config['waves'];assert waves['enabled'] is True and waves['replenishAt']==2 and waves['breatherSeconds']>=0 and waves['spawnSpacingSeconds']>=.1
     assert waves['mode']=='steady' and waves['pendingLimit']==2 and waves['spawnSpacingSeconds']>=4 and 0<=waves['spacingJitter']<=.5
     assert set(waves['aliveCaps'])==set(config['maps']) and all(1<=cap<=64 for cap in waves['aliveCaps'].values())
+    for mapid,group in waves.get('reinforcementGroups',{}).items():
+        assert 1<=group['size']<=waves['aliveCaps'][mapid]
+        assert 0<=group['replenishAt']<waves['aliveCaps'][mapid] and group['breatherSeconds']>=0
     for mapid,spec in config['maps'].items():
         assert spec['total']==len(spec['spawns']) and 0<=spec['shooters']<=spec['total']
         assert all(s['BossName'].startswith('infected') and s['Time']==-1 for s in spec['spawns'])

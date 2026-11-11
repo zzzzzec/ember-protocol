@@ -169,18 +169,29 @@ public static class ThreatPolicy
     }
 }
 
-// Reaction is based on confirmed observations; a lost sight check clears it.
-// Native acquisition retries are not guaranteed to run at the raid tick rate.
+// Retain recognition briefly after losing sight. A fresh, unobstructed
+// observation is still required before the game can assign an enemy.
 public sealed class ThreatSight
 {
     private string _candidate = "";
     private float _readyAt, _last = -100;
+    private bool _recognised, _lost;
     public bool Observe(string target, bool visible, float now, float reaction)
     {
-        if (!visible) { _candidate = ""; _last = -100; return false; }
-        if (_candidate != target || now - _last > 3f)
-        { _candidate = target; _readyAt = now + reaction; }
+        if (!visible)
+        {
+            _lost = true;
+            if (!_recognised) _candidate = "";
+            return false;
+        }
+        var sampleLifetime = _lost ? 1.25f : 3f;
+        if (_candidate != target || now - _last > sampleLifetime)
+        {
+            _candidate = target;
+            _readyAt = now + reaction;
+        }
+        _lost = false;
         _last = now;
-        return now >= _readyAt;
+        return _recognised = now >= _readyAt;
     }
 }

@@ -63,6 +63,11 @@ internal static class ThreatActors
     }
     internal static bool SimplifiedArmor(Player player)=>Players.TryGetValue(player,out var actor)&&actor.Simplified;
     internal static float Hearing(Player player, float radius) => Players.TryGetValue(player, out var a) ? radius * a.Unit.Hearing : radius;
+    internal static void LoseSight(Player player)
+    {
+        if (Players.TryGetValue(player, out var actor))
+            actor.Acquisition.Observe("", false, Time.time, actor.Unit.ReactionSeconds);
+    }
     internal static bool Sight(Player player, Player target, float distance, float dot, bool valid)
     {
         if (!Players.TryGetValue(player, out var actor)) return valid;

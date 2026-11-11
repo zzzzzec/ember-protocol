@@ -52,7 +52,6 @@ public sealed class PatrolPlan
 {
     private readonly uint _seed;
     private int _cycle;
-    private RoamPoint _revisionCentre;
     public RoamPoint Home{get;private set;}
     public RoamPoint Centre{get;private set;}
     public bool FollowingInformation{get;private set;}
@@ -61,21 +60,25 @@ public sealed class PatrolPlan
     public int Revision{get;private set;}
     public PatrolPlan(uint seed,RoamPoint home){_seed=seed;Home=Centre=home;}
     public bool NeedsIdlePlan(float now,bool informed)=>!informed&&(FollowingInformation||now>=NextIdlePlan);
-    public bool Update(PatrolSettings settings,float now,RoamPoint current,RoamPoint? information,float until,IReadOnlyList<RoamPoint> neighbours)
+    private int _cuePriority;
+    public bool Update(PatrolSettings settings,float now,RoamPoint current,RoamPoint? information,float until,IReadOnlyList<RoamPoint> neighbours,int cuePriority=0)
     {
         var informed=information.HasValue&&information.Value.Finite&&AwarenessPolicy.InformationAlive(now,until);
         if(informed)
         {
-            var changed=!FollowingInformation||_revisionCentre.FlatDistanceSquared(information!.Value)>16||Math.Abs(_revisionCentre.Y-information.Value.Y)>3;
-            FollowingInformation=true;Centre=information!.Value;HoldSeconds=3;
-            if(changed){Revision++;_revisionCentre=Centre;}
+            var point=information!.Value;
+            var changed=!FollowingInformation||cuePriority>_cuePriority||Centre.FlatDistanceSquared(point)>16||Math.Abs(Centre.Y-point.Y)>3;
+            HoldSeconds=FollowingInformation?Math.Max(HoldSeconds,until-now+.25f):until-now+.25f;
+            FollowingInformation=true;
+            _cuePriority=cuePriority;
+            if(changed){Revision++;Centre=point;}
             return changed;
         }
         if(!NeedsIdlePlan(now,false))return false;
         // After investigating, settle around the actual current location rather than following a stale cue.
         if(FollowingInformation){Home=current;FollowingInformation=false;}
         Centre=PatrolPolicy.Choose(settings,_seed,++_cycle,Home,current,neighbours);
-        HoldSeconds=PatrolPolicy.Hold(settings,_seed,_cycle);NextIdlePlan=now+HoldSeconds;Revision++;_revisionCentre=Centre;
+        HoldSeconds=PatrolPolicy.Hold(settings,_seed,_cycle);NextIdlePlan=now+HoldSeconds;Revision++;
         return true;
     }
 }

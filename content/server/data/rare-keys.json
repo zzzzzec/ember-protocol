@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "ordinaryMinimumPrice": 1500,
+  "ordinaryWeightMultiplier": 1.20,
+  "remainingUseWeights": [16, 15, 14, 13, 12, 10, 8, 6, 4, 2]
+}

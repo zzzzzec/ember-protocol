@@ -23,7 +23,7 @@ def reward_id(oid):
 
 
 def specialist_entries(stock, contacts):
-    assert stock["schemaVersion"] == 1 and set(stock["traders"]) == set(contacts)
+    assert stock["schemaVersion"] == 1 and set(stock["traders"]) - {"rin"} == set(contacts)
     for trader, groups in stock["traders"].items():
         for group in groups:
             for offer in group["offers"]:
@@ -73,7 +73,8 @@ def compile_procurement(write=False):
 
     for row in entries:
         oid, tpl, level, limit = (row[key] for key in ("id", "tpl", "level", "limit"))
-        owner = contacts[row["owner"]]
+        owner = row["owner"]
+        trader_id = manifest["traderId"] if owner == "rin" else contacts[owner]["id"]
         price, inputs = row.get("price", 0), row.get("inputs", [])
         assert all(re.fullmatch("[0-9a-f]{24}", key) for key in (oid, tpl))
         assert type(level) is int and 1 <= level <= 4 and type(limit) is int and 1 <= limit <= 16
@@ -96,20 +97,21 @@ def compile_procurement(write=False):
         meta = dict(id=oid, tpl=tpl, name=row["name"], price=price, stock=limit, limit=limit, level=level, unlock=qid)
         if row.get("validatePayment"):
             meta["validatePayment"] = True
-            specialist_owners[row["owner"]].append(oid)
-        elif oid not in owner["offers"]:
-            owner["offers"].append(oid)
+            if owner != "rin":
+                specialist_owners[owner].append(oid)
+        elif oid not in contacts[owner]["offers"]:
+            contacts[owner]["offers"].append(oid)
         if inputs:
             meta["barter"] = inputs
             manifest["barters"].append(copy.deepcopy(meta))
         manifest["offers"].append(meta)
         if qid:
-            assert qid in quests and quests[qid]["traderId"] == owner["id"], (row["name"], qid)
+            assert qid in quests and quests[qid]["traderId"] == trader_id, (row["name"], qid)
             trader["questassort"]["success"][oid] = qid
             reward_root = {key: val for key, val in root.items() if key not in ("parentId", "slotId")}
             reward = dict(id=reward_id(oid), type="AssortmentUnlock", isHidden=False, unknown=False,
                           gameMode=["regular", "pve"], availableInGameEditions=[], items=[reward_root, *children],
-                          target=oid, traderId=owner["id"], loyaltyLevel=level)
+                          target=oid, traderId=trader_id, loyaltyLevel=level)
             quests[qid]["rewards"]["Success"].append(reward)
 
     for name, contact in contacts.items():

@@ -8,9 +8,14 @@ internal static class ThreatChecks
     {
         var sight = new ThreatSight();
         check(!sight.Observe("a",true,0,1.2f) && !sight.Observe("a",true,.8f,1.2f) && sight.Observe("a",true,1.6f,1.2f),"irregular native sight retries eventually complete reaction");
-        check(!sight.Observe("a",false,1.8f,1.2f) && !sight.Observe("a",true,2,1.2f),"losing confirmed sight clears acquisition without unseen tracking");
+        check(!sight.Observe("a",false,1.8f,1.2f) && sight.Observe("a",true,2,1.2f),"a brief interruption retains recognition but requires a fresh visible sample");
+        check(!sight.Observe("a",false,2.1f,1.2f) && !sight.Observe("a",false,3.4f,1.2f) &&
+              !sight.Observe("a",true,3.5f,1.2f),"invisible samples cannot refresh the recognition window");
         check(!sight.Observe("b",true,4,1.2f) && sight.Observe("b",true,5.3f,1.2f),"new target starts its own reaction");
         check(!sight.Observe("b",true,9,1.2f),"expired visual sample cannot instantly reacquire");
+        var pending = new ThreatSight();
+        check(!pending.Observe("a",true,0,1.2f) && !pending.Observe("a",false,.8f,1.2f) &&
+              !pending.Observe("a",true,1.3f,1.2f),"an interruption before recognition still resets initial acquisition");
         var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         var config = JsonSerializer.Deserialize<ThreatConfiguration>(File.ReadAllText(Path.Combine(root,"config/threat-generator.json")),options)!;
         var maps = JsonNode.Parse(File.ReadAllText(Path.Combine(root,"config/gameplay.json")))!["maps"]!.AsObject();

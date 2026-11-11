@@ -6,6 +6,7 @@
   <ItemGroup>
     <Compile Include="../../src/shared/ThreatPolicy.cs" Link="ThreatPolicy.cs" />
     <Compile Include="../../src/shared/LoadingPolicy.cs" Link="LoadingPolicy.cs" />
+    <Compile Include="../../src/shared/ReloadPractice.cs" Link="ReloadPractice.cs" />
     <Compile Include="../../src/shared/WavePolicy.cs" Link="WavePolicy.cs" />
     <Compile Include="../../src/shared/PatrolPolicy.cs" Link="PatrolPolicy.cs" />
     <Compile Include="../../src/server/StoryQuestPolicy.cs" Link="StoryQuestPolicy.cs" />

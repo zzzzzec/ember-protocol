@@ -6,7 +6,7 @@
 
 ## 从现有安装目录获取依赖
 
-解压 `ember-protocol-1.4.2.zip`，在解压目录运行：
+解压 `ember-protocol-2.21.6.zip`，在解压目录运行：
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1 -GameRoot "D:\Games\SPT" -DependencyRoot "E:\Existing-SPT-Z"

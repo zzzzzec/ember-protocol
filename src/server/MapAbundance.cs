@@ -15,9 +15,10 @@ namespace Codex.ZombieSurvival;
 public sealed partial class SurvivalService
 {
     private const string AbundanceLedger = "emberMapAbundance";
-    private const int AbundanceKillCap = 880;
-    private const int AbundanceQuestCap = 3600;
     private const int AbundanceScale = 10000;
+    private const int AbundanceQuestCap = 4320;
+    private const int AbundanceKillValue = 5;
+    private const int AbundanceKillCap = (2 * AbundanceScale - AbundanceQuestCap) / AbundanceKillValue;
     private const string AbundanceLabel = "ember map abundance";
     private readonly object _abundanceGate = new();
     private readonly Dictionary<MongoId, AbundanceRaid> _abundanceRaids = [];
@@ -52,11 +53,11 @@ public sealed partial class SurvivalService
         var data = Read("data/map-abundance.json");
         foreach (var (map, quests) in data["maps"]!.AsObject())
         {
-            foreach (var quest in quests!["main"]!.AsArray()) _abundanceAwards.Add((MongoId)quest!.ToString(), new() { [map] = 600 });
-            foreach (var quest in quests["side"]!.AsArray()) _abundanceAwards.Add((MongoId)quest!.ToString(), new() { [map] = 300 });
+            foreach (var quest in quests!["main"]!.AsArray()) _abundanceAwards.Add((MongoId)quest!.ToString(), new() { [map] = 720 });
+            foreach (var quest in quests["side"]!.AsArray()) _abundanceAwards.Add((MongoId)quest!.ToString(), new() { [map] = 360 });
         }
         foreach (var (quest, maps) in data["shared"]!.AsObject())
-            _abundanceAwards.Add((MongoId)quest, maps!.AsArray().ToDictionary(map => map!.ToString(), _ => 150));
+            _abundanceAwards.Add((MongoId)quest, maps!.AsArray().ToDictionary(map => map!.ToString(), _ => 180));
 
         var englishMaps = new Dictionary<string, string>
         {
@@ -115,7 +116,7 @@ public sealed partial class SurvivalService
         return AbundanceMapNames.Keys.ToDictionary(map => map, map =>
         {
             var task = Math.Min(AbundanceQuestCap, quests.GetValueOrDefault(map)) / (decimal)AbundanceScale;
-            var combat = AbundanceKills(ledger, map) * 5 / (decimal)AbundanceScale;
+            var combat = AbundanceKills(ledger, map) * AbundanceKillValue / (decimal)AbundanceScale;
             return new AbundanceProgress(1m + task + combat, task, combat);
         });
     }

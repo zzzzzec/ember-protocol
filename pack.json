@@ -1,8 +1,8 @@
 {
   "name": "Ember Protocol",
   "displayName": "余烬协议",
-  "version": "2.19.0",
-  "contentVersion": "2.19.0-campaign-skills",
+  "version": "2.21.6",
+  "contentVersion": "2.21.6-loot-value",
   "sptVersion": "4.0.13",
   "gameVersion": "0.16.9.40087",
   "defaultPort": 6969,
@@ -54,8 +54,8 @@
     "SPT/user/launcher/config.json"
   ],
   "counts": {
-    "quests": 285,
-    "offers": 617,
+    "quests": 295,
+    "offers": 652,
     "barters": 190,
     "crafts": 71
   }

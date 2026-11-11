@@ -142,11 +142,9 @@ end(start('bigmap'), 'KILLED', [victim('bigmap') for _ in range(99)])
 assert progress()['bigmap']['kills'] == 0.05
 awards = read(root / 'SPT/user/mods/Codex-ZombieSurvival/data/map-abundance.json')['maps']['bigmap']
 end(start('bigmap'), completed=[awards['main'][0], awards['side'][0]])
-assert progress()['bigmap'] == dict(total=1.14, quests=.09, kills=.05), progress()['bigmap']
-for _ in range(9):
-    end(start('bigmap'), 'KILLED', [victim('bigmap') for _ in range(85)], completed=awards['main'] + awards['side'])
-end(start('bigmap'), 'KILLED', [victim('bigmap') for _ in range(35)])
-assert progress()['bigmap'] == dict(total=1.8, quests=.36, kills=.44), progress()['bigmap']
+assert progress()['bigmap'] == dict(total=1.158, quests=.108, kills=.05), progress()['bigmap']
+end(start('bigmap'), 'KILLED', [victim('bigmap') for _ in range(3040)], completed=awards['main'] + awards['side'])
+assert progress()['bigmap'] == dict(total=3, quests=.432, kills=1.568), progress()['bigmap']
 boosted_samples = []
 for _ in range(5):
     raid = start('bigmap', loot=True)

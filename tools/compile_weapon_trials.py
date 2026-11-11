@@ -113,6 +113,11 @@ def create_quest(template, stage, trader, prerequisite, image):
         reward("TraderStanding", key + ":standing", target=trader, value=.025),
         item_reward(key + ":cash", [dict(_id=stable("item", key + ":cash"), _tpl=ROUBLES,
                                        upd=dict(StackObjectsCount=cash, SpawnedInSession=False))], cash)])
+    if "skillReward" in stage:
+        practice = stage["skillReward"]
+        assert practice["skill"] in {"Pistol", "SMG", "Assault", "Shotgun", "DMR", "Sniper"}
+        assert type(practice["points"]) is int and 50 <= practice["points"] <= 150
+        q["rewards"]["Success"].append(reward("Skill", key + ":practice", target=practice["skill"], value=practice["points"]))
     spec = dict(weapon=stage["weapon"], requiredParts=sorted(set(mods)), exactParts=sorted(mods),
                 minimumDurability=50, minimumMagazineCapacity=stage["magazineCapacity"],
                 returnCondition=ret["id"], killCondition=stable("kill", key), referenceOffer=stable("offer", key))
@@ -199,6 +204,7 @@ def compile_weapon_trials(write=False):
         prerequisite = group["prerequisite"]
         group_quests, group_offers = [], []
         for stage in group["stages"]:
+            prerequisite = stage.get("prerequisite", prerequisite)
             q, spec = create_quest(template, stage, owner, prerequisite, assets[character])
             qid, key = q["_id"], stage["key"]
             assert qid not in quests and qid in dialogue and dialogue[qid]["speaker"] == owner

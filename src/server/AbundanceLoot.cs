@@ -1,10 +1,7 @@
-using System.Reflection;
-using System.Reflection.Emit;
 using HarmonyLib;
 using SPTarkov.Server.Core.Generators;
 using SPTarkov.Server.Core.Models.Common;
 using SPTarkov.Server.Core.Models.Eft.Common;
-using SPTarkov.Server.Core.Models.Spt.Config;
 using SPTarkov.Server.Core.Services;
 using SPTarkov.Server.Core.Utils.Collections;
 
@@ -15,58 +12,48 @@ public sealed partial class SurvivalService
     [ThreadStatic]
     private static LootScope? _abundanceLootScope;
 
-    private readonly Dictionary<MongoId, double> _abundanceEligible = [];
-    private bool _abundanceContainerDuplicates;
+    private readonly Dictionary<MongoId, double> _abundancePrices = [];
 
-    private sealed class LootScope(MongoId session, string map, double increase)
+    private sealed class LootScope(MongoId session, string map, double multiplier)
     {
         internal readonly MongoId Session = session;
         internal readonly string Map = map;
-        internal readonly double Increase = increase;
-        internal int LooseExtras;
-        internal int ContainerExtras;
+        internal readonly double Multiplier = multiplier;
+        // Native placement and guaranteed points damp the requested increase differently by map.
+        internal readonly double LooseQuantity = Quantity(multiplier, map switch
+        {
+            "interchange" => .15,
+            "laboratory" => .45,
+            _ => 0
+        });
+        internal readonly double StaticQuantity = Quantity(multiplier, map switch
+        {
+            "sandbox" => .28,
+            "bigmap" => .35,
+            "interchange" => .47,
+            "rezervbase" => .17,
+            _ => .33
+        });
+        internal readonly double Quality = Math.Pow(multiplier, .22);
+        internal int StaticExtraDraws;
+        internal int LoosePoolsReweighted;
+
+        private static double Quantity(double target, double placementCorrection) =>
+            Math.Pow(target, .78) * (1 + placementCorrection * (target - 1) / 2);
     }
 
     private void InitializeAbundanceLoot()
     {
-        _abundanceContainerDuplicates = configs.GetConfig<LocationConfig>().AllowDuplicateItemsInStaticContainers;
-        var materials = new HashSet<string>(StringComparer.Ordinal)
-        {
-            "57864a66245977548f04a81f", // Electronics
-            "57864ada245977548638de91", // Building materials
-            "57864bb7245977548b3b66c2", // Tools
-            "57864c322459775490116fbf", // Household goods
-            "57864c8c245977548867e7f1", // Barter medical supplies
-            "57864e4c24597754843f8723", // Lubricants
-            "57864ee62459775490116fc1"  // Batteries
-        };
-        var basicCalibres = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-        {
-            "Caliber9x18PM", "Caliber9x19PARA", "Caliber762x25TT", "Caliber9x21", "Caliber1143x23ACP",
-            "Caliber12g", "Caliber20g", "Caliber545x39", "Caliber556x45NATO", "Caliber762x39", "Caliber366TKM"
-        };
         foreach (var (tpl, item) in _items)
         {
             if (item["_type"]?.ToString() != "Item" || item["_props"] is not { } props ||
-                (bool?)props["QuestItem"] == true) continue;
+                (bool?)props["QuestItem"] == true || IsClosedMapKey(tpl) ||
+                item["_parent"]?.ToString() is MechanicalKey or Keycard) continue;
             var id = (MongoId)tpl;
-            var category = Category(tpl);
-            if (category == "ammo")
-            {
-                var ammo = AmmoPackPolicy.Describe(_items, tpl) is { } pack ? _items[pack.Ammunition]["_props"]! : props;
-                if ((double?)ammo["PenetrationPower"] is >= 0 and <= 22 && basicCalibres.Contains(ammo["Caliber"]?.ToString() ?? ""))
-                    _abundanceEligible[id] = .5;
-                continue;
-            }
-            if (category is "medical" or "food" or "drink" or "drug")
-            {
-                if (handbookHelper.GetTemplatePrice(id) is > 0 and <= 12000) _abundanceEligible[id] = .5;
-            }
-            else if (category == "other" && materials.Contains(item["_parent"]?.ToString() ?? "") &&
-                handbookHelper.GetTemplatePrice(id) is > 0 and <= 24000)
-            {
-                _abundanceEligible[id] = 1;
-            }
+            var price = handbookHelper.GetTemplatePrice(id);
+            if (AmmoPackPolicy.Describe(_items, tpl) is { } pack)
+                price += handbookHelper.GetTemplatePrice((MongoId)pack.Ammunition) * pack.Capacity;
+            if (price > 0) _abundancePrices[id] = price;
         }
     }
 
@@ -76,14 +63,53 @@ public sealed partial class SurvivalService
         harmony.Patch(AccessTools.DeclaredMethod(typeof(LocationLifecycleService), "GenerateLocationAndLoot"),
             prefix: new HarmonyMethod(hooks, nameof(AbundanceLootPatches.Begin)),
             finalizer: new HarmonyMethod(hooks, nameof(AbundanceLootPatches.End)));
-        harmony.Patch(AccessTools.DeclaredMethod(typeof(LocationLootGenerator), "AddLootToContainer"),
-            transpiler: new HarmonyMethod(hooks, nameof(AbundanceLootPatches.StaticLoot)));
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(LocationLootGenerator), "GetWeightedCountOfContainerItems"),
+            postfix: new HarmonyMethod(hooks, nameof(AbundanceLootPatches.StaticCount)));
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(LocationLootGenerator), "GetPossibleLootItemsForContainer"),
+            postfix: new HarmonyMethod(hooks, nameof(AbundanceLootPatches.StaticQuality)));
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(LocationLootGenerator), "GetLooseLootMultiplierForLocation"),
+            postfix: new HarmonyMethod(hooks, nameof(AbundanceLootPatches.LooseCount)));
         harmony.Patch(AccessTools.DeclaredMethod(typeof(LocationLootGenerator), "GenerateDynamicLoot"),
-            transpiler: new HarmonyMethod(hooks, nameof(AbundanceLootPatches.DynamicLoot)));
+            prefix: new HarmonyMethod(hooks, nameof(AbundanceLootPatches.LooseQuality)));
+    }
+
+    private readonly record struct PriceTilt(double Mean, double MeanScore, double Strength)
+    {
+        private static double Score(double price, double mean) => price / (price + mean);
+
+        internal static PriceTilt Create(IEnumerable<(double Weight, double Price)> entries, double factor)
+        {
+            double weight = 0, value = 0;
+            foreach (var row in entries)
+            {
+                weight += row.Weight;
+                value += row.Weight * row.Price;
+            }
+            if (weight <= 0 || value <= 0) return default;
+            var mean = value / weight;
+            double scoreSum = 0, slope = 0;
+            foreach (var row in entries)
+            {
+                var score = Score(row.Price, mean);
+                scoreSum += row.Weight * score;
+                slope += row.Weight * (row.Price - mean) * score;
+            }
+            if (slope <= 0) return default;
+            var meanScore = scoreSum / weight;
+            // A centred score conserves pool weight. The bounded, saturating
+            // score stops rare valuables from taking over the normal distribution.
+            var strength = Math.Min((factor - 1) * value / slope, Math.Min(.35 / meanScore, .65 / (1 - meanScore)));
+            return new(mean, meanScore, strength);
+        }
+
+        internal double WeightFactor(double price) => 1 + Strength * (Score(price, Mean) - MeanScore);
     }
 
     private static class AbundanceLootPatches
     {
+        private sealed record LoosePricePool(Spawnpoint Point, double TotalWeight,
+            List<(LooseLootItemDistribution Option, double Price)> Options);
+
         public static void Begin(MongoId __0, string __1, bool __2, out LootScope? __state)
         {
             __state = _abundanceLootScope;
@@ -91,7 +117,7 @@ public sealed partial class SurvivalService
             var map = AbundanceMap(__1);
             if (!__2 || !AbundanceMapNames.ContainsKey(map)) return;
             var progress = Current.AbundanceFor(__0)[map];
-            _abundanceLootScope = new LootScope(__0, map, (double)(progress.Total - 1m));
+            _abundanceLootScope = new LootScope(__0, map, (double)progress.Total);
         }
 
         public static void End(LootScope? __state, Exception? __exception)
@@ -101,116 +127,81 @@ public sealed partial class SurvivalService
             if (scope is null || __exception is not null) return;
             Current.CaptureDiagnostic(() => Current.Trace("abundance.loot", scope.Session, new
             {
-                map = scope.Map, multiplier = 1 + scope.Increase, looseExtras = scope.LooseExtras,
-                containerExtraDraws = scope.ContainerExtras
+                map = scope.Map, multiplier = scope.Multiplier, containerCountTarget = scope.StaticQuantity,
+                looseCountTarget = scope.LooseQuantity,
+                priceTarget = scope.Quality, containerExtraDraws = scope.StaticExtraDraws,
+                loosePoolsReweighted = scope.LoosePoolsReweighted
             }));
         }
 
-        // Keep native generation/placement. Extend the list of draws after the base
-        // container picks, using the already-filtered native probability table.
-        public static IEnumerable<CodeInstruction> StaticLoot(IEnumerable<CodeInstruction> instructions, MethodBase original)
+        public static void StaticCount(ref int __result)
         {
-            CheckLocal<ProbabilityObjectArray<MongoId, float?>>(original, 5);
-            var codes = instructions.ToList();
-            var call = codes.Single(code => IsEnumerableCall<MongoId>(code, nameof(Enumerable.Concat)));
-            var index = codes.IndexOf(call);
-            var options = new CodeInstruction(OpCodes.Ldloc_S, (byte)5);
-            options.labels.AddRange(call.labels);
-            call.labels.Clear();
-            codes.Insert(index, options);
-            call.operand = AccessTools.DeclaredMethod(typeof(AbundanceLootPatches), nameof(ExtendStatic));
-            return codes;
+            if (_abundanceLootScope is not { StaticQuantity: > 1 } scope || __result <= 0) return;
+            var extra = __result * (scope.StaticQuantity - 1);
+            var rounded = (int)extra + (Random.Shared.NextDouble() < extra % 1 ? 1 : 0);
+            __result += rounded;
+            scope.StaticExtraDraws += rounded;
         }
 
-        // Append after native grouping and before item generation, seasonal filtering
-        // and the native per-template spawn limits. Pass its forced and weighted points.
-        public static IEnumerable<CodeInstruction> DynamicLoot(IEnumerable<CodeInstruction> instructions, MethodBase original)
+        public static void StaticQuality(ProbabilityObjectArray<MongoId, float?> __result)
         {
-            CheckLocal<List<Spawnpoint>>(original, 2);
-            CheckLocal<ProbabilityObjectArray<string, Spawnpoint>>(original, 5);
-            var codes = instructions.ToList();
-            var anchor = codes.Single(code => IsEnumerableCall<Spawnpoint>(code, nameof(Enumerable.ToList)));
-            codes.InsertRange(codes.IndexOf(anchor) + 1,
-            [
-                new CodeInstruction(OpCodes.Ldloc_2), new CodeInstruction(OpCodes.Ldloc_S, (byte)5),
-                new CodeInstruction(OpCodes.Call, AccessTools.DeclaredMethod(typeof(AbundanceLootPatches), nameof(ExtendLoose)))
-            ]);
-            return codes;
+            if (_abundanceLootScope is not { Quality: > 1 } scope || __result.Count < 2) return;
+            var prices = Current._abundancePrices;
+            var entries = __result.Where(row => row.RelativeProbability is > 0 && prices.ContainsKey(row.Key))
+                .Select(row => (row.RelativeProbability!.Value, prices[row.Key]));
+            var tilt = PriceTilt.Create(entries, scope.Quality);
+            if (tilt.Strength <= 0) return;
+            foreach (var row in __result)
+                if (row.RelativeProbability is > 0 && prices.TryGetValue(row.Key, out var price))
+                    row.RelativeProbability *= tilt.WeightFactor(price);
         }
 
-        private static bool IsEnumerableCall<T>(CodeInstruction code, string name) =>
-            code.opcode == OpCodes.Call && code.operand is MethodInfo method && method.DeclaringType == typeof(Enumerable) &&
-            method.Name == name && method.IsGenericMethod && method.GetGenericArguments() is [var type] && type == typeof(T);
-
-        private static void CheckLocal<T>(MethodBase method, int index)
+        public static void LooseCount(ref double __result)
         {
-            var locals = method.GetMethodBody()?.LocalVariables;
-            if (locals is null || index >= locals.Count || locals[index].LocalType != typeof(T))
-                throw new InvalidOperationException($"Map abundance native binding changed: {method.Name} local {index}.");
+            if (_abundanceLootScope is { LooseQuantity: > 1 } scope) __result *= scope.LooseQuantity;
         }
 
-        public static IEnumerable<MongoId> ExtendStatic(IEnumerable<MongoId> forced, IEnumerable<MongoId> drawn,
-            ProbabilityObjectArray<MongoId, float?> options)
+        public static void LooseQuality(LooseLoot __0)
         {
-            if (_abundanceLootScope is not { Increase: > 0 } scope) return forced.Concat(drawn);
-            var eligible = Current._abundanceEligible;
-            var original = drawn.ToArray();
-        var bands = original.Where(eligible.ContainsKey).GroupBy(id => eligible[id])
-            .Select(group => (Weight: group.Key, Count: Rounded(group.Count() * group.Key * scope.Increase)))
-            .Where(band => band.Count > 0).ToArray();
-        if (bands.Length == 0) return forced.Concat(original);
-
-            var noDuplicates = !Current._abundanceContainerDuplicates;
-            var excluded = forced.ToHashSet();
-            if (noDuplicates) excluded.UnionWith(original);
-            var candidates = options.Filter(row => row.RelativeProbability > 0 && eligible.ContainsKey(row.Key) && !excluded.Contains(row.Key));
-            // Sample material and consumable bonuses separately to preserve their different rates.
-            var extraTemplates = new List<MongoId>();
-        foreach (var (weight, count) in bands)
+            if (_abundanceLootScope is not { Quality: > 1 } scope || __0.Spawnpoints is not { } points) return;
+            var prices = Current._abundancePrices;
+            var pools = new List<LoosePricePool>();
+            foreach (var point in points)
             {
-            var pool = candidates.Filter(row => eligible[row.Key] == weight);
-                if (pool.Count == 0) continue;
-                extraTemplates.AddRange(noDuplicates ? pool.DrawAndRemove(Math.Min(count, pool.Count), null) : pool.Draw(count));
-            }
-            scope.ContainerExtras += extraTemplates.Count;
-            return forced.Concat(original).Concat(extraTemplates);
-        }
-
-        public static List<Spawnpoint> ExtendLoose(List<Spawnpoint> selected, List<Spawnpoint> forced,
-            ProbabilityObjectArray<string, Spawnpoint> options)
-        {
-            if (_abundanceLootScope is not { Increase: > 0 } scope) return selected;
-            var budget = Rounded(selected.Count * scope.Increase);
-            if (budget == 0) return selected;
-            var occupied = selected.Concat(forced).Select(point => point.LocationId).ToHashSet();
-            var pool = options.Filter(row => row.RelativeProbability > 0 && row.Data is { } point && !occupied.Contains(point.LocationId));
-            var eligible = Current._abundanceEligible;
-            foreach (var key in pool.DrawAndRemove(Math.Min(budget, pool.Count), null))
-            {
-                var point = pool.Data(key);
-                if (point is null || !occupied.Add(point.LocationId) || point.Template is not { IsContainer: not true, Items: { } items } template ||
-                    point.ItemDistribution is not { } distribution) continue;
-                var byKey = items.Where(i => !string.IsNullOrEmpty(i.ComposedKey)).ToLookup(i => i.ComposedKey);
-                var weights = distribution.Where(row => row.RelativeProbability > 0 && row.ComposedKey?.Key is { } key && byKey.Contains(key))
-                    .Select(row => (Row: row, Key: row.ComposedKey!.Key!, Weight: row.RelativeProbability!.Value)).ToArray();
-                var draw = Random.Shared.NextDouble() * weights.Sum(row => row.Weight);
-                foreach (var (row, composedKey, weight) in weights)
+                if (point.Probability is not (> 0 and < 1) || point.Template is not { IsAlwaysSpawn: not true, Items: { } items } ||
+                    point.ItemDistribution is not { } options) continue;
+                var templates = items.Where(item => !string.IsNullOrEmpty(item.ComposedKey)).ToLookup(item => item.ComposedKey);
+                var total = 0d;
+                var priced = new List<(LooseLootItemDistribution, double)>();
+                foreach (var option in options)
                 {
-                    draw -= weight;
-                    if (draw > 0) continue;
-                    var item = byKey[composedKey].First();
-                    if (eligible.TryGetValue(item.Template, out var chance) && Random.Shared.NextDouble() < chance)
-                    {
-                        // The bonus uses this real location's variant and item tree.
-                        selected.Add(point with { Template = template with { Items = items.Select(i => i with { }).ToList() }, ItemDistribution = [row] });
-                        scope.LooseExtras++;
-                    }
-                    break;
+                    if (option.RelativeProbability is not > 0 || option.ComposedKey?.Key is not { } key ||
+                        templates[key].FirstOrDefault() is not { } item) continue;
+                    total += option.RelativeProbability.Value;
+                    if (prices.TryGetValue(item.Template, out var price)) priced.Add((option, price));
                 }
+                if (priced.Count == 0) continue;
+                pools.Add(new LoosePricePool(point, total, priced));
             }
-            return selected;
+            var entries = pools.SelectMany(pool => pool.Options.Select(row =>
+                (pool.Point.Probability!.Value / pool.TotalWeight * row.Option.RelativeProbability!.Value, row.Price)));
+            var tilt = PriceTilt.Create(entries, scope.Quality);
+            if (tilt.Strength <= 0) return;
+            foreach (var pool in pools)
+            {
+                var total = pool.TotalWeight;
+                foreach (var (option, price) in pool.Options)
+                {
+                    var old = option.RelativeProbability!.Value;
+                    option.RelativeProbability = old * tilt.WeightFactor(price);
+                    total += option.RelativeProbability.Value - old;
+                }
+                // Keep the native two-stage draw equivalent to reweighting the
+                // point/variant pair. Exactly 1 means guaranteed to the native generator.
+                var pointWeight = pool.Point.Probability!.Value * total / pool.TotalWeight;
+                pool.Point.Probability = pointWeight == 1 ? Math.BitDecrement(1d) : pointWeight;
+            }
+            scope.LoosePoolsReweighted += pools.Count;
         }
-
-        private static int Rounded(double count) => (int)count + (Random.Shared.NextDouble() < count % 1 ? 1 : 0);
     }
 }

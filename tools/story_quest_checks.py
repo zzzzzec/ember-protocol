@@ -8,11 +8,6 @@ class StoryQuestChecks(FieldQuestChecks):
  def __init__(self,request,profile_path,quests,rules,templates):
   super().__init__(request,profile_path,quests,{})
   self.story=rules;self.templates=templates;self.fixture_ids=set();self.checks=[];self.branch_checks=[];self.permanent_before={};self.growth_checks=[]
-  mod=profile_path.parent.parent/'mods/Codex-ZombieSurvival'
-  campaign=json.loads((mod/'data/campaign.json').read_text('utf-8-sig'))
-  self.training_floors={row['id']:{skill:5100*min(row['index'],track['eliteQuest'])//track['eliteQuest']
-                                   for track in campaign.get('skillTraining',[]) for skill in track['skills']}
-                        for row in campaign['main']}
  def route(self,qid):
   return next(((g,r) for g in self.story['choices'] for r in g['routes'] if qid in r['quests']),None)
  def reachable(self,qid):
@@ -115,10 +110,7 @@ class StoryQuestChecks(FieldQuestChecks):
   if qid in self.permanent_before:
    initial=self.permanent_before[qid]
    for r in self.quests[qid]['rewards']['Success']:
-    if r['type']=='Skill':
-     skill=r['target'];normal=min(5100,initial['skills'][skill]+r['value'])
-     expected=max(normal,self.training_floors.get(qid,{}).get(skill,0))
-     assert expected-.001<=completed['skills'][skill]<=min(5100,expected+(1 if expected>normal else 0))+.001,('Native training points differ',qid,r,initial,completed)
+    if r['type']=='Skill':assert abs(completed['skills'][r['target']]-min(5100,initial['skills'][r['target']]+r['value']))<.001,('Native training points differ',qid,r,initial,completed)
     if r['type']=='StashRows':
      total=lambda state:sum(b.get('value',0) for b in state['bonuses'] if b['type']=='StashRows')
      assert total(completed)-total(initial)==r['value'],('Native stash expansion differs',qid,initial,completed)

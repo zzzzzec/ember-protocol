@@ -234,7 +234,11 @@
               2150,
               1
             ]
-          ]
+          ],
+          "skillReward": {
+            "skill": "Pistol",
+            "points": 100
+          }
         },
         {
           "key": "nina-4",
@@ -420,6 +424,72 @@
               "5.7x28mm R37.F",
               530,
               16
+            ]
+          ]
+        },
+        {
+          "key": "nina-ppsh",
+          "title": "木托上的名字",
+          "weapon": "5ea03f7400685063ec28bfa8",
+          "weaponName": "PPSh-41 7.62x25 submachine gun",
+          "setup": "PPSh-41 原厂 35 发弹匣",
+          "maps": [
+            "Sandbox",
+            "Sandbox_high"
+          ],
+          "mapNames": [
+            "中心区",
+            "Ground Zero"
+          ],
+          "kills": 8,
+          "challenge": "close:18",
+          "level": 9,
+          "loyalty": 1,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_stock",
+              "5ea03e9400685063ec28bfa4"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5ea034eb5aad6446a939737b"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5ea03e5009aa976f2e7a514b"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5ea02bb600685063ec28bfa1"
+            ]
+          ],
+          "magazineCapacity": 35,
+          "price": 26400,
+          "xp": 2900,
+          "cashReward": 13200,
+          "starterBox": [
+            "6570253acfc010a0f5006a1c",
+            "573602322459776445391df1",
+            25
+          ],
+          "prerequisite": "93d8ee73d94f5e3953cf126f",
+          "spares": [
+            [
+              "5ea034eb5aad6446a939737b",
+              "PPSh-41 7.62x25 35-round magazine",
+              3200,
+              2
+            ],
+            [
+              "573602322459776445391df1",
+              "7.62x25mm TT LRNPC",
+              155,
+              24
             ]
           ]
         }
@@ -647,7 +717,11 @@
               290,
               12
             ]
-          ]
+          ],
+          "skillReward": {
+            "skill": "SMG",
+            "points": 100
+          }
         },
         {
           "key": "claire-4",
@@ -1141,7 +1215,11 @@
               620,
               8
             ]
-          ]
+          ],
+          "skillReward": {
+            "skill": "DMR",
+            "points": 100
+          }
         },
         {
           "key": "claire-9",
@@ -1327,6 +1405,240 @@
               "9x39mm SP-6 gs",
               1495,
               4
+            ]
+          ]
+        },
+        {
+          "key": "claire-p90",
+          "title": "灯圈里的灰",
+          "weapon": "5cc82d76e24e8d00134b4b83",
+          "weaponName": "FN P90 5.7x28 submachine gun",
+          "setup": "P90 原配环形瞄具",
+          "maps": [
+            "Interchange"
+          ],
+          "mapNames": [
+            "立交桥",
+            "Interchange"
+          ],
+          "kills": 10,
+          "challenge": "survive",
+          "level": 15,
+          "loyalty": 2,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5cc70093e4a949033c734312"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5cc700b9e4a949000f0f0f25"
+            ],
+            [
+              2,
+              "mod_stock_000",
+              "5cc700cae4a949035e43ba72"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5cc70102e4a949035e43ba74"
+            ],
+            [
+              4,
+              "mod_mount_000",
+              "5cebec38d7f00c00110a652a"
+            ],
+            [
+              4,
+              "mod_mount_001",
+              "5cc70146e4a949000d73bf6b"
+            ],
+            [
+              4,
+              "mod_mount_002",
+              "5cc70146e4a949000d73bf6b"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5cc701aae4a949000e1ea45c"
+            ],
+            [
+              8,
+              "mod_muzzle",
+              "5cc82796e24e8d000f5859a8"
+            ],
+            [
+              0,
+              "mod_charge",
+              "5cc6ea78e4a949000e1ea3c1"
+            ]
+          ],
+          "magazineCapacity": 50,
+          "price": 112500,
+          "xp": 3100,
+          "cashReward": 14500,
+          "starterBox": [
+            "6570251ccfc010a0f5006a13",
+            "5cc86832d7f00c000d3a6e6c",
+            50
+          ],
+          "prerequisite": "317b38adb4ed97a374d9f72e",
+          "spares": [
+            [
+              "5cc70093e4a949033c734312",
+              "FN P90 5.7x28 50-round magazine",
+              12600,
+              2
+            ],
+            [
+              "5cc86832d7f00c000d3a6e6c",
+              "5.7x28mm R37.F",
+              490,
+              20
+            ]
+          ]
+        },
+        {
+          "key": "claire-mp7a1",
+          "title": "袖口别勾住",
+          "weapon": "5ba26383d4351e00334c93d9",
+          "weaponName": "HK MP7A1 4.6x30 submachine gun",
+          "setup": "MP7A1 原配机械瞄具",
+          "maps": [
+            "bigmap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 12,
+          "challenge": "close:25",
+          "level": 17,
+          "loyalty": 2,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5ba264f6d4351e0034777d52"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "5ba26acdd4351e003562908e"
+            ],
+            [
+              0,
+              "mod_sight_front",
+              "5ba26b01d4351e0085325a51"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "5ba26b17d4351e00367f9bdd"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5bcf0213d4351e0085327c17"
+            ]
+          ],
+          "magazineCapacity": 20,
+          "price": 57000,
+          "xp": 3300,
+          "cashReward": 60400,
+          "prerequisite": "3e2c1afdf3e00963ca4b049d",
+          "spares": [
+            [
+              "5ba264f6d4351e0034777d52",
+              "HK MP7 4.6x30 20-round magazine",
+              4850,
+              2
+            ],
+            [
+              "5ba26812d4351e003201fef1",
+              "4.6x30mm Action SX",
+              345,
+              24
+            ]
+          ]
+        },
+        {
+          "key": "claire-mp7a2",
+          "title": "门外等三秒",
+          "weapon": "5bd70322209c4d00d7167b8f",
+          "weaponName": "HK MP7A2 4.6x30 submachine gun",
+          "setup": "MP7A2、Rotex 2 消音器和 30 发弹匣",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 10,
+          "challenge": "head",
+          "level": 21,
+          "loyalty": 3,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5ba2657ed4351e0035628ff2"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "5ba26acdd4351e003562908e"
+            ],
+            [
+              0,
+              "mod_sight_front",
+              "5ba26b01d4351e0085325a51"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "5ba26b17d4351e00367f9bdd"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5bd704e7209c4d00d7167c31"
+            ],
+            [
+              2,
+              "mod_muzzle",
+              "5ba26ae8d4351e00367f9bdb"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 128000,
+          "xp": 3100,
+          "cashReward": 14500,
+          "starterBox": [
+            "657024c81419851aef03e712",
+            "5ba26812d4351e003201fef1",
+            40
+          ],
+          "spares": [
+            [
+              "5ba2657ed4351e0035628ff2",
+              "HK MP7 4.6x30 30-round magazine",
+              7250,
+              2
+            ],
+            [
+              "5ba26ae8d4351e00367f9bdb",
+              "HK MP7 B&T Rotex 2 4.6x30 sound suppressor",
+              63350,
+              1
             ]
           ]
         }
@@ -1543,7 +1855,11 @@
               2850,
               1
             ]
-          ]
+          ],
+          "skillReward": {
+            "skill": "Shotgun",
+            "points": 100
+          }
         },
         {
           "key": "emma-4",
@@ -1723,6 +2039,175 @@
               "Benelli M3 forend",
               2750,
               1
+            ]
+          ]
+        },
+        {
+          "key": "emma-vector-45",
+          "title": "柜子空一层",
+          "weapon": "5fb64bc92b1b027b1f50bcf2",
+          "weaponName": "TDI KRISS Vector Gen.2 .45 ACP submachine gun",
+          "setup": ".45 Vector 和 30 发延长弹匣",
+          "maps": [
+            "factory4_day",
+            "factory4_night"
+          ],
+          "mapNames": [
+            "工厂",
+            "Factory"
+          ],
+          "kills": 10,
+          "challenge": "close:16",
+          "level": 15,
+          "loyalty": 2,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5fb651dc85f90547f674b6f4"
+            ],
+            [
+              0,
+              "mod_sight_front",
+              "5fb6567747ce63734e3fa1dc"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "5fb6564947ce63734e3fa1da"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5fb6558ad6f0b2136f2d7eb7"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5fb65363d1409e5ca04b54f5"
+            ],
+            [
+              5,
+              "mod_muzzle",
+              "5fb6548dd1409e5ca04b54f9"
+            ],
+            [
+              0,
+              "mod_mount",
+              "5fbb976df9986c4cff3fe5f2"
+            ],
+            [
+              0,
+              "mod_mount_001",
+              "5fce0f9b55375d18a253eff2"
+            ],
+            [
+              0,
+              "mod_mount_002",
+              "5fce0f9b55375d18a253eff2"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 64550,
+          "xp": 3100,
+          "cashReward": 14500,
+          "starterBox": [
+            "6570240a1419851aef03e6f7",
+            "5efb0d4f4bc50b58e81710f3",
+            50
+          ],
+          "prerequisite": "599c9693a25a3b984cb0d51e",
+          "spares": [
+            [
+              "5fb651dc85f90547f674b6f4",
+              "Glock .45 ACP KRISS G30 MagEx 30-round magazine",
+              4950,
+              2
+            ],
+            [
+              "5efb0d4f4bc50b58e81710f3",
+              ".45 ACP Lasermatch FMJ",
+              290,
+              14
+            ]
+          ]
+        },
+        {
+          "key": "emma-vector-9",
+          "title": "两只一样的包",
+          "weapon": "5fc3f2d5900b1d5091531e57",
+          "weaponName": "TDI KRISS Vector Gen.2 9x19 submachine gun",
+          "setup": "9×19 Vector 和 33 发弹匣",
+          "maps": [
+            "Interchange"
+          ],
+          "mapNames": [
+            "立交桥",
+            "Interchange"
+          ],
+          "kills": 12,
+          "challenge": "survive",
+          "level": 18,
+          "loyalty": 2,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "5a7ad2e851dfba0016153692"
+            ],
+            [
+              0,
+              "mod_sight_front",
+              "5fb6567747ce63734e3fa1dc"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "5fb6564947ce63734e3fa1da"
+            ],
+            [
+              0,
+              "mod_stock",
+              "5fb6558ad6f0b2136f2d7eb7"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5fbbc366ca32ed67276c1557"
+            ],
+            [
+              5,
+              "mod_muzzle",
+              "5fbbc34106bde7524f03cbe9"
+            ],
+            [
+              0,
+              "mod_mount",
+              "5fbb976df9986c4cff3fe5f2"
+            ],
+            [
+              0,
+              "mod_mount_001",
+              "5fce0f9b55375d18a253eff2"
+            ],
+            [
+              0,
+              "mod_mount_002",
+              "5fce0f9b55375d18a253eff2"
+            ]
+          ],
+          "magazineCapacity": 33,
+          "price": 59450,
+          "xp": 3300,
+          "cashReward": 62050,
+          "spares": [
+            [
+              "5a7ad2e851dfba0016153692",
+              "Glock 9x19 \"Big Stick\" 33-round magazine",
+              4750,
+              2
             ]
           ]
         }
@@ -2247,7 +2732,11 @@
               4250,
               1
             ]
-          ]
+          ],
+          "skillReward": {
+            "skill": "Assault",
+            "points": 125
+          }
         },
         {
           "key": "katya-6",
@@ -2787,6 +3276,12 @@
           ],
           "spares": [
             [
+              "5addbfe15acfc4001a5fc58b",
+              "M14 A.R.M.S. #18 scope mount",
+              3900,
+              1
+            ],
+            [
               "5aaf8a0be5b5b00015693243",
               "M1A 7.62x51 20-round magazine",
               3400,
@@ -3042,6 +3537,367 @@
               "6.8x51mm SIG FMJ",
               1035,
               6
+            ]
+          ]
+        },
+        {
+          "key": "katya-g36",
+          "title": "扶手比昨天凉",
+          "weapon": "623063e994fc3f7b302a9696",
+          "weaponName": "HK G36 5.56x45 assault rifle",
+          "setup": "G36 原配 Hensoldt 双层瞄具",
+          "maps": [
+            "bigmap"
+          ],
+          "mapNames": [
+            "海关",
+            "Customs"
+          ],
+          "kills": 12,
+          "challenge": "far:30",
+          "level": 19,
+          "loyalty": 2,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_magazine",
+              "62307b7b10d2321fa8741921"
+            ],
+            [
+              0,
+              "mod_stock",
+              "622f140da5958f63c67f1735"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "622b38c56762c718e457e246"
+            ],
+            [
+              3,
+              "mod_muzzle",
+              "622f128cec80d870d349b4e8"
+            ],
+            [
+              3,
+              "mod_gas_block",
+              "622b327b267a1b13a44abea3"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "6231654c71b5bc3baa1078e5"
+            ],
+            [
+              0,
+              "mod_mount",
+              "622f02437762f55aaa68ac85"
+            ],
+            [
+              0,
+              "mod_scope",
+              "622b4d7df9cfc87d675d2ded"
+            ],
+            [
+              8,
+              "mod_scope",
+              "622efbcb99f4ea1a4d6c9a15"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 80200,
+          "xp": 3300,
+          "cashReward": 76150,
+          "prerequisite": "82253eecdfb7414f705e0f8a",
+          "spares": [
+            [
+              "62307b7b10d2321fa8741921",
+              "HK G36 5.56x45 30-round magazine",
+              2850,
+              2
+            ],
+            [
+              "59e6918f86f7746c9f75e849",
+              "5.56x45mm MK 255 Mod 0 (RRLP)",
+              380,
+              22
+            ]
+          ]
+        },
+        {
+          "key": "katya-ak12",
+          "title": "看清那扇窗",
+          "weapon": "6499849fc93611967b034949",
+          "weaponName": "Kalashnikov AK-12 5.45x39 assault rifle",
+          "setup": "AK-12 和 MRS 红点",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 13,
+          "challenge": "far:35",
+          "level": 22,
+          "loyalty": 2,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_gas_block",
+              "649ec107961514b22506b10c"
+            ],
+            [
+              0,
+              "mod_pistol_grip",
+              "5beec8ea0db834001a6f9dbf"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "649ec127c93611967b034957"
+            ],
+            [
+              3,
+              "mod_mount_001",
+              "5beecbb80db834001d2c465e"
+            ],
+            [
+              0,
+              "mod_muzzle",
+              "649ec2af961514b22506b10f"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "649ec2f3961514b22506b111"
+            ],
+            [
+              6,
+              "mod_sight_rear",
+              "649ec2da59cbb3c813042dca"
+            ],
+            [
+              7,
+              "mod_sight_rear",
+              "649ec2cec93611967b03495e"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "649ec30cb013f04a700e60fb"
+            ],
+            [
+              0,
+              "mod_stock_001",
+              "649ec87d8007560a9001ab36"
+            ],
+            [
+              10,
+              "mod_stock",
+              "5beec8c20db834001d2c465c"
+            ],
+            [
+              6,
+              "mod_scope",
+              "570fd721d2720bc5458b4596"
+            ]
+          ],
+          "magazineCapacity": 30,
+          "price": 95500,
+          "xp": 3400,
+          "cashReward": 16450,
+          "starterBox": [
+            "5737339e2459776af261abeb",
+            "56dff216d2720bbd668b4568",
+            30
+          ],
+          "spares": [
+            [
+              "649ec30cb013f04a700e60fb",
+              "AK-12 5.45x39 early model 30-round magazine",
+              5200,
+              2
+            ],
+            [
+              "570fd721d2720bc5458b4596",
+              "Walther MRS reflex sight",
+              12000,
+              1
+            ]
+          ]
+        },
+        {
+          "key": "katya-rpk16",
+          "title": "桌脚下那块砖",
+          "weapon": "5beed0f50db834001c062b12",
+          "weaponName": "RPK-16 5.45x39 light machine gun",
+          "setup": "RPK-16 和 95 发弹鼓",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 15,
+          "challenge": "survive",
+          "level": 25,
+          "loyalty": 3,
+          "issued": false,
+          "assembly": [
+            [
+              0,
+              "mod_pistol_grip",
+              "5beec8ea0db834001a6f9dbf"
+            ],
+            [
+              0,
+              "mod_reciever",
+              "5beec91a0db834001961942d"
+            ],
+            [
+              2,
+              "mod_sight_rear",
+              "5beec9450db83400970084fd"
+            ],
+            [
+              3,
+              "mod_sight_rear",
+              "5bf3f59f0db834001a6fa060"
+            ],
+            [
+              0,
+              "mod_stock_001",
+              "5beec8b20db834001961942a"
+            ],
+            [
+              5,
+              "mod_stock",
+              "5beec8c20db834001d2c465c"
+            ],
+            [
+              0,
+              "mod_handguard",
+              "5beec3e30db8340019619424"
+            ],
+            [
+              7,
+              "mod_mount_000",
+              "5beecbb80db834001d2c465e"
+            ],
+            [
+              7,
+              "mod_mount_001",
+              "5beecbb80db834001d2c465e"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "5beec1bd0db834001e6006f3"
+            ],
+            [
+              10,
+              "mod_muzzle",
+              "5beec3420db834001b095429"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "5bed625c0db834001c062946"
+            ]
+          ],
+          "magazineCapacity": 95,
+          "price": 117500,
+          "xp": 3600,
+          "cashReward": 106900,
+          "spares": [
+            [
+              "5bed625c0db834001c062946",
+              "RPK-16 5.45x39 95-round drum magazine",
+              42750,
+              2
+            ]
+          ]
+        },
+        {
+          "key": "katya-pkm",
+          "title": "拎箱子的手",
+          "weapon": "64637076203536ad5600c990",
+          "weaponName": "Kalashnikov PKM 7.62x54R machine gun",
+          "setup": "PKM 和原厂 100 发弹箱",
+          "maps": [
+            "RezervBase"
+          ],
+          "mapNames": [
+            "储备站",
+            "Reserve"
+          ],
+          "kills": 10,
+          "challenge": "survive",
+          "level": 30,
+          "loyalty": 4,
+          "issued": true,
+          "assembly": [
+            [
+              0,
+              "mod_pistolgrip",
+              "646371779f5f0ea59a04c204"
+            ],
+            [
+              0,
+              "mod_barrel",
+              "646371faf2404ab67905c8e9"
+            ],
+            [
+              2,
+              "mod_muzzle",
+              "6492efb8cfcf7c89e701abf3"
+            ],
+            [
+              0,
+              "mod_magazine",
+              "646372518610c40fc20204e8"
+            ],
+            [
+              0,
+              "mod_stock",
+              "646371a9f2404ab67905c8e6"
+            ],
+            [
+              0,
+              "mod_bipod",
+              "6464d870bb2c580352070cc4"
+            ],
+            [
+              0,
+              "mod_sight_rear",
+              "6492fb8253acae0af00a29b6"
+            ]
+          ],
+          "magazineCapacity": 100,
+          "price": 134850,
+          "xp": 3100,
+          "cashReward": 14500,
+          "starterBox": [
+            "64acee6903378853630da544",
+            "64b8f7c241772715af0f9c3d",
+            20
+          ],
+          "spares": [
+            [
+              "646372518610c40fc20204e8",
+              "PK 7.62x54R 100-round box",
+              18500,
+              2
+            ],
+            [
+              "64b8f7c241772715af0f9c3d",
+              "7.62x54mm R HP BT",
+              730,
+              10
             ]
           ]
         }
@@ -3347,7 +4203,11 @@
               900,
               4
             ]
-          ]
+          ],
+          "skillReward": {
+            "skill": "Sniper",
+            "points": 125
+          }
         },
         {
           "key": "haruka-4",

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using EFT;
 using HarmonyLib;
 using UnityEngine;
@@ -62,21 +63,76 @@ internal static class InfectedAwareness
     }
 }
 
+internal static class InfectedTurning
+{
+    private sealed class TurnLimits
+    {
+        internal readonly InfectedTurnBudget Look = new();
+        internal readonly InfectedTurnBudget Body = new();
+    }
+
+    private static ConditionalWeakTable<MovementContext, TurnLimits> _limits = new();
+
+    internal static void Install(Harmony harmony)
+    {
+        var steering = new HarmonyMethod(typeof(InfectedTurning), nameof(LimitSteering));
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(BotSteering), nameof(BotSteering.SetXAngle)), prefix: steering);
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(GClass498), nameof(BotSteering.SetXAngle)), prefix: steering);
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(Player), nameof(Player.Rotate), new[] { typeof(Vector2), typeof(bool) }),
+            prefix: new HarmonyMethod(typeof(InfectedTurning), nameof(LimitLook)));
+        harmony.Patch(AccessTools.DeclaredMethod(typeof(MovementContext), nameof(MovementContext.ApplyRotation), new[] { typeof(Quaternion) }),
+            prefix: new HarmonyMethod(typeof(InfectedTurning), nameof(LimitBody)));
+    }
+
+    internal static void Register(MovementContext context) => _limits.GetValue(context, _ => new TurnLimits());
+    internal static void Reset() => _limits = new();
+
+    private static bool MovingOrFighting(MovementContext context, Player player) =>
+        context.MovementDirection.sqrMagnitude > .0004f || player.AIData?.BotOwner?.Memory?.GoalEnemy?.IsVisible == true;
+
+    private static void LimitSteering(BotSteering __instance, ref float __0)
+    {
+        var player = __instance.Player;
+        var context = player?.MovementContext;
+        var seconds = Time.deltaTime;
+        if (seconds <= 0 || context == null || !_limits.TryGetValue(context, out var limits)) return;
+        // The steering code rotates weapon aim before it calls Player.Rotate.
+        // Limit both to the same budget, which Player.Rotate consumes.
+        __0 = limits.Look.Limit(__0 * seconds, Time.frameCount, seconds, MovingOrFighting(context, player!), consume: false) / seconds;
+    }
+
+    private static void LimitLook(Player __instance, ref Vector2 __0)
+    {
+        var context = __instance.MovementContext;
+        if (__0.x == 0 || context == null || !_limits.TryGetValue(context, out var limits) || __instance.HealthController?.IsAlive != true) return;
+        __0.x = limits.Look.Limit(__0.x, Time.frameCount, Time.deltaTime, MovingOrFighting(context, __instance));
+    }
+
+    private static void LimitBody(MovementContext __instance, Player ____player, ref Quaternion __0)
+    {
+        if (!_limits.TryGetValue(__instance, out var limits) || ____player.HealthController?.IsAlive != true) return;
+        var requested = Mathf.DeltaAngle(__instance.TransformRotation.eulerAngles.y, __0.eulerAngles.y);
+        var allowed = limits.Body.Limit(requested, Time.frameCount, Time.deltaTime, MovingOrFighting(__instance, ____player));
+        if (requested != allowed)
+            __0 = Quaternion.AngleAxis(allowed - requested, Vector3.up) * __0;
+    }
+}
+
 public sealed partial class SurvivalRaid
 {
     private readonly Dictionary<Player, float> _nextSightingReport = new();
-    private int _straightInfectedPaths, _unknownGoalBlocks, _globalPursuitsBlocked, _localReportAlerts;
+    private int _straightInfectedPaths, _unknownGoalBlocks, _globalPursuitsBlocked, _localReportAlerts, _lostSight;
     private int _near25, _near50, _near100, _sameFloorNear25;
     internal void StraightInfectedPath() => _straightInfectedPaths++;
     internal void UnknownGoalRejected() => _unknownGoalBlocks++;
     internal void GlobalPursuitRejected() => _globalPursuitsBlocked++;
-    internal object AwarenessDiagnostic() => new { straightInfectedPaths = _straightInfectedPaths, unknownGoalBlocks = _unknownGoalBlocks, globalPursuitsBlocked = _globalPursuitsBlocked, localReportAlerts = _localReportAlerts, near25 = _near25, near50 = _near50, near100 = _near100, sameFloorNear25 = _sameFloorNear25, near25Per1000SquareMetres = AwarenessPolicy.LocalDensity(_near25, 25) };
+    internal object AwarenessDiagnostic() => new { straightInfectedPaths = _straightInfectedPaths, unknownGoalBlocks = _unknownGoalBlocks, lostSight = _lostSight, globalPursuitsBlocked = _globalPursuitsBlocked, localReportAlerts = _localReportAlerts, near25 = _near25, near50 = _near50, near100 = _near100, sameFloorNear25 = _sameFloorNear25, near25Per1000SquareMetres = AwarenessPolicy.LocalDensity(_near25, 25) };
     internal bool InvestigateAt(Player listener, Vector3 point, float seconds, string reason="native_call")
     {
         var now = Time.time;
-        if (Customs && _attention.TryGetValue(listener, out var old) && old.Until > now
-            && AwarenessPolicy.CuePriority(old.Reason) > AwarenessPolicy.CuePriority(reason)) return false;
-        _attention[listener] = new Attention { Point = point, Until = now + seconds, Reason = reason };
+        if (_attention.TryGetValue(listener, out var old) && AwarenessPolicy.InformationAlive(now,old.Until)
+            && !AwarenessPolicy.AcceptCue(old.Reason, reason, now - old.ObservedAt, Customs)) return false;
+        _attention[listener] = new Attention { Point = point, Until = now + seconds, ObservedAt = now, Reason = reason };
         WakeIdleActor(listener, reason);
         return true;
     }

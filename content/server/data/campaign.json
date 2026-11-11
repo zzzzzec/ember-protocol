@@ -231,65 +231,6 @@
       "chapter": 7
     }
   ],
-  "skillTraining": [
-    {
-      "id": "field",
-      "eliteQuest": 33,
-      "skills": [
-        "Endurance",
-        "Strength",
-        "Perception",
-        "Attention",
-        "Search",
-        "CovertMovement"
-      ]
-    },
-    {
-      "id": "care",
-      "eliteQuest": 34,
-      "skills": [
-        "Health",
-        "Vitality",
-        "Metabolism",
-        "StressResistance",
-        "Immunity",
-        "Surgery"
-      ]
-    },
-    {
-      "id": "workshop",
-      "eliteQuest": 35,
-      "skills": [
-        "Crafting",
-        "HideoutManagement",
-        "WeaponTreatment",
-        "Intellect",
-        "Charisma"
-      ]
-    },
-    {
-      "id": "firearms",
-      "eliteQuest": 32,
-      "skills": [
-        "Pistol",
-        "SMG",
-        "Assault",
-        "Shotgun",
-        "DMR",
-        "MagDrills"
-      ]
-    },
-    {
-      "id": "protection",
-      "eliteQuest": 35,
-      "skills": [
-        "LightVests",
-        "HeavyVests",
-        "AimDrills",
-        "Throwing"
-      ]
-    }
-  ],
   "chapters": [
     "焦土上的灯",
     "错误的回声",
@@ -1131,7 +1072,8 @@
         "93d8ee73d94f5e3953cf126f",
         "04505cf21f921364ffd75196",
         "06cbe93a5bed708779a2fd40",
-        "d86b52c67f6bee6091fe0a5e"
+        "d86b52c67f6bee6091fe0a5e",
+        "ceb7f25b860a83907587b03a"
       ]
     },
     {
@@ -1146,7 +1088,10 @@
         "4ad9f1971a020550798bc56e",
         "47b2c784d47921ed96124b81",
         "20734424bb148be95e8f46d2",
-        "d19fdc040c91263840581ed6"
+        "d19fdc040c91263840581ed6",
+        "3e2c1afdf3e00963ca4b049d",
+        "31744c13eb2bba3a5c687223",
+        "75296371c4974f967681b448"
       ]
     },
     {
@@ -1156,7 +1101,9 @@
         "599c9693a25a3b984cb0d51e",
         "cb3b358c8ebedb337b861547",
         "5853ecf1df1602709f041467",
-        "bf18949fcabb25bc3a8585bc"
+        "bf18949fcabb25bc3a8585bc",
+        "54cd0b82b52a2652dd774e8e",
+        "1f3a0b4c0081fed806a8588a"
       ]
     },
     {
@@ -1173,7 +1120,11 @@
         "50f5dbd9d9dd01be02a3e19d",
         "11fbcebb176199c83de50dc1",
         "0facfd4d46f3bde52e3c9a78",
-        "13143378c36614c2cc66c3b8"
+        "13143378c36614c2cc66c3b8",
+        "b31da7b32bc45e43ef62f7d8",
+        "14af83e53f422bf8ec6173a8",
+        "1c3343db660eaa91464b026f",
+        "6a06067104685561b786483f"
       ]
     },
     {

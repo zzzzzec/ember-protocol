@@ -18,7 +18,7 @@ using Codex.ZombieSurvival.Rules;
 
 namespace Codex.ZombieSurvival.Client;
 
-[BepInPlugin("codex.zombie-survival.client","SPT-Z Survival","2.19.0")]
+[BepInPlugin("codex.zombie-survival.client","SPT-Z Survival","2.21.6")]
 [BepInDependency("com.netVnum.pause", BepInDependency.DependencyFlags.SoftDependency)]
 public sealed class Plugin:BaseUnityPlugin
 {
@@ -57,11 +57,11 @@ public sealed class Plugin:BaseUnityPlugin
         h.Patch(AccessTools.Method(typeof(TraderScreensGroup),"Show"),prefix:new HarmonyMethod(typeof(Plugin),nameof(GroupList)));
         SurvivalUi.Install(h);
         MapAbundance.Install(h);
-        WeaponTrials.Install(h);
         ThreatActors.Install(h);
         BoundedHearing.Install(h);
         InfectedAwareness.Install(h);
         InfectedPatrol.Install(h);
+        InfectedTurning.Install(h);
         InfectedWeaponActivation.Install(h);
         InfectedIdleBudget.Install(h);
         FiniteWaves.Install(h);
@@ -72,6 +72,7 @@ public sealed class Plugin:BaseUnityPlugin
         h.Patch(stopSession, prefix: new HarmonyMethod(typeof(Plugin), nameof(StopLocalSession)));
         LabBlackout.Install(h);
         SkillProgression.Install(h);
+        CombatSkillPractice.Install(h);
         InfectedAudio.Install(h, Config);
         PauseCompatibility.Install();
         try{ClientDiagnostics.Start();}catch(Exception e){Log.LogWarning("SPT-Z diagnostics could not start: "+e.Message);}
@@ -262,10 +263,10 @@ public sealed partial class SurvivalRaid:MonoBehaviour
     private GameWorld _world=null!;
     private Door[] _doors=Array.Empty<Door>();
     private readonly List<Player> _infected=new();
-    private readonly Dictionary<Player,float> _swing=new(),_repath=new(),_open=new();
+    private readonly Dictionary<Player,float> _swing=new(),_open=new();
     private readonly Dictionary<Player,(float Due,int Attempts)> _activationRetries=new();
     private float _nextActivationRetry;
-    private sealed class Attention { public Vector3 Point; public float Until; public string Reason="unknown"; }
+    private sealed class Attention { public Vector3 Point; public float Until, ObservedAt; public string Reason="unknown"; }
     private sealed class Noise { public Vector3 Point; public float Radius,Duration,Power; public string Kind="",Source=""; }
     private readonly Dictionary<Player,Attention> _attention=new();
     private readonly ConcurrentQueue<Noise> _noises=new();
@@ -284,12 +285,13 @@ public sealed partial class SurvivalRaid:MonoBehaviour
     private static readonly BindingFlags Flags=BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Instance;
     private void Start()
     {
-        _world=Singleton<GameWorld>.Instance;Current=this;ThreatActors.Reset();
+        _world=Singleton<GameWorld>.Instance;Current=this;ThreatActors.Reset();InfectedTurning.Reset();
         var map=_world.MainPlayer?.Location??_world.LocationId;
         GroundZero=HearingPolicy.IsGroundZero(map);
         Customs=string.Equals(map,"bigmap",StringComparison.OrdinalIgnoreCase);
         _diagnosticCombat=()=>new {spawned=_spawned,alive=_infected.Count(p=>p!=null&&p.HealthController?.IsAlive==true),doorOpens=_doorOpens,swings=_swings,loudEvents=_loudEvents,quietEvents=_quietEvents,stepEvents=_stepEvents,blastEvents=_blastEvents,loudAlerts=_loudAlerts,quietAlerts=_quietAlerts,lastNoise=_lastNoise,lastRange=_lastRange,nativeActionError=_reportedError,nativeHearingBlocked=_nativeHearingBlocks,nativeCallsBlocked=_nativeCallBlocks,nativeEnemies=_nativeEnemies,visibleEnemies=_visibleEnemies,distantNativeEnemies=_distantEnemies,investigating=_investigating,awareness=AwarenessDiagnostic(),idleBudget=IdleBudgetDiagnostic(),waves=FiniteWaves.Diagnostic()};
         try{ClientDiagnostics.BeginRaid(_world);}catch(Exception e){ClientDiagnostics.Record("raid.begin_capture_error",new {error=e.ToString()});}
+        CombatSkillPractice.Begin(_world);
         _doors=FindObjectsOfType<Door>();
         if (Customs) RestoreCheckpointKey();
         _world.OnPersonAdd+=Added;
@@ -381,13 +383,14 @@ public sealed partial class SurvivalRaid:MonoBehaviour
         if(p is not Player player||player.IsYourPlayer||!player.IsAI)return;
         if(player.Profile?.Info?.Settings?.Role.ToString().StartsWith("infected",StringComparison.OrdinalIgnoreCase)!=true)return;
         player.Profile.Info.Side=EPlayerSide.Savage;ThreatActors.Register(player);
+        if(player.MovementContext!=null)InfectedTurning.Register(player.MovementContext);
         if(!_infected.Contains(player)){_infected.Add(player);_spawned++;ClientDiagnostics.Record("bot.spawn",new {id=ClientDiagnostics.Key(player.Profile.Id),role=player.Profile.Info.Settings.Role.ToString(),difficulty=player.Profile.Info.Settings.BotDifficulty,position=new {player.Transform.position.x,player.Transform.position.y,player.Transform.position.z}});}
     }
     private static object? Get(object? o,string name)=>o==null?null:o.GetType().GetProperty(name,Flags)?.GetValue(o)??o.GetType().GetField(name,Flags)?.GetValue(o);
-    private static void VectorCall(object o,string name,Vector3 point,bool richest=false)
+    private static void VectorCall(object o,string name,Vector3 point)
     {
         var methods=o.GetType().GetMethods(Flags).Where(m=>m.Name==name&&m.GetParameters().Length>0&&m.GetParameters()[0].ParameterType==typeof(Vector3));
-        var method=(richest?methods.OrderByDescending(m=>m.GetParameters().Length):methods.OrderBy(m=>m.GetParameters().Length)).FirstOrDefault();
+        var method=methods.OrderBy(m=>m.GetParameters().Length).FirstOrDefault();
         if(method==null)throw new MissingMethodException(o.GetType().Name,name);
         var ps=method.GetParameters();var args=new object?[ps.Length];args[0]=point;
         for(var i=1;i<ps.Length;i++)args[i]=ps[i].HasDefaultValue?ps[i].DefaultValue:ps[i].ParameterType==typeof(bool)?true:ps[i].ParameterType==typeof(float)?-1f:ps[i].ParameterType.IsValueType?Activator.CreateInstance(ps[i].ParameterType):null;
@@ -448,7 +451,7 @@ public sealed partial class SurvivalRaid:MonoBehaviour
             File.WriteAllText(path,"Spawned="+_spawned+"\nAlive="+_infected.Count(p=>p!=null&&p.HealthController?.IsAlive==true)+"\nDoorOpens="+_doorOpens+"\nMeleeSwings="+_swings+"\nDoors="+_doors.Length+"\nLoudShotEvents="+_loudEvents+"\nSuppressedShotEvents="+_quietEvents+"\nMovementSoundEvents="+_stepEvents+"\nExplosionEvents="+_blastEvents+"\nLoudShotAlerts="+_loudAlerts+"\nSuppressedShotAlerts="+_quietAlerts+"\nLastNoise="+_lastNoise+"\nLastNoiseRange="+_lastRange.ToString("F1")+"\nNativeActionError="+_reportedError+"\nUpdatedUtc="+DateTime.UtcNow.ToString("O"),Encoding.UTF8);
         }
         foreach(var dead in _infected.Where(p=>p==null||p.HealthController?.IsAlive!=true).ToArray())
-        {_infected.Remove(dead);ForgetIdleActor(dead);if(dead!=null){_activationRetries.Remove(dead);_swing.Remove(dead);_repath.Remove(dead);_open.Remove(dead);_attention.Remove(dead);_nextSightingReport.Remove(dead);ForgetPatrol(dead);}}
+        {_infected.Remove(dead);ForgetIdleActor(dead);if(dead!=null){_activationRetries.Remove(dead);_swing.Remove(dead);_open.Remove(dead);_attention.Remove(dead);_nextSightingReport.Remove(dead);ForgetPatrol(dead);}}
         var humans=_world.AllAlivePlayersList.OfType<Player>().Where(p=>!p.IsAI&&p.HealthController?.IsAlive==true).ToArray();
         if(humans.Length==0)return;
         _nativeEnemies=0;_visibleEnemies=0;_distantEnemies=0;_investigating=0;
@@ -468,12 +471,17 @@ public sealed partial class SurvivalRaid:MonoBehaviour
                 if(visible!=null&&!InfectedAwareness.DirectSight(owner,visible,true))visible=null;
                 if(visible!=null)_visibleEnemies++;
                 if(memory!=null&&enemy?.Person is Player known&&!known.IsAI&&visible==null)
-                {memory.GoalEnemy=null;memory.LastEnemy=null;_unknownGoalBlocks++;}
+                {
+                    ThreatActors.LoseSight(z);
+                    memory.GoalEnemy=null;memory.LastEnemy=null;_unknownGoalBlocks++;
+                    _lostSight++;
+                }
 
-                if(_attention.TryGetValue(z,out var currentAttention)&&currentAttention.Until>Time.time)_investigating++;
                 var contact=distance<=2.6f&&!Occluded(pos+Vector3.up*1.4f,target.Transform.position+Vector3.up*1.1f);
                 if(visible!=null)ShareSighting(z,visible.Transform.position);
                 else if(contact)InvestigateAt(z,target.Transform.position,8,"contact");
+                if(_attention.TryGetValue(z,out var currentAttention)&&currentAttention.Until>Time.time)_investigating++;
+                RefreshInvestigationRoute(z,owner,contact||memory?.GoalEnemy!=null);
                 if(!_open.TryGetValue(z,out var nextDoor)||Time.time>=nextDoor)
                 {
                     _open[z]=Time.time+1.2f;
@@ -486,13 +494,6 @@ public sealed partial class SurvivalRaid:MonoBehaviour
                     }
                 }
                 var melee=Get(Get(owner,"WeaponManager"),"Melee");var knife=Get(melee,"KnifeController");
-                // A copied noise/report point is for investigation. Once a
-                // zombie sees the player, its native pursuit owns path and gaze.
-                if(visible==null&&!contact&&_attention.TryGetValue(z,out var attention)&&attention.Until>Time.time&&(!_repath.TryGetValue(z,out var pathTime)||Time.time>=pathTime))
-                {
-                    _repath[z]=Time.time+1.3f;var steering=Get(owner,"Steering");if(steering!=null)VectorCall(steering,"LookToPoint",attention.Point+Vector3.up*1.3f);
-                    VectorCall(owner,"GoToPoint",attention.Point,true);
-                }
                 if(knife==null)continue; // Armed infected investigate copied positions and retain visible-target shooting.
                 if(contact&&(!_swing.TryGetValue(z,out var swingTime)||Time.time>=swingTime))
                 {
@@ -506,8 +507,12 @@ public sealed partial class SurvivalRaid:MonoBehaviour
     }
     private void OnDestroy()
     {
-        if(Current==this){Current=null;ThreatActors.Reset();}
-        if(_world!=null)ClientDiagnostics.EndRaid(_world);
+        if(Current==this){Current=null;ThreatActors.Reset();InfectedTurning.Reset();}
+        if(_world!=null)
+        {
+            CombatSkillPractice.End(_world);
+            ClientDiagnostics.EndRaid(_world);
+        }
         if(_world!=null)_world.OnPersonAdd-=Added;
         if(_events!=null){_events.OnSoundPlayed-=Sound;_events.OnGrenadeExplosive-=Explosion;}
     }

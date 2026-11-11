@@ -11,6 +11,20 @@ using SPTarkov.Server.Core.Models.Enums;
 
 var checks = new List<string>();
 void Check(bool condition, string name) { if (!condition) throw new InvalidOperationException(name); checks.Add(name); }
+{
+    var practice = new ReloadPractice();
+    Check(practice.Finish("first", true, true) == 0, "switching a magazine without firing earns no practice");
+    practice.Fired("first");
+    practice.Fired("first");
+    practice.Fired("second");
+    Check(practice.Finish("first", false, true) == 0, "cancelled reload does not spend fired rounds");
+    Check(practice.Finish("first", true, false) == 0 && practice.HasRounds("first"), "a reload that loads nothing does not spend fired rounds");
+    Check(practice.Finish("second", true, true) == 1 && practice.HasRounds("first"), "practice is tied to the firearm used");
+    Check(practice.Finish("first", true, true) == 2, "successful reload consumes fired rounds once");
+    Check(practice.Finish("first", true, true) == 0 && !practice.HasRounds("first"), "duplicate reload completion has no reward");
+    practice.Fired("first");
+    Check(new ReloadPractice().Finish("first", true, true) == 0, "a new raid starts without spent rounds");
+}
 MongoId tid = "111111111111111111111111", other = "222222222222222222222222", offer = "333333333333333333333333";
 SptProfile Profile() => new() {
     CharacterData = new Characters { PmcData = new PmcData { TradersInfo = new() { [tid] = new TraderInfo { NextResupply = 0 } } } },
@@ -90,6 +104,21 @@ Check(!AwarenessPolicy.SightConfirmed(true,false,20,-1), "native shared target b
 Check(AwarenessPolicy.SightConfirmed(true,false,20,.8f), "own clear forward vision permits pursuit");
 Check(AwarenessPolicy.SightConfirmed(false,false,2,0), "unobstructed physical contact still permits melee");
 Check(!AwarenessPolicy.InformationAlive(100,99) && AwarenessPolicy.InformationAlive(100,101), "old information expires instead of following a live target");
+Check(!AwarenessPolicy.AcceptCue("sighting","gun",.4f,false) &&
+      AwarenessPolicy.AcceptCue("sighting","gun",1.25f,false) &&
+      !AwarenessPolicy.AcceptCue("sighting","gun",10,true), "recent sightings resist weaker cues while Customs retains its existing priority");
+Check(AwarenessPolicy.AcceptCue("gun","sighting",0,false), "a directly seen player takes priority over a sound");
+{
+    var turn = new InfectedTurnBudget();
+    Check(turn.Limit(1, 0, 1f/60, false) == 1 && turn.Limit(-90, 0, 1f/60, false) == -1 &&
+          turn.Limit(90, 0, 1f/60, false) == 0, "all idle yaw requests in the same frame share one limit");
+    Check(Math.Abs(turn.Limit(90, 1, 1f/60, true) - 3.5f) < .001f, "moving yaw has a faster limit");
+    Check(Math.Abs(turn.Limit(-180, 2, 1, false) + 6f) < .001f, "a frame hitch cannot cause a snap turn");
+    Check(Math.Abs(turn.Limit(180, 3, 1f/30, false) - 4f) < .001f, "the turn limit scales with frame duration");
+    Check(turn.Limit(90,4,1f/60,false,consume:false)==2 &&
+          turn.Limit(90,4,1f/60,false)==2 && turn.Limit(90,4,1f/60,false)==0,
+          "steering can preview the same turn limit that player rotation consumes");
+}
 Check(AwarenessPolicy.LocalDensity(10,25)>AwarenessPolicy.LocalDensity(5,25), "local density compares equal-radius encounters");
 var rules = JsonNode.Parse(File.ReadAllText(Path.Combine(args[0],"content/server/data/field-quests.json")))!;
 var allQuests = JsonNode.Parse(File.ReadAllText(Path.Combine(args[0],"content/server/data/quests.json")))!;
@@ -237,7 +266,14 @@ foreach(var id in storyRules["quests"]!.AsArray())
         Check(plan.FollowingInformation&&plan.Centre.FlatDistanceSquared(cue)==0,"valid cue overrides idle spacing and permits a local horde");
     }
     sample=plans[0];revision=sample.Revision;
-    for(var n=1;n<=50;n++)sample.Update(patrolSettings,3+n*.1f,home,new RoamPoint(cue.X+n*.1f,cue.Y,cue.Z),20,occupied);
+    Check(!sample.Update(patrolSettings,2.2f,home,new RoamPoint(cue.X+1,cue.Y,cue.Z),20,occupied) &&
+          sample.Centre.FlatDistanceSquared(cue)==0&&sample.HoldSeconds>=17.8f,
+          "small changes retain the last navigation point until the investigation expires");
+    var newSighting = new RoamPoint(cue.X+1,cue.Y,cue.Z);
+    Check(sample.Update(patrolSettings,2.4f,home,newSighting,20,occupied,4) &&
+          sample.Centre.FlatDistanceSquared(newSighting)==0,"a stronger sighting replaces a nearby weaker cue");
+    revision=sample.Revision;
+    for(var n=1;n<=60;n++)sample.Update(patrolSettings,3+n*.1f,home,new RoamPoint(cue.X+n*.1f,cue.Y,cue.Z),20,occupied,4);
     Check(sample.Revision>revision,"successive small cue movements eventually invalidate the stale native point");
     foreach(var plan in plans)
     {
@@ -361,6 +397,45 @@ foreach(var latency in new[]{.2,4d,9d})
         "the held identity can be admitted and counted once when its zone becomes safe");
     Check(covered.Total==6&&covered.Alive==3&&covered.Pending==0&&!covered.ReturnUnbound(1),
         "a returned reservation never changes population, duplicates a profile or exceeds the cap");
+}
+{
+    var factory = new WaveBudget(20, 5, 35, 6, steady: true, pendingLimit: 2, jitter: 0, groupSize: 6);
+    for (var ticket = 0; ticket < 56; ticket++)
+    {
+        factory.Register(ticket);
+        if (ticket >= 20) continue;
+        factory.Opening(ticket);
+        factory.Bind(ticket, $"factory-{ticket}");
+        factory.Created($"factory-{ticket}", 0);
+    }
+    factory.Seal();
+    for (var ticket = 0; ticket < 14; ticket++) factory.Died($"factory-{ticket}");
+    Check(factory.TakeNext(100) is null, "Factory holds its reserve while six opening actors remain");
+    factory.Died("factory-14");
+
+    var now = 101d;
+    for (var group = 0; group < 6; group++)
+    {
+        Check(factory.TakeNext(now) is null && factory.TakeNext(now + 34.99) is null,
+            "Factory opens a full looting window between reinforcement groups");
+        now += 35;
+        for (var member = 0; member < 6; member++)
+        {
+            var ticket = 20 + group * 6 + member;
+            var id = $"factory-{ticket}";
+            if (member > 0)
+                Check(factory.TakeNext(now - .01) is null, "Factory spaces requests within each group");
+            Check(factory.TakeNext(now) == ticket && factory.Bind(ticket, id), "Factory admits one finite reinforcement");
+            Check(factory.TryActivate(ticket, now) && factory.Created(id, now), "Factory paces native births within each group");
+            Check(factory.Alive + factory.Pending <= factory.Cap && factory.Activating == 0, "Factory maintains its simultaneous cap");
+            factory.Died(id);
+            now += 6;
+        }
+        Check(factory.Batch == group + 2, "Factory stops each group after six requests");
+    }
+    Check(factory.Waiting == 0 && factory.Spawned == 56, "Factory exhausts its fixed reserve");
+    for (var ticket = 15; ticket < 20; ticket++) factory.Died($"factory-{ticket}");
+    Check(factory.Cleared && factory.TakeNext(now + 100) is null, "Factory stays clear once the fixed population is dead");
 }
 // Retain legacy-mode regression coverage for compatibility and the fixed-pool invariants.
 foreach(var total in new[]{30,60,90,110,140,180,230})

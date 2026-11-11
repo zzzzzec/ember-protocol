@@ -73,7 +73,7 @@ internal static class FiniteWaves
             if(player.HealthController is not null&&!player.HealthController.IsAlive)Budget.Died(id);
             ClientDiagnostics.Record("waves.actor_spawned",new{source,actor=ClientDiagnostics.Key(id),budget=Snapshot()});
         }
-        public object Snapshot()=>new{planned=Budget.Total,openingCap=OpeningCap,preferNearby=PreferNearby,issued=Budget.Issued,spawned=Budget.Spawned,alive=Budget.Alive,pending=Budget.Pending,waiting=Budget.Waiting,cap=Budget.Cap,mode=Budget.Steady?"steady":"batch",pendingLimit=Budget.PendingLimit,activating=Budget.Activating,nextActivationAt=Budget.NextActivationAt,spacing=Budget.Spacing,jitter=Budget.Jitter,seed=Budget.Seed,deferred=Tickets.Values.Count(e=>e.Deferred is not null),native=new{alive=Spawner.AllBotsCount,loading=Spawner.InSpawnProcess,delayed=Spawner.SpawnDelaysService.WaitCount},batch=Budget.Batch,threshold=Budget.Threshold,sealedPlan=Budget.Sealed,cleared=Budget.Cleared};
+        public object Snapshot()=>new{planned=Budget.Total,openingCap=OpeningCap,preferNearby=PreferNearby,issued=Budget.Issued,spawned=Budget.Spawned,alive=Budget.Alive,pending=Budget.Pending,waiting=Budget.Waiting,cap=Budget.Cap,mode=Budget.Steady?"steady":"batch",pendingLimit=Budget.PendingLimit,activating=Budget.Activating,nextActivationAt=Budget.NextActivationAt,spacing=Budget.Spacing,jitter=Budget.Jitter,seed=Budget.Seed,deferred=Tickets.Values.Count(e=>e.Deferred is not null),native=new{alive=Spawner.AllBotsCount,loading=Spawner.InSpawnProcess,delayed=Spawner.SpawnDelaysService.WaitCount},batch=Budget.Batch,threshold=Budget.Threshold,groupSize=Budget.GroupSize,breather=Budget.Pause,sealedPlan=Budget.Sealed,cleared=Budget.Cleared};
     }
     private static JObject Settings=new();
     private static bool Enabled;
@@ -101,7 +101,10 @@ internal static class FiniteWaves
         var cap=spawner.MaxBots>0?Math.Min(configured,spawner.MaxBots):configured;
         var steady=(string?)Settings["mode"]=="steady";
         var seed=unchecked((uint)DateTime.UtcNow.Ticks);
-        var raid=new Raid{Spawner=spawner,Budget=new WaveBudget(cap,(int?)Settings["replenishAt"]??2,(double?)Settings["breatherSeconds"]??8,(double?)Settings["spawnSpacingSeconds"]??.35,steady,(int?)Settings["pendingLimit"]??2,(double?)Settings["spacingJitter"]??.25,seed)};
+        var group=Settings["reinforcementGroups"]?[map];
+        var threshold=(int?)group?["replenishAt"]??(int?)Settings["replenishAt"]??2;
+        var breather=(double?)group?["breatherSeconds"]??(double?)Settings["breatherSeconds"]??8;
+        var raid=new Raid{Spawner=spawner,Budget=new WaveBudget(cap,threshold,breather,(double?)Settings["spawnSpacingSeconds"]??.35,steady,(int?)Settings["pendingLimit"]??2,(double?)Settings["spacingJitter"]??.25,seed,(int?)group?["size"]??0)};
         raid.OpeningCap=Math.Max(1,Math.Min(cap,(int?)Settings["openingCaps"]?[map]??cap));
         raid.PreferNearby=Settings["nearbyReinforcements"] is JArray maps&&maps.Values<string>().Contains(map);
         if(raid.PreferNearby)

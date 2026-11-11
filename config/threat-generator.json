@@ -249,7 +249,7 @@
       }
     },
     "factory4_day": {
-      "budget": 2750,
+      "budget": 1400,
       "maxUnitScore": 70,
       "minOrdinaryFraction": 0.25,
       "maxRenderCostPerActor": 2.2,
@@ -321,7 +321,7 @@
       }
     },
     "factory4_night": {
-      "budget": 2750,
+      "budget": 1400,
       "maxUnitScore": 70,
       "minOrdinaryFraction": 0.25,
       "maxRenderCostPerActor": 2.2,

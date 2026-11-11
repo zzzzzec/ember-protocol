@@ -56,8 +56,13 @@ def main():
  character['Info']['Level']=target_level
  for merchant in [cfg['traderId'],cfg['fence']['traderId']]:
   character['TradersInfo'][merchant].setdefault('salesSum',0);character['TradersInfo'][merchant].setdefault('standing',0)
- raid=request('/client/match/local/start',dict(location='sandbox',playerSide='Pmc',shouldSkipLootGeneration=True,timeVariant='CURR'))
- request('/client/match/local/end',dict(serverId=raid['serverId'],results=dict(profile=character,result='SURVIVED',exitName='QA late-game XP fixture',inSession=False,favorite=False,playTime=60),lostInsuredItems=[],transferItems={}))
+ for map_id in ('sandbox','sandbox_high'):
+  raid=request('/client/match/local/start',dict(location=map_id,playerSide='Pmc',shouldSkipLootGeneration=False,timeVariant='CURR'))
+  # Check the dedicated Scav body template. The old forced entry on another corpse also produces a green flare.
+  corpse,=(spot for spot in raid['locationLoot']['Loot'] if any(
+   item['_id']==spot['Root'] and item['_tpl']=='6582e6bb0c3b9823fe6d1840' for item in spot.get('Items') or []))
+  assert sum(item['_tpl']=='6217726288ed9f0845317459' and item.get('parentId')==corpse['Root'] for item in corpse['Items'])==1,map_id
+  request('/client/match/local/end',dict(serverId=raid['serverId'],results=dict(profile=character,result='SURVIVED',exitName='QA late-game XP fixture',inSession=False,favorite=False,playTime=60),lostInsuredItems=[],transferItems={}))
  request('/client/game/start');request('/client/trading/api/traderSettings')
 
  assert 'BuffsZombieInfection' not in global_config['Health']['Effects']['Stimulator']['Buffs']
@@ -78,15 +83,9 @@ def main():
    key=qid+' description'
    if key in expected_locale:expected_locale[key]+='\n\n物资丰度奖励　'+' / '.join(parts)
   expected_locale['ember map abundance']='物资丰度 ×{0}\n任务 +{1}　击杀 +{2}'
- campaign=read(mod/'data/campaign.json')
- main_order={row['id']:row['index'] for row in campaign['main']}
- training_floors={qid:{skill:5100*min(index,track['eliteQuest'])//track['eliteQuest']
-                       for track in campaign['skillTraining'] for skill in track['skills']}
-                  for qid,index in main_order.items()}
- for qid,floors in training_floors.items():
-  lowest,highest=min(floors.values())//100,max(floors.values())//100
-  levels=str(lowest) if lowest==highest else f'{lowest}–{highest}'
-  expected_locale[qid+' description']+=f'\n\n主线训练　{len(floors)} 项技能保底至 {levels} 级'
+ main_ids={row['id'] for row in read(mod/'data/campaign.json')['main']}
+ for key in ('SearchAction','FindAction'):
+  assert abs(skill_settings['Search'][key]-native_config['SkillsSettings']['Search'][key]*progression['searchGainMultiplier'])<1e-6
  locale=request('/client/locale/ch');assert all(locale.get(k)==v for k,v in expected_locale.items())
  locations=request('/client/locations')['locations'];map_report=[]
  for loc in locations.values():
@@ -150,8 +149,6 @@ def main():
  def skill_progress():
   return {s['Id']:s['Progress'] for s in story.pmc()['Skills']['Common']}
  skill_rewards_verified=0
- training_skills={skill for track in campaign['skillTraining'] for skill in track['skills']}
- training_elites={}
  completed=[];skipped=[];ordered=[];pending=list(m['quests']);seen=set()
  trials=set(m.get('weaponTrials',{}).get('quests',[]))
  while pending:
@@ -171,24 +168,14 @@ def main():
   skill_rewards=collections.Counter()
   for reward in qs[qid]['rewards']['Success']:
    if reward['type']=='Skill':skill_rewards[reward['target']]+=reward['value']
-  floors=training_floors.get(qid,{})
-  before=skill_progress() if skill_rewards or floors else {}
+  before=skill_progress() if skill_rewards or qid in main_ids else {}
   action('QuestComplete',qid);completed.append(qid)
   if before:
    after=skill_progress()
-   for skill in set(skill_rewards)|set(floors):
-    normal=min(5100,before[skill]+skill_rewards[skill])
-    expected=max(normal,floors.get(skill,0))
-    assert expected-1e-6<=after[skill]<=min(5100,expected+(1 if expected>normal else 0))+1e-6,(qid,skill,before[skill],after[skill],expected)
+   for skill in before:
+    expected=min(5100,before[skill]+skill_rewards[skill]) if skill in skill_rewards else before[skill]
+    assert abs(after[skill]-expected)<1e-6,(qid,skill,before[skill],after[skill],expected)
    skill_rewards_verified+=len(skill_rewards)
-  if main_order.get(qid) in (32,33,34,35):
-   after=skill_progress()
-   elite_count=sum(after[skill]==5100 for skill in training_skills)
-   training_elites[main_order[qid]]=elite_count
-   if main_order[qid]==35:
-    assert elite_count==27,training_elites
-    action('QuestComplete',qid)
-    assert skill_progress()==after,'Repeated main quest changed skill progress'
   if qid in field_rules['loans']:field.after_complete(qid)
   if qid in story_rules['quests'] and qid not in (lab['scout'],lab['repair']):story.after_complete(qid)
  expected_skipped=set()
@@ -259,7 +246,7 @@ def main():
  report=dict(passed=True,port=a.port,version=state['version'],role=state['instanceKind'],questCount=len(qs),completedQuestCount=len(completed),exclusiveSkipped=len(skipped),allNativeQuestRewardPipelines=True,allChineseRewardMessages=True,allReachableOffersUnlock=True,oppositeBranchOffersRemainLocked=True,storyChecks=story.checks,permanentGrowthChecks=story.growth_checks,storyChoices=story.branch_checks,storyBartersPurchased=story_purchases,offerCount=len(m['offers']),allRecipesMatch=True,recipeCount=len(rs),authoredQuestConditionsPreserved=True,ritualDisabled=True,halloweenInfectedEnabled=True,zombieVirusDisabled=True,zombieBleedingPreserved=True,valuablesRebalancePreserved=True,maps=map_report,fence=fence_report,loanChecks=field.checks,syntheticCombatAndInventoryFixtures=True,syntheticLateGameXpFixture=True,playerInstanceUsed=False,gameUiOrInRaidAcceptance=False)
  report['specialistLoyalty']=specialist_loyalty
  report['nativeSkillRewardsVerified']=skill_rewards_verified
- report['mainlineTrainingEliteCounts']=training_elites
+ report['mainlineSkillsOnlyUseAuthoredRewards']=True
  report['allNativeItemRewardAttachmentsVerified']=True
  report['allCompletedQuestAcceptAndCompleteReplaysPreserved']=True
  report['completedQuestReplayCount']=len(completed)

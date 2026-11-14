@@ -247,7 +247,7 @@
           ],
           "target": "6db691129551dbe835df8b1d",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "0f731ae13018ff0ec0c53b53",
@@ -686,7 +686,7 @@
           ],
           "target": "f97848a44ed82566f66188c9",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "1dedf4dce550fca151bbeb22",
@@ -732,7 +732,7 @@
           ],
           "target": "9be7b47a03f6c2351230b87b",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "4c4173c55f0aff519418583a",
@@ -1103,7 +1103,7 @@
           ],
           "target": "4bd94b4966c98b29c434d2c1",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "406271dea50c6cadd5ad90a2",
@@ -1129,7 +1129,7 @@
           ],
           "target": "51c2f3aa49b23961e17fcead",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "cc140c0dd24a1b1e7d08f602",
@@ -1155,7 +1155,7 @@
           ],
           "target": "fabbc19ccd3bb8fc404dd77e",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "723505653da66e42a49a92bc",
@@ -1181,7 +1181,7 @@
           ],
           "target": "2d86f7efb3f95e815378acfd",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "99cfeb3562611f37a4b250a5",
@@ -1297,7 +1297,7 @@
           ],
           "target": "8bb1be7daba81d84d9725231",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -1522,7 +1522,7 @@
           ],
           "target": "3580d38603e636b9e79f7645",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "02d86e993800d491ab01ee8a",
@@ -1767,7 +1767,7 @@
           ],
           "target": "9172d15c7202be7dddc39ecf",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "b864732b8e22c2eac95be0f5",
@@ -1793,7 +1793,7 @@
           ],
           "target": "f9b2d19f5620e0a79002b1f1",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "e4eb1a4c45a91bb1f12a9f7c",
@@ -1819,7 +1819,7 @@
           ],
           "target": "462b7264759e37eed4436074",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "1331314f9e8618f31ad0be13",
@@ -1890,7 +1890,7 @@
           ],
           "target": "2572d89d26bf8aec2dd5459d",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -3246,7 +3246,7 @@
           ],
           "target": "f99d78a12ffdb2fc4c982442",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "dbf2b3fe47a8063a317fdf1d",
@@ -3302,7 +3302,7 @@
           ],
           "target": "b47174c2fe33dbc7ab698b09",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -3606,7 +3606,7 @@
           ],
           "target": "4edb58382ee92a7af1309889",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "0eb3bb75d55b06b73a8de625",
@@ -4170,7 +4170,7 @@
           ],
           "target": "9e1f6e160c8fe91d4f1610ec",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "7130d7b51a5e4e26e1867a4e",
@@ -5657,7 +5657,7 @@
           ],
           "target": "c40683a87279eddc72749758",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "fdd1146abbfc4c31a7cf0253",
@@ -6024,7 +6024,7 @@
           ],
           "target": "86a7e551fc7292b9dd029dbb",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "49c94238131d75041c88da71",
@@ -6050,7 +6050,7 @@
           ],
           "target": "3bbdde816d7e37a41c6bce29",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "141617f7a18446073fd58e04",
@@ -6377,7 +6377,7 @@
           ],
           "target": "3a6d60541fb2723f920a6466",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "5cc1669e69a914600f717fed",
@@ -6427,7 +6427,7 @@
           ],
           "target": "383165b3ac750ff02bf82cc5",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "5ec3e6f80e5cab0b8d2ef235",
@@ -6453,7 +6453,7 @@
           ],
           "target": "a72ccc4924febf39247df30d",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "50bffcdd310d2ac35bc13d2d",
@@ -6589,7 +6589,7 @@
           ],
           "target": "632f4c2f19d5dd69e34ae5d6",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -6891,7 +6891,7 @@
           ],
           "target": "6ed53194174beb626d5c1d31",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "7108d863233893add7055787",
@@ -7266,7 +7266,7 @@
           ],
           "target": "6c9456c269fe1b55d45ef334",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "ac780560eac3a54bcd1a42f6",
@@ -7544,7 +7544,7 @@
           ],
           "target": "3dd30e2d5f16faa0aa6b008b",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "b764787c14fb2c7fd52b5be5",
@@ -7570,7 +7570,7 @@
           ],
           "target": "feaba2b57dd31143d11ff4f3",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "7133b4de2b02713eb2d6bb21",
@@ -9213,7 +9213,7 @@
           ],
           "target": "f8a0c16b951494b918be0011",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "546494e0e59c41118685ed39",
@@ -9239,7 +9239,7 @@
           ],
           "target": "0d6d55b4363058fd6818f171",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "5838238f6e166404bd1f5299",
@@ -9265,7 +9265,7 @@
           ],
           "target": "e3f7c2573de8387474578d2f",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "989ae56cc0d23182c9bd42c2",
@@ -9291,7 +9291,7 @@
           ],
           "target": "dbfba2c0805da92d6da3fd93",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -10611,7 +10611,7 @@
           ],
           "target": "ad769f094b2b6effc3f38b30",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -10799,7 +10799,7 @@
           ],
           "target": "e45d3911a0146aa1fca9994c",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -11335,7 +11335,7 @@
           ],
           "target": "2e831db12a387396076bcbf1",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -12968,7 +12968,7 @@
           ],
           "target": "744e8ba429a6f561546bc9e4",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -14285,7 +14285,7 @@
           ],
           "target": "5a6927aa2bc261e1f475a85a",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "e9db36bfa37d95be3c0b03ce",
@@ -14311,7 +14311,7 @@
           ],
           "target": "19f9fc2e1d140d235402a706",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "1b015d348dbf5649a4edf173",
@@ -14337,7 +14337,7 @@
           ],
           "target": "90519d95936a50ff5a9a7caa",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "1b4e2945175ab2cbcc8644ba",
@@ -14363,7 +14363,7 @@
           ],
           "target": "b335b5ae875e2e86ca787fe1",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -14740,7 +14740,7 @@
           ],
           "target": "3ae43d6b2ebbd19e6464e10c",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "d120df1cb25f0dc519024659",
@@ -14766,7 +14766,7 @@
           ],
           "target": "08242d351745feb919a951fb",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -15469,7 +15469,7 @@
           ],
           "target": "02315a0d13fcf57f28ecdee8",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "1692726ab99b0ae00133edda",
@@ -15495,7 +15495,7 @@
           ],
           "target": "e25592f38bcd365cf31367fb",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "e545977a7aafed296838c7a8",
@@ -15521,7 +15521,7 @@
           ],
           "target": "c538fa69f937f07f5b1a557c",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "9257c4de80d27852224e14fe",
@@ -15547,7 +15547,7 @@
           ],
           "target": "5dc8fd3be02fc83da3339f8c",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -15739,7 +15739,7 @@
           ],
           "target": "c953027f6b8eed0da086755a",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -15936,7 +15936,7 @@
           ],
           "target": "6d07d0d536d4a04383e45072",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -16118,7 +16118,7 @@
           ],
           "target": "20ebfabe779145bb6549788b",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "4a235c01541fda78a3148292",
@@ -16138,7 +16138,7 @@
           ],
           "target": "1186f8c491ec4f3f22ea3f8d",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -16529,7 +16529,7 @@
           ],
           "target": "96ded8654261ce73beb13061",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "e1c8590f2fd04738cdca4c8f",
@@ -16555,7 +16555,7 @@
           ],
           "target": "51afbb9d4272cd202c4808d7",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -16727,7 +16727,7 @@
           ],
           "target": "a2968f9d8b05a40136a7baf5",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "f1886e0147a9638d1c7fadd7",
@@ -16942,7 +16942,7 @@
           ],
           "target": "077af95c5ef6a081a6dc6480",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "3f7581c9b7ada10bf6697efd",
@@ -17183,7 +17183,7 @@
           ],
           "target": "34e4e4295de4f03713da7965",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "97f76b5fb4af39562e238665",
@@ -17219,7 +17219,7 @@
           ],
           "target": "96f835eef74742b0e0f50cd8",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "18636d6a847221e3f6ebd0ed",
@@ -17259,7 +17259,7 @@
           ],
           "target": "2f19de2c90d3c2be93d0db4a",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "e3b11775295da3c7630aa2ed",
@@ -17484,7 +17484,7 @@
           ],
           "target": "fd2ce282536df72d8db1911c",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "84d80e04f4cc3a209bb13ef3",
@@ -17510,7 +17510,7 @@
           ],
           "target": "3f76e812e77ec1a34694bd0c",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "ff70ad5f97260d579f254c42",
@@ -17536,7 +17536,7 @@
           ],
           "target": "5236be9a6000296c2c6d03ac",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "662f01326577f59f39e07552",
@@ -17562,7 +17562,7 @@
           ],
           "target": "208af826f07858f677ec2295",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -17798,7 +17798,7 @@
           ],
           "target": "67575924c35b4259a16e2a51",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "357b41fe93138df29dd9780c",
@@ -17872,7 +17872,7 @@
           ],
           "target": "7a316daf80461281a1584fe1",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "8f2afd20a6d99f73cecac021",
@@ -17935,7 +17935,7 @@
           ],
           "target": "7ff24e023bafce269f21b195",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "83fc3f05b97fef4d669da116",
@@ -17985,7 +17985,7 @@
           ],
           "target": "978d6c0719122954cc96ddf1",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "f8bedb28deb8c167b1a4c573",
@@ -18029,7 +18029,7 @@
           ],
           "target": "f290ea0534d7ed10daa4b4ad",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "01a3ccad25590a159f615b36",
@@ -18055,7 +18055,7 @@
           ],
           "target": "4b0071e3bfc33e64495df01d",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -18269,7 +18269,7 @@
           ],
           "target": "b87fc9c34872fc39ff010ab6",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "b7e891037bc95e5bc05e9125",
@@ -18295,7 +18295,7 @@
           ],
           "target": "0afcf10e0bd8ec65dc03f186",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "f7cec3cea65b06ba68c4d443",
@@ -18321,7 +18321,7 @@
           ],
           "target": "8d11111122c729cda4941ea0",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "672c81e91dd18a3b4f3a58ae",
@@ -18347,7 +18347,7 @@
           ],
           "target": "f2a5188d6702e0efabb37d8e",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -18888,7 +18888,7 @@
           ],
           "target": "c081d5776311fe39c99e7986",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "a8ebc11559907502127595d0",
@@ -18914,7 +18914,7 @@
           ],
           "target": "37df0c030f7cd29d23fefd8f",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "4b5dde7cb5fd29f24179baed",
@@ -18940,7 +18940,7 @@
           ],
           "target": "573128b2e757467103eeba3e",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "d8e093386f2e404d58b92137",
@@ -18966,7 +18966,7 @@
           ],
           "target": "bb75935145752b3271154ba7",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -19163,7 +19163,7 @@
           ],
           "target": "2132fbc66974da629a18cf9e",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "a762de5430244f8e4edd366f",
@@ -19189,7 +19189,7 @@
           ],
           "target": "b035f233d38317aee5588932",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "088d80dfd02924b1cf78129d",
@@ -19248,7 +19248,7 @@
           ],
           "target": "463cb3d0313f151bc0906cce",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "15f1802e0083d09693d3428b",
@@ -19274,7 +19274,7 @@
           ],
           "target": "8b94bd6a5d5ff63ed88cc210",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "a7d47dcd7e81245e7ddd88f5",
@@ -19300,7 +19300,7 @@
           ],
           "target": "e91cd96279adf5b49fc877bb",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "fa519b859d8fcd2762a7e137",
@@ -19326,7 +19326,7 @@
           ],
           "target": "da9404e555e9b520200021be",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -19636,7 +19636,7 @@
           ],
           "target": "81edb898c36ff1007bd7e4db",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "9db12ae74ccc88e3b1578f58",
@@ -19662,7 +19662,7 @@
           ],
           "target": "6b252ddf3fe43a516c7da681",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "c79759770ff088fa01c17658",
@@ -19688,7 +19688,7 @@
           ],
           "target": "00418619b2642ccf72ed5775",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "51052a5b04c4e17bf2bd824d",
@@ -19714,7 +19714,7 @@
           ],
           "target": "1f6981176aa503c68a555140",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "d4b5d7e339434110ae10696f",
@@ -19740,7 +19740,7 @@
           ],
           "target": "0348e2e017ce8a540cfbb6d0",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "1abebe21f0dd69f7f87a9324",
@@ -19766,7 +19766,7 @@
           ],
           "target": "bcb71e86357c67119e166aa9",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -20027,7 +20027,7 @@
           ],
           "target": "25517e9c59c556bcf14ce839",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "641694412b9189b80f726ffa",
@@ -20095,7 +20095,7 @@
           ],
           "target": "e2e1db9cb0be8a6d1f6399d6",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "2e715f7d7fd4ac1732292452",
@@ -20121,7 +20121,7 @@
           ],
           "target": "3bb411adfcf664104b60a13e",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "9932cfecc2b10901583ce524",
@@ -20147,7 +20147,7 @@
           ],
           "target": "37e74617ceb4157af35718d2",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "ce88f90451d4ffd664945139",
@@ -20173,7 +20173,7 @@
           ],
           "target": "59971e70ca782c85356ea89c",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "3a3d5e99709b5008e84d1d27",
@@ -20199,7 +20199,7 @@
           ],
           "target": "6fa9c101cc13065a04628f10",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -20371,7 +20371,7 @@
           ],
           "target": "5367e11a457e5bff95d8314f",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "1ac51e542acae95534e6bbad",
@@ -20397,7 +20397,7 @@
           ],
           "target": "399f1380b644f95c61b02923",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "60546574c3888264978edc3e",
@@ -20423,7 +20423,7 @@
           ],
           "target": "d80f437f7a4a20d861f1edc1",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "e8e60b6de074bc39c032a28b",
@@ -20449,7 +20449,7 @@
           ],
           "target": "dd249c7181eb68f679c6924a",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "b13c5148c825c7f1a436f231",
@@ -20475,7 +20475,7 @@
           ],
           "target": "0bcda0dc9e5415b6ca8188eb",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -32247,7 +32247,7 @@
           ],
           "target": "3b161bd24d5f9bd9b65cbcca",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -34111,7 +34111,7 @@
           ],
           "target": "e591422b854761bfe1d78d29",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -34864,7 +34864,7 @@
           ],
           "target": "9cd9f33c4b334aea4238af42",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -35058,7 +35058,7 @@
           ],
           "target": "e52e503662ceb000178d1744",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "841f774a956fe6695259dc54",
@@ -35084,7 +35084,7 @@
           ],
           "target": "ed6491d0cfd88ad9bc1ad79f",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "a3bc16850d05623e19eb10bb",
@@ -35110,7 +35110,7 @@
           ],
           "target": "02810b8ba9e0feedfbecb4a3",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "acb1503b97df2b333abe70a8",
@@ -35136,7 +35136,7 @@
           ],
           "target": "08065d3e952980849cbc736a",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -35737,7 +35737,7 @@
           ],
           "target": "1c2ebd88287ea4359c93bb23",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "afe7013e84d0cc8a1c0e302d",
@@ -35765,7 +35765,7 @@
           ],
           "target": "faf6bdb246af08213c2a8b9c",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "17724db2320692fd4fe6cb54",
@@ -38347,7 +38347,7 @@
           ],
           "target": "2c2b4dff6c7d44f8816ce905",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -38820,7 +38820,7 @@
           ],
           "target": "d1a411239a30a24045e8a846",
           "traderId": "4b7e8889344316d03e8369b7",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },
@@ -42076,7 +42076,7 @@
           ],
           "target": "b4d0b56a8dcead52eccbb7a7",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "54cb6f09ea4e4865a967d861",
@@ -42102,7 +42102,7 @@
           ],
           "target": "a0a113a8c51fa03ab0239e30",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "674e7dde0e5f9d0b41325111",
@@ -42128,7 +42128,7 @@
           ],
           "target": "818e30d1357302b7156e079a",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "8e3be23569a34db7077c503a",
@@ -42154,7 +42154,7 @@
           ],
           "target": "f824c070ee763f13f3ca1920",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -43210,7 +43210,7 @@
           ],
           "target": "798f7cf0df4f4d35c3cee780",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "93855a7834196382308989e3",
@@ -43236,7 +43236,7 @@
           ],
           "target": "83e21559fd678b555ba5f3f7",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "a1d717146b6c39c066af7313",
@@ -43262,7 +43262,7 @@
           ],
           "target": "861681fe67e767309fbfe0bc",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "cdd2cead225773315a1b0399",
@@ -43288,7 +43288,7 @@
           ],
           "target": "7ca34a5629dfa8dbe4cd2f89",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -44151,7 +44151,7 @@
           ],
           "target": "0daba5010431dd55d4f38a1c",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -45634,7 +45634,7 @@
           ],
           "target": "56fccebaa05e6e898eb4839a",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "8f456b3286c8f2dddd39a44e",
@@ -45660,7 +45660,7 @@
           ],
           "target": "1555e03f1828c672b4d8deff",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "e7d1bb62d7a6f322154ff166",
@@ -45686,7 +45686,7 @@
           ],
           "target": "943a3a9f91c62628fc8f892b",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "38c0c8bd395b0faaba4f2097",
@@ -45712,7 +45712,7 @@
           ],
           "target": "71fd4c7438dd1c0e099af403",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -46558,7 +46558,7 @@
           ],
           "target": "d9d357e909420a9faec83bd1",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "707c536d06da8c950c9aac81",
@@ -46584,7 +46584,7 @@
           ],
           "target": "b6d17d0bebf7e8b496331ced",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "c29011a67f2cd0eaca44f5cf",
@@ -46610,7 +46610,7 @@
           ],
           "target": "1d8569b0bd72626379a5a9b2",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "1e6a45556680a143fb5a05c2",
@@ -46636,7 +46636,7 @@
           ],
           "target": "b7e96edcfa8677a64aaf4684",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -47179,7 +47179,7 @@
           ],
           "target": "a492ad2c9021b1e6dfd8cfaa",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "dd8419afdbbaa2bd5208103c",
@@ -47205,7 +47205,7 @@
           ],
           "target": "d679def2c6f7aad9157e80d3",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "a1563f302458876ddada57a7",
@@ -47231,7 +47231,7 @@
           ],
           "target": "dacda3f708ab4bea730f4d1a",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "63e1f5507cf0e24355b60a10",
@@ -47257,7 +47257,7 @@
           ],
           "target": "f0b48f2a17e6628ff43933ee",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "6871b201daca42fb5f8e4930",
@@ -47283,7 +47283,7 @@
           ],
           "target": "76c19953da73432c68d14da3",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -47453,7 +47453,7 @@
           ],
           "target": "ab5a00e096ea5180148423aa",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "79acfdd5c9634228abe193f7",
@@ -47479,7 +47479,7 @@
           ],
           "target": "a41d0deb304102885df4364f",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "50657604a5215739a40a4519",
@@ -47505,7 +47505,7 @@
           ],
           "target": "742e187a0e51a6245b3fc842",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "0490e6ade77ed24b8fdc10ab",
@@ -47531,7 +47531,7 @@
           ],
           "target": "98f3c58f5b80ae97c7beaf11",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -47898,7 +47898,7 @@
           ],
           "target": "d956ed9cf48de4ca39dffb0e",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "3a36800fdf09da831e53527c",
@@ -47924,7 +47924,7 @@
           ],
           "target": "22876731ab3be075f6b12abb",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "e8b589c572f9383576e34d0c",
@@ -47950,7 +47950,7 @@
           ],
           "target": "9dcaab1b372d360a148bc0dc",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "9336d4130c8ec2b6ad7553e5",
@@ -47976,7 +47976,7 @@
           ],
           "target": "450e3f58355217dee54e92ae",
           "traderId": "39a130d714ed6d61f6b1c2aa",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -49667,7 +49667,7 @@
           ],
           "target": "171d2ff2c24c551f1bdb9c13",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "9ef9e1f1938c4adda8c28dd9",
@@ -49693,7 +49693,7 @@
           ],
           "target": "fce5e5644fbb5992aa66ce65",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "5c65491a3720e5d79b095e21",
@@ -49719,7 +49719,7 @@
           ],
           "target": "930598e143cda9163a9b351b",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "1cb96cacc5ff4e20f40a2461",
@@ -49745,7 +49745,7 @@
           ],
           "target": "5b12d4c09d1fb88eb6636eb9",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -49923,7 +49923,7 @@
           ],
           "target": "fabdd6d70b25b661502c1dac",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "d83cff6ed6e31d2352295bb3",
@@ -49949,7 +49949,7 @@
           ],
           "target": "693375cce287a996ce34d815",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "224ea627bf6218ec9318cd66",
@@ -49975,7 +49975,7 @@
           ],
           "target": "209f270def517d5cc183933b",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "b72e873a47f51cf762f75a3c",
@@ -50001,7 +50001,7 @@
           ],
           "target": "33176aaa8768dc4610bb9c20",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -51186,7 +51186,7 @@
           ],
           "target": "0d5f899650c72d5e52b69ccc",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "4c21e8c93ef46aae7598a0f7",
@@ -51212,7 +51212,7 @@
           ],
           "target": "fc189b01ff664ccc9793d3d0",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "be5da7f7f6ada1c3c9524d9c",
@@ -51238,7 +51238,7 @@
           ],
           "target": "acceb0a989422629f4fb5ab9",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "8a32532287a9cf8c7119671e",
@@ -51264,7 +51264,7 @@
           ],
           "target": "c368b6ec7e098778bc162a9f",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -51817,7 +51817,7 @@
           ],
           "target": "9a7ea7f452c935ce0a2c5c4d",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "8660572779a2d38bd4cb90a9",
@@ -51843,7 +51843,7 @@
           ],
           "target": "548585cc6ca4bea270e97b60",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "82a6264ab1844da46122fa49",
@@ -51869,7 +51869,7 @@
           ],
           "target": "bacd0ce648d9209c2e12f888",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "2b909bb8f429a24962007382",
@@ -51895,7 +51895,7 @@
           ],
           "target": "4f61cce54535f9e048ffabbf",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         },
         {
           "id": "3e16447fc8ba037f86e23ace",
@@ -51921,7 +51921,7 @@
           ],
           "target": "850482ec499eb38774f11d13",
           "traderId": "428880b53be6cbb14b9e2f11",
-          "loyaltyLevel": 4
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -52140,7 +52140,7 @@
           ],
           "target": "4ffb024d70a1dabd719d202d",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "47be9b49579ec8d7f1b8671e",
@@ -52208,7 +52208,7 @@
           ],
           "target": "0a964a5e859547a282dd6730",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "61df586e24ad2275ffea24f1",
@@ -52252,7 +52252,7 @@
           ],
           "target": "171793564295bd1a543f7dea",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "72de16c8749b3841c35096d2",
@@ -52278,7 +52278,7 @@
           ],
           "target": "93407ec90be4650548cb60ac",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -52802,7 +52802,7 @@
           ],
           "target": "ff7e5e40d90e6ad0f5d70195",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "4926a0142fe453745d794997",
@@ -52828,7 +52828,7 @@
           ],
           "target": "1a18676058dff859f4c2c584",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "697dcb2a81e117f9b515034e",
@@ -52854,7 +52854,7 @@
           ],
           "target": "5eaa230691dc13f3851a9f18",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "13a4f8d24dee0cda3676a747",
@@ -52892,7 +52892,7 @@
           ],
           "target": "8696d406cd106db2f0c1452b",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -53812,7 +53812,7 @@
           ],
           "target": "5b7200e9a311e3e29e785f78",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "10e34097f333de4b14b5058a",
@@ -53838,7 +53838,7 @@
           ],
           "target": "4ade08df1cd60c3518ff4b8c",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "d867d3c09312a546b9560c68",
@@ -53864,7 +53864,7 @@
           ],
           "target": "17c44c19f81f597dc668e820",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "22bfe7ddd2e153ce307223db",
@@ -53890,7 +53890,7 @@
           ],
           "target": "9c6095c9ed2530ba9bbbb985",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -54110,7 +54110,7 @@
           ],
           "target": "7d449aad00155410409f7480",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "7f57693682cbf3b274605032",
@@ -54154,7 +54154,7 @@
           ],
           "target": "16271c033c26d59843ae0d3a",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "fd7591493c497013295d7bf7",
@@ -54180,7 +54180,7 @@
           ],
           "target": "e82bfd1d04aad84498225376",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "52e512cf6b6e473de4fedd7a",
@@ -54206,7 +54206,7 @@
           ],
           "target": "55662aa9f79a75164a6db886",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -54896,7 +54896,7 @@
           ],
           "target": "0439fb4620c8aff36756ed39",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "625a5d19566394b9a2db080b",
@@ -54922,7 +54922,7 @@
           ],
           "target": "6f30633998ff3d27d2cd4580",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "0a5c8d7d7404f6c7260f3694",
@@ -54948,7 +54948,7 @@
           ],
           "target": "1306f4f39504f3d9e9129697",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "0edc096259d37b74116e7430",
@@ -54974,7 +54974,7 @@
           ],
           "target": "0078149c9a7ec9b36d816a5a",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -55580,7 +55580,7 @@
           ],
           "target": "7eb5430bba1c7deebb6c2f53",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "302eaca16eedc329dffea550",
@@ -55606,7 +55606,7 @@
           ],
           "target": "91fc07d3d07a71f8a04e225c",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "bab164f7258daae0c5eec08d",
@@ -55632,7 +55632,7 @@
           ],
           "target": "266e60b4d6ca0378e9e6124d",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         },
         {
           "id": "17c6c4e1b65369aa9fc0806e",
@@ -55658,7 +55658,7 @@
           ],
           "target": "37f8a62bf3dab7c311c15c32",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 2
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -56346,7 +56346,7 @@
           ],
           "target": "c6e3f9410855112bae1277f0",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "99edfc64c83763b216338a16",
@@ -56372,7 +56372,7 @@
           ],
           "target": "a257dab6a1f2b14ef45c69aa",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "bbeeb3fbd45f2fb799b0be4d",
@@ -56398,7 +56398,7 @@
           ],
           "target": "194824f11c287bdd251ceb02",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "5255018f71358fbc150bd04a",
@@ -56424,7 +56424,7 @@
           ],
           "target": "57d26ee5a9c75290de4cfc48",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -56607,7 +56607,7 @@
           ],
           "target": "9b020311d90f26ac33bce6f9",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "5241182f0f21cf39819f6bc4",
@@ -56633,7 +56633,7 @@
           ],
           "target": "fcb3186c4f49ccda7804a4c6",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "4d3abb205414c863006c06c6",
@@ -56659,7 +56659,7 @@
           ],
           "target": "544bf2750c295da9b7e7d665",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "1024525fd652bf3a9102a31b",
@@ -56685,7 +56685,7 @@
           ],
           "target": "59ef76bcae74dea7409c3be9",
           "traderId": "d20d87e0da4822e5261cd161",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -60214,7 +60214,7 @@
           ],
           "target": "e8766f93a3af8ed1a425cd43",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "5048b683d139292eb5157ac0",
@@ -60240,7 +60240,7 @@
           ],
           "target": "845204d5c886999f9ec6912f",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "13e1d4133e61939bfb5f4e5e",
@@ -60266,7 +60266,7 @@
           ],
           "target": "2859a84c6a6931094a509820",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "9c0b1b4de41b8cea8876725e",
@@ -60292,7 +60292,7 @@
           ],
           "target": "7b7571999924dc3f84ef7ed3",
           "traderId": "09ce24e1c055c45828a1922f",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ],
       "Fail": []
@@ -61128,7 +61128,7 @@
           ],
           "target": "4ef4fd65d0de994eea4a02c4",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "4d2100ec6dd5ec933590c3be",
@@ -61154,7 +61154,7 @@
           ],
           "target": "5c5f9800a58e52811eff2ebf",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "3e73f54f805083201439daa2",
@@ -61180,7 +61180,7 @@
           ],
           "target": "6d2051f52e2cf6141cb50e08",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "c8d3d0b05d7fb0dec7885381",
@@ -61206,7 +61206,7 @@
           ],
           "target": "7c858fe0c6959b756ba2f3f9",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "58da1d44c36ec13abcaf2aa0",
@@ -61232,7 +61232,7 @@
           ],
           "target": "7911b6b1c53176c5ef279433",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "e0205c8476fb0028874b1de8",
@@ -61258,7 +61258,7 @@
           ],
           "target": "91c41b5666588f5cda01b85c",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         },
         {
           "id": "8e795fb2fd917cae2a4564d0",
@@ -61284,7 +61284,7 @@
           ],
           "target": "277f863bdf1c2e4346b66852",
           "traderId": "afee5b874a94cd243d05ff44",
-          "loyaltyLevel": 3
+          "loyaltyLevel": 1
         }
       ]
     },

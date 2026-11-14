@@ -17,6 +17,6 @@
   ],
   "barters": [
     {"id": "57402bf3f109f048d2968a50", "tpl": "577e1c9d2459773cd707c525", "name": "Printer paper", "level": 1, "stock": 1, "limit": 1, "unlock": "d59ca94b0e1c99294ed9f708", "inputs": [{"_tpl": "57347c1124597737fb1379e3", "count": 1}]},
-    {"id": "0daba5010431dd55d4f38a1c", "tpl": "57347c5b245977448d35f6e1", "name": "Bolts", "level": 2, "stock": 1, "limit": 1, "unlock": "bb8dc90f84669829486f7926", "inputs": [{"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}]}
+    {"id": "0daba5010431dd55d4f38a1c", "tpl": "57347c5b245977448d35f6e1", "name": "Bolts", "level": 1, "stock": 1, "limit": 1, "unlock": "bb8dc90f84669829486f7926", "inputs": [{"_tpl": "61bf7b6302b3924be92fa8c3", "count": 2}]}
   ]
 }

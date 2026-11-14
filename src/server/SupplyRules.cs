@@ -11,17 +11,19 @@ using SPTarkov.Server.Core.Models.Eft.Inventory;
 using SPTarkov.Server.Core.Models.Eft.ItemEvent;
 using SPTarkov.Server.Core.Models.Eft.Profile;
 using SPTarkov.Server.Core.Models.Eft.Trade;
+using SPTarkov.Server.Core.Models.Enums;
 
 namespace Codex.ZombieSurvival;
 
 public sealed partial class SurvivalService
 {
     private sealed record SupplyRecipe(int Area, int Level, Dictionary<MongoId, int> Inputs, Dictionary<MongoId, int> Tools);
-    private sealed record SupplyOffer(MongoId Trader, int Level, int Limit, MongoId? Unlock, Dictionary<MongoId, int> Price);
+    private sealed record SupplyOffer(MongoId Trader, int Level, int Limit, Dictionary<MongoId, int> Price);
 
     private readonly object _supplyActionGate = new();
     private readonly Dictionary<MongoId, SupplyRecipe> _supplyRecipes = [];
     private readonly Dictionary<MongoId, SupplyOffer> _supplyOffers = [];
+    private readonly Dictionary<MongoId, MongoId> _questPurchaseUnlocks = [];
 
     private void ConfigureSupplyRoutes()
     {
@@ -47,6 +49,8 @@ public sealed partial class SurvivalService
         foreach (var offer in manifest["offers"]!.AsArray().OfType<JsonObject>())
         {
             var id = offer["id"]!.ToString();
+            if (offer["unlock"] is { } quest)
+                _questPurchaseUnlocks.Add((MongoId)id, (MongoId)quest.ToString());
             if (offerIds.Contains(id) || (bool?)offer["validatePayment"] == true)
                 RegisterSupplyOffer(offer, owners.GetValueOrDefault(id, TraderId));
         }
@@ -57,9 +61,8 @@ public sealed partial class SurvivalService
         var price = offer["barter"] is JsonArray barter
             ? barter.OfType<JsonObject>().ToDictionary(ingredient => (MongoId)ingredient["_tpl"]!.ToString(), ingredient => (int)ingredient["count"]!)
             : new Dictionary<MongoId, int> { [(MongoId)TraderSalePolicy.Roubles] = (int)offer["price"]! };
-        var unlock = offer["unlock"] is { } quest ? (MongoId?)((MongoId)quest.ToString()) : null;
         _supplyOffers.Add((MongoId)offer["id"]!.ToString(),
-            new SupplyOffer((MongoId)trader, (int)offer["level"]!, (int)offer["limit"]!, unlock, price));
+            new SupplyOffer((MongoId)trader, (int)offer["level"]!, (int)offer["limit"]!, price));
     }
 
     private static bool MatchesSupplyInputs(PmcData profile, IEnumerable<IdWithCount>? selections, Dictionary<MongoId, int> expected,
@@ -80,12 +83,19 @@ public sealed partial class SurvivalService
     public bool CheckSupplyPurchase(PmcData profile, ProcessBaseTradeRequestData request, MongoId session,
         ref ItemEventRouterResponse result, ref bool entered)
     {
-        if (request is not ProcessBuyTradeRequestData buy || !_supplyOffers.TryGetValue(buy.ItemId, out var offer)) return true;
+        if (request is not ProcessBuyTradeRequestData buy) return true;
+        if (_questPurchaseUnlocks.TryGetValue(buy.ItemId, out var quest) &&
+            profile.Quests?.Any(q => q.QId == quest && q.Status == QuestStatusEnum.Success) != true)
+        {
+            result = FieldDenied(session, "请先完成解锁这件商品的任务。");
+            Trace("supply.purchase_rejected", session, new { offer = buy.ItemId.ToString(), reason = "quest" });
+            return false;
+        }
+        if (!_supplyOffers.TryGetValue(buy.ItemId, out var offer)) return true;
         Monitor.Enter(_supplyActionGate, ref entered);
         var level = profile.TradersInfo?.GetValueOrDefault(offer.Trader)?.LoyaltyLevel ?? 0;
-        var questComplete = offer.Unlock is not { } unlock || profile.Quests?.Any(q => q.QId == unlock && (int)q.Status == 4) == true;
         if (buy.TransactionId != offer.Trader || buy.Count is not int count || count < 1 || count > offer.Limit ||
-            level < offer.Level || !questComplete ||
+            level < offer.Level ||
             SupplyPurchaseCount(session, offer.Trader, buy.ItemId) + count > offer.Limit)
         {
             result = FieldDenied(session, "这份补给尚未开放，或本局补给已经换完。");

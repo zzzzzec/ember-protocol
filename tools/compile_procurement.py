@@ -82,6 +82,9 @@ def compile_procurement(write=False):
         assert len({part["_tpl"] for part in inputs}) == len(inputs)
         assert all(re.fullmatch("[0-9a-f]{24}", part["_tpl"]) and part["_tpl"] not in (ROUBLES, tpl)
                    and type(part["count"]) is int and 1 <= part["count"] <= 12 for part in inputs)
+        qid = row.get("unlock")
+        if qid:
+            level = 1
         # Root stack count is the number in stock. Each purchase yields one item.
         upd = dict(StackObjectsCount=limit, UnlimitedCount=False, BuyRestrictionMax=limit, BuyRestrictionCurrent=0)
         if "foodResource" in row:
@@ -93,7 +96,6 @@ def compile_procurement(write=False):
         assort["items"].extend([root, *children])
         assort["barter_scheme"][oid] = [[dict(_tpl=ROUBLES, count=price)] if price else inputs]
         assort["loyal_level_items"][oid] = level
-        qid = row.get("unlock")
         meta = dict(id=oid, tpl=tpl, name=row["name"], price=price, stock=limit, limit=limit, level=level, unlock=qid)
         if row.get("validatePayment"):
             meta["validatePayment"] = True

@@ -156,10 +156,16 @@ def validate():
     for qid,parent in opening['questRelease'].items():
         assert any(c['conditionType']=='Quest' and c['target']==parent and c['status']==[4] for c in qs[qid]['conditions']['AvailableForStart'])
     owners={oid:c['id'] for c in contacts for oid in c['offers']}
+    quest_unlocks=trader['questassort']['success']
+    unlock_rewards={}
     for q in qs.values():
         assert q['traderId'] in {m['traderId'],config['fence']['traderId']}|contact_ids
         for r in q['rewards']['Success']:
-            if r['type']=='AssortmentUnlock':assert r['traderId']==owners.get(r['target'],m['traderId'])
+            if r['type']=='AssortmentUnlock':
+                oid=r['target']
+                assert r['traderId']==owners.get(oid,m['traderId'])
+                assert r['loyaltyLevel']==1,('Task unlock reward must show loyalty I',oid)
+                unlock_rewards[oid]=q['_id']
     for quest in qs.values():
         for phase,rewards in quest['rewards'].items():
             for reward in rewards:
@@ -178,7 +184,12 @@ def validate():
     roots={i['_id']:i for i in trader['assort']['items'] if i.get('parentId')=='hideout'}
     assert set(roots)==set(trader['assort']['barter_scheme'])==set(trader['assort']['loyal_level_items'])
     for offer in m['offers']:
-        assert offer['tpl']==roots[offer['id']]['_tpl'],('Manifest offer template mismatch',offer['id'])
+        oid=offer['id']
+        assert offer['tpl']==roots[oid]['_tpl'],('Manifest offer template mismatch',oid)
+        assert offer.get('unlock')==quest_unlocks.get(oid),('Mismatched task purchase gate',oid)
+        if oid in quest_unlocks:
+            assert unlock_rewards.get(oid)==quest_unlocks[oid],('Missing matching task unlock reward',oid)
+            assert offer['level']==trader['assort']['loyal_level_items'][oid]==1,('Task unlock requires loyalty I',oid)
     for offer in m['barters']:
         assert next(x for x in m['offers'] if x['id']==offer['id'])==offer,('Duplicated barter metadata mismatch',offer['id'])
     for phase,links in trader['questassort'].items():

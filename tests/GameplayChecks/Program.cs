@@ -470,43 +470,45 @@ foreach(var latency in new[]{.2,4d,9d})
         "a returned reservation never changes population, duplicates a profile or exceeds the cap");
 }
 {
-    var factory = new WaveBudget(20, 5, 35, 6, steady: true, pendingLimit: 2, jitter: 0, groupSize: 6);
-    for (var ticket = 0; ticket < 56; ticket++)
+    var waves = JsonNode.Parse(File.ReadAllText(Path.Combine(args[0], "config/gameplay.json")))!["waves"]!;
+    foreach (var (map, _) in waves["aliveCaps"]!.AsObject())
+        Check((string?)waves["mode"] == "steady" && ((int?)waves["reinforcementGroups"]?[map]?["size"] ?? 0) == 0,
+            $"{map} refills by vacancy");
+
+    var cap = WaveLimits.FactoryActiveCap((int)waves["aliveCaps"]!["factory4_day"]!, 66, 56);
+    var delay = (double)waves["breatherSeconds"]!;
+    var spacing = (double)waves["spawnSpacingSeconds"]!;
+    var factory = new WaveBudget(cap, (int)waves["replenishAt"]!, delay, spacing, steady: true,
+        pendingLimit: (int)waves["pendingLimit"]!, jitter: 0);
+    void Spawn(int ticket, double now)
+    {
+        var id = $"factory-{ticket}";
+        Check(factory.Bind(ticket, id) && factory.TryActivate(ticket, now) && factory.Created(id, now),
+            "Factory materializes one reserved actor");
+    }
+    for (var ticket = 0; ticket < 66; ticket++)
     {
         factory.Register(ticket);
-        if (ticket >= 20) continue;
+        if (ticket >= cap) continue;
         factory.Opening(ticket);
-        factory.Bind(ticket, $"factory-{ticket}");
-        factory.Created($"factory-{ticket}", 0);
+        Spawn(ticket, 0);
     }
     factory.Seal();
-    for (var ticket = 0; ticket < 14; ticket++) factory.Died($"factory-{ticket}");
-    Check(factory.TakeNext(100) is null, "Factory holds its reserve while six opening actors remain");
-    factory.Died("factory-14");
-
-    var now = 101d;
-    for (var group = 0; group < 6; group++)
+    Check(cap == 21 && factory.Alive == 21 && factory.TakeNext(0) is null, "Factory never refills a full map");
+    var now = 1d;
+    for (var ticket = cap; ticket < 66; ticket++)
     {
-        Check(factory.TakeNext(now) is null && factory.TakeNext(now + 34.99) is null,
-            "Factory opens a full looting window between reinforcement groups");
-        now += 35;
-        for (var member = 0; member < 6; member++)
-        {
-            var ticket = 20 + group * 6 + member;
-            var id = $"factory-{ticket}";
-            if (member > 0)
-                Check(factory.TakeNext(now - .01) is null, "Factory spaces requests within each group");
-            Check(factory.TakeNext(now) == ticket && factory.Bind(ticket, id), "Factory admits one finite reinforcement");
-            Check(factory.TryActivate(ticket, now) && factory.Created(id, now), "Factory paces native births within each group");
-            Check(factory.Alive + factory.Pending <= factory.Cap && factory.Activating == 0, "Factory maintains its simultaneous cap");
-            factory.Died(id);
-            now += 6;
-        }
-        Check(factory.Batch == group + 2, "Factory stops each group after six requests");
+        factory.Died($"factory-{ticket - cap}");
+        Check(factory.Alive == cap - 1 && factory.TakeNext(now) is null &&
+            factory.TakeNext(now + delay - .01) is null, "One Factory vacancy starts the short refill delay");
+        now += delay;
+        Check(factory.TakeNext(now) == ticket && factory.Alive + factory.Pending == cap &&
+            factory.TakeNext(now + spacing) is null, "A pending Factory replacement holds the only empty slot");
+        Spawn(ticket, now);
+        now += spacing;
     }
-    Check(factory.Waiting == 0 && factory.Spawned == 56, "Factory exhausts its fixed reserve");
-    for (var ticket = 15; ticket < 20; ticket++) factory.Died($"factory-{ticket}");
-    Check(factory.Cleared && factory.TakeNext(now + 100) is null, "Factory stays clear once the fixed population is dead");
+    for (var ticket = 66 - cap; ticket < 66; ticket++) factory.Died($"factory-{ticket}");
+    Check(factory.Cleared && factory.TakeNext(now + 100) is null, "Factory stops when the finite reserve is exhausted");
 }
 // Retain legacy-mode regression coverage for compatibility and the fixed-pool invariants.
 foreach(var total in new[]{30,60,90,110,140,180,230})

@@ -15580,10 +15580,6 @@
     },
     "openingCaps": { "bigmap": 22 },
     "nearbyReinforcements": ["bigmap"],
-    "reinforcementGroups": {
-      "factory4_day": { "size": 6, "replenishAt": 5, "breatherSeconds": 35 },
-      "factory4_night": { "size": 6, "replenishAt": 5, "breatherSeconds": 35 }
-    },
     "replenishAt": 2,
     "breatherSeconds": 4,
     "spawnSpacingSeconds": 6,

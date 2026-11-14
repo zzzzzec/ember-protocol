@@ -106,7 +106,8 @@ internal static class FiniteWaves
         var group=Settings["reinforcementGroups"]?[map];
         var threshold=(int?)group?["replenishAt"]??(int?)Settings["replenishAt"]??2;
         var breather=(double?)group?["breatherSeconds"]??(double?)Settings["breatherSeconds"]??8;
-        var raid=new Raid{Spawner=spawner,Budget=new WaveBudget(cap,threshold,breather,(double?)Settings["spawnSpacingSeconds"]??.35,steady,(int?)Settings["pendingLimit"]??2,(double?)Settings["spacingJitter"]??.25,seed,(int?)group?["size"]??0)};
+        var groupSize=(int?)group?["size"]??0;
+        var raid=new Raid{Spawner=spawner,Budget=new WaveBudget(cap,threshold,breather,(double?)Settings["spawnSpacingSeconds"]??.35,steady,(int?)Settings["pendingLimit"]??2,(double?)Settings["spacingJitter"]??.25,seed,groupSize)};
         raid.OpeningCap=Math.Max(1,Math.Min(cap,(int?)Settings["openingCaps"]?[map]??cap));
         raid.PreferNearby=Settings["nearbyReinforcements"] is JArray maps&&maps.Values<string>().Contains(map);
         if(raid.PreferNearby)

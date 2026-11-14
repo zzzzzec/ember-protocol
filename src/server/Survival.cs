@@ -213,6 +213,13 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         InitializeClosedMapKeys();
         InitializeRaidRestock();
         foreach(var (id,profile) in saves.GetProfiles()) EnsureProfile(id);
+        foreach(var item in db.GetItems().Values)
+        {
+            if(item.Type == "Item" && item.Parent == BaseClasses.AMMO &&
+                item.Properties is { AmmoType: "bullet" or "buckshot", Weight: > 0 } cartridge &&
+                cartridge.Caliber is not ("Caliber26x75" or "Caliber40x46" or "Caliber40mmRU"))
+                cartridge.Weight *= .2;
+        }
         _items=db.GetItems().ToDictionary(x=>x.Key.ToString(),x=>Node(x.Value).AsObject());
         ConfigureRareKeyLoot();
         InitializeAbundanceLoot();

@@ -428,8 +428,11 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
     // The bus-side Scav body (6582e6bb0c3b9823fe6d1840) has its own loot table.
     private const string MiraFlareCorpse = "container_Sandbox_Design_Stuff_00011";
     private const string GreenHandheldFlare = "6217726288ed9f0845317459";
+    private const string TankBattery = "5d03794386f77420415576f5";
+    private const double ReserveTankBatteryChance = .25;
 
-    public JsonArray FilterItems(JsonArray list,double factor=1,Random? random=null,bool preserveMiraFlare=false)
+    public JsonArray FilterItems(JsonArray list,double factor=1,Random? random=null,bool preserveMiraFlare=false,
+        bool limitReserveBattery=false,JsonObject? keptReserveBattery=null)
     {
         random??=Random.Shared;var rules=Config["scarcity"]!;
         var ids=list.OfType<JsonObject>().ToDictionary(x=>x["_id"]!.ToString());var removed=new HashSet<string>();
@@ -437,6 +440,8 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         foreach(var item in list.OfType<JsonObject>())
         {
             var id=item["_id"]!.ToString();var tpl=item["_tpl"]!.ToString();
+            if(limitReserveBattery && tpl==TankBattery && !ReferenceEquals(item,keptReserveBattery))
+            { removed.Add(id); continue; }
             if (IsClosedMapKey(tpl)) { removed.Add(id); continue; }
             // EFT classifies this single-use signal cartridge as a weapon.
             if (preserveMiraFlare && tpl == GreenHandheldFlare) continue;
@@ -484,13 +489,24 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
     {
         var map = location.ToLowerInvariant();
         var data=Node(loot).AsArray();var factor=(int?)Maps[map]?["rank"]??1;
+        var limitReserveBattery = map == "rezervbase";
+        JsonObject? keptReserveBattery = null;
+        // Roll once over the generated raid so additional containers and
+        // abundance draws cannot turn several independent chances into a guarantee.
+        if (limitReserveBattery && Random.Shared.NextDouble() < ReserveTankBatteryChance)
+        {
+            var candidates = data.OfType<JsonObject>().SelectMany(spawn => (spawn["Items"] as JsonArray ?? []).OfType<JsonObject>())
+                .Where(item => item["_tpl"]?.ToString() == TankBattery).ToArray();
+            if (candidates.Length > 0) keptReserveBattery = candidates[Random.Shared.Next(candidates.Length)];
+        }
         var result=new JsonArray();
         foreach(var spawn in data)
         {
             if(spawn?["Items"] is JsonArray list)
             {
                 var preserveMiraFlare = (map is "sandbox" or "sandbox_high") && spawn["Id"]?.ToString() == MiraFlareCorpse;
-                var items = FilterItems(list,.80+factor*.08,preserveMiraFlare:preserveMiraFlare);
+                var items = FilterItems(list,.80+factor*.08,preserveMiraFlare:preserveMiraFlare,
+                    limitReserveBattery:limitReserveBattery,keptReserveBattery:keptReserveBattery);
                 WearRareWorldKeys(items, map, spawn["Id"]?.ToString() ?? "");
                 spawn["Items"] = items;
                 var root=spawn["Root"]?.ToString();

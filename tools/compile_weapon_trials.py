@@ -118,7 +118,7 @@ def create_quest(template, stage, trader, prerequisite, image):
         assert practice["skill"] in {"Pistol", "SMG", "Assault", "Shotgun", "DMR", "Sniper"}
         assert type(practice["points"]) is int and 50 <= practice["points"] <= 150
         q["rewards"]["Success"].append(reward("Skill", key + ":practice", target=practice["skill"], value=practice["points"]))
-    spec = dict(weapon=stage["weapon"], requiredParts=sorted(set(mods)), exactParts=sorted(mods),
+    spec = dict(weapon=stage["weapon"], requiredParts=sorted(set(mods)),
                 minimumDurability=50, minimumMagazineCapacity=stage["magazineCapacity"],
                 returnCondition=ret["id"], killCondition=stable("kill", key), referenceOffer=stable("offer", key))
     return q, spec
@@ -132,7 +132,7 @@ def write_locales(locales, q, stage, dialogue):
               "close": f" within {distance} m"}.get(qualifier, "")
     for lang, fields in (
         ("ch", [stage["title"], dialogue["description"], dialogue["accepted"], dialogue["success"]]),
-        ("en", [f"Field trial {key}", "The signed build is on the trader's shelf. Use it in the field and bring back the unloaded assembly.",
+        ("en", [f"Field trial {key}", "The signed build is on the trader's shelf. Use it in the field and bring it back with the required parts.",
                 "The loan and a sealed box of cartridges are in your mail." if stage["issued"] else "The matching build is available to buy. This commission uses your own equipment.",
                 "The assembly and field record are both here. The payment is ready."])):
         l = locales[lang]
@@ -144,8 +144,8 @@ def write_locales(locales, q, stage, dialogue):
         if qualifier == "survive":
             l[objectives[1]["id"]] = (f"从{stage['mapNames'][0]}成功撤离" if lang == "ch"
                                       else f"Survive and extract from {stage['mapNames'][1]}")
-        l[objectives[-1]["id"]] = (f"交还{stage['setup']}，退净弹药，耐久至少 50"
-                                   if lang == "ch" else f"Return the specified unloaded {stage['weaponName']} at 50 or more durability")
+        l[objectives[-1]["id"]] = (f"交还{stage['setup']}，装齐所需配件，耐久至少 50。枪上配件和弹药一并交付"
+                                   if lang == "ch" else f"Return the {stage['weaponName']} with the required parts and at least 50 durability. Attached parts and loaded rounds are handed over with it.")
 
 
 def compile_weapon_trials(write=False):
@@ -233,12 +233,12 @@ def compile_weapon_trials(write=False):
                 assert oid not in assort["barter_scheme"] and price > 0
                 new_items.extend(bundle)
                 new_offers.append(dict(id=oid, tpl=tpl, name=name, price=price, stock=limit, limit=limit,
-                                       level=stage["loyalty"], unlock=prerequisite, validatePayment=True))
+                                       level=1, unlock=prerequisite, validatePayment=True))
                 group_offers.append(oid)
                 assort["barter_scheme"][oid] = [[dict(_tpl=ROUBLES, count=price)]]
-                assort["loyal_level_items"][oid] = stage["loyalty"]
+                assort["loyal_level_items"][oid] = 1
                 trader["questassort"]["success"][oid] = prerequisite
-                unlock = reward("AssortmentUnlock", oid, items=reward_items, target=oid, traderId=owner, loyaltyLevel=stage["loyalty"])
+                unlock = reward("AssortmentUnlock", oid, items=reward_items, target=oid, traderId=owner, loyaltyLevel=1)
                 rewards = quests[prerequisite]["rewards"]
                 rewards["Success"] = insert_before(rewards["Success"], [unlock],
                                                    lambda row: row.get("target") if row["type"] == "AssortmentUnlock" else None, later)

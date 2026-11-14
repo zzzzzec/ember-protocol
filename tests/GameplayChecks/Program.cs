@@ -175,12 +175,36 @@ foreach(var loan in rules["loans"]!.AsObject())
     Check(FieldQuestPolicy.ValidateReturn(spec,bare,rootId,nativeItems) is not null,"missing magazine or integral part is rejected: "+spec["weapon"]);
     foreach(var required in spec["requiredParts"]!.AsArray())
     {
-        var missing=tree.DeepClone().AsArray();var item=missing.First(x=>x!["_tpl"]?.ToString()==required!.ToString())!;missing.Remove(item);
+        var missing = new JsonArray(tree.Where(item => item!["_tpl"]?.ToString() != required!.ToString())
+            .Select(item => item!.DeepClone()).ToArray());
         Check(FieldQuestPolicy.ValidateReturn(spec,missing,rootId,nativeItems) is not null,"missing required part is rejected: "+required);
     }
-    var loaded=tree.DeepClone().AsArray();var magazine=loaded.FirstOrDefault(x=>x!["slotId"]?.ToString()=="mod_magazine")??loaded[0]!;
-    loaded.Add(new JsonObject{["_id"]="bbbbbbbbbbbbbbbbbbbbbbbb",["_tpl"]="59e4d3d286f774176a36250a",["parentId"]=magazine["_id"]!.ToString(),["slotId"]="cartridges",["location"]=0,["upd"]=new JsonObject{["StackObjectsCount"]=1}});
-    Check(FieldQuestPolicy.ValidateReturn(spec,loaded,rootId,nativeItems) is not null,"loaded ammunition must be removed before return: "+spec["weapon"]);
+    var loaded = tree.DeepClone().AsArray();
+    foreach (var part in tree)
+    {
+        var props = nativeItems[part!["_tpl"]!.ToString()]["_props"]!;
+        foreach (var group in new[] { "Chambers", "Cartridges" })
+        {
+            var slot = props[group]?.AsArray().FirstOrDefault();
+            var round = slot?["_props"]?["filters"]?[0]?["Filter"]?.AsArray()
+                .FirstOrDefault(id => nativeItems.TryGetValue(id!.ToString(), out var template) && template["_props"]?["ammoType"] is not null);
+            if (round is null) continue;
+            var ammo = new JsonObject { ["_id"] = Guid.NewGuid().ToString("N")[..24], ["_tpl"] = round.ToString(),
+                ["parentId"] = part["_id"]!.ToString(), ["slotId"] = slot!["_name"]!.ToString(),
+                ["upd"] = new JsonObject { ["StackObjectsCount"] = 1 } };
+            if (group == "Cartridges") ammo["location"] = 0;
+            loaded.Add(ammo);
+        }
+    }
+    Check(FieldQuestPolicy.ValidateReturn(spec, loaded, rootId, nativeItems) is null,
+        "compatible ammunition in the gun does not block the return: " + spec["weapon"]);
+    if (spec["weapon"]!.ToString() == "5cadc190ae921500103bb3b6")
+    {
+        loaded.Add(new JsonObject { ["_id"] = "bbbbbbbbbbbbbbbbbbbbbbbb", ["_tpl"] = "5cc9c20cd7f00c001336c65d",
+            ["parentId"] = rootId, ["slotId"] = "mod_tactical" });
+        Check(FieldQuestPolicy.ValidateReturn(spec, loaded, rootId, nativeItems) is null,
+            "the M9A3 trial accepts a loaded build with an extra compatible tactical attachment");
+    }
     var c=quest["conditions"]!["AvailableForFinish"]![0]!.AsObject();var actor=new JsonObject{["TaskConditionCounters"]=new JsonObject(),["Quests"]=new JsonArray()};
     Check(!FieldQuestPolicy.ObjectiveReady(actor,c,loan.Key),"missing kill counter prevents early return: "+spec["weapon"]);
     actor["TaskConditionCounters"]![c["id"]!.ToString()]=new JsonObject{["value"]=c["value"]!.DeepClone()};

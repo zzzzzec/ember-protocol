@@ -67,8 +67,8 @@ public sealed partial class SurvivalService
     public bool BeforeFieldAccept(PmcData pmc, AcceptQuestRequestData request, MongoId session, ref ItemEventRouterResponse result, out FieldAcceptState? state)
     {
         state = null;
-        var exactTrial = Loan(request.QuestId)?["exactParts"] is not null;
-        if (!FieldGift(request.QuestId) && !exactTrial) return true;
+        var weaponTrial = Loan(request.QuestId)?["killCondition"] is not null;
+        if (!FieldGift(request.QuestId) && !weaponTrial) return true;
         Monitor.Enter(_fieldIssueGate);
         state = new FieldAcceptState { Gate = _fieldIssueGate, Quest = request.QuestId, Session = session };
         var active = pmc.Quests?.FirstOrDefault(q => q.QId == request.QuestId);
@@ -76,7 +76,7 @@ public sealed partial class SurvivalService
         if (active is not null && (int)active.Status is 2 or 3 or 4)
         { result = outputs.GetOutput(session); Trace("field.accept_replayed", session, new { quest = request.QuestId.ToString() }); return false; }
         var quest = db.GetQuests()[request.QuestId];
-        if (exactTrial)
+        if (weaponTrial)
         {
             var trader = quest.TraderId;
             if (!TraderAvailable(pmc, trader.ToString(), session))

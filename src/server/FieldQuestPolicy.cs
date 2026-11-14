@@ -25,13 +25,6 @@ public static class FieldQuestPolicy
         if (durability < Number(spec["minimumDurability"], 50)) return "枪械当前耐久不足50，请修复或换一支同型号枪。";
         var tpls = tree.Select(i => i["_tpl"]!.ToString()).ToHashSet();
         if (spec["requiredParts"]!.AsArray().Any(p => !tpls.Contains(p!.ToString()))) return "借条上要求的配件还没装齐。";
-        if (tree.Skip(1).Any(i => templates[i["_tpl"]!.ToString()]["_props"]?["ammoType"] is not null && Number(i["upd"]?["StackObjectsCount"], 1) > 0)) return "请先退出弹匣和膛内的弹药，再交还枪械。";
-        if (spec["exactParts"] is JsonArray exactParts)
-        {
-            var attached = tree.Skip(1).Select(i => i["_tpl"]!.ToString()).Order(StringComparer.Ordinal);
-            if (!attached.SequenceEqual(exactParts.Select(part => part!.ToString()).Order(StringComparer.Ordinal)))
-                return "请把枪恢复成试驾清单上的完整配置再交还。";
-        }
         bool IsA(string tpl, string category)
         {
             var visited = new HashSet<string>();
@@ -62,7 +55,15 @@ public static class FieldQuestPolicy
             foreach (var conflict in itemProps["ConflictingItems"]?.AsArray() ?? [])
                 if (tpls.Contains(conflict!.ToString())) return "枪械配件互相冲突，请检查装配。";
             foreach (var child in children)
-                if (!slots.Any(s => s["_name"]?.ToString() == child["slotId"]?.ToString())) return "枪械配件装在了不正确的槽位。";
+            {
+                var slotId = child["slotId"]?.ToString();
+                if (slots.Any(s => s["_name"]?.ToString() == slotId)) continue;
+                // Native chambers and magazine stacks are separate from attachment slots.
+                var ammo = templates[child["_tpl"]!.ToString()]["_props"]?["ammoType"] is not null;
+                if (ammo && (itemProps["Chambers"] is JsonArray chambers && chambers.Any(s => s?["_name"]?.ToString() == slotId)
+                          || itemProps["Cartridges"] is JsonArray cartridges && cartridges.Any(s => s?["_name"]?.ToString() == slotId))) continue;
+                return "枪械配件装在了不正确的槽位。";
+            }
         }
         var magazine = tree.FirstOrDefault(i => i["slotId"]?.ToString() == "mod_magazine");
         var capacity = magazine is null ? 0 : templates[magazine["_tpl"]!.ToString()]["_props"]?["Cartridges"]?.AsArray().Sum(c => Number(c?["_max_count"])) ?? 0;

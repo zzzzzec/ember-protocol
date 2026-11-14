@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -39,6 +40,18 @@ internal static class ClientDiagnostics
     private static int _writing;
     private static bool _started;
     private static float _nextHealTrace;
+    private sealed class RecentInfectedHit
+    {
+        internal float Time;
+        internal float NextRecovery;
+    }
+    private static readonly ConditionalWeakTable<BotMover, RecentInfectedHit> RecentHits = new();
+    private sealed class InfectedDeathPose
+    {
+        internal Vector3 Position;
+        internal bool UsedSpirit;
+    }
+    private static readonly ConditionalWeakTable<Player, InfectedDeathPose> DeathPoses = new();
     private static long _updateTicks,_updateMax,_updateCount;
     private static double _lastCaptureMs;
     internal static void MeasureUpdate(long ticks){_updateTicks+=ticks;_updateMax=Math.Max(_updateMax,ticks);_updateCount++;}
@@ -50,6 +63,35 @@ internal static class ClientDiagnostics
         h.Patch(AccessTools.Method(typeof(EFT.Interactive.PlaceItemTrigger),"TriggerExit"),postfix:new HarmonyMethod(typeof(ClientDiagnostics),nameof(PlacementExited)));
         h.Patch(AccessTools.Method(typeof(Player),"ApplyDamageInfo"),prefix:new HarmonyMethod(typeof(ClientDiagnostics),nameof(BeforeDamage)),postfix:new HarmonyMethod(typeof(ClientDiagnostics),nameof(AfterDamage)));
         h.Patch(AccessTools.Method(typeof(ActiveHealthController),"ChangeHealth"),prefix:new HarmonyMethod(typeof(ClientDiagnostics),nameof(HealthChange)));
+        var beforeCorrection = new HarmonyMethod(typeof(ClientDiagnostics), nameof(BeforeNavigationCorrection));
+        var afterCorrection = new HarmonyMethod(typeof(ClientDiagnostics), nameof(AfterNavigationCorrection));
+        h.Patch(AccessTools.DeclaredMethod(typeof(BotMover), "method_10", new[] { typeof(Vector3), typeof(bool) }), prefix: beforeCorrection, postfix: afterCorrection);
+        h.Patch(AccessTools.DeclaredMethod(typeof(BotMover), nameof(BotMover.Teleport), new[] { typeof(Vector3) }),
+            prefix: new HarmonyMethod(typeof(ClientDiagnostics), nameof(BeforeNavigationTeleport)), postfix: afterCorrection);
+        h.Patch(AccessTools.DeclaredMethod(typeof(Player), nameof(Player.OnDead), new[] { typeof(EDamageType) }),
+            prefix: new HarmonyMethod(typeof(ClientDiagnostics), nameof(CaptureInfectedDeathPose)));
+        h.Patch(AccessTools.DeclaredMethod(typeof(Player), nameof(Player.CreateCorpse), Type.EmptyTypes),
+            prefix: new HarmonyMethod(typeof(ClientDiagnostics), nameof(KeepInfectedCorpseAtDeathPose)));
+    }
+    private static void CaptureInfectedDeathPose(Player __instance, EDamageType __0)
+    {
+        if(__0!=EDamageType.Bullet || !Plugin.Infected(__instance))return;
+        var pose=DeathPoses.GetOrCreateValue(__instance);
+        pose.Position=__instance.Transform.position;
+        pose.UsedSpirit=__instance.Spirit?.IsActive==true;
+    }
+    private static void KeepInfectedCorpseAtDeathPose(Player __instance)
+    {
+        if(!DeathPoses.TryGetValue(__instance,out var pose))return;
+        DeathPoses.Remove(__instance);
+        var body=__instance.Transform.Original;
+        var destination=body.position;
+        if((destination-pose.Position).sqrMagnitude<=4)return;
+        // The native death handoff can expose a stale body transform before ragdoll initialization.
+        body.position=pose.Position;
+        Record("infected.death_position_preserved",new {target=Key(__instance.Profile.Id),frame=Time.frameCount,
+            spirit=pose.UsedSpirit,from=Position(destination),to=Position(pose.Position),
+            distance=Vector3.Distance(destination,pose.Position)});
     }
     private static readonly Dictionary<string,string[]> PlacementZones=new(StringComparer.OrdinalIgnoreCase)
     {
@@ -87,20 +129,71 @@ internal static class ClientDiagnostics
             Record("combat.healing",new {part=__0.ToString(),amount=__1,cause=__2.DamageType.ToString(),stack=new System.Diagnostics.StackTrace(1,false).ToString()});
         }catch { }
     }
-    private static void BeforeDamage(Player __instance,EBodyPart __1,out float __state)
+    private static void BeforeDamage(Player __instance,DamageInfoStruct __0,EBodyPart __1,out (float Health, Vector3? TargetPosition) __state)
     {
-        __state=-1;
-        try{__state=__instance.HealthController.GetBodyPartHealth(__1).Current;}catch { }
+        __state=(-1,null);
+        try
+        {
+            var hp=__instance.HealthController.GetBodyPartHealth(__1).Current;
+            __state=(hp,null);
+            if(__0.DamageType!=EDamageType.Bullet || !Plugin.Infected(__instance))return;
+            __state=(hp,__instance.Transform.position);
+            if(__instance.AIData?.BotOwner?.Mover is { } mover)
+                RecentHits.GetOrCreateValue(mover).Time=Time.time;
+        }
+        catch { }
     }
-    private static void AfterDamage(Player __instance,DamageInfoStruct __0,EBodyPart __1,float __3,float __state)
+    private static void AfterDamage(Player __instance,DamageInfoStruct __0,EBodyPart __1,float __3,(float Health, Vector3? TargetPosition) __state)
     {
         try
         {
             var owner=Get(__0.Player,"iPlayer") as Player;
-            Record("combat.damage",new {target=Key(__instance.Profile.Id),isPlayer=__instance.IsYourPlayer,role=__instance.Profile.Info.Settings?.Role.ToString(),part=__1.ToString(),cause=__0.DamageType.ToString(),incoming=__0.Damage,absorbed=__3,before=__state,after=__instance.HealthController.GetBodyPartHealth(__1).Current,weapon=__0.Weapon?.StringTemplateId,source=__0.SourceId,attacker=owner is null?null:Key(owner.Profile.Id),distance=owner is null?(float?)null:Vector3.Distance(owner.Transform.position,__instance.Transform.position)});
+            var target=__instance.Transform.position;
+            var attacker=owner?.Transform.position;
+            Record("combat.damage",new {target=Key(__instance.Profile.Id),isPlayer=__instance.IsYourPlayer,role=__instance.Profile.Info.Settings?.Role.ToString(),part=__1.ToString(),cause=__0.DamageType.ToString(),incoming=__0.Damage,absorbed=__3,before=__state.Health,after=__instance.HealthController.GetBodyPartHealth(__1).Current,weapon=__0.Weapon?.StringTemplateId,source=__0.SourceId,attacker=owner is null?null:Key(owner.Profile.Id),distance=attacker is { } point?(float?)Vector3.Distance(point,target):null,
+                movement=__state.TargetPosition is { } before?new {frame=Time.frameCount,from=Position(before),to=Position(target),attacker=attacker is { } origin?Position(origin):null}:null});
         }
         catch { }
     }
+    private static bool BeforeNavigationCorrection(BotMover __instance, Vector3 __0, ref EBotLinkResult __result, out Vector3? __state)
+    {
+        if(AllowNavigationCorrection(__instance,__0,out __state))return true;
+        __result=EBotLinkResult.fail;
+        return false;
+    }
+    private static bool BeforeNavigationTeleport(BotMover __instance, Vector3 __0, out Vector3? __state)
+        => AllowNavigationCorrection(__instance,__0,out __state);
+
+    private static bool AllowNavigationCorrection(BotMover mover, Vector3 destination, out Vector3? before)
+    {
+        before=null;
+        if(!RecentHits.TryGetValue(mover,out var hit) || Time.time-hit.Time>1)return true;
+        var owner=mover.BotOwner_0;
+        var current=owner.Position;
+        before=current;
+        if(!mover.LinkedToNavmeshInitially || owner.IsDead || (destination-current).sqrMagnitude<=4)return true;
+        // Reuse the current position rather than handing native recovery the old route corner again.
+        mover.PositionOnWayInner=current;
+        if(Time.time>=hit.NextRecovery)
+        {
+            hit.NextRecovery=Time.time+.5f;
+            owner.Brain?.BaseBrain?.CalcActionNextFrame();
+            Record("infected.navigation_correction_blocked",new {target=Key(owner.Profile.Id),frame=Time.frameCount,
+                distance=Vector3.Distance(current,destination),from=Position(current),destination=Position(destination)});
+        }
+        return false;
+    }
+    private static void AfterNavigationCorrection(BotMover __instance, MethodBase __originalMethod, Vector3? __state)
+    {
+        if(__state is not { } before) return;
+        var owner=__instance.BotOwner_0;
+        var after=owner.Position;
+        var distanceSquared=(after-before).sqrMagnitude;
+        if(distanceSquared<1) return;
+        Record("infected.navigation_correction",new {target=Key(owner.Profile.Id),frame=Time.frameCount,
+            method=__originalMethod.Name,distance=Mathf.Sqrt(distanceSquared),from=Position(before),to=Position(after)});
+    }
+    private static object Position(Vector3 point)=>new {point.x,point.y,point.z};
     internal static string Key(string raw)
     {
         using var sha=SHA256.Create();return BitConverter.ToString(sha.ComputeHash(Encoding.UTF8.GetBytes(raw))).Replace("-","").ToLowerInvariant().Substring(0,16);

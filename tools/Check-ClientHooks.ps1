@@ -15,6 +15,8 @@ $methods+=,@('LocationInfoPanel','Set',9)
 $fields+=@(@('LocationInfoPanel','location_0'),@('LocationInfoPanel','_description'))
 $fields+=,@('GClass429','BotOwner_0')
 $methods+=@(@('BotOwner','UpdateManual',0),@('BotOwner','FixedUpdate',0),@('BotOwner','method_9',3),@('AICoreAgentClass','Update',0))
+$methods+=@(@('BotMover','method_10',2),@('BotMover','Teleport',1))
+$methods+=@(@('Player','OnDead',1),@('Player','CreateCorpse',0))
 $fields+=,@('BotCreatorClass','Func_0')
 try {
  foreach($check in $methods){

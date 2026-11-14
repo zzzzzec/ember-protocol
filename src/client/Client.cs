@@ -18,7 +18,7 @@ using Codex.ZombieSurvival.Rules;
 
 namespace Codex.ZombieSurvival.Client;
 
-[BepInPlugin("codex.zombie-survival.client","SPT-Z Survival","2.21.6")]
+[BepInPlugin("codex.zombie-survival.client","SPT-Z Survival","2.21.15")]
 [BepInDependency("com.netVnum.pause", BepInDependency.DependencyFlags.SoftDependency)]
 public sealed class Plugin:BaseUnityPlugin
 {

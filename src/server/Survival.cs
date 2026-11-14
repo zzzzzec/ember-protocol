@@ -42,7 +42,7 @@ public sealed record Metadata : AbstractModMetadata
     public override string Name { get; init; } = "SPT-Z Survival";
     public override string Author { get; init; } = "Ember Protocol contributors";
     public override List<string> Contributors { get; init; } = [];
-    public override SemanticVersioning.Version Version { get; init; } = new("2.21.6");
+    public override SemanticVersioning.Version Version { get; init; } = new("2.21.15");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.13");
     public override List<string> Incompatibilities { get; init; } = ["com.vonbraunz.roamingzombies"];
     public override Dictionary<string, SemanticVersioning.Range> ModDependencies { get; init; } = [];

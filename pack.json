@@ -1,8 +1,8 @@
 {
   "name": "Ember Protocol",
   "displayName": "余烬协议",
-  "version": "2.21.6",
-  "contentVersion": "2.21.6-loot-value",
+  "version": "2.21.15",
+  "contentVersion": "2.21.15-factory-refill",
   "sptVersion": "4.0.13",
   "gameVersion": "0.16.9.40087",
   "defaultPort": 6969,

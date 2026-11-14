@@ -63,17 +63,17 @@ internal static class ThreatActors
     }
     internal static bool SimplifiedArmor(Player player)=>Players.TryGetValue(player,out var actor)&&actor.Simplified;
     internal static float Hearing(Player player, float radius) => Players.TryGetValue(player, out var a) ? radius * a.Unit.Hearing : radius;
-    internal static void LoseSight(Player player)
+    internal static bool InSightCone(Player player, float distance, float dot)
     {
-        if (Players.TryGetValue(player, out var actor))
-            actor.Acquisition.Observe("", false, Time.time, actor.Unit.ReactionSeconds);
+        var unit = Players.TryGetValue(player, out var actor) ? actor.Unit : null;
+        return AwarenessPolicy.InSightCone(distance, dot, unit?.SightRange ?? 25, unit?.SightAngle ?? 100);
     }
-    internal static bool Sight(Player player, Player target, float distance, float dot, bool valid)
+
+    internal static bool ObserveSight(Player player, Player target, float distance, bool clearView)
     {
-        if (!Players.TryGetValue(player, out var actor)) return valid;
-        if (!valid || (distance > 2.6f && (distance > actor.Unit.SightRange || dot < Mathf.Cos(actor.Unit.SightAngle * .5f * Mathf.Deg2Rad))))
-        { return actor.Acquisition.Observe("",false,Time.time,actor.Unit.ReactionSeconds); }
-        if (distance <= 2.6f) return true;
-        return actor.Acquisition.Observe(target.Profile.Id.ToString(),true,Time.time,actor.Unit.ReactionSeconds);
+        if (!Players.TryGetValue(player, out var actor)) return clearView;
+        var recognised = actor.Acquisition.Observe(clearView ? target.ProfileId : "", clearView,
+            Time.time, actor.Unit.ReactionSeconds);
+        return clearView && (distance <= AwarenessPolicy.ContactDistance || recognised);
     }
 }

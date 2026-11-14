@@ -39,5 +39,31 @@ public static class HearingPolicy
         return (radius + 12.5f * extra, .45f + .04f * extra);
     }
 
+    public static float CustomsWallResponse(float baseline, int pressure, float heightDifference)
+    {
+        if (Math.Abs(heightDifference) > 3) return baseline;
+        return pressure switch { 2 => Math.Max(.56f, baseline), >= 3 => Math.Max(.70f, baseline), _ => baseline };
+    }
+
+    public static bool ContinueCustomsBurst(float now, float expires, float displacementSquared)
+        => now < expires && displacementSquared <= 28 * 28;
+
+    public static int ApproachSector(float offsetX, float offsetZ)
+    {
+        var angle = Math.Atan2(offsetZ, offsetX) + Math.PI / 8;
+        return (int)Math.Floor(angle / (Math.PI / 4) + 8) % 8;
+    }
+
+    public static float CustomsResponseDelay(float distance, float firstShotRadius, int pressure, int sector, float variation)
+    {
+        // A single shot recruits only the inner group. Later shots open the
+        // surrounding approaches in stages, with one small offset per bearing.
+        var inner = Math.Min(32, firstShotRadius * .45f);
+        if (distance <= inner) return 0;
+        if (pressure < 2 || (pressure == 2 && distance > firstShotRadius * .65f)) return -1;
+        var outer = distance > firstShotRadius * .65f;
+        return (outer ? 3.8f : 1.1f) + sector * .28f + variation * .8f;
+    }
+
     public static float MemorySeconds(string kind) => kind == "gun" ? 18 : kind == "silencedGun" ? 8 : kind == "step" ? 5 : 24;
 }

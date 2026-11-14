@@ -61,13 +61,16 @@ public sealed class PatrolPlan
     public PatrolPlan(uint seed,RoamPoint home){_seed=seed;Home=Centre=home;}
     public bool NeedsIdlePlan(float now,bool informed)=>!informed&&(FollowingInformation||now>=NextIdlePlan);
     private int _cuePriority;
-    public bool Update(PatrolSettings settings,float now,RoamPoint current,RoamPoint? information,float until,IReadOnlyList<RoamPoint> neighbours,int cuePriority=0)
+    public bool Update(PatrolSettings settings,float now,RoamPoint current,RoamPoint? information,float until,
+        IReadOnlyList<RoamPoint> neighbours,int cuePriority=0,bool playerGunfire=false)
     {
         var informed=information.HasValue&&information.Value.Finite&&AwarenessPolicy.InformationAlive(now,until);
         if(informed)
         {
             var point=information!.Value;
-            var changed=!FollowingInformation||cuePriority>_cuePriority||Centre.FlatDistanceSquared(point)>16||Math.Abs(Centre.Y-point.Y)>3;
+            var changed = !FollowingInformation || cuePriority > _cuePriority ||
+                Centre.FlatDistanceSquared(point) > (playerGunfire ? 4 : 16) ||
+                Math.Abs(Centre.Y - point.Y) > (playerGunfire ? 1.5f : 3f);
             HoldSeconds=FollowingInformation?Math.Max(HoldSeconds,until-now+.25f):until-now+.25f;
             FollowingInformation=true;
             _cuePriority=cuePriority;

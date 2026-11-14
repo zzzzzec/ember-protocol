@@ -2,12 +2,15 @@ using System;
 namespace Codex.ZombieSurvival.Rules;
 public static class AwarenessPolicy
 {
-    public static bool SightConfirmed(bool nativeVisible, bool blocked, float distance, float facingDot)
+    public const float ContactDistance = 2.6f;
+
+    public static bool InSightCone(float distance, float facingDot, float maxDistance, float angle)
     {
-        if (float.IsNaN(distance) || float.IsInfinity(distance) || distance < 0 || blocked) return false;
-        if (distance <= 2.6f) return true;
-        return nativeVisible && facingDot >= .25f;
+        if (!float.IsFinite(distance) || distance < 0 || distance > maxDistance) return false;
+        return distance <= ContactDistance || facingDot >= Math.Cos(angle * Math.PI / 360);
     }
+    public static bool ChaseDestinationMoved(float distanceSquared) => distanceSquared >= 2.25f;
+
     public static int CuePriority(string reason) => reason switch
     {
         "sighting" or "contact" => 4,
@@ -16,10 +19,16 @@ public static class AwarenessPolicy
         _ => 1
     };
 
-    public static bool AcceptCue(string previous, string next, float age, bool preservePriority)
+    public static bool AcceptCue(string previous, string next, float age, bool preservePriority,
+        bool previousPlayerShot = false, bool nextPlayerShot = false)
     {
         var priority = CuePriority(previous);
-        return CuePriority(next) >= priority || (!preservePriority && (priority < 4 || age >= 1.25f));
+        var nextPriority = CuePriority(next);
+        // Direct sight and contact still own combat. This replaces the stored
+        // investigation point even when the previous cue was a sighting.
+        if (nextPlayerShot) return true;
+        if (previousPlayerShot && age < 2f && nextPriority < 4) return false;
+        return nextPriority >= priority || (!preservePriority && (priority < 4 || age >= 1.25f));
     }
 
     public static bool InformationAlive(float now, float until) => until > now && until > 0;

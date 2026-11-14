@@ -85,7 +85,7 @@ public sealed partial class SurvivalRaid
         }
         var previousMode=plan.FollowingInformation;
         if(plan.Update(Plugin.Patrol,now,current,informed?PatrolPosition(attention!.Point):(RoamPoint?)null,informed?attention!.Until:0,
-            neighbours,informed?AwarenessPolicy.CuePriority(attention!.Reason):0))
+            neighbours,informed?AwarenessPolicy.CuePriority(attention!.Reason):0,informed&&attention!.PlayerGunfire))
         {
             if(plan.FollowingInformation)_patrolInformationChanges++;else _idlePatrolPlans++;
             if(!plan.FollowingInformation||previousMode!=plan.FollowingInformation)
@@ -114,14 +114,20 @@ public sealed partial class SurvivalRaid
         {
             if(!_investigationRevisions.Remove(player))return;
         }
-        // Restart the native patrol decision once per change of destination.
-        // Its cover action owns both the route and the movement.
+        // Clear a running path to the previous point before asking the native
+        // patrol action for a new destination. Revisions only change on a real retarget.
+        var mover = owner.Mover;
+        var staleChase = informed && cue!.Reason == "sighting" && mover.TargetPoint is { } destination &&
+            AwarenessPolicy.ChaseDestinationMoved((destination - cue.Point).sqrMagnitude);
+        var cancelledPath = informed && (cue!.PlayerGunfire || staleChase) && mover.HasPathAndNoComplete;
+        if(cancelledPath)mover.Stop();
         owner.Memory.SetCoverPoints(null,"Ember investigate");
         owner.Memory.CheckIsInCover2();
         owner.Brain?.BaseBrain?.CalcActionNextFrame();
         ClientDiagnostics.Record("patrol.route",new{id=ClientDiagnostics.Key(player.Profile.Id),
             mode=plan.FollowingInformation?"investigate":"wander",reason=informed?cue!.Reason:"expired",
-            revision=plan.Revision,centre=new{x=plan.Centre.X,y=plan.Centre.Y,z=plan.Centre.Z}});
+            revision=plan.Revision,playerGunfire=informed&&cue!.PlayerGunfire,cancelledPath,
+            centre=new{x=plan.Centre.X,y=plan.Centre.Y,z=plan.Centre.Z}});
     }
     private void ForgetPatrol(Player player){_patrols.Remove(player);_patrolCoverRevisions.Remove(player);_investigationRevisions.Remove(player);}
     private void SamplePatrol()

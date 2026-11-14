@@ -26,6 +26,7 @@ public sealed class Plugin:BaseUnityPlugin
     internal static readonly HearingSettings Hearing=new();
     internal static readonly PatrolSettings Patrol=new();
     internal static bool CustomsIdleBudget;
+    internal static bool CustomsStaggeredResponse = true;
     internal static float LoudMin=>Hearing.LoudMin;
     internal static float LoudMax=>Hearing.LoudMax;
     internal static float QuietMax=>Hearing.QuietMax;
@@ -266,7 +267,7 @@ public sealed partial class SurvivalRaid:MonoBehaviour
     private readonly Dictionary<Player,float> _swing=new(),_open=new();
     private readonly Dictionary<Player,(float Due,int Attempts)> _activationRetries=new();
     private float _nextActivationRetry;
-    private sealed class Attention { public Vector3 Point; public float Until, ObservedAt; public string Reason="unknown"; }
+    private sealed class Attention { public Vector3 Point; public float Until, ObservedAt; public string Reason="unknown"; public bool PlayerGunfire; }
     private sealed class Noise { public Vector3 Point; public float Radius,Duration,Power; public string Kind="",Source=""; }
     private readonly Dictionary<Player,Attention> _attention=new();
     private readonly ConcurrentQueue<Noise> _noises=new();
@@ -276,7 +277,10 @@ public sealed partial class SurvivalRaid:MonoBehaviour
     private int _spawned,_doorOpens,_swings;
     private float _nextReport;
     private int _loudEvents,_quietEvents,_stepEvents,_blastEvents,_loudAlerts,_quietAlerts;
-    private Vector3 _lastCustomsGunfire;
+    private Vector3 _customsBurstOrigin;
+    private readonly Dictionary<Player,(float Due, Vector3 Point, int Sector)> _customsResponses=new();
+    private readonly List<Player> _finishedCustomsResponses=new();
+    private int _customsResponseCount, _customsApproachMask;
     private float _customsGunfireUntil;
     private int _customsGunfireShots;
     private string _lastNoise="none";
@@ -289,7 +293,7 @@ public sealed partial class SurvivalRaid:MonoBehaviour
         var map=_world.MainPlayer?.Location??_world.LocationId;
         GroundZero=HearingPolicy.IsGroundZero(map);
         Customs=string.Equals(map,"bigmap",StringComparison.OrdinalIgnoreCase);
-        _diagnosticCombat=()=>new {spawned=_spawned,alive=_infected.Count(p=>p!=null&&p.HealthController?.IsAlive==true),doorOpens=_doorOpens,swings=_swings,loudEvents=_loudEvents,quietEvents=_quietEvents,stepEvents=_stepEvents,blastEvents=_blastEvents,loudAlerts=_loudAlerts,quietAlerts=_quietAlerts,lastNoise=_lastNoise,lastRange=_lastRange,nativeActionError=_reportedError,nativeHearingBlocked=_nativeHearingBlocks,nativeCallsBlocked=_nativeCallBlocks,nativeEnemies=_nativeEnemies,visibleEnemies=_visibleEnemies,distantNativeEnemies=_distantEnemies,investigating=_investigating,awareness=AwarenessDiagnostic(),idleBudget=IdleBudgetDiagnostic(),waves=FiniteWaves.Diagnostic()};
+        _diagnosticCombat=()=>new {spawned=_spawned,alive=_infected.Count(p=>p!=null&&p.HealthController?.IsAlive==true),doorOpens=_doorOpens,swings=_swings,loudEvents=_loudEvents,quietEvents=_quietEvents,stepEvents=_stepEvents,blastEvents=_blastEvents,loudAlerts=_loudAlerts,quietAlerts=_quietAlerts,lastNoise=_lastNoise,lastRange=_lastRange,nativeActionError=_reportedError,nativeHearingBlocked=_nativeHearingBlocks,nativeCallsBlocked=_nativeCallBlocks,nativeEnemies=_nativeEnemies,visibleEnemies=_visibleEnemies,distantNativeEnemies=_distantEnemies,investigating=_investigating,awareness=AwarenessDiagnostic(),idleBudget=IdleBudgetDiagnostic(),waves=FiniteWaves.Diagnostic(),customsResponse=Customs ? new { staggered=Plugin.CustomsStaggeredResponse, pending=_customsResponses.Count, released=_customsResponseCount, approaches=_customsApproachMask } : null};
         try{ClientDiagnostics.BeginRaid(_world);}catch(Exception e){ClientDiagnostics.Record("raid.begin_capture_error",new {error=e.ToString()});}
         CombatSkillPractice.Begin(_world);
         _doors=FindObjectsOfType<Door>();
@@ -340,19 +344,26 @@ public sealed partial class SurvivalRaid:MonoBehaviour
     {
         for(var count=0;count<128&&_noises.TryDequeue(out var noise);count++)
         {
+            var playerGunfire = noise.Source == "player" && (noise.Kind is "gun" or "silencedGun");
             var radius=noise.Radius;
             var minimumWallScale=0f;
             var pressure=0;
             if(Customs&&noise.Kind=="gun"&&noise.Source=="player")
             {
-                var sameArea=Time.time<_customsGunfireUntil&&(noise.Point-_lastCustomsGunfire).sqrMagnitude<=28*28;
+                var sameArea=HearingPolicy.ContinueCustomsBurst(Time.time,_customsGunfireUntil,(noise.Point-_customsBurstOrigin).sqrMagnitude);
+                if(!sameArea)
+                {
+                    _customsBurstOrigin=noise.Point;
+                    _customsResponses.Clear();
+                }
                 pressure=_customsGunfireShots=sameArea?Mathf.Min(_customsGunfireShots+1,3):1;
-                _lastCustomsGunfire=noise.Point;
+                if(!Plugin.CustomsStaggeredResponse)_customsBurstOrigin=noise.Point;
                 _customsGunfireUntil=Time.time+8;
                 (radius,minimumWallScale)=HearingPolicy.CustomsGunfire(radius,pressure);
             }
             _lastNoise=noise.Kind;_lastRange=radius;
             if(noise.Kind=="gun")_loudEvents++;else if(noise.Kind=="silencedGun")_quietEvents++;else if(noise.Kind=="step")_stepEvents++;else _blastEvents++;
+            var staggered=Plugin.CustomsStaggeredResponse&&pressure>0;
             var heard=0;var alerted=0;var newlyAlerted=0;var attenuated=0;var farthest=0f;
             foreach(var z in _infected)
             {
@@ -360,13 +371,35 @@ public sealed partial class SurvivalRaid:MonoBehaviour
                 var pos=z.Transform.position;var distance=Vector3.Distance(pos,noise.Point);
                 var audible=ThreatActors.Hearing(z,radius);
                 if(distance>audible)continue;
-                var effective=BoundedHearing.Effective(pos,noise.Point,audible,minimumWallScale);
+                var wallScale=staggered
+                    ? HearingPolicy.CustomsWallResponse(minimumWallScale,pressure,pos.y-noise.Point.y)
+                    : minimumWallScale;
+                var effective=BoundedHearing.Effective(pos,noise.Point,audible,wallScale);
                 if(distance>effective){attenuated++;continue;}
                 heard++;
                 var active=_attention.TryGetValue(z,out var old)&&old.Until>Time.time;
+                if(staggered)
+                {
+                    if(z.AIData?.BotOwner?.Memory?.GoalEnemy?.IsVisible==true)continue;
+                    if(!active || old!.Reason!="gun" || !old.PlayerGunfire)
+                    {
+                        var offset=pos-_customsBurstOrigin;
+                        var sector=HearingPolicy.ApproachSector(offset.x,offset.z);
+                        var delay=HearingPolicy.CustomsResponseDelay(distance,noise.Radius,pressure,sector,(z.Id&15)/15f);
+                        if(delay<0)continue;
+                        if(delay>0)
+                        {
+                            var due=Time.time+delay;
+                            if(_customsResponses.TryGetValue(z,out var queued))due=Mathf.Min(due,queued.Due);
+                            _customsResponses[z]=(due,noise.Point,sector);
+                            continue;
+                        }
+                    }
+                    _customsResponses.Remove(z);
+                }
                 if(noise.Kind=="step"&&active&&old!.Until>Time.time+5)continue;
                 var reason=noise.Source=="infected"?"infected_"+noise.Kind:noise.Kind;
-                if(!InvestigateAt(z,noise.Point,noise.Duration,reason))continue;
+                if(!InvestigateAt(z,noise.Point,noise.Duration,reason,playerGunfire))continue;
                 if(!active)newlyAlerted++;
                 alerted++;farthest=Mathf.Max(farthest,distance);
             }
@@ -377,6 +410,29 @@ public sealed partial class SurvivalRaid:MonoBehaviour
                 ClientDiagnostics.Record("hearing.event",new{kind=noise.Kind,source=noise.Source,power=noise.Power,radius,pressure,heard,alerted,newlyAlerted,refreshed=alerted-newlyAlerted,blocked=attenuated,farthestAlert=farthest,activeInfected=_infected.Count(z=>z!=null&&z.HealthController?.IsAlive==true),groundZero=GroundZero});
             }
         }
+    }
+    private void ReleaseCustomsResponses()
+    {
+        if(_customsResponses.Count==0)return;
+        if(!Plugin.CustomsStaggeredResponse || Time.time>=_customsGunfireUntil)
+        {
+            _customsResponses.Clear();
+            return;
+        }
+        foreach(var entry in _customsResponses)
+        {
+            var (due, point, sector)=entry.Value;
+            if(Time.time<due)continue;
+            _finishedCustomsResponses.Add(entry.Key);
+            var actor=entry.Key;
+            if(actor==null || actor.HealthController?.IsAlive!=true || actor.AIData?.BotOwner?.Memory?.GoalEnemy?.IsVisible==true)continue;
+            if(!InvestigateAt(actor,point,HearingPolicy.MemorySeconds("gun"),"gun",playerGunfire:true))continue;
+            _customsResponseCount++;
+            _customsApproachMask|=1<<sector;
+            ClientDiagnostics.Record("awareness.customs_response",new { sector, distance=Vector3.Distance(actor.Transform.position,point), id=ClientDiagnostics.Key(actor.Profile.Id) });
+        }
+        foreach(var actor in _finishedCustomsResponses)_customsResponses.Remove(actor);
+        _finishedCustomsResponses.Clear();
     }
     internal void Added(IPlayer p)
     {
@@ -443,6 +499,7 @@ public sealed partial class SurvivalRaid:MonoBehaviour
         if(Time.time<_nextTick)return;_nextTick=Time.time+.20f;
         FiniteWaves.Tick();
         HearNoises();
+        ReleaseCustomsResponses();
         SamplePatrol();
         if(Time.time>=_nextReport)
         {
@@ -455,32 +512,38 @@ public sealed partial class SurvivalRaid:MonoBehaviour
         var humans=_world.AllAlivePlayersList.OfType<Player>().Where(p=>!p.IsAI&&p.HealthController?.IsAlive==true).ToArray();
         if(humans.Length==0)return;
         _nativeEnemies=0;_visibleEnemies=0;_distantEnemies=0;_investigating=0;
-        _near25=0;_near50=0;_near100=0;_sameFloorNear25=0;
+        _near25=0;_near50=0;_near100=0;_sameFloorNear25=0;_localResponders=0;_localChasers=0;
         foreach(var z in _infected)
         {
             try
             {
-                var pos=z.Transform.position;var target=humans.OrderBy(h=>(h.Transform.position-pos).sqrMagnitude).First();
-                var distance=Vector3.Distance(pos,target.Transform.position);var owner=z.AIData?.BotOwner;if(owner==null)continue;
+                var pos=z.Transform.position;
+                var target=humans[0];
+                var distanceSquared=(pos-target.Transform.position).sqrMagnitude;
+                for(var i=1;i<humans.Length;i++)
+                {
+                    var candidateDistance=(pos-humans[i].Transform.position).sqrMagnitude;
+                    if(candidateDistance>=distanceSquared)continue;
+                    target=humans[i];distanceSquared=candidateDistance;
+                }
+                var distance=Mathf.Sqrt(distanceSquared);var owner=z.AIData?.BotOwner;if(owner?.Memory==null)continue;
                 if(distance<=25){_near25++;if(Mathf.Abs(pos.y-target.Transform.position.y)<=3)_sameFloorNear25++;}
                 if(distance<=50)_near50++;if(distance<=100)_near100++;
                 if(WaitForInfectedActivation(z,owner)||PauseIdleActor(z,owner,humans,distance))continue;
-                var memory=owner.Memory;var enemy=memory?.GoalEnemy;
-                var visible=enemy?.IsVisible==true&&enemy.Person is Player seen&&!seen.IsAI&&seen.HealthController?.IsAlive==true?seen:null;
-                if(enemy!=null){_nativeEnemies++;if(distance>Plugin.LoudMax*(GroundZero?Plugin.Hearing.GroundZeroScale:1))_distantEnemies++;}
-                if(visible!=null&&!InfectedAwareness.DirectSight(owner,visible,true))visible=null;
-                if(visible!=null)_visibleEnemies++;
-                if(memory!=null&&enemy?.Person is Player known&&!known.IsAI&&visible==null)
+                var memory=owner.Memory;
+                var contact=UpdateVisualGoal(z,owner,target,distance);
+                if(memory.GoalEnemy!=null){_nativeEnemies++;if(distance>Plugin.LoudMax*(GroundZero?Plugin.Hearing.GroundZeroScale:1))_distantEnemies++;}
+                if(_attention.TryGetValue(z,out var currentAttention)&&currentAttention.Until>Time.time)
                 {
-                    ThreatActors.LoseSight(z);
-                    memory.GoalEnemy=null;memory.LastEnemy=null;_unknownGoalBlocks++;
-                    _lostSight++;
+                    _investigating++;
+                    if(distance<=25&&Mathf.Abs(pos.y-target.Transform.position.y)<=3 &&
+                       (currentAttention.PlayerGunfire || currentAttention.Reason is "sighting" or "local_sighting" or "explosion"))
+                    {
+                        _localResponders++;
+                        if(memory.GoalEnemy?.IsVisible==true)_localChasers++;
+                        _peakLocalResponders=Mathf.Max(_peakLocalResponders,_localResponders);
+                    }
                 }
-
-                var contact=distance<=2.6f&&!Occluded(pos+Vector3.up*1.4f,target.Transform.position+Vector3.up*1.1f);
-                if(visible!=null)ShareSighting(z,visible.Transform.position);
-                else if(contact)InvestigateAt(z,target.Transform.position,8,"contact");
-                if(_attention.TryGetValue(z,out var currentAttention)&&currentAttention.Until>Time.time)_investigating++;
                 RefreshInvestigationRoute(z,owner,contact||memory?.GoalEnemy!=null);
                 if(!_open.TryGetValue(z,out var nextDoor)||Time.time>=nextDoor)
                 {

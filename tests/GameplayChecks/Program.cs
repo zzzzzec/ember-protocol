@@ -68,6 +68,13 @@ Check(HearingPolicy.EffectiveRadius(settings, gun, true, 5) < HearingPolicy.Effe
 Check(HearingPolicy.Radius(settings, "step", 100, true, false) <= 6, "movement is a close-range stimulus");
 Check(Gun(float.NaN) == 0 && Gun(float.PositiveInfinity) == 0 && Gun(-1) == 0, "invalid native sound power is ignored");
 Check(HearingPolicy.MemorySeconds("gun") == 18 && HearingPolicy.MemorySeconds("silencedGun") == 8, "sound investigation has bounded memory");
+Check(HearingPolicy.ContinueCustomsBurst(7.9f,8,784)&&!HearingPolicy.ContinueCustomsBurst(8,8,784)&&!HearingPolicy.ContinueCustomsBurst(1,8,785), "Customs pressure is limited to one local burst");
+Check(HearingPolicy.ApproachSector(0,1)==2&&HearingPolicy.ApproachSector(-1,0)==4&&HearingPolicy.ApproachSector(0,-1)==6, "separate approach bearings get staggered");
+Check(HearingPolicy.CustomsResponseDelay(24,100,1,2,.5f)==0&&HearingPolicy.CustomsResponseDelay(50,100,1,2,.5f)<0, "only nearby infected join on the first unsuppressed shot");
+Check(HearingPolicy.CustomsResponseDelay(50,100,2,0,0)>0&&HearingPolicy.CustomsResponseDelay(78,100,2,0,0)<0&&HearingPolicy.CustomsResponseDelay(78,100,3,0,0)>HearingPolicy.CustomsResponseDelay(50,100,2,0,1), "ongoing gunfire releases middle and outer approaches in order");
+Check(HearingPolicy.CustomsWallResponse(.45f,1,0)==.45f &&
+    HearingPolicy.CustomsWallResponse(.49f,2,1)==.56f && HearingPolicy.CustomsWallResponse(.53f,3,2)==.70f &&
+    HearingPolicy.CustomsWallResponse(.53f,3,4)==.53f, "sustained Customs gunfire extends through walls on the same floor only");
 var firstShot=HearingPolicy.CustomsGunfire(100,1);
 var sustained=HearingPolicy.CustomsGunfire(100,3);
 Check(Math.Abs(HearingPolicy.EffectiveRadius(new HearingSettings(),firstShot.Radius,true,0,firstShot.MinimumWallScale)-45)<.001
@@ -98,16 +105,31 @@ foreach (var (id, limit) in medical)
     var item = traderData["assort"]!["items"]!.AsArray().Single(x => x!["_id"]!.ToString() == id)!;
     Check((int)o["level"]! == 1 && o["unlock"] is null && (int)o["limit"]! == limit && (int)o["stock"]! == limit && (int)item["upd"]!["BuyRestrictionMax"]! == limit && (int)item["upd"]!["StackObjectsCount"]! == limit, "level-one medical quota agrees in manifest and real assort: " + id);
 }
-Check(!AwarenessPolicy.SightConfirmed(false,false,20,1), "standing still in an enemy list is not direct visual evidence");
-Check(!AwarenessPolicy.SightConfirmed(true,true,10,1), "native visible flag cannot see through a wall");
-Check(!AwarenessPolicy.SightConfirmed(true,false,20,-1), "native shared target behind the infected is not a sighting");
-Check(AwarenessPolicy.SightConfirmed(true,false,20,.8f), "own clear forward vision permits pursuit");
-Check(AwarenessPolicy.SightConfirmed(false,false,2,0), "unobstructed physical contact still permits melee");
+Check(AwarenessPolicy.InSightCone(20,1,25,100), "a stationary player in clear forward view is eligible without a native enemy flag");
+Check(!AwarenessPolicy.InSightCone(26,1,25,100), "an infected cannot see past its archetype's range");
+Check(!AwarenessPolicy.InSightCone(20,-1,25,100), "a player behind an infected is outside its view");
+Check(!AwarenessPolicy.InSightCone(20,.55f,25,100)&&AwarenessPolicy.InSightCone(20,.55f,35,120), "archetype angles affect peripheral detection");
+Check(AwarenessPolicy.InSightCone(2,-1,25,100), "contact inside melee range can use the obstruction check from any angle");
+Check(!AwarenessPolicy.ChaseDestinationMoved(2.24f)&&AwarenessPolicy.ChaseDestinationMoved(2.25f), "a visible chase repaths once the player is at least 1.5 metres from its current route destination");
 Check(!AwarenessPolicy.InformationAlive(100,99) && AwarenessPolicy.InformationAlive(100,101), "old information expires instead of following a live target");
 Check(!AwarenessPolicy.AcceptCue("sighting","gun",.4f,false) &&
       AwarenessPolicy.AcceptCue("sighting","gun",1.25f,false) &&
       !AwarenessPolicy.AcceptCue("sighting","gun",10,true), "recent sightings resist weaker cues while Customs retains its existing priority");
 Check(AwarenessPolicy.AcceptCue("gun","sighting",0,false), "a directly seen player takes priority over a sound");
+Check(AwarenessPolicy.AcceptCue("sighting", "gun", .2f, true, nextPlayerShot: true),
+    "a newly heard player shot supersedes a stored Customs sighting");
+Check(AwarenessPolicy.AcceptCue("explosion", "silencedGun", .2f, true, nextPlayerShot: true) &&
+      AwarenessPolicy.AcceptCue("gun", "silencedGun", .2f, true, previousPlayerShot: true, nextPlayerShot: true),
+    "the latest audible player shot wins over a louder previous location");
+Check(!AwarenessPolicy.AcceptCue("gun", "step", 1.9f, false, previousPlayerShot: true) &&
+      !AwarenessPolicy.AcceptCue("gun", "local_sighting", 1.9f, false, previousPlayerShot: true) &&
+      !AwarenessPolicy.AcceptCue("gun", "explosion", 1.9f, false, previousPlayerShot: true),
+    "other noise cannot divert an infected from recent player gunfire");
+Check(AwarenessPolicy.AcceptCue("gun", "sighting", 0, true, previousPlayerShot: true) &&
+      AwarenessPolicy.AcceptCue("gun", "contact", 0, true, previousPlayerShot: true),
+    "current sight and contact still take over from player gunfire");
+Check(AwarenessPolicy.AcceptCue("gun", "local_sighting", 2f, false, previousPlayerShot: true),
+    "gunfire priority fades after shooting stops");
 {
     var turn = new InfectedTurnBudget();
     Check(turn.Limit(1, 0, 1f/60, false) == 1 && turn.Limit(-90, 0, 1f/60, false) == -1 &&
@@ -275,6 +297,19 @@ foreach(var id in storyRules["quests"]!.AsArray())
     revision=sample.Revision;
     for(var n=1;n<=60;n++)sample.Update(patrolSettings,3+n*.1f,home,new RoamPoint(cue.X+n*.1f,cue.Y,cue.Z),20,occupied,4);
     Check(sample.Revision>revision,"successive small cue movements eventually invalidate the stale native point");
+    var shooter = new PatrolPlan(17, home);
+    shooter.Update(patrolSettings, 1, home, cue, 20, empty, 4);
+    var latestShot = new RoamPoint(cue.X + 2.5f, cue.Y, cue.Z);
+    Check(shooter.Update(patrolSettings, 1.2f, home, latestShot, 19, empty, 3, playerGunfire: true) &&
+          shooter.Centre.FlatDistanceSquared(latestShot) == 0,
+        "a newly heard shot inside the old four-metre threshold invalidates the previous sighting route");
+    revision = shooter.Revision;
+    for (var n = 0; n < 10; n++)
+        shooter.Update(patrolSettings, 1.4f + n * .2f, home, latestShot, 20, empty, 3, playerGunfire: true);
+    Check(shooter.Revision == revision, "repeated shots from the same spot do not restart the path");
+    var nextFloor = new RoamPoint(latestShot.X, latestShot.Y + 2, latestShot.Z);
+    Check(shooter.Update(patrolSettings, 3.5f, home, nextFloor, 20, empty, 3, playerGunfire: true) &&
+          shooter.Centre.Y == nextFloor.Y, "a newly audible shot on a different landing invalidates the old path");
     foreach(var plan in plans)
     {
         var arrived=new RoamPoint(98,2,69);plan.Update(patrolSettings,21,arrived,cue,20,empty);

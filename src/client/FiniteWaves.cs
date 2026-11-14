@@ -98,7 +98,9 @@ internal static class FiniteWaves
         if(Current is not null)Close(Current);
         var map=Map();var configured=(int?)Settings["aliveCaps"]?[map]??WaveLimits.DefaultCap(map);
         // The location's BotMax is the server's copy of the same authored cap.
-        var cap=spawner.MaxBots>0?Math.Min(configured,spawner.MaxBots):configured;
+        var cap=spawner.MaxBots>0
+            ? WaveLimits.IsFactory(map)?Math.Clamp(spawner.MaxBots,1,64):Math.Min(configured,spawner.MaxBots)
+            : configured;
         var steady=(string?)Settings["mode"]=="steady";
         var seed=unchecked((uint)DateTime.UtcNow.Ticks);
         var group=Settings["reinforcementGroups"]?[map];

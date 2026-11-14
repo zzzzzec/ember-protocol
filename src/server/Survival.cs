@@ -9,6 +9,7 @@ using System.Text.Json.Nodes;
 using HarmonyLib;
 using Microsoft.Extensions.DependencyInjection;
 using SPTarkov.DI.Annotations;
+using SPTarkov.Server.Core.Callbacks;
 using SPTarkov.Server.Core.DI;
 using SPTarkov.Server.Core.Extensions;
 using SPTarkov.Server.Core.Controllers;
@@ -265,9 +266,9 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         ConfigureRoubleBuying();
         InstallPatches();
         if(FenceEnabled)fenceService.GenerateFenceAssorts();
-        var report=new JsonObject { ["version"]=Config["version"]?.DeepClone(),["traderId"]=TraderId,["quests"]=own.Count,["customRecipes"]=Read("data/recipes.json").AsArray().Count,["customRecipeTimeMultiplier"]=customRecipeTimeMultiplier,["fixedRaidPopulation"]=true,["finiteWaves"]=(bool?)Config["waves"]?["enabled"]==true,["infiniteReinforcements"]=false,["maps"]=Maps.DeepClone(),["mapLootMultipliers"]=mapLoot,["infectedCorpseSearchable"]=false,["campaign"]=_campaign.DeepClone(),["generatedUtc"]=DateTimeOffset.UtcNow.ToString("O")};
+        var report=new JsonObject { ["version"]=Config["version"]?.DeepClone(),["traderId"]=TraderId,["quests"]=own.Count,["customRecipes"]=Read("data/recipes.json").AsArray().Count,["customRecipeTimeMultiplier"]=customRecipeTimeMultiplier,["fixedRaidPopulation"]=true,["factoryPopulationVariesBetweenRaids"]=true,["finiteWaves"]=(bool?)Config["waves"]?["enabled"]==true,["infiniteReinforcements"]=false,["maps"]=Maps.DeepClone(),["mapLootMultipliers"]=mapLoot,["infectedCorpseSearchable"]=false,["campaign"]=_campaign.DeepClone(),["generatedUtc"]=DateTimeOffset.UtcNow.ToString("O")};
         File.WriteAllText(Path.Combine(Folder,"startup-report.json"),report.ToJsonString(new(){WriteIndented=true}));
-        log.Success($"[SPT-Z] {own.Count} survival contracts; Ember Protocol campaign; six map tiers; fixed totals with finite waves; infected corpses sealed.",null);
+        log.Success($"[SPT-Z] {own.Count} survival contracts; Ember Protocol campaign; six map tiers; finite waves with per-raid budgets; infected corpses sealed.",null);
     }
 
     private double? ReadSvmRecipeTimeMultiplier()
@@ -298,7 +299,14 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         }
     }
 
-    public int WaveCap(string map,int total)=>(bool?)Config["waves"]?["enabled"]==true?Codex.ZombieSurvival.Rules.WaveLimits.Cap(map,(int?)Config["waves"]?["aliveCaps"]?[map]??0,total):total;
+    public int WaveCap(string map,int total)
+    {
+        if((bool?)Config["waves"]?["enabled"]!=true)return total;
+        var cap=Codex.ZombieSurvival.Rules.WaveLimits.Cap(map,(int?)Config["waves"]?["aliveCaps"]?[map]??0,total);
+        return Codex.ZombieSurvival.Rules.WaveLimits.IsFactory(map)
+            ? Codex.ZombieSurvival.Rules.WaveLimits.FactoryActiveCap(cap,total,(int)Maps[map]!["total"]!)
+            : cap;
+    }
 
     public LocationBase ConfigureLocation(LocationBase original,string map,MongoId? session=null)
     {
@@ -553,6 +561,7 @@ public sealed partial class SurvivalService(JsonUtil json, DatabaseService db, C
         Patch(h,typeof(RagfairController),"AddPlayerOffer",prefix:nameof(Patches.Flea));
         Patch(h,typeof(RagfairController),"GetOffers",prefix:nameof(Patches.FleaSearch));
         Patch(h,typeof(LocationLifecycleService),"StartLocalRaid",nameof(Patches.Start),nameof(Patches.Started));
+        Patch(h,typeof(BotCallbacks),"GetBotCap",prefix:nameof(Patches.RaidBotCap));
         Patch(h,typeof(LocationLifecycleService),"EndLocalRaid",nameof(Patches.EndReceived),nameof(Patches.EndSaved));
         h.Patch(AccessTools.Method(typeof(ItemEventRouter),"HandleEvents"),prefix:new HarmonyMethod(typeof(Patches),nameof(Patches.ItemsRequest)),postfix:new HarmonyMethod(typeof(Patches),nameof(Patches.ItemsResponse)),finalizer:new HarmonyMethod(typeof(Patches),nameof(Patches.ItemsFinished)));
         Patch(h,typeof(BotController),"Generate",nameof(Patches.BotRequest),nameof(Patches.Bots));
@@ -616,6 +625,13 @@ public static class Patches
     public static bool Flea(MongoId sessionID,ref ItemEventRouterResponse __result){__result=S.Denied(sessionID);return false;}
     public static bool FleaSearch(ref GetOffersResult __result){__result=new GetOffersResult{Offers=[],OffersCount=0,Categories=[]};return false;}
     public static void Start(MongoId sessionId,StartLocalRaidRequestData request)=>S.Start(sessionId,request);
+    public static bool RaidBotCap(string __0,MongoId __2,ref ValueTask<string> __result)
+    {
+        var map=__0[(__0.LastIndexOf('/')+1)..].ToLowerInvariant();
+        if(S.FactoryRaidCap(__2,map) is not { } cap)return true;
+        __result=ValueTask.FromResult(cap.ToString(System.Globalization.CultureInfo.InvariantCulture));
+        return false;
+    }
     public static void Started(MongoId sessionId,StartLocalRaidRequestData request,ref StartLocalRaidResponseData __result)
     {
         var map=request.Location.ToLowerInvariant();

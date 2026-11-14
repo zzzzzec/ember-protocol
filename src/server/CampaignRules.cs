@@ -1,5 +1,7 @@
 using System.Collections.Concurrent;
+using System.Security.Cryptography;
 using System.Text.Json.Nodes;
+using Codex.ZombieSurvival.Rules;
 using SPTarkov.Server.Core.Models.Common;
 
 namespace Codex.ZombieSurvival;
@@ -22,7 +24,13 @@ public sealed partial class SurvivalService
         var completed=Completed(session);
         var crisis=_campaign["events"]!.AsArray().FirstOrDefault(e=>e?["map"]?.ToString()==map&&completed.Contains(e["starts"]!.ToString())&&!completed.Contains(e["ends"]!.ToString()));
         if(crisis is null)return spec;
-        var total=(int)crisis["total"]!;var shooters=(int)crisis["shooters"]!;
+        ResizePopulation(spec,(int)crisis["total"]!,(int)crisis["shooters"]!);
+        spec["chest"]=(int)Math.Round((int)spec["chest"]!*(double)crisis["chestMultiplier"]!);
+        spec["crisis"]=crisis["id"]!.ToString();spec["crisisName"]=crisis["name"]!.ToString();
+        return spec;
+    }
+    private static void ResizePopulation(JsonObject spec,int total,int shooters)
+    {
         var normal=spec["spawns"]!.AsArray().First(x=>x?["BossDifficult"]?.ToString()=="normal")!;
         var hard=spec["spawns"]!.AsArray().First(x=>x?["BossDifficult"]?.ToString()=="hard")!;
         var baselineSpawns=spec["spawns"]!.AsArray();var spawns=new JsonArray();
@@ -44,18 +52,31 @@ public sealed partial class SurvivalService
             foreach(var row in spawns){var zone=row!["BossZone"]!.ToString();actual[zone]=((int?)actual[zone]??0)+1;}
             density["allocation"]=actual;
         }
-        spec["chest"]=(int)Math.Round((int)spec["chest"]!*(double)crisis["chestMultiplier"]!);
-        spec["crisis"]=crisis["id"]!.ToString();spec["crisisName"]=crisis["name"]!.ToString();
-        return spec;
     }
     private void CaptureRaidSpec(MongoId session,string map)
     {
         var spec=BuildCampaignMap(session,map)??throw new InvalidOperationException("地图未开放。");
+        if(WaveLimits.IsFactory(map))
+        {
+            var abundance=AbundanceFor(session)["factory"].Total;
+            var roll=RandomNumberGenerator.GetInt32(10001)/10000m;
+            var multiplier=WaveLimits.FactoryPopulationMultiplier(abundance,roll);
+            var total=WaveLimits.FactoryPopulationCount((int)spec["total"]!,multiplier);
+            var shooters=WaveLimits.FactoryPopulationCount((int)spec["shooters"]!,multiplier);
+            if(total!=(int)spec["total"]! || shooters!=(int)spec["shooters"]!)
+                ResizePopulation(spec,total,shooters);
+            spec["populationMultiplier"]=multiplier;
+        }
         _raidSpecs[session.ToString()]=spec;
         RaidTraceStart(session,map);
         StartThreatPlan(session,map,spec);
-        log.Info($"[余烬协议] {spec["name"]}: {(spec["crisisName"]?.ToString()??"常态")}，总量 {spec["total"]} 名感染者，{spec["shooters"]} 名持枪；分批出场，同时上限 {WaveCap(map,(int)spec["total"]!)}。",null);
+        var multiplierLabel=spec["populationMultiplier"] is { } value?$"，本局数量倍率 ×{(decimal)value:0.000}":"";
+        log.Info($"[余烬协议] {spec["name"]}: {(spec["crisisName"]?.ToString()??"常态")}，总量 {spec["total"]} 名感染者，{spec["shooters"]} 名持枪，同时上限 {WaveCap(map,(int)spec["total"]!)}{multiplierLabel}。",null);
     }
+    internal int? FactoryRaidCap(MongoId session,string map)
+        => WaveLimits.IsFactory(map) && _sessionMaps.GetValueOrDefault(session.ToString())==map &&
+            _raidSpecs.TryGetValue(session.ToString(),out var spec) && spec["populationMultiplier"] is not null
+            ? WaveCap(map,(int)spec["total"]!) : null;
     public JsonObject? MapSpecFor(MongoId session,string map)
     {
         if(_sessionMaps.GetValueOrDefault(session.ToString())==map&&_raidSpecs.TryGetValue(session.ToString(),out var spec))return spec;

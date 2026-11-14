@@ -164,6 +164,21 @@ public sealed class WaveBudget
 
 public static class WaveLimits
 {
+    public static bool IsFactory(string map) => map is "factory4_day" or "factory4_night";
+
+    public static decimal FactoryPopulationMultiplier(decimal abundance, decimal roll)
+    {
+        var progress = (Math.Clamp(abundance, 1m, 3m) - 1m) / 2m;
+        var expected = 1m + 1.5m * progress;
+        return Math.Clamp(expected + (Math.Clamp(roll, 0m, 1m) - .5m) * .16m, 1m, 2.5m);
+    }
+
+    public static int FactoryPopulationCount(int baseline, decimal multiplier)
+        => (int)Math.Round(baseline * multiplier, MidpointRounding.AwayFromZero);
+
+    public static int FactoryActiveCap(int baseline, int total, int baselineTotal)
+        => Math.Min(total, baseline + Math.Clamp((int)Math.Round((total / (double)baselineTotal - 1) * 7), 0, 10));
+
     public static int DefaultCap(string map)=>map.ToLowerInvariant() switch
     {"sandbox" or "sandbox_high"=>12,"bigmap"=>16,"interchange"=>20,_=>24};
     public static int Cap(string map,int configured,int total)=>Math.Min(Math.Max(1,total),Math.Max(1,Math.Min(64,configured>0?configured:DefaultCap(map))));

@@ -50,7 +50,8 @@ public sealed partial class SurvivalService
             map, seed = plan.Seed, revision = _threat.Revision, budget = plan.Budget, spent = plan.Spent,
             renderCost = plan.RenderCost, total, shooters = (int)spec["shooters"]!,
             composition = plan.Units.GroupBy(a => a.Id).ToDictionary(g => g.Key, g => new { count = g.Count(), score = g.Sum(a=>a.Score) }),
-            units = plan.Units.Select((a, i) => new { index = i, type = a.Id, score = a.Score,wear = a.WearCode }), performanceCapUnchanged = true
+            units = plan.Units.Select((a, i) => new { index = i, type = a.Id, score = a.Score,wear = a.WearCode }),
+            performanceCapUnchanged = WaveCap(map,total)==WaveCap(map,(int)Maps[map]!["total"]!)
         }));
     }
     private bool ApplyThreatBot(JsonNode bot, string role, MongoId session)

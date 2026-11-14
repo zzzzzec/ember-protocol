@@ -149,6 +149,7 @@ public sealed partial class SurvivalService
         var id=$"{DateTime.Now:yyyyMMdd-HHmmss}-{Guid.NewGuid().ToString("N")[..8]}";_raidIds[session.ToString()]=id;
         var spec=MapSpecFor(session,map)!;
         var context=new JsonObject{["raid"]=id,["player"]=PlayerKey(session.ToString()),["serverRun"]=_journal.Run,["version"]=Config["version"]?.DeepClone(),["map"]=map,["expected"]=spec["total"]?.DeepClone(),["populationMode"]=JsonValue.Create("finiteWaves"),["activeCap"]=JsonValue.Create(WaveCap(map,(int)spec["total"]!)),["shooters"]=spec["shooters"]?.DeepClone(),["crisis"]=spec["crisisName"]?.DeepClone(),["utc"]=DateTimeOffset.UtcNow.ToString("O")};
+        if(spec["populationMultiplier"] is { } populationMultiplier)context["populationMultiplier"]=populationMultiplier.DeepClone();
         var dir=System.IO.Path.Combine(_journal.Root,"contexts");Directory.CreateDirectory(dir);
         var path=System.IO.Path.Combine(dir,PlayerKey(session.ToString())+".json");var temp=path+".tmp";File.WriteAllText(temp,context.ToJsonString());File.Move(temp,path,true);
         Trace("raid.start",session,new {context,profile=ProfileDiagnostic(session)});

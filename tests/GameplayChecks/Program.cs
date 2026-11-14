@@ -12,6 +12,18 @@ using SPTarkov.Server.Core.Models.Enums;
 var checks = new List<string>();
 void Check(bool condition, string name) { if (!condition) throw new InvalidOperationException(name); checks.Add(name); }
 {
+    Check(WaveLimits.FactoryPopulationMultiplier(1m,.5m)==1m &&
+        WaveLimits.FactoryPopulationMultiplier(2m,.5m)==1.75m &&
+        WaveLimits.FactoryPopulationMultiplier(3m,.5m)==2.5m, "Factory population follows the linear abundance curve");
+    Check(WaveLimits.FactoryPopulationCount(56,WaveLimits.FactoryPopulationMultiplier(2m,0m))==94 &&
+        WaveLimits.FactoryPopulationCount(56,WaveLimits.FactoryPopulationMultiplier(2m,1m))==102 &&
+        WaveLimits.FactoryPopulationMultiplier(1m,0m)==1m &&
+        WaveLimits.FactoryPopulationMultiplier(3m,1m)==2.5m, "Factory population varies per raid inside the requested endpoints");
+    Check(WaveLimits.FactoryActiveCap(20,56,56)==20 && WaveLimits.FactoryActiveCap(20,98,56)==25 &&
+        WaveLimits.FactoryActiveCap(20,140,56)==30,
+        "Factory scales its simultaneous cap separately from the total population");
+}
+{
     var practice = new ReloadPractice();
     Check(practice.Finish("first", true, true) == 0, "switching a magazine without firing earns no practice");
     practice.Fired("first");
